@@ -18,11 +18,20 @@ class AuxiliaryContact:
         shift={'fixed':[0,0,0],'lift':[0,self.lift,0],'head':[self.advance,0,0],'gate':[self.advance-self.gate,0,0]}[kind]
         if spec.get('resettable',False):shift[0]+=self.reset
         return lo+shift,hi+shift
+    def shape_distance(self,p,spec):
+        if not spec.get("boxes_mm"):
+            lo,hi=self.bounds(spec);return box_distance3d(p,lo,hi)
+        parts=[]
+        for box in spec["boxes_mm"]:
+            piece={**spec,"bbox_mm":box};lo,hi=self.bounds(piece);parts.append(box_distance3d(p,lo,hi))
+        d,g=parts[0]
+        for x,n in parts[1:]:
+            use=x<d;d[use]=x[use];g[use]=n[use]
+        return d,g
     def components(self,p):
         result=[]
         for spec in self.envelopes.values():
-            lo,hi=self.bounds(spec)
-            result.append(box_distance3d(p,lo,hi))
+            result.append(self.shape_distance(p,spec))
         return result
     def distance(self,p):
         parts=self.components(p);d,g=parts[0]
@@ -35,6 +44,6 @@ class AuxiliaryContact:
             lo,hi=self.bounds(spec)
             active=np.all((p>=lo-radius)&(p<=hi+radius),axis=1)
             d=np.full(len(p),radius+1.);g=np.zeros_like(p)
-            if np.any(active):d[active],g[active]=box_distance3d(p[active],lo,hi)
+            if np.any(active):d[active],g[active]=self.shape_distance(p[active],spec)
             result.append((d,g))
         return result

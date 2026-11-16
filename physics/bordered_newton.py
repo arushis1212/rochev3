@@ -21,17 +21,25 @@ def bordered_direction(A,B,C,gradient,damping=0.):
     cb=cho_solve(cho_factor(S,lower=True,check_finite=True),-gradient[m:]+B.T@z)
     return np.concatenate([-z-W@cb,cb])
 
-def minimize_bordered(evaluate,start,interior,local_safe,gtol=1e-8,maxiter=200,step=1e-6,max_step=.25,callback=None):
+def minimize_bordered(evaluate,start,interior,local_safe,gtol=1e-8,maxiter=200,step=1e-6,max_step=.25,callback=None,spectral=False):
     x=start.copy();E,g=evaluate(x);iterations=0;reason='iteration_limit';largest_damping=0.;fallbacks=0
     for iteration in range(maxiter):
         if np.max(abs(g))<=gtol:reason='force_residual';break
         local=local_safe(x)
         if local:A,B,C=bordered_hessian(evaluate,x,interior,8,step);scale=max(1.,float(np.max(abs(A[0]))),float(np.max(abs(np.diag(C)))))
         else:A=banded_hessian(evaluate,x,len(x)-1,step);scale=max(1.,float(np.max(abs(A[0]))));fallbacks+=1
+        spectral_direction=None
+        if spectral:
+            n=len(x);dense=np.zeros((n,n));block=A.shape[1]
+            for k in range(A.shape[0]):
+                j=np.arange(block-k);dense[j+k,j]=A[k,:block-k];dense[j,j+k]=A[k,:block-k]
+            if local:dense[:interior,interior:]=B;dense[interior:,:interior]=B.T;dense[interior:,interior:]=C
+            eig,V=np.linalg.eigh(dense);floor=max(1e-9,1e-12*float(np.max(abs(eig))));spectral_direction=-V@((V.T@g)/np.maximum(eig,floor))
         damping=0.;accepted=False
         for attempt in range(18):
             try:
-                if local:direction=bordered_direction(A,B,C,g,damping)
+                if spectral_direction is not None:direction=spectral_direction/(1+damping)
+                elif local:direction=bordered_direction(A,B,C,g,damping)
                 else:
                     H=A.copy();H[0]+=damping;factor=cholesky_banded(H,lower=True);direction=cho_solve_banded((factor,True),-g)
             except np.linalg.LinAlgError:
@@ -45,7 +53,9 @@ def minimize_bordered(evaluate,start,interior,local_safe,gtol=1e-8,maxiter=200,s
                 candidate=x+alpha*direction
                 try:En,gn=evaluate(candidate)
                 except ValueError:En=float('inf')
-                if np.isfinite(En) and En<=E+1e-4*alpha*slope:accepted=True;break
+                roundoff=32*np.finfo(float).eps*max(1.,abs(E))
+                force_improved=np.max(abs(g))<=1e-6 and np.max(abs(gn))<np.max(abs(g)) if np.isfinite(En) else False
+                if np.isfinite(En) and (En<=E+1e-4*alpha*slope or (force_improved and En<=E+roundoff)):accepted=True;break
                 alpha*=.5
             if accepted:break
             damping=scale*1e-10 if damping==0 else damping*10

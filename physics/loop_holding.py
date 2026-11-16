@@ -116,7 +116,7 @@ def solve_holding(q,rest,center,angles,cfg,obstacle,optimizer_memory=None,checkp
     if cfg.get('solver_method')=='bordered_newton':
         def save(y,diagnostic):
             if checkpoint is not None:checkpoint(*unpack(y),diagnostic)
-        solution,diagnostic=minimize_bordered(evaluate,x,count,local_safe,maxiter=cfg.get('bordered_max_iterations',200),callback=save)
+        solution,diagnostic=minimize_bordered(evaluate,x,count,local_safe,maxiter=cfg.get('bordered_max_iterations',200),max_step=cfg.get('bordered_max_step_mm',.25),callback=save)
         opt=SimpleNamespace(x=solution,nit=diagnostic['iterations'],message=diagnostic['message'])
     else:
         diagnostic=None

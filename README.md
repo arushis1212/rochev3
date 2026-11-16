@@ -72,3 +72,5 @@ The toolkit also includes [three-dimensional CAD contact and strand mechanics](d
 [Coupled equilibrium and contact algorithms](docs/NUMERICAL_METHODS.md) describe the banded-clamp solver, exact contact broad phase and adaptive interpolation certificates.
 
 The [T13 transfer station](docs/LOOP_TRANSFER.md) adds an installed bracket and mechanically stopped pin shuttle. Its [557-solid assembled STEP](cad/transfer/installed/installation.step) and [nominal position checks](docs/INSTALLED_GEOMETRY.json) accompany the editable design.
+
+[Connected yarn mechanics](docs/CONNECTED_YARN.md) adds an explicit material chain, shared-clamp force balance and hollow-guide contact, with reproducible numerical checks.

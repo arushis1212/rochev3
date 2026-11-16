@@ -18,3 +18,14 @@ class BorderedNewton(unittest.TestCase):
    x,r=minimize_bordered(f,np.ones(len(target)),m,lambda x:safe,maxiter=30)
    self.assertTrue(r['optimizer_success']);np.testing.assert_allclose(x,target,atol=1e-8)
    self.assertEqual(r['full_hessian_fallbacks']>0,not safe)
+
+ def test_near_equilibrium_energy_roundoff_still_requires_force_convergence(self):
+  H=np.diag([1e-3,2.,3.,4.]);target=np.zeros(4)
+  def f(x):return 1e8+.5*x@H@x,H@x
+  x,r=minimize_bordered(f,np.array([2e-4,0,0,0]),2,lambda x:True,maxiter=10)
+  self.assertTrue(r['optimizer_success']);self.assertLess(np.max(abs(H@x)),1e-8)
+
+ def test_spectral_metric_handles_indefinite_curvature_without_changing_energy(self):
+  def f(x):return (x[0]*x[0]-1)**2+.5*x[1]*x[1],np.array([4*x[0]*(x[0]*x[0]-1),x[1]])
+  x,r=minimize_bordered(f,np.array([.1,.2]),1,lambda x:True,maxiter=50,spectral=True)
+  self.assertTrue(r['optimizer_success']);self.assertAlmostEqual(x[0],1,places=7);self.assertLess(abs(x[1]),1e-8)

@@ -1,0 +1,171 @@
+{
+  "scope": "Synthetic quasistatic single old-bight and captured working-strand component experiment, with a locked material endpoint at the guide",
+  "material_chain": [
+    "left cloth attachment",
+    "old bight",
+    "shared right cloth attachment",
+    "captured working strand",
+    "guide eye"
+  ],
+  "guide_local_mm": [
+    10,
+    0.5,
+    16
+  ],
+  "initial_working_waypoints_local_mm": [
+    [
+      14,
+      -18,
+      -4
+    ],
+    [
+      9.75,
+      0,
+      -1.4
+    ],
+    [
+      9.75,
+      0,
+      0
+    ],
+    [
+      9.75,
+      0,
+      1.4
+    ],
+    [
+      8.71442478062692,
+      -0.9396926207859084,
+      16.52400526045877
+    ],
+    [
+      10,
+      0.5,
+      16
+    ]
+  ],
+  "nodes": 32,
+  "reference_material_length_mm": 265.99727684211547,
+  "accepted_states": [
+    {
+      "state_mm": [
+        8.75,
+        0.0,
+        6.0,
+        0.0
+      ],
+      "force_residual_N": 3.024493046147655e-11,
+      "maximum_strain": 0.03116608438273527,
+      "solid_gap_lower_bound_mm": -0.0022372032485696892,
+      "self_gap_mm": 0.39988325650744583,
+      "hook_capture_retained": true,
+      "interpolation": {
+        "solid_centerline_bound_mm": 0.061794096342682875,
+        "nonlocal_centerline_bound_mm": 0.45310501840444767,
+        "max_node_motion_mm": 3.3210962727397537,
+        "max_rigid_motion_mm": 0.0,
+        "subdivisions": 8,
+        "samples_evaluated": 9,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.23820590365731711,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "state_mm": [
+        8.257142857142856,
+        0.0,
+        6.0,
+        0.0
+      ],
+      "force_residual_N": 3.024493046147655e-11,
+      "maximum_strain": 0.03116608438273527,
+      "solid_gap_lower_bound_mm": -0.0022372032485696892,
+      "self_gap_mm": 0.39988325650744583,
+      "hook_capture_retained": true,
+      "interpolation": {
+        "solid_centerline_bound_mm": 0.05133422532285842,
+        "nonlocal_centerline_bound_mm": 0.9998832565074458,
+        "max_node_motion_mm": 0.0,
+        "max_rigid_motion_mm": 0.49285714285714377,
+        "subdivisions": 1,
+        "samples_evaluated": 2,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.24866577467714157,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "state_mm": [
+        7.764285714285714,
+        0.0,
+        6.0,
+        0.0
+      ],
+      "force_residual_N": 3.024493046147655e-11,
+      "maximum_strain": 0.03116608438273527,
+      "solid_gap_lower_bound_mm": -0.0022372032485696892,
+      "self_gap_mm": 0.39988325650744583,
+      "hook_capture_retained": true,
+      "interpolation": {
+        "solid_centerline_bound_mm": 0.051334225322859306,
+        "nonlocal_centerline_bound_mm": 0.9998832565074458,
+        "max_node_motion_mm": 0.0,
+        "max_rigid_motion_mm": 0.492857142857142,
+        "subdivisions": 1,
+        "samples_evaluated": 2,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.24866577467714068,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "state_mm": [
+        7.271428571428571,
+        0.0,
+        6.0,
+        0.0
+      ],
+      "force_residual_N": 3.024493046147655e-11,
+      "maximum_strain": 0.03116608438273527,
+      "solid_gap_lower_bound_mm": -0.0022372032485696892,
+      "self_gap_mm": 0.39988325650744583,
+      "hook_capture_retained": true,
+      "interpolation": {
+        "solid_centerline_bound_mm": 0.05133422532285886,
+        "nonlocal_centerline_bound_mm": 0.9998832565074458,
+        "max_node_motion_mm": 0.0,
+        "max_rigid_motion_mm": 0.4928571428571429,
+        "subdivisions": 1,
+        "samples_evaluated": 2,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.24866577467714113,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "state_mm": [
+        6.7785714285714285,
+        0.0,
+        6.0,
+        0.0
+      ],
+      "force_residual_N": 3.024493046147655e-11,
+      "maximum_strain": 0.03116608438273527,
+      "solid_gap_lower_bound_mm": -0.0022372032485696892,
+      "self_gap_mm": 0.39988325650744583,
+      "hook_capture_retained": true,
+      "interpolation": {
+        "solid_centerline_bound_mm": 0.05133422532285886,
+        "nonlocal_centerline_bound_mm": 0.9998832565074458,
+        "max_node_motion_mm": 0.0,
+        "max_rigid_motion_mm": 0.4928571428571429,
+        "subdivisions": 1,
+        "samples_evaluated": 2,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.24866577467714113,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    }
+  ]
+}

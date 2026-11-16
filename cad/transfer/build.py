@@ -82,6 +82,8 @@ def main():
         cq.exporters.export(p,str(OUT/(name+'.step')));cq.exporters.export(p,str(OUT/(name+'.stl')),tolerance=.03,angularTolerance=.1)
     modeled={'H01_hook_body','H02_gate','H02_contact_blade','R01_front_stripper','R02_rear_stripper','R03_lift_pin_0','R03_lift_pin_1'}
     auxiliary={name:{'bbox_mm':value['bbox_mm'],'motion':motion_kind(name),'resettable':resets_with_shuttle(name),'moves_with_lift':motion_kind(name)=='lift'} for name,value in manifest.items() if name not in modeled}
+    from cad.transfer.contact_envelopes import carriage_boxes
+    auxiliary['R05_lift_carriage']['boxes_mm']=carriage_boxes(C,json.loads((ROOT/'spec/transfer_interfaces.json').read_text()))
     for n,d in [('manifest.json',manifest),('contact_profiles.json',profiles),('auxiliary_envelopes.json',auxiliary)]: (OUT/n).write_text(json.dumps(d,indent=2)+'\n')
     print(json.dumps(manifest,indent=2))
 if __name__=='__main__':main()

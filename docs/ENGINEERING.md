@@ -36,6 +36,13 @@ They are useful design calculations rather than measured textile behavior.
 The first hardware scope is single-stitch/swatch research; dimensional data here
 is prototype geometry, not an automatic garment-production program.
 
+The local strand module uses elastic stretch energy EA(l−l0)²/(2l0) and
+isotropic discrete bending energy2B(1−cosθ)/(lbar(1+cosθ)). Contact uses
+finite yarn radius and a reference-length-weighted penalty against the pocket
+cross-section. Its scope is planar quasistatic mechanics with prescribed ends;
+friction, twist,3D loop connectivity and material calibration are separate
+modeling stages. Numerical examples use explicit benchmark parameters.
+
 ## Nominal geometry checks
 
 The current design was checked at69 rigid assembly states, including selected

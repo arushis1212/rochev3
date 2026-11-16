@@ -51,3 +51,10 @@ mass model accounts for the complete moving assembly and its ballast allocation.
 Created by [arushis1212](https://github.com/arushis1212).
 See [research references](docs/REFERENCES.md) for the textile and mechanics work
 that informs this project.
+
+## Strand mechanics
+
+The numerical toolkit includes a planar extensible-rod model with large-angle
+bending and finite-radius contact. Analytic stretch/cantilever checks, energy
+gradients and continuous clearance bounds are covered by executable tests.
+Run `.venv/bin/python examples/rod_energy.py` for a minimal reference case.

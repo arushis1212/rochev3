@@ -4,7 +4,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "82b954df4bfb4112eb9a3f27c3f8d60ec22fee3f8d63d44682161242db142f4f",
+    "README.md": "a655fc350324fd56560f321aca09a16bae97a85462452fca7e2ff76cf985cc5c",
     "cad/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cad/r5m2/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cad/r5m2/build.py": "4a0367c42fb836c0638d53fab0a5149c6fc5250cdc0098eaea8127bdf41272c0",
@@ -190,14 +190,17 @@
     "cad/r5m2/generated/support_bank_with_hardware.step": "686743ee7921b4fd75d05bb3f70c0e376c998a1a5070d578343af43e7901f50e",
     "cad/r5m2/peripherals.py": "9fcadca0e9f42befff96faf364ee350679a598e8536e77d860145b9a74efdb10",
     "cad/r5m2/requirements.lock.txt": "ff20dd5244eed5a69bc1a3f384753a9e1a440bdf98d4888fae0c65225d583bcd",
-    "docs/ENGINEERING.md": "3bb42309ebe726c77b3275df4c727475be8dd99290f21b7fd1d0b99982d09852",
+    "docs/ENGINEERING.md": "b1a778dcf56c2aa2814905917d625a2ef97f9f9cb90a167b82e2fedc63c18492",
     "docs/GEOMETRY_CHECKS.json": "3c167773c901047ef19bff75efd5ee0fcb65917d9b6179f2e6b8487e6f56ad72",
     "docs/REFERENCES.md": "5ee7bb8712b74487782f7968a7577ebcd7de2d15332ebc7586565a3168221386",
     "examples/feeder.py": "828fb6ba8c3c920fcd347b2b96b64f034f85be89c921e6e6dfded19d901ea91f",
+    "examples/rod_energy.py": "bf5be2e3b688b079527891766a602a5d3bdd7c52baa796079f12092b86d136a1",
     "physics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "physics/r5_feed_geometry.py": "7a2a091e0caf61065c344221fa94487e0767a76de24075a804a8bd3768043985",
     "physics/r5_feeder.py": "e28bf278e3131c4e67f0c2a5c3ff33d06b39311c96ba758d5293e2caa3216c58",
+    "physics/roche_rod.py": "693a82201b4f9da275be5ca63f985be0243393ca4edba7a972de48ba87d817ad",
     "spec/r5_m2_fixture.json": "a9dcac800df28a966610c8d697fcf1e0e798d06c19b2137a1e22a5b0288a5980",
-    "tests/test_feeder.py": "529372d47c6b574bc47fad1671659089522ae6b0561844778aaa1d5ab7446ed9"
+    "tests/test_feeder.py": "529372d47c6b574bc47fad1671659089522ae6b0561844778aaa1d5ab7446ed9",
+    "tests/test_roche_rod.py": "c6b92fa9a687365d7d443f41dbc868fba4258c7200a8455f1f274a55158aca24"
   }
 }

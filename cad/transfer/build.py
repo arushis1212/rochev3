@@ -1,4 +1,4 @@
-"""Local transfer candidate solids. No claim of full machine integration."""
+"""Parametric guided loop-transfer research subassembly."""
 from pathlib import Path
 import sys,json,hashlib
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
@@ -31,7 +31,7 @@ def parts():
         for w in [-C['anchor_bolt_w_mm'],C['anchor_bolt_w_mm']]:p=p.cut(base.cyl_x(a-1,b+1,C['anchor_bolt_clearance_mm']/2,C['anchor_bolt_v_mm'],w))
         return p
     parts={'H01_hook_body':body,'H02_gate':gate,'H02_contact_blade':blade,'R01_front_stripper':plate(u0,u0+th),'R02_rear_stripper':plate(-u0-th,-u0)}
-    a=u0+th+C['lift_carriage_plate_gap_mm'];b=a+C['lift_pin_embed_mm'];v=C['lift_park_v_mm'];pinw=C['lift_pin_w_mm'];col=C['lift_carriage_column_width_mm']/2;top0,top1=C['lift_carriage_top_offsets_mm'];rod_u=(a+b)/2;rodw=C['lift_guide_w_mm']
+    a=u0+th+C['lift_carriage_plate_gap_mm'];b=a+C['lift_pin_embed_mm'];v=C['lift_park_v_mm'];pinw=C['lift_pin_w_mm'];col=C['lift_carriage_column_width_mm']/2;top0,top1=C['lift_carriage_top_offsets_mm'];rod_u=(a+b)/2+C['lift_guide_u_offset_mm'];rodw=C['lift_guide_w_mm']
     carriage=base.box(a,b,v+top0,v+top1,-rodw-3,rodw+3)
     for w in [-pinw,pinw]:
         carriage=carriage.union(base.box(a,b,v-col,v+top0,w-col,w+col))
@@ -50,6 +50,11 @@ def parts():
         parts['R08_guide_rod_'+str(i)]=base.cyl_y(low,high,C['lift_guide_radius_mm'],rod_u,w)
     for i,w in enumerate([-pinw,pinw]):parts['R03_lift_pin_'+str(i)]=base.cyl_x(-u0-th-C['lift_pin_protrusion_mm'],b,C['lift_pin_radius_mm'],v,w)
     parts.update(R05_lift_carriage=carriage,R06_anchor=anchor,R07_plate_spacer=spacer)
+    for i,w in enumerate([-C['anchor_bolt_w_mm'],C['anchor_bolt_w_mm']]):
+        head=(u0+th+C['anchor_depth_mm'],C['anchor_bolt_v_mm'],w)
+        rear=(-u0-th,C['anchor_bolt_v_mm'],w)
+        parts['R09_anchor_screw_'+str(i)]=cq.Workplane(obj=base.place(base.bolt(3,C['anchor_bolt_length_mm']),head,(0,0,1),(1,0,0)))
+        parts['R10_anchor_nut_'+str(i)]=cq.Workplane(obj=base.place(base.nut(3),rear,(0,0,1),(-1,0,0)))
     return parts
 def main():
     OUT.mkdir(exist_ok=True,parents=True);ps=parts();profiles={};manifest={}

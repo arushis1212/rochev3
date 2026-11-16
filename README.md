@@ -66,3 +66,5 @@ The toolkit also includes [three-dimensional CAD contact and strand mechanics](d
 [Loop-holding mechanics](docs/LOOP_HOLDING.md) couples yarn contact to clamp force, torque and neighboring textile load paths.
 
 [Mechanically guided loop transfer](docs/LOOP_TRANSFER.md) adds a sloped pocket exit, paired restraint plates and a guided two-pin lift, with editable solid geometry.
+
+[Material length and contact integration](docs/CONTACT_INTEGRATION.md) documents spatial quadrature and conservative motion bounds, with executable regression examples.

@@ -8,3 +8,5 @@
 
 References credit prior work and explain the design's technical context.
 Third-party papers and source CAD are not redistributed here.
+
+- Kaldor, James and Marschner(2008), [Simulating Knitted Cloth at the Yarn Level](https://www.cs.cornell.edu/projects/YarnCloth/): yarn-level geometry, length conservation and contact modeling.

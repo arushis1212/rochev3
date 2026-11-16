@@ -7,7 +7,7 @@ from scipy.linalg import cholesky_banded,cho_solve_banded
 def banded_hessian(evaluate,x,bandwidth,step=1e-5):
     n=len(x);b=min(bandwidth,n-1);H=np.zeros((2*b+1,n))
     # Rows influenced by two columns of one color are disjoint.
-    for color in range(2*b+1):
+    for color in range(min(n,2*b+1)):
         columns=np.arange(color,n,2*b+1);plus=x.copy();minus=x.copy()
         plus[columns]+=step;minus[columns]-=step
         delta=(evaluate(plus)[1]-evaluate(minus)[1])/(2*step)

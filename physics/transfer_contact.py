@@ -1,6 +1,6 @@
 """Finite candidate hook/slider and paired physical stripper contacts."""
 import numpy as np
-from physics.roche_contact3d import HookContact,extrusion_distance
+from physics.roche_contact3d import HookContact,extrusion_distance,extrusion_contact_distance
 
 class TransferContact:
     def __init__(self,profiles,advance,gate,plates=True,lift_mm=0.):
@@ -12,6 +12,13 @@ class TransferContact:
         for name in ['R03_lift_pin_0','R03_lift_pin_1']:
             if name in self.profiles:
                 local=p.copy();local[:,1]-=self.lift_mm;parts.append(extrusion_distance(local,self.profiles[name]))
+        return parts
+    def contact_components(self,p,radius):
+        local=p.copy();local[:,0]-=self.advance;parts=self.hook.contact_components(local,radius)
+        if self.plates:parts += [extrusion_contact_distance(p,self.profiles[name],radius) for name in ['R01_front_stripper','R02_rear_stripper']]
+        for name in ['R03_lift_pin_0','R03_lift_pin_1']:
+            if name in self.profiles:
+                local=p.copy();local[:,1]-=self.lift_mm;parts.append(extrusion_contact_distance(local,self.profiles[name],radius))
         return parts
     def distance(self,p):
         parts=self.components(p);d,g=parts[0]

@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T3",
+  "revision": "TRANSFER-T5",
   "status": "Mechanism research subassembly",
   "base_revision": "R5-M2-D22",
   "units": "mm,N,g",
@@ -53,13 +53,15 @@
     18.0
   ],
   "anchor_v_bounds_mm": [
-    -11.0,
+    -13.0,
     -7.0
   ],
-  "anchor_bolt_w_mm": 4.5,
+  "anchor_bolt_w_mm": 3.0,
   "anchor_bolt_v_mm": -9.5,
   "anchor_bolt_clearance_mm": 3.4,
   "anchor_depth_mm": 6.0,
   "lift_pin_protrusion_mm": 0.2,
-  "motion_admission": "Pins raise the old bight after shaft exit; gate closure only after measured finite-radius strand clearance. No invisible node constraints. Whole-machine engagement remains a separate integration task."
+  "motion_admission": "Pins raise the old bight after shaft exit; gate closure only after measured finite-radius strand clearance. No invisible node constraints. Whole-machine engagement remains a separate integration task.",
+  "lift_guide_u_offset_mm": 0.5,
+  "anchor_bolt_length_mm": 16.0
 }

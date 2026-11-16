@@ -33,6 +33,27 @@ def extrusion_distance(p,profile):
     grad=np.zeros_like(p);grad[:,axes]=weights[:,0,None]*g;grad[:,normal]=weights[:,1]*np.where(offset>=0,1.,-1.)
     return length+np.minimum(np.max(both,axis=1),0),grad
 
+def extrusion_bounds(profile):
+    # Full-circle boxes conservatively contain partial arcs as well.
+    wire=profile['outer'];xy=list(wire['points'])
+    for f in wire.get('analytic_features',[]):
+        xy.extend([f['a'],f['b']])
+        if f['kind']=='CIRCLE':
+            c=np.array(f['center']);r=f['radius'];xy.extend([c-r,c+r])
+    xy=np.array(xy);lo=np.empty(3);hi=np.empty(3)
+    lo[profile['profile_axes']]=xy.min(axis=0);hi[profile['profile_axes']]=xy.max(axis=0)
+    lo[profile['extrusion_axis']],hi[profile['extrusion_axis']]=profile['extrusion_bounds_mm']
+    return lo,hi
+
+
+def extrusion_contact_distance(p,profile,radius):
+    """Exact active penalty; skip only points outside an expanded solid AABB."""
+    lo,hi=extrusion_bounds(profile)
+    active=np.all((p>=lo-radius)&(p<=hi+radius),axis=1)
+    d=np.full(len(p),radius+1.);g=np.zeros_like(p)
+    if np.any(active):d[active],g[active]=extrusion_distance(p[active],profile)
+    return d,g
+
 
 class HookContact:
     def __init__(self,profiles,gate_displacement=9.):
@@ -40,6 +61,9 @@ class HookContact:
     def components(self,p):
         body=extrusion_distance(p,self.profiles['H01_hook_body']);gp=p.copy();gp[:,0]+=self.gate_displacement
         return [body,extrusion_distance(gp,self.profiles['H02_gate'])]
+    def contact_components(self,p,radius):
+        gp=p.copy();gp[:,0]+=self.gate_displacement
+        return [extrusion_contact_distance(p,self.profiles['H01_hook_body'],radius),extrusion_contact_distance(gp,self.profiles['H02_gate'],radius)]
     def distance(self,p):
         (body,bg),(gate,gg)=self.components(p);use=gate<body
         body[use]=gate[use];bg[use]=gg[use]
@@ -47,15 +71,20 @@ class HookContact:
 
 
 def contact_energy3d(q,rest,radius,k,obstacle,samples=8):
-    ts=(np.arange(samples)+.5)/samples
-    p=(1-ts)[None,:,None]*q[:-1,None,:]+ts[None,:,None]*q[1:,None,:]
-    points=p.reshape(-1,3);weights=np.repeat(rest,samples);g=np.zeros_like(q);E=0.
-    components=obstacle.components(points) if hasattr(obstacle,'components') else [obstacle.distance(points)]
+    # Fixed reference-domain quadrature: counts may differ by material edge.
+    # Keeping counts independent of q preserves the derivative of the energy.
+    counts=np.broadcast_to(np.asarray(samples,dtype=int),len(rest))
+    if np.any(counts<1):raise ValueError('Contact counts must be positive')
+    edge=np.repeat(np.arange(len(rest)),counts)
+    ts=np.concatenate([(np.arange(n)+.5)/n for n in counts])
+    points=(1-ts[:,None])*q[edge]+ts[:,None]*q[edge+1]
+    weights=np.repeat(rest/counts,counts);g=np.zeros_like(q);E=0.
+    components=obstacle.contact_components(points,radius) if hasattr(obstacle,'contact_components') else obstacle.components(points) if hasattr(obstacle,'components') else [obstacle.distance(points)]
     for d,n in components:
         depth=np.maximum(radius-d,0)
-        E+=.5*k*np.dot(weights*depth,depth)/samples
-        gp=(-k*(weights*depth)[:,None]*n/samples).reshape(len(rest),samples,3)
-        g[:-1]+=np.sum((1-ts)[None,:,None]*gp,axis=1);g[1:]+=np.sum(ts[None,:,None]*gp,axis=1)
+        E+=.5*k*np.dot(weights*depth,depth)
+        gp=-k*(weights*depth)[:,None]*n
+        np.add.at(g,edge,(1-ts[:,None])*gp);np.add.at(g,edge+1,ts[:,None]*gp)
     return float(E),g
 
 

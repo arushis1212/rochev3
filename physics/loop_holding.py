@@ -53,11 +53,17 @@ def initial_state(cfg,tip):
     return q,rest,center,np.zeros(2)
 
 
+def contact_counts(rest,cfg):
+    minimum=cfg['contact_samples_per_edge']
+    spacing=cfg.get('contact_reference_spacing_mm')
+    return minimum if spacing is None else np.maximum(minimum,np.ceil(rest/spacing).astype(int))
+
+
 def objective(q,rest,center,angles,cfg,obstacle):
     n,da,db=bar_direction(angles);offsets=np.array(cfg['active_attachment_offsets_x_mm'])
     p=q.copy();p[[0,-1]]=center+offsets[:,None]*n
     E,g=energy_gradient(p,rest,cfg['EA_N'],cfg['B_Nmm2'])
-    C,h=contact_energy3d(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],obstacle,cfg['contact_samples_per_edge'])
+    C,h=contact_energy3d(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],obstacle,contact_counts(rest,cfg))
     S,j,_=self_contact(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],self_pairs(rest,cfg['yarn_radius_mm']));g+=h+j
     xx=np.array(cfg['neighbor_support_x_mm']);yz=cfg['support_contact_yz_mm'];anchors=np.column_stack([xx,np.full(len(xx),yz[0]),np.full(len(xx),yz[1])]);po=xx-cfg['clamp_initial_center_xyz_mm'][0]
     baseline=np.array(cfg['clamp_initial_center_xyz_mm'])+po[:,None]*np.array([1.,0.,0.]);lengths=np.linalg.norm(baseline-anchors,axis=1)
@@ -69,7 +75,18 @@ def objective(q,rest,center,angles,cfg,obstacle):
     return E+C+S+P+weight*center[2],g,cg,ag,{'clamp_force_residual_xyz_N':cg.tolist(),'clamp_torque_residual_Nmm':torque.tolist(),'neighbor_tensions_N':np.linalg.norm(pg,axis=1).tolist(),'clamp_z_mm':float(center[2])}
 
 
-def solve_holding(q,rest,center,angles,cfg,obstacle):
+def valid_inverse_hessian(matrix,size):
+    """A positive search metric changes convergence, never the energy or forces."""
+    if matrix is None:return None
+    H=np.asarray(matrix,dtype=float)
+    if H.shape!=(size,size) or not np.all(np.isfinite(H)):return None
+    H=(H+H.T)/2
+    try:np.linalg.cholesky(H)
+    except np.linalg.LinAlgError:return None
+    return H
+
+
+def solve_holding(q,rest,center,angles,cfg,obstacle,optimizer_memory=None):
     count=q[1:-1].size
     def unpack(x):
         c=x[count:count+3];a=x[count+3:];n,_,_=bar_direction(a);p=q.copy();p[1:-1]=x[:count].reshape(-1,3);p[[0,-1]]=c+np.array(cfg['active_attachment_offsets_x_mm'])[:,None]*n
@@ -77,7 +94,14 @@ def solve_holding(q,rest,center,angles,cfg,obstacle):
     def evaluate(x):
         p,c,a=unpack(x);E,g,cg,ag,_=objective(p,rest,c,a,cfg,obstacle)
         return E,np.concatenate([g[1:-1].ravel(),cg,ag])
-    x=np.concatenate([q[1:-1].ravel(),center,angles]);opt=minimize(evaluate,x,method='BFGS',jac=True,options={'gtol':1e-8,'maxiter':cfg.get('BFGS_max_iterations',1500)})
+    x=np.concatenate([q[1:-1].ravel(),center,angles])
+    options={'gtol':1e-8,'maxiter':cfg.get('BFGS_max_iterations',1500)}
+    H=valid_inverse_hessian(optimizer_memory.get('inverse_hessian') if optimizer_memory is not None else None,len(x))
+    if H is not None:options['hess_inv0']=H
+    opt=minimize(evaluate,x,method='BFGS',jac=True,options=options)
+    if optimizer_memory is not None:
+        saved=valid_inverse_hessian(getattr(opt,'hess_inv',None),len(x))
+        optimizer_memory['inverse_hessian']=None if saved is None else saved.tolist()
     solution=opt.x;refinement=None
     if cfg.get('newton_refinement_iterations',0) and np.max(abs(evaluate(solution)[1]))>1e-8:
         solution,refinement=minimize_banded(evaluate,solution,bandwidth=len(solution)-1,gtol=1e-8,maxiter=cfg['newton_refinement_iterations'],step=1e-6)

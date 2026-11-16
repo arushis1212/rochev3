@@ -1,6 +1,6 @@
 # Mechanically guided loop transfer
 
-The T3 research subassembly combines a sloped pocket heel, paired stripper plates,
+The T5 research subassembly combines a sloped pocket heel, paired stripper plates,
 and two guide pins on a printable lift carriage. The plates resist axial movement
 of the old bight. After the hook advances8.75mm, the pins rise6mm before the slider
 closes. The hook then retracts through the raised bight.

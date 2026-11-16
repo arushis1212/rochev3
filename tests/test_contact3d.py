@@ -53,7 +53,7 @@ class Contact3D(unittest.TestCase):
                 vertex=cq.Vertex.makeVertex(*map(float,p))
                 exact=min(face.distance(vertex) for face in shape.Faces())
                 if shape.isInside(cq.Vector(*map(float,p)),1e-8):exact=-exact
-                self.assertLessEqual(abs(approx-exact),.00101,(name,p,approx,exact))
+                self.assertLessEqual(abs(approx-exact),1e-8,(name,p,approx,exact))
     def test_straight_refinement_has_no_false_self_contact(self):
         for n in (17,33,65,129):
             q=np.column_stack([np.linspace(0,16,n),np.zeros(n),np.zeros(n)])

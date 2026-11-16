@@ -6,6 +6,7 @@ import numpy as np
 from physics.roche_rod import energy_gradient
 from physics.banded_newton import minimize_banded
 from scipy.optimize import minimize
+from physics.analytic_profile import wire_distance
 
 
 def polygon_distance(points,vertices):
@@ -22,9 +23,9 @@ def polygon_distance(points,vertices):
 
 def extrusion_distance(p,profile):
     axes=profile['profile_axes'];normal=profile['extrusion_axis']
-    d,g=polygon_distance(p[:,axes],profile['outer']['points'])
+    d,g=wire_distance(p[:,axes],profile['outer'])
     for hole in profile['holes']:
-        h,hg=polygon_distance(p[:,axes],hole['points']);mask=-h>d;d[mask]=-h[mask];g[mask]=-hg[mask]
+        h,hg=wire_distance(p[:,axes],hole);mask=-h>d;d[mask]=-h[mask];g[mask]=-hg[mask]
     lo,hi=profile['extrusion_bounds_mm'];offset=p[:,normal]-(lo+hi)/2;dn=abs(offset)-(hi-lo)/2
     both=np.column_stack([d,dn]);pos=np.maximum(both,0);length=np.linalg.norm(pos,axis=1)
     weights=np.zeros_like(both);outside=length>1e-14;weights[outside]=pos[outside]/length[outside,None]
@@ -83,11 +84,11 @@ def self_contact(q,rest,radius,k,pairs):
     return float(.5*k*np.dot(weight,depth*depth)),g,float(np.min(distance)-2*radius)
 
 
-def solve3d(q,rest,EA,B,radius,obstacle,k=1000.,maxiter=100):
+def solve3d(q,rest,EA,B,radius,obstacle,k=1000.,maxiter=100,samples=8):
     ends=q[[0,-1]].copy();pairs=self_pairs(rest,radius)
     def evaluate(x):
         p=np.vstack([ends[0],x.reshape(-1,3),ends[1]])
-        E,g=energy_gradient(p,rest,EA,B);C,h=contact_energy3d(p,rest,radius,k,obstacle)
+        E,g=energy_gradient(p,rest,EA,B);C,h=contact_energy3d(p,rest,radius,k,obstacle,samples)
         S,j,_=self_contact(p,rest,radius,k,pairs)
         return E+C+S,(g+h+j)[1:-1].ravel()
     def bandwidth(x):

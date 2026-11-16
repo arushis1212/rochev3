@@ -10,9 +10,10 @@ The material examples use declared benchmark EA, bending rigidity and radius.
 The code does not substitute those constants for measured yarn properties.
 Friction and twist are outside this implementation's constitutive model.
 
-Hook faces consist of lines and circular arcs. Circular boundaries are exported
-with a0.001mm chord-error bound. Distance and gradient tests include independent
-OpenCascade boundary queries, analytic solids, holes and finite differences.
+Contact uses the exact CAD lines and circular arcs, preserving the smooth normals
+of the manufactured fillets. Optional polygon boundaries retain a0.001mm chord
+bound for reference. Analytic circle/semicircle checks, independent OpenCascade
+boundary queries and finite-difference gradients verify the implementation.
 
 Nonlocal contact excludes edge pairs within one semicircle of reference material;
 the local tube condition radius*curvature<1 must also be checked. This prevents

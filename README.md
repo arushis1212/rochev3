@@ -62,3 +62,5 @@ gradients and continuous clearance bounds are covered by executable tests.
 Run `.venv/bin/python examples/rod_energy.py` for a minimal reference case.
 
 The toolkit also includes [three-dimensional CAD contact and strand mechanics](docs/STRAND_MECHANICS.md), with analytic and solid-model regression checks.
+
+[Loop-holding mechanics](docs/LOOP_HOLDING.md) couples yarn contact to clamp force, torque and neighboring textile load paths.

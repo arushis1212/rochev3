@@ -17,7 +17,7 @@ bounds are d0,d1, then min(d0,d1)-(M+R)/2 is a conservative lower bound over the
 transition. A positive value protects centerline noncrossing. Finite yarn radius,
 material data and the full installed contact geometry require their own checks.
 
-The local T6 CAD includes the lift carriage, matched guide axes, anchor screws
+The local T8 CAD includes the lift carriage, matched guide axes, anchor screws
 and nuts. Its guide-axis location is5.7256mm and nominal carriage/plate separation
 is0.30mm. Part files form a separate mechanism study alongside the D22 fixture.
 

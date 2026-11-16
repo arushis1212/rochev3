@@ -1,5 +1,5 @@
 {
-  "scope": "Nested free-clamp equilibrium refinement at one local castoff endpoint, preserving material lengths",
+  "scope": "T6 reference-geometry nested free-clamp equilibrium refinement at one local castoff endpoint, preserving material lengths",
   "material_inputs": {
     "EA_N": 2.0,
     "B_Nmm2": 0.02,

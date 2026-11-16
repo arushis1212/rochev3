@@ -97,14 +97,14 @@ def solve_holding(q,rest,center,angles,cfg,obstacle,optimizer_memory=None,checkp
         p,c,a=unpack(x);E,g,cg,ag,_=objective(p,rest,c,a,cfg,obstacle)
         return E,np.concatenate([g[1:-1].ravel(),cg,ag])
     x=np.concatenate([q[1:-1].ravel(),center,angles])
+    pairs=self_pairs(rest,cfg['yarn_radius_mm'])
+    def local_safe(y):
+        p,_,_=unpack(y)
+        return self_contact(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],pairs)[2]>4e-6
     options={'gtol':1e-8,'maxiter':cfg.get('BFGS_max_iterations',1500)}
     H=valid_inverse_hessian(optimizer_memory.get('inverse_hessian') if optimizer_memory is not None else None,len(x))
     if H is not None:options['hess_inv0']=H
     if cfg.get('solver_method')=='bordered_newton':
-        pairs=self_pairs(rest,cfg['yarn_radius_mm'])
-        def local_safe(y):
-            p,_,_=unpack(y)
-            return self_contact(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],pairs)[2]>4e-6
         def save(y,diagnostic):
             if checkpoint is not None:checkpoint(*unpack(y),diagnostic)
         solution,diagnostic=minimize_bordered(evaluate,x,count,local_safe,maxiter=cfg.get('bordered_max_iterations',200),callback=save)
@@ -117,7 +117,9 @@ def solve_holding(q,rest,center,angles,cfg,obstacle,optimizer_memory=None,checkp
         optimizer_memory['inverse_hessian']=None if saved is None else saved.tolist()
     solution=opt.x;refinement=None
     if cfg.get('solver_method')!='bordered_newton' and cfg.get('newton_refinement_iterations',0) and np.max(abs(evaluate(solution)[1]))>1e-8:
-        solution,refinement=minimize_banded(evaluate,solution,bandwidth=len(solution)-1,gtol=1e-8,maxiter=cfg['newton_refinement_iterations'],step=1e-6)
+        if cfg.get('newton_polish_method')=='bordered':
+            solution,refinement=minimize_bordered(evaluate,solution,count,local_safe,gtol=1e-8,maxiter=cfg['newton_refinement_iterations'],step=1e-6)
+        else:solution,refinement=minimize_banded(evaluate,solution,bandwidth=len(solution)-1,gtol=1e-8,maxiter=cfg['newton_refinement_iterations'],step=1e-6)
     p,c,a=unpack(solution);E,g,cg,ag,info=objective(p,rest,c,a,cfg,obstacle)
     residual=max(float(np.max(abs(g[1:-1]))),float(np.max(abs(cg))),float(np.linalg.norm(info['clamp_torque_residual_Nmm'])/44))
     lo,hi=cfg['clamp_z_safety_bound_mm'];inside=lo<c[2]<hi

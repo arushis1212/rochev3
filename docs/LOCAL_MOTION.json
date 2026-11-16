@@ -1,0 +1,14 @@
+{
+  "revision": "TRANSFER-T8",
+  "scope": "Synthetic quasistatic pre-seated single-bight local transfer experiment",
+  "commanded_targets": 197,
+  "joined_accepted_states": 203,
+  "final_pose_mm": {
+    "advance": -8.5,
+    "gate": 0.0,
+    "lift": 6.0
+  },
+  "maximum_force_residual_N": 3.576796884889599e-08,
+  "maximum_engineering_strain": 0.031066019843144277,
+  "interpolation_certificate": "Positive solid and nonlocal strand centerline separation for the stated linear interpolation; finite-radius behavior separately evaluated at saved states."
+}

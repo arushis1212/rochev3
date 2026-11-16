@@ -4,6 +4,7 @@ import sys,json,hashlib
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
 from cad.r5m2 import build as base
 from cad.r5m2.export_contact import wire_points
+from cad.transfer.interfaces import add_interfaces,motion_kind
 cq=base.cq;ROOT=base.ROOT
 C=json.loads((ROOT/'spec/transfer_candidate.json').read_text());T=base.T
 OUT=ROOT/'cad/transfer/generated'
@@ -55,7 +56,7 @@ def parts():
         rear=(-u0-th,C['anchor_bolt_v_mm'],w)
         parts['R09_anchor_screw_'+str(i)]=cq.Workplane(obj=base.place(base.bolt(3,C['anchor_bolt_length_mm']),head,(0,0,1),(1,0,0)))
         parts['R10_anchor_nut_'+str(i)]=cq.Workplane(obj=base.place(base.nut(3).rotate((0,0,0),(0,0,1),C['anchor_nut_rotation_deg']),rear,(0,0,1),(-1,0,0)))
-    return parts
+    return add_interfaces(base,C,parts)
 def main():
     OUT.mkdir(exist_ok=True,parents=True);ps=parts();profiles={};manifest={}
     for name,p in ps.items():
@@ -67,7 +68,8 @@ def main():
         profiles['H02_gate' if name=='H02_contact_blade' else name]={'outer':wire_points(face.outerWire(),axes,.001),'holes':[wire_points(x,axes,.001) for x in face.innerWires()],'profile_axes':axes,'extrusion_axis':normal,'extrusion_bounds_mm':bounds[normal]}
     for name,p in ps.items():
         cq.exporters.export(p,str(OUT/(name+'.step')));cq.exporters.export(p,str(OUT/(name+'.stl')),tolerance=.03,angularTolerance=.1)
-    auxiliary={name:{'bbox_mm':value['bbox_mm'],'moves_with_lift':name=='R05_lift_carriage'} for name,value in manifest.items() if name.startswith(('R05','R06','R07','R08','R09','R10'))}
+    modeled={'H01_hook_body','H02_gate','H02_contact_blade','R01_front_stripper','R02_rear_stripper','R03_lift_pin_0','R03_lift_pin_1'}
+    auxiliary={name:{'bbox_mm':value['bbox_mm'],'motion':motion_kind(name),'moves_with_lift':motion_kind(name)=='lift'} for name,value in manifest.items() if name not in modeled}
     for n,d in [('manifest.json',manifest),('contact_profiles.json',profiles),('auxiliary_envelopes.json',auxiliary)]: (OUT/n).write_text(json.dumps(d,indent=2)+'\n')
     print(json.dumps(manifest,indent=2))
 if __name__=='__main__':main()

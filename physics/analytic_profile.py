@@ -8,6 +8,9 @@ def parameter(angle,start,sweep):
 
 
 def wire_distance(points,wire):
+    if '_compiled_features' in wire:
+        from physics.compiled_profile import compiled_wire_distance
+        return compiled_wire_distance(np.asarray(points,dtype=float),wire['_compiled_features'])
     if 'analytic_features' not in wire:
         # Test fixtures can still supply exact linear polygons.
         a=np.asarray(wire['points']);features=[{'kind':'LINE','a':x,'b':y} for x,y in zip(a,np.roll(a,-1,axis=0))]

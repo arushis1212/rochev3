@@ -37,9 +37,11 @@ def extrusion_distance(p,profile):
 class HookContact:
     def __init__(self,profiles,gate_displacement=9.):
         self.profiles=profiles;self.gate_displacement=gate_displacement
+    def components(self,p):
+        body=extrusion_distance(p,self.profiles['H01_hook_body']);gp=p.copy();gp[:,0]+=self.gate_displacement
+        return [body,extrusion_distance(gp,self.profiles['H02_gate'])]
     def distance(self,p):
-        body,bg=extrusion_distance(p,self.profiles['H01_hook_body']);gp=p.copy();gp[:,0]+=self.gate_displacement
-        gate,gg=extrusion_distance(gp,self.profiles['H02_gate']);use=gate<body
+        (body,bg),(gate,gg)=self.components(p);use=gate<body
         body[use]=gate[use];bg[use]=gg[use]
         return body,bg
 
@@ -47,10 +49,13 @@ class HookContact:
 def contact_energy3d(q,rest,radius,k,obstacle,samples=8):
     ts=(np.arange(samples)+.5)/samples
     p=(1-ts)[None,:,None]*q[:-1,None,:]+ts[None,:,None]*q[1:,None,:]
-    d,n=obstacle.distance(p.reshape(-1,3));depth=np.maximum(radius-d,0);weights=np.repeat(rest,samples)
-    E=.5*k*np.dot(weights*depth,depth)/samples
-    gp=(-k*(weights*depth)[:,None]*n/samples).reshape(len(rest),samples,3)
-    g=np.zeros_like(q);g[:-1]+=np.sum((1-ts)[None,:,None]*gp,axis=1);g[1:]+=np.sum(ts[None,:,None]*gp,axis=1)
+    points=p.reshape(-1,3);weights=np.repeat(rest,samples);g=np.zeros_like(q);E=0.
+    components=obstacle.components(points) if hasattr(obstacle,'components') else [obstacle.distance(points)]
+    for d,n in components:
+        depth=np.maximum(radius-d,0)
+        E+=.5*k*np.dot(weights*depth,depth)/samples
+        gp=(-k*(weights*depth)[:,None]*n/samples).reshape(len(rest),samples,3)
+        g[:-1]+=np.sum((1-ts)[None,:,None]*gp,axis=1);g[1:]+=np.sum(ts[None,:,None]*gp,axis=1)
     return float(E),g
 
 

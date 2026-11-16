@@ -3,6 +3,7 @@ The six tension members are an explicit fabric surrogate, not calibrated fabric.
 """
 import numpy as np
 from scipy.optimize import minimize
+from physics.banded_newton import minimize_banded
 from physics.roche_contact3d import HookContact,extrusion_distance,contact_energy3d,self_contact,self_pairs
 from physics.roche_rod import energy_gradient
 
@@ -16,12 +17,17 @@ def head_frame(tip,angle=30.,roll=20.):
 class HoldingContact:
     def __init__(self,profiles,tip,gate,front_inner=None):
         self.profiles=profiles;self.origin,self.frame=head_frame(tip);self.hook=HookContact(profiles,gate);self.front_inner=front_inner
-    def distance(self,p):
-        d,g=self.hook.distance((p-self.origin)@self.frame);g=g@self.frame.T
+    def components(self,p):
+        parts=[(d,g@self.frame.T) for d,g in self.hook.components((p-self.origin)@self.frame)]
         plate=self.profiles['B06_knockover']
         shifts=[0.] if self.front_inner is None else [0.,self.front_inner-plate['extrusion_bounds_mm'][1]]
         for shift in shifts:
-            x=p.copy();x[:,1]-=shift;pd,pg=extrusion_distance(x,plate);use=pd<d;d[use]=pd[use];g[use]=pg[use]
+            x=p.copy();x[:,1]-=shift;parts.append(extrusion_distance(x,plate))
+        return parts
+    def distance(self,p):
+        parts=self.components(p);d,g=parts[0]
+        for pd,pg in parts[1:]:
+            use=pd<d;d[use]=pd[use];g[use]=pg[use]
         return d,g
 
 
@@ -71,9 +77,13 @@ def solve_holding(q,rest,center,angles,cfg,obstacle):
     def evaluate(x):
         p,c,a=unpack(x);E,g,cg,ag,_=objective(p,rest,c,a,cfg,obstacle)
         return E,np.concatenate([g[1:-1].ravel(),cg,ag])
-    x=np.concatenate([q[1:-1].ravel(),center,angles]);opt=minimize(evaluate,x,method='BFGS',jac=True,options={'gtol':1e-8,'maxiter':1500})
-    p,c,a=unpack(opt.x);E,g,cg,ag,info=objective(p,rest,c,a,cfg,obstacle)
+    x=np.concatenate([q[1:-1].ravel(),center,angles]);opt=minimize(evaluate,x,method='BFGS',jac=True,options={'gtol':1e-8,'maxiter':cfg.get('BFGS_max_iterations',1500)})
+    solution=opt.x;refinement=None
+    if cfg.get('newton_refinement_iterations',0) and np.max(abs(evaluate(solution)[1]))>1e-8:
+        solution,refinement=minimize_banded(evaluate,solution,bandwidth=len(solution)-1,gtol=1e-8,maxiter=cfg['newton_refinement_iterations'],step=1e-6)
+    p,c,a=unpack(solution);E,g,cg,ag,info=objective(p,rest,c,a,cfg,obstacle)
     residual=max(float(np.max(abs(g[1:-1]))),float(np.max(abs(cg))),float(np.linalg.norm(info['clamp_torque_residual_Nmm'])/44))
     lo,hi=cfg['clamp_z_safety_bound_mm'];inside=lo<c[2]<hi
     info.update(optimizer_success=bool(residual<=1e-7 and inside),force_residual_N=residual,iterations=int(opt.nit),message=str(opt.message),clamp_center_xyz_mm=c.tolist(),bar_angles_scaled_mm=a.tolist(),energy_Nmm=float(E),domain_guard_clear=bool(inside),centerline_xyz_mm=p.tolist())
+    if refinement is not None:info['newton_refinement']=refinement
     return p,c,a,info

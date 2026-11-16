@@ -64,3 +64,5 @@ Run `.venv/bin/python examples/rod_energy.py` for a minimal reference case.
 The toolkit also includes [three-dimensional CAD contact and strand mechanics](docs/STRAND_MECHANICS.md), with analytic and solid-model regression checks.
 
 [Loop-holding mechanics](docs/LOOP_HOLDING.md) couples yarn contact to clamp force, torque and neighboring textile load paths.
+
+[Mechanically guided loop transfer](docs/LOOP_TRANSFER.md) adds a sloped pocket exit, paired restraint plates and a guided two-pin lift, with editable solid geometry.

@@ -32,14 +32,18 @@ def solve_connected(q,rest,split,center,angles,guide,cfg,obstacle,callback=None,
     options={'gtol':1e-8,'maxiter':cfg.get('connected_iterations',600)}
     H=valid_inverse_hessian(memory.get('inverse_hessian') if memory is not None else None,len(x))
     if H is not None:options['hess_inv0']=H
-    opt=minimize(fun,x,method='BFGS',jac=True,callback=save,options=options)
+    if cfg.get('connected_newton_first'):
+        from scipy.optimize import OptimizeResult
+        opt=OptimizeResult(x=x,nit=0,message='Newton-first contact branch',hess_inv=np.eye(len(x)))
+    else:
+        opt=minimize(fun,x,method='BFGS',jac=True,callback=save,options=options)
     if memory is not None:
         H=valid_inverse_hessian(opt.hess_inv,len(x));memory['inverse_hessian']=None if H is None else H.tolist()
     solution=opt.x;refinement=None
     if np.max(abs(fun(solution)[1]))>1e-8:
         pairs=self_pairs(rest,cfg['yarn_radius_mm'])
         def safe(x):return self_contact(unpack(x)[0],rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],pairs)[2]>4e-6
-        solution,refinement=minimize_bordered(fun,solution,m,safe,maxiter=cfg.get('connected_newton_iterations',200),max_step=.5,callback=lambda x,d:save(x),spectral=cfg.get('connected_spectral_newton',False))
+        solution,refinement=minimize_bordered(fun,solution,m,safe,maxiter=cfg.get('connected_newton_iterations',200),max_step=.5,step=cfg.get('connected_difference_step_mm',1e-6),callback=lambda x,d:save(x),spectral=cfg.get('connected_spectral_newton',False))
     p,c,a=unpack(solution);E,g,cg,ag,info=connected_objective(p,rest,split,c,a,guide,cfg,obstacle);res=max(float(np.max(abs(g[free]))),float(np.max(abs(cg))),float(np.linalg.norm(info['clamp_torque_residual_Nmm'])/44));lo,hi=cfg['clamp_z_safety_bound_mm']
     if refinement is not None:info['newton_refinement']=refinement
     info.update(force_residual_N=res,optimizer_success=bool(res<=1e-7 and lo<c[2]<hi),iterations=int(opt.nit),message=str(opt.message),energy_Nmm=float(E),maximum_strain=float(np.max(np.linalg.norm(np.diff(p,axis=0),axis=1)/rest-1)),centerline_xyz_mm=p.tolist(),clamp_center_xyz_mm=c.tolist(),bar_angles_scaled_mm=a.tolist());return p,c,a,info

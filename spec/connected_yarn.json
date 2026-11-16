@@ -1,0 +1,42 @@
+{
+  "guide_local_mm": [
+    10,
+    0.5,
+    16
+  ],
+  "working_waypoints_local_mm": [
+    [
+      14,
+      -18,
+      -4
+    ],
+    [
+      9.75,
+      0,
+      -1.4
+    ],
+    [
+      9.75,
+      0,
+      0
+    ],
+    [
+      9.75,
+      0,
+      1.4
+    ],
+    [
+      8.71442478062692,
+      -0.9396926207859084,
+      16.52400526045877
+    ],
+    [
+      10,
+      0.5,
+      16
+    ]
+  ],
+  "yarn_linear_density_g_per_m": 0.1786,
+  "contact_reference_spacing_mm": 0.0125,
+  "newton_difference_step_mm": 1e-08
+}

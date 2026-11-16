@@ -12,3 +12,5 @@ Third-party papers and source CAD are not redistributed here.
 - Kaldor, James and Marschner(2008), [Simulating Knitted Cloth at the Yarn Level](https://www.cs.cornell.edu/projects/YarnCloth/): yarn-level geometry, length conservation and contact modeling.
 
 - [Numba compilation documentation](https://numba.readthedocs.io/en/stable/user/jit.html): compilation and caching used for the exact line/arc contact kernel.
+
+- Hanna, Singh and Virga(2018), [Partial constraint singularities in elastic rods](https://arxiv.org/abs/1711.00900): force, moment and energy balances at a material-throughflow boundary, with planar inextensible sleeve examples.

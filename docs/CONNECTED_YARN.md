@@ -18,8 +18,12 @@ cylinder geometry and are checked against independent CAD distances and gradient
 `physics/connected_yarn.py` implements the coupled energy and derivatives;
 `physics/guide_contact.py` provides the nominal tube contacts. The regression
 suite checks the shared-node force/torque chain rule and contact geometry. A
-spectral modified-Newton option conditions the numerical search while keeping
-the physical energy, forces and final acceptance criteria unchanged.
+contact-scale Newton stencil resolves shallow active contacts. Exact segment/AABB
+culling evaluates the original reference-quadrature samples only where a contact
+penalty can be nonzero. Dense-oracle tests check identical energies and forces;
+a bounded secant predictor supplies an initial guess without changing constraints.
+The fine-quadrature dataset spans13 loaded-draw advances fromu6.778571429mm
+tou0.371428571mm, with saved force, capture and clearance checks.
 
 These are synthetic, quasistatic component experiments with one old bight and a
 locked guide material endpoint. Two-loop single-crochet formation, metered feed,

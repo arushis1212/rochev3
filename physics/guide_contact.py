@@ -15,6 +15,24 @@ class GuidedContact:
         for prefix in ['exit_insert','reducer','outer_tube']:
             self.tubes.append((spec[prefix+'_back'],spec[prefix+'_front'],spec[prefix+'_od']/2-spec[prefix+'_wall'],spec[prefix+'_od']/2))
     def tubes_distance(self,p):return [annular_cylinder(p,self.axis,self.tip,*tube) for tube in self.tubes]
+    def edge_contact_terms(self,q,rest,counts,radius):
+        from physics.edge_contact import edge_samples
+        yield from self.base.edge_contact_terms(q,rest,counts,radius)
+        for tube in self.tubes:
+            back,front,inner,outer=tube
+            ends=np.array([self.tip+back*self.axis,self.tip+front*self.axis]);extent=outer*np.sqrt(np.maximum(0,1-self.axis**2))
+            edge,t,w,p=edge_samples(q,rest,counts,ends.min(axis=0)-extent,ends.max(axis=0)+extent,radius)
+            if len(edge):
+                d,g=annular_cylinder(p,self.axis,self.tip,*tube);yield edge,t,w,d,g
+    def sparse_components(self,p,radius):
+        from physics.sparse_contact import active_indices
+        yield from self.base.sparse_components(p,radius)
+        for tube in self.tubes:
+            back,front,inner,outer=tube
+            ends=np.array([self.tip+back*self.axis,self.tip+front*self.axis]);extent=outer*np.sqrt(np.maximum(0,1-self.axis**2))
+            idx=active_indices(p,ends.min(axis=0)-extent,ends.max(axis=0)+extent,radius)
+            if len(idx):
+                d,g=annular_cylinder(p[idx],self.axis,self.tip,*tube);yield idx,d,g
     def components(self,p):return self.base.components(p)+self.tubes_distance(p)
     def contact_components(self,p,radius):return self.base.contact_components(p,radius)+self.tubes_distance(p)
     def distance(self,p):

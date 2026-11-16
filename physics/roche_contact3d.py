@@ -75,10 +75,26 @@ def contact_energy3d(q,rest,radius,k,obstacle,samples=8):
     # Keeping counts independent of q preserves the derivative of the energy.
     counts=np.broadcast_to(np.asarray(samples,dtype=int),len(rest))
     if np.any(counts<1):raise ValueError('Contact counts must be positive')
+    if hasattr(obstacle,'edge_contact_terms'):
+        E=0.;g=np.zeros_like(q)
+        for edge,t,weight,d,n in obstacle.edge_contact_terms(q,rest,counts,radius):
+            depth=np.maximum(radius-d,0);E+=.5*k*np.dot(weight*depth,depth);active=depth>0
+            if not np.any(active):continue
+            at=edge[active];fraction=t[active,None];gp=-k*(weight[active]*depth[active])[:,None]*n[active]
+            np.add.at(g,at,(1-fraction)*gp);np.add.at(g,at+1,fraction*gp)
+        return float(E),g
     edge=np.repeat(np.arange(len(rest)),counts)
     ts=np.concatenate([(np.arange(n)+.5)/n for n in counts])
     points=(1-ts[:,None])*q[edge]+ts[:,None]*q[edge+1]
     weights=np.repeat(rest/counts,counts);g=np.zeros_like(q);E=0.
+    if hasattr(obstacle,'sparse_components'):
+        for idx,d,n in obstacle.sparse_components(points,radius):
+            depth=np.maximum(radius-d,0);E+=.5*k*np.dot(weights[idx]*depth,depth)
+            active=depth>0
+            if not np.any(active):continue
+            ix=idx[active];gp=-k*(weights[ix]*depth[active])[:,None]*n[active];at=edge[ix];fraction=ts[ix,None]
+            np.add.at(g,at,(1-fraction)*gp);np.add.at(g,at+1,fraction*gp)
+        return float(E),g
     components=obstacle.contact_components(points,radius) if hasattr(obstacle,'contact_components') else obstacle.components(points) if hasattr(obstacle,'components') else [obstacle.distance(points)]
     for d,n in components:
         depth=np.maximum(radius-d,0)

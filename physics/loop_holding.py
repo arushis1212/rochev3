@@ -4,6 +4,8 @@ The six tension members are an explicit fabric surrogate, not calibrated fabric.
 import numpy as np
 from scipy.optimize import minimize
 from physics.banded_newton import minimize_banded
+from physics.bordered_newton import minimize_bordered
+from types import SimpleNamespace
 from physics.roche_contact3d import HookContact,extrusion_distance,contact_energy3d,self_contact,self_pairs
 from physics.roche_rod import energy_gradient
 
@@ -86,7 +88,7 @@ def valid_inverse_hessian(matrix,size):
     return H
 
 
-def solve_holding(q,rest,center,angles,cfg,obstacle,optimizer_memory=None):
+def solve_holding(q,rest,center,angles,cfg,obstacle,optimizer_memory=None,checkpoint=None):
     count=q[1:-1].size
     def unpack(x):
         c=x[count:count+3];a=x[count+3:];n,_,_=bar_direction(a);p=q.copy();p[1:-1]=x[:count].reshape(-1,3);p[[0,-1]]=c+np.array(cfg['active_attachment_offsets_x_mm'])[:,None]*n
@@ -98,16 +100,28 @@ def solve_holding(q,rest,center,angles,cfg,obstacle,optimizer_memory=None):
     options={'gtol':1e-8,'maxiter':cfg.get('BFGS_max_iterations',1500)}
     H=valid_inverse_hessian(optimizer_memory.get('inverse_hessian') if optimizer_memory is not None else None,len(x))
     if H is not None:options['hess_inv0']=H
-    opt=minimize(evaluate,x,method='BFGS',jac=True,options=options)
+    if cfg.get('solver_method')=='bordered_newton':
+        pairs=self_pairs(rest,cfg['yarn_radius_mm'])
+        def local_safe(y):
+            p,_,_=unpack(y)
+            return self_contact(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],pairs)[2]>4e-6
+        def save(y,diagnostic):
+            if checkpoint is not None:checkpoint(*unpack(y),diagnostic)
+        solution,diagnostic=minimize_bordered(evaluate,x,count,local_safe,maxiter=cfg.get('bordered_max_iterations',200),callback=save)
+        opt=SimpleNamespace(x=solution,nit=diagnostic['iterations'],message=diagnostic['message'])
+    else:
+        diagnostic=None
+        opt=minimize(evaluate,x,method='BFGS',jac=True,options=options)
     if optimizer_memory is not None:
         saved=valid_inverse_hessian(getattr(opt,'hess_inv',None),len(x))
         optimizer_memory['inverse_hessian']=None if saved is None else saved.tolist()
     solution=opt.x;refinement=None
-    if cfg.get('newton_refinement_iterations',0) and np.max(abs(evaluate(solution)[1]))>1e-8:
+    if cfg.get('solver_method')!='bordered_newton' and cfg.get('newton_refinement_iterations',0) and np.max(abs(evaluate(solution)[1]))>1e-8:
         solution,refinement=minimize_banded(evaluate,solution,bandwidth=len(solution)-1,gtol=1e-8,maxiter=cfg['newton_refinement_iterations'],step=1e-6)
     p,c,a=unpack(solution);E,g,cg,ag,info=objective(p,rest,c,a,cfg,obstacle)
     residual=max(float(np.max(abs(g[1:-1]))),float(np.max(abs(cg))),float(np.linalg.norm(info['clamp_torque_residual_Nmm'])/44))
     lo,hi=cfg['clamp_z_safety_bound_mm'];inside=lo<c[2]<hi
     info.update(optimizer_success=bool(residual<=1e-7 and inside),force_residual_N=residual,iterations=int(opt.nit),message=str(opt.message),clamp_center_xyz_mm=c.tolist(),bar_angles_scaled_mm=a.tolist(),energy_Nmm=float(E),domain_guard_clear=bool(inside),centerline_xyz_mm=p.tolist())
     if refinement is not None:info['newton_refinement']=refinement
+    if diagnostic is not None:info['bordered_newton']=diagnostic
     return p,c,a,info

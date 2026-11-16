@@ -83,8 +83,11 @@ def contact_energy3d(q,rest,radius,k,obstacle,samples=8):
     for d,n in components:
         depth=np.maximum(radius-d,0)
         E+=.5*k*np.dot(weights*depth,depth)
-        gp=-k*(weights*depth)[:,None]*n
-        np.add.at(g,edge,(1-ts[:,None])*gp);np.add.at(g,edge+1,ts[:,None]*gp)
+        active=depth>0
+        if not np.any(active):continue
+        gp=-k*(weights[active]*depth[active])[:,None]*n[active]
+        at=edge[active];fraction=ts[active,None]
+        np.add.at(g,at,(1-fraction)*gp);np.add.at(g,at+1,fraction*gp)
     return float(E),g
 
 
@@ -110,6 +113,16 @@ def self_pairs(rest,radius):
 def self_contact(q,rest,radius,k,pairs):
     i,j=pairs;g=np.zeros_like(q)
     if len(i)==0:return 0.,g,float('inf')
+    # A segment's AABB contains it, so box distance is a rigorous lower bound.
+    # One exact pair supplies an upper bound on the global minimum. Keeping
+    # every pair below max(that bound, contact diameter) preserves BOTH the
+    # minimum distance and every nonzero penalty term, including gradients.
+    lo=np.minimum(q[:-1],q[1:]);hi=np.maximum(q[:-1],q[1:])
+    delta_box=np.maximum(np.maximum(lo[i]-hi[j],lo[j]-hi[i]),0.)
+    lower=np.linalg.norm(delta_box,axis=1);first=int(np.argmin(lower))
+    upper=closest_segments(q[i[first:first+1]],q[i[first:first+1]+1],q[j[first:first+1]],q[j[first:first+1]+1])[0][0]
+    keep=lower<=max(float(upper),2*radius)+1e-12
+    keep[first]=True;i,j=i[keep],j[keep]
     distance,delta,s,t=closest_segments(q[i],q[i+1],q[j],q[j+1]);depth=np.maximum(2*radius-distance,0)
     weight=rest[i]*rest[j]/(2*radius);n=delta/np.maximum(distance[:,None],1e-14)
     force=(-k*weight*depth)[:,None]*n

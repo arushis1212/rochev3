@@ -46,7 +46,7 @@ def parts():
         hole=base.cyl_x(-u0-th-1,u0+th+C['anchor_depth_mm']+1,C['anchor_bolt_clearance_mm']/2,C['anchor_bolt_v_mm'],w)
         anchor=anchor.cut(hole);spacer=spacer.cut(hole)
     for i,w in enumerate([-rodw,rodw]):
-        low,high=C['lift_guide_v_bounds_mm'];anchor=anchor.cut(base.cyl_y(low,vhi+1,C['lift_guide_radius_mm'],rod_u,w))
+        low,high=C['lift_guide_v_bounds_mm'];anchor=anchor.cut(base.cyl_y(vlo-1,high,C['lift_guide_radius_mm'],rod_u,w))
         parts['R08_guide_rod_'+str(i)]=base.cyl_y(low,high,C['lift_guide_radius_mm'],rod_u,w)
     for i,w in enumerate([-pinw,pinw]):parts['R03_lift_pin_'+str(i)]=base.cyl_x(-u0-th-C['lift_pin_protrusion_mm'],b,C['lift_pin_radius_mm'],v,w)
     parts.update(R05_lift_carriage=carriage,R06_anchor=anchor,R07_plate_spacer=spacer)
@@ -54,7 +54,7 @@ def parts():
         head=(u0+th+C['anchor_depth_mm'],C['anchor_bolt_v_mm'],w)
         rear=(-u0-th,C['anchor_bolt_v_mm'],w)
         parts['R09_anchor_screw_'+str(i)]=cq.Workplane(obj=base.place(base.bolt(3,C['anchor_bolt_length_mm']),head,(0,0,1),(1,0,0)))
-        parts['R10_anchor_nut_'+str(i)]=cq.Workplane(obj=base.place(base.nut(3),rear,(0,0,1),(-1,0,0)))
+        parts['R10_anchor_nut_'+str(i)]=cq.Workplane(obj=base.place(base.nut(3).rotate((0,0,0),(0,0,1),C['anchor_nut_rotation_deg']),rear,(0,0,1),(-1,0,0)))
     return parts
 def main():
     OUT.mkdir(exist_ok=True,parents=True);ps=parts();profiles={};manifest={}
@@ -67,6 +67,7 @@ def main():
         profiles['H02_gate' if name=='H02_contact_blade' else name]={'outer':wire_points(face.outerWire(),axes,.001),'holes':[wire_points(x,axes,.001) for x in face.innerWires()],'profile_axes':axes,'extrusion_axis':normal,'extrusion_bounds_mm':bounds[normal]}
     for name,p in ps.items():
         cq.exporters.export(p,str(OUT/(name+'.step')));cq.exporters.export(p,str(OUT/(name+'.stl')),tolerance=.03,angularTolerance=.1)
-    for n,d in [('manifest.json',manifest),('contact_profiles.json',profiles)]: (OUT/n).write_text(json.dumps(d,indent=2)+'\n')
+    auxiliary={name:{'bbox_mm':value['bbox_mm'],'moves_with_lift':name=='R05_lift_carriage'} for name,value in manifest.items() if name.startswith(('R05','R06','R07','R08','R09','R10'))}
+    for n,d in [('manifest.json',manifest),('contact_profiles.json',profiles),('auxiliary_envelopes.json',auxiliary)]: (OUT/n).write_text(json.dumps(d,indent=2)+'\n')
     print(json.dumps(manifest,indent=2))
 if __name__=='__main__':main()

@@ -24,6 +24,10 @@ def parts():
     v0,v1=C['stripper_outer_v_mm'];w0,w1=C['stripper_outer_w_mm'];u0=C['stripper_channel_mm']/2;th=C['stripper_plate_thickness_mm'];slot=C['stripper_slot_halfwidth_mm']
     def plate(a,b):
         p=base.box(a,b,v0,v1,w0,w1).cut(base.box(a-1,b+1,C['stripper_slot_bottom_v_mm'],v1+1,-slot,slot))
+        if C.get('stripper_lower_relief_halfwidth_mm'):
+            wide=C['stripper_lower_relief_halfwidth_mm'];top=C['stripper_lower_relief_top_v_mm'];end=C['stripper_relief_transition_top_v_mm'];bottom=C['stripper_slot_bottom_v_mm']
+            relief=cq.Workplane('YZ',origin=(a-1,0,0)).polyline([(bottom,-wide),(top,-wide),(end,-slot),(end,slot),(top,wide),(bottom,wide)]).close().extrude(b-a+2)
+            p=p.cut(relief)
         p=p.edges('|X').fillet(C['stripper_edge_radius_mm'])
         rad=C['lift_pin_radius_mm']+C['lift_slot_clearance_mm'];lo=C['lift_park_v_mm'];hi=C['lift_high_v_mm']
         for w in [-C['lift_pin_w_mm'],C['lift_pin_w_mm']]:
@@ -82,8 +86,10 @@ def main():
         cq.exporters.export(p,str(OUT/(name+'.step')));cq.exporters.export(p,str(OUT/(name+'.stl')),tolerance=.03,angularTolerance=.1)
     modeled={'H01_hook_body','H02_gate','H02_contact_blade','R01_front_stripper','R02_rear_stripper','R03_lift_pin_0','R03_lift_pin_1'}
     auxiliary={name:{'bbox_mm':value['bbox_mm'],'motion':motion_kind(name),'resettable':resets_with_shuttle(name),'moves_with_lift':motion_kind(name)=='lift'} for name,value in manifest.items() if name not in modeled}
-    from cad.transfer.contact_envelopes import carriage_boxes
-    auxiliary['R05_lift_carriage']['boxes_mm']=carriage_boxes(C,json.loads((ROOT/'spec/transfer_interfaces.json').read_text()))
+    from cad.transfer.contact_envelopes import carriage_boxes,anchor_boxes
+    interfaces=json.loads((ROOT/'spec/transfer_interfaces.json').read_text())
+    auxiliary['R05_lift_carriage']['boxes_mm']=carriage_boxes(C,interfaces)
+    auxiliary['R06_anchor']['boxes_mm']=anchor_boxes(C,interfaces)
     for n,d in [('manifest.json',manifest),('contact_profiles.json',profiles),('auxiliary_envelopes.json',auxiliary)]: (OUT/n).write_text(json.dumps(d,indent=2)+'\n')
     print(json.dumps(manifest,indent=2))
 if __name__=='__main__':main()

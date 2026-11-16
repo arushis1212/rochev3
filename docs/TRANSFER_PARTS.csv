@@ -1,0 +1,54 @@
+instance,physical,quantity,u_min_mm,u_max_mm,v_min_mm,v_max_mm,w_min_mm,w_max_mm,volume_mm3,process
+H01_hook_body,True,1,-60.0,5.0,-2.0,4.0,-0.8128,0.8128000000000002,340.6900767126774,Machined and finished metal tool
+H02_gate,True,1,-80.0,4.5,1.7,3.3256000000000006,-2.75,2.75,308.223458299933,Machined and finished metal tool
+H02_contact_blade,False,0,-80.0,4.5,1.7,3.3256000000000006,-0.8128000000000002,0.8128,219.92952605132047,Machined and finished metal tool
+R01_front_stripper,True,1,0.7999999999999998,2.4256000000000006,-12.0,24.0,-10.0,10.0,1019.6062266387135,Machined and finished metal tool
+R02_rear_stripper,True,1,-2.4256,-0.7999999999999996,-12.0,24.0,-10.0,10.0,1019.6062266387132,Machined and finished metal tool
+R08_guide_rod_0,True,1,4.2256,7.2256,-10.0,22.0,-8.5,-5.5,226.19467105846508,Cut polished metal pin or rod
+R08_guide_rod_1,True,1,4.2256,7.2256,-10.0,22.0,5.5,8.5,226.19467105846508,Cut polished metal pin or rod
+R03_lift_pin_0,True,1,-2.6256000000000004,26.0,-2.5,-1.5,-3.0,-2.0,22.482493666149992,Cut polished metal pin or rod
+R03_lift_pin_1,True,1,-2.6256000000000004,26.0,-2.5,-1.5,2.0,3.0,22.482493666149992,Cut polished metal pin or rod
+R05_lift_carriage,True,1,2.7256,49.0,-9.000000000000004,28.0,-10.0,10.0,3035.1698878325838,Printed and post-fitted structural part
+R06_anchor,True,1,2.4255999999999998,59.20000000000002,17.9999999,42.0,-24.0,24.000000000000004,15152.292866108513,Printed and post-fitted structural part
+R07_plate_spacer,True,1,-0.8,0.8,18.0,24.0,-6.0,6.0,86.14655113960158,Printed and post-fitted structural part
+R09_anchor_screw_0,True,1,-7.574400000000001,11.4256,18.16,23.84,-5.84,-0.16000000000000014,189.11382464961406,Purchased fastener or finished sleeve
+R10_anchor_nut_0,True,1,-4.8256,-2.4256,17.824573519457058,24.175426480542942,-5.75,-0.25,45.908843985365344,Purchased fastener or finished sleeve
+R09_anchor_screw_1,True,1,-7.574400000000001,11.4256,18.16,23.84,0.16000000000000014,5.84,189.11382464961403,Purchased fastener or finished sleeve
+R10_anchor_nut_1,True,1,-4.8256,-2.4256,17.824573519457058,24.175426480542942,0.25,5.75,45.908843985365344,Purchased fastener or finished sleeve
+TH_H03_barrel_stop,True,1,-95.0,-11.9999999,-8.0000001,15.0,-8.0000001,8.0000001,10258.42864561751,Printed and post-fitted structural part
+TH_H04_bearing,True,1,-48.0000001,-23.9999999,-27.510189430364637,18.624567890774696,-12.000000000000002,17.34975731354056,11908.786760505918,Purchased fastener or finished sleeve
+TH_H05_rear_collar,True,1,-55.2,-48.2,-11.0,15.0,-11.0,11.0,1521.7058417386418,Printed and post-fitted structural part
+TH_H06_front_collar,True,1,-23.80000000000001,-16.799999999999997,-11.0,15.0,-11.0,11.0,1521.7058417386418,Printed and post-fitted structural part
+TH_H07_gate_knob,True,1,-80.0,-68.0,-6.3,1.7000000000000002,-6.0,6.0,1075.6879390655952,Printed and post-fitted structural part
+TH_H08_stop_sleeve,True,1,-75.5875,-72.4125,3.3255999999999992,15.2,-1.5875,1.5875,37.40072275336797,Purchased fastener or finished sleeve
+TH_HW_M2x12_body_0,True,1,-58.99,-55.01,-2.19,1.79,-7.0,7.0,62.581153978039424,Purchased fastener or finished sleeve
+TH_HW_M2nut_body_0,True,1,-59.309401076758505,-54.690598923241495,-2.200000000000001,1.8,-6.6,-5.0,17.143702091137982,Purchased fastener or finished sleeve
+TH_HW_M2x12_body_1,True,1,-45.99,-42.01,-2.19,1.79,-7.0,7.0,62.581153978039424,Purchased fastener or finished sleeve
+TH_HW_M2nut_body_1,True,1,-46.309401076758505,-41.690598923241495,-2.200000000000001,1.8,-6.6,-5.0,17.143702091137985,Purchased fastener or finished sleeve
+TH_HW_M2x12_body_2,True,1,-21.99,-18.01,-2.19,1.79,-7.0,7.0,62.581153978039396,Purchased fastener or finished sleeve
+TH_HW_M2nut_body_2,True,1,-22.309401076758505,-17.690598923241495,-2.200000000000001,1.8,-6.6,-5.0,17.14370209113797,Purchased fastener or finished sleeve
+TH_HW_M3x20_collar_0,True,1,-54.540000000000006,-48.86,9.16,14.84,-13.0,10.0,217.38815853192224,Purchased fastener or finished sleeve
+TH_HW_M3nut_collar_0,True,1,-54.87542648054294,-48.524573519457064,9.25,14.75,-9.4,-7.0,45.908843985365294,Purchased fastener or finished sleeve
+TH_HW_M3x20_collar_1,True,1,-23.14,-17.46,9.16,14.84,-13.0,10.0,217.3881585319222,Purchased fastener or finished sleeve
+TH_HW_M3nut_collar_1,True,1,-23.475426480542943,-17.12457351945706,9.25,14.75,-9.4,-7.0,45.90884398536536,Purchased fastener or finished sleeve
+TH_HW_M2x20_gate,True,1,-75.99,-72.01,-4.800000000000001,17.2,-1.99,1.99,87.7138952067578,Purchased fastener or finished sleeve
+TH_HW_M2nut_gate,True,1,-76.3094010767585,-71.6905989232415,-3.9000000000000004,-2.3,-2.0,2.000000000000001,17.143702091137957,Purchased fastener or finished sleeve
+TH_HW_M3x12_roll_lock,True,1,-38.84,-33.16,7.286418537534536,22.866175271356568,-10.637796382520062,-1.4292282584241878,160.83949076730593,Purchased fastener or finished sleeve
+TH_HW_M3nut_roll_lock,True,1,-39.17542648054294,-32.82457351945706,10.335756055285312,14.472129133462671,-7.509244771050878,-1.5200870127467758,45.908843985365344,Purchased fastener or finished sleeve
+R11_lift_stop_sleeve,True,1,45.8,55.2,22.4125,25.5875,-1.5875,1.5875,29.607120686658426,Purchased fastener or finished sleeve
+R12_lift_stop_screw,True,1,43.2,61.2,22.01,25.99,-1.99,1.99,75.14752459239855,Purchased fastener or finished sleeve
+R13_lift_stop_nut,True,1,44.199999999999996,45.8,22.0,26.0,-2.309401076758503,2.3094010767585034,17.143702091137968,Purchased fastener or finished sleeve
+R14_rod_clamp_screw_0,True,1,3.7356,7.7156,19.01,22.99,-14.5,-8.5,37.44841274932105,Purchased fastener or finished sleeve
+R15_rod_clamp_nut_0,True,1,3.416198923241497,8.035001076758503,19.0,23.0,-11.6,-10.0,17.14370209113796,Purchased fastener or finished sleeve
+R14_rod_clamp_screw_1,True,1,3.7356,7.7156,19.01,22.99,8.5,14.5,37.44841274932105,Purchased fastener or finished sleeve
+R15_rod_clamp_nut_1,True,1,3.416198923241497,8.035001076758503,19.0,23.0,10.0,11.6,17.14370209113796,Purchased fastener or finished sleeve
+R16_pin_clamp_screw_0,True,1,21.01,24.99,-1.5,4.5,-4.49,-0.51,37.44841274932105,Purchased fastener or finished sleeve
+R17_pin_clamp_nut_0,True,1,20.690598923241495,25.309401076758505,0.0,1.6,-4.5,-0.4999999999999991,17.143702091137957,Purchased fastener or finished sleeve
+R16_pin_clamp_screw_1,True,1,21.01,24.99,-1.5,4.5,0.51,4.49,37.44841274932105,Purchased fastener or finished sleeve
+R17_pin_clamp_nut_1,True,1,20.690598923241495,25.309401076758505,0.0,1.6,0.5,4.500000000000001,17.143702091137957,Purchased fastener or finished sleeve
+R20_reset_sleeve,True,1,18.0,32.0,-7.5875,-4.4125,-1.5875,1.5875,44.09571166098067,Purchased fastener or finished sleeve
+R21_reset_front_washer,True,1,18.0,20.0,-9.0,-3.0,-3.0,3.0,40.71405904281948,Purchased fastener or finished sleeve
+R22_reset_rear_washer,True,1,32.0,34.0,-9.0,-3.0,-3.0,3.0,48.94601354292898,Purchased fastener or finished sleeve
+R23_reset_screw,True,1,14.0,36.0,-7.99,-4.01,-1.99,1.99,87.71389520675774,Purchased fastener or finished sleeve
+R24_reset_nut,True,1,14.500000000000002,16.1,-8.0,-3.9999999999999996,-2.309401076758503,2.3094010767585034,17.14370209113796,Purchased fastener or finished sleeve
+R19_pin_shuttle,True,1,19.9999999,26.0000001,-9.0,2.5,-5.0,5.0,542.2281160632623,Printed and post-fitted structural part

@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T13",
+  "revision": "TRANSFER-T14",
   "status": "Mechanism research subassembly",
   "base_revision": "R5-M2-D22",
   "units": "mm,N,g",
@@ -66,5 +66,8 @@
   "anchor_bolt_length_mm": 16.0,
   "anchor_nut_rotation_deg": 30.0,
   "pin_reset_stroke_mm": 6.0,
-  "pin_shuttle": true
+  "pin_shuttle": true,
+  "stripper_lower_relief_halfwidth_mm": 1.45,
+  "stripper_lower_relief_top_v_mm": 2.5,
+  "stripper_relief_transition_top_v_mm": 3.5
 }

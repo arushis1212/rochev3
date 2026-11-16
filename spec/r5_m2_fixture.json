@@ -1,0 +1,1634 @@
+{
+  "revision": "R5-M2-D21",
+  "units": "mm except explicit suffixes",
+  "cameras": false,
+  "tolerances": {
+    "printed_noncritical_mm": 0.2,
+    "cut_metal_outline_mm": 0.05,
+    "metal_thickness_mm": 0.0254,
+    "finished_gate_gap_mm": [
+      0.025,
+      0.075
+    ],
+    "finished_guide_width_mm": [
+      1.7256,
+      1.7756
+    ],
+    "yarn_contact_edge_radius_min_mm": 0.25,
+    "surface_Ra_max_um": 0.8,
+    "stock_strip_width_mm": 0.254,
+    "stock_tube_od_mm": 0.0508,
+    "stock_tube_id_mm": 0.0508,
+    "loaded_registration_design_allowance_mm": 0.2
+  },
+  "tool": {
+    "body_stock": "KS8245_C260_brass_strip_0.064x0.25x12in",
+    "gate_stock": "KS8245_C260_brass_strip_0.064x0.25x12in",
+    "body_thickness": 1.6256,
+    "body_back": -60.0,
+    "body_tip": 5.0,
+    "body_bottom": -2.0,
+    "body_top": 1.65,
+    "pocket_left": -3.0,
+    "pocket_right": 3.0,
+    "pocket_bottom": -0.6,
+    "pocket_root_radius": 0.8,
+    "nose_radius": 0.5,
+    "body_fix_holes_u": [
+      -57.0,
+      -44.0,
+      -20.0
+    ],
+    "body_fix_hole_d": 2.2,
+    "body_fix_hole_v": -0.2,
+    "gate_thickness": 1.6256,
+    "gate_width": 1.6256,
+    "gate_bottom": 1.7,
+    "gate_front_closed": 4.5,
+    "gate_back": -80.0,
+    "gate_tail_front": -65.0,
+    "gate_tail_width": 5.5,
+    "gate_tail_hole_u": -74.0,
+    "gate_tail_hole_d": 2.2,
+    "gate_stroke": 9.0,
+    "barrel_back": -60.0,
+    "barrel_front": -8.0,
+    "barrel_d": 16.0,
+    "barrel_slot_width": 1.8256,
+    "barrel_slot_bottom": -2.05,
+    "barrel_slot_top": 3.3628,
+    "bearing_back": -48.0,
+    "bearing_front": -24.0,
+    "bearing_bore_d": 16.4,
+    "bearing_outer_d": 24.0,
+    "collar_thickness": 7.0,
+    "collar_d": 22.0,
+    "collar_axial_gap": 0.2,
+    "collar_fix_d": 3.4,
+    "barrel_bolt_counterbore_d": 4.5,
+    "barrel_bolt_counterbore_depth": 3.0,
+    "barrel_nut_across_flats": 4.2,
+    "barrel_nut_depth": 3.0,
+    "mount_hole_pitch": 16.0,
+    "mount_hole_d": 3.4,
+    "mount_tab_width": 18.0,
+    "mount_tab_height": 16.0,
+    "mount_tab_offset": 18.0,
+    "gate_knob_length": 12.0,
+    "gate_knob_width": 12.0,
+    "gate_knob_height": 8.0,
+    "gate_knob_hole_d": 2.2,
+    "gate_stop_slot_length": 12.375,
+    "gate_stop_slot_width": 3.375,
+    "gate_stop_plate_thickness": 3.0,
+    "gate_stop_plate_width": 12.0,
+    "gate_stop_plate_back": -94.0,
+    "gate_stop_plate_front": -58.0,
+    "gate_stop_plate_offset_v": 12.0,
+    "mount_to_tip_u": 41.0,
+    "inclination_deg": 30.0,
+    "rolling_range_deg": [
+      -180.0,
+      180.0
+    ],
+    "stop_sleeve_od": 3.175,
+    "stop_sleeve_id": 2.4638,
+    "stop_slot_side_clearance": 0.2,
+    "stop_axial_clearance": 0.2,
+    "collar_bore_d": 16.2,
+    "nose_top": 4.0,
+    "nose_slot_bottom": 1.65,
+    "nose_slot_top": 3.4,
+    "nose_slot_end": 4.7,
+    "nose_ramp_start": 3.0,
+    "nose_ramp_end": 4.0,
+    "bearing_nut_access_width": 6.8,
+    "bearing_nut_access_height": 3.4,
+    "body_bolt_length": 12.0,
+    "collar_ear_half_width": 7.0,
+    "collar_bolt_length": 20.0,
+    "roll_lock_boss_length": 10.0,
+    "roll_lock_boss_width": 10.0,
+    "roll_lock_boss_top_v": 18.0,
+    "roll_lock_nut_v": [
+      12.0,
+      14.6
+    ],
+    "roll_lock_clearance": 0.3,
+    "gate_knob_nut_pocket_depth": 4.0,
+    "gate_stop_bolt_length": 20.0
+  },
+  "support_bank": {
+    "station_count": 4,
+    "station_pitch": 24.0,
+    "pair_centers": 12.0,
+    "first_station_x": 112.0,
+    "standard_tip_y": 160.0,
+    "tool_axis_z": 90.0,
+    "travel_toward_front": 17.0,
+    "travel_toward_rear": 25.0,
+    "layover_toward_front": 6.0,
+    "tools_per_station": 2,
+    "clamp_back_u": -60.0,
+    "clamp_front_u": -30.0,
+    "clamp_width": 20.0,
+    "clamp_height": 17.0,
+    "knockover_thickness": 1.6256,
+    "knockover_slot_width": 1.9256,
+    "knockover_slot_height": 6.9,
+    "knockover_y": 170.0,
+    "knockover_height": 20.0,
+    "knockover_width": 160.0,
+    "knockover_mount_holes_x": [
+      80.0,
+      224.0
+    ],
+    "clamp_bottom_v": -10.0,
+    "clamp_top_v": 7.0,
+    "bank_width": 108.0,
+    "bank_length": 100.0,
+    "bank_floor": 8.0,
+    "bank_top": 14.4,
+    "bank_cap_thickness": 4.0,
+    "bank_cap_slot_width": 12.4,
+    "bank_cap_bolt_x": [
+      100.0,
+      124.0,
+      148.0,
+      172.0,
+      196.0
+    ],
+    "bank_cap_bolt_y": [
+      178.0,
+      242.0
+    ],
+    "bank_origin": [
+      148.0,
+      210.0,
+      60.0
+    ],
+    "bank_carriage_top": 20.0,
+    "bank_carriage_length": 34.0,
+    "bank_mount_holes": [
+      [
+        102.0,
+        200.0
+      ],
+      [
+        194.0,
+        200.0
+      ],
+      [
+        102.0,
+        252.0
+      ],
+      [
+        194.0,
+        252.0
+      ]
+    ],
+    "knockover_mount_holes_z": [
+      86.0,
+      96.0
+    ],
+    "knockover_slot_bottom_z": 87.55,
+    "knockover_post_width": 16.0,
+    "knockover_post_depth": 12.0,
+    "knockover_post_front_y": 178,
+    "knockover_post_back_y": 190,
+    "pair_knob_width": 20.0,
+    "holder_nut_floor_v": -8.0,
+    "holder_nut_roof_v": -4.0,
+    "cover_bed_relief_clearance": 0.2,
+    "index_offsets_y": [
+      -17.0,
+      -6.0,
+      0.0,
+      25.0
+    ],
+    "index_arm_u": 18.5,
+    "index_arm_end_u": 22.0,
+    "index_arm_width": 8.0,
+    "index_arm_height": 6.0,
+    "index_pin_bore": 3.4,
+    "index_pin_length": 30.0,
+    "knockover_post_arm_floor_z": 82.0,
+    "pedestal_width": 16.0,
+    "pedestal_depth": 16.0,
+    "pedestal_height": 48.0,
+    "pedestal_lower_nut_z": [
+      16.0,
+      19.4
+    ],
+    "pedestal_upper_nut_z": [
+      54.0,
+      57.4
+    ],
+    "post_foot_width": 32.0,
+    "post_foot_height": 8.0,
+    "index_arm_start_u": 15.5,
+    "presentation_window_width": 9.0,
+    "presentation_window_bottom_z": 79.5,
+    "presentation_window_top_z": 98,
+    "compressed_yarn_diameter_admission_min": 0.25,
+    "guide_relief_local": [
+      -66,
+      -29,
+      3,
+      16,
+      -4.5,
+      4.5
+    ],
+    "post_arm_front_y": 171.6256,
+    "post_nut_y": [
+      182,
+      185.4
+    ]
+  },
+  "guide": {
+    "tube_od": 3.175,
+    "tube_wall": 0.3556,
+    "tube_length": 175.0,
+    "tip_edge_radius": 0.15,
+    "mount_engagement": 20.0,
+    "mount_bore": 8.1375,
+    "mount_block": [
+      30.0,
+      24.0,
+      16.0
+    ],
+    "mount_hole_pitch": 16.0,
+    "mount_hole_d": 3.4,
+    "tube_lock_hole_d": 3.4,
+    "compatibility_max_yarn_diameter": 0.6,
+    "lock_nut_inner_v": 6.0,
+    "lock_nut_outer_v": 8.6,
+    "lock_nut_access_width": 6.8,
+    "mount_back_u": -160.0,
+    "mount_hole_offset_v": -8.0,
+    "outer_tube_back": -168.0,
+    "outer_tube_front": -30,
+    "outer_tube_od": 7.9375,
+    "outer_tube_wall": 0.3556,
+    "bushing_od": 7.12,
+    "bushing_bore": 3.275,
+    "bushing_length": 10.0,
+    "rear_bushing_back": -100,
+    "front_bushing_back": -40,
+    "rear_flange_length": 0,
+    "rear_flange_d": 7.12,
+    "tip_offset_x": 0.0,
+    "work_z": 81.25,
+    "adapter_feed_bore": 6.0,
+    "inner_lock_u": -171.0,
+    "inner_lock_length": 6.0,
+    "inner_lock_nut_v": [
+      2.0,
+      3.8
+    ],
+    "outer_lock_nut_v": [
+      6.0,
+      8.6
+    ],
+    "inclination_deg": 20.0,
+    "exit_insert_od": 1.5875,
+    "exit_insert_wall": 0.3556,
+    "exit_insert_back": -18.0,
+    "exit_insert_front": 0.0,
+    "inner_tube_front": -3.0,
+    "exit_insert_bond_radial_nominal": 0.041275,
+    "outer_bush_bond_radial_nominal": 0.05315,
+    "bush_inner_bond_radial_nominal": 0.049375,
+    "guide_load_screen_N": 0.5,
+    "guide_E_sensitivity_MPa": [
+      80000.0,
+      110316.117,
+      120000.0
+    ],
+    "bonded_runout_acceptance_mm": 0.025,
+    "other_mount_error_allowance_mm": 0.04,
+    "reducer_back": -18,
+    "reducer_front": -3,
+    "reducer_od": 2.38125,
+    "reducer_wall": 0.3556,
+    "inner_lock_enabled": false
+  },
+  "slide": {
+    "outside_width": 40.0,
+    "channel_width": 20.4,
+    "floor_thickness": 6.0,
+    "wall_top": 12.4,
+    "carriage_length": 26.0,
+    "carriage_width": 20.0,
+    "carriage_flange_height": 6.0,
+    "neck_width": 12.0,
+    "carriage_top": 18.0,
+    "cap_inner_edge": 7.0,
+    "cap_thickness": 4.0,
+    "cap_bolt_y": 15.2,
+    "cap_bolt_end_inset": 10.0,
+    "endstop_thickness": 7.0,
+    "mount_hole_pitch": 16.0,
+    "bolt_clearance": 3.4,
+    "counterbore_d": 6.0,
+    "counterbore_depth": 3.2,
+    "nut_af": 5.8,
+    "nut_pocket_roof": 12.5,
+    "nut_thickness": 2.4,
+    "cap_nut_pocket_roof": 7.6,
+    "cap_bolt_length": 12.0,
+    "stack_bolt_length": 12.0,
+    "lock_bolt_length": 12.0,
+    "lengths": {
+      "x": 160.0,
+      "y": 160.0,
+      "z": 100.0,
+      "support": 80.0,
+      "gy": 180.0,
+      "gz": 140.0
+    },
+    "endstop_top": 16.0,
+    "endstop_hole_y": 3.8,
+    "endstop_nut_roof": 4.5,
+    "stop_cap_clearance": 0.2,
+    "lock_nut_inner_y": 15.2,
+    "lock_nut_outer_y": 18.0,
+    "lock_nut_access_width": 6.8,
+    "cap_counterbore_d": 6.4,
+    "cap_counterbore_depth": 1.8,
+    "cap_head_height": 1.65,
+    "cap_head_d": 5.7,
+    "z_lock_side": -1
+  },
+  "frame": {
+    "base_size": [
+      320,
+      480,
+      12
+    ],
+    "head_x_origin": [
+      125.0,
+      60.0,
+      12.0
+    ],
+    "guide_x_origin": [
+      178,
+      360,
+      12
+    ],
+    "z_axis_origin_height": 108.0,
+    "z_bracket_width": 40.0,
+    "z_bracket_depth": 40.0,
+    "z_bracket_height": 110.0,
+    "z_bracket_thickness": 6.0,
+    "tool_lateral_offset": 42.0,
+    "support_pedestal_height": 48.0,
+    "mount_bolt_d": 3.4,
+    "base_mount_bolt_length": 20.0,
+    "support_base_y": 210.0,
+    "support_base_z": 60.0,
+    "take_down_crossbar": [
+      100.0,
+      10.0,
+      6.0
+    ],
+    "take_down_holes": 4,
+    "take_down_hole_d": 2.0,
+    "take_down_drop_space": 80.0,
+    "feed_accumulator_stroke": 60.0,
+    "feed_target_N_reference_only": 0.063,
+    "feed_pulley_d": 20.0,
+    "feed_pulley_width": 6.0,
+    "feed_axle_d": 3.0,
+    "feed_total_moving_mass_g_ideal_only": 12.848,
+    "z_axis_center_above_xy": 60.0,
+    "foot_height": 8.0,
+    "tool_adapter_thickness": 8.0,
+    "tool_adapter_width": 54.0,
+    "tool_adapter_vertical_thickness": 8.0,
+    "tool_adapter_vertical_width": 26.0,
+    "tool_adapter_vertical_height": 30.0,
+    "foot_width": 20.0,
+    "foot_centers": [
+      [
+        20,
+        20
+      ],
+      [
+        300,
+        20
+      ],
+      [
+        20,
+        460
+      ],
+      [
+        300,
+        460
+      ]
+    ],
+    "foot_nut_roof_z": -2.5,
+    "foot_counterbore_depth": 2.0,
+    "adapter_counterbore_d": 6.4,
+    "adapter_counterbore_depth": 4.5,
+    "guide_lateral_offset": 30.0,
+    "guide_shelf_width": 62.0,
+    "guide_shelf_front_y": -42.0,
+    "guide_shelf_back_y": -4.0,
+    "guide_shelf_bottom_z": -16.0,
+    "guide_shelf_top_z": -8.0,
+    "guide_vertical_front_y": -12.0,
+    "guide_vertical_back_y": -4.0,
+    "head_adapter_lateral_trim_w": -14.0,
+    "guide_shelf_local_u": [
+      -166.0,
+      -128.0
+    ],
+    "guide_vertical_z": [
+      -30.0,
+      20.0
+    ],
+    "guide_z_axis_center_above_xy": 80.0,
+    "guide_z_bracket_height": 160.0,
+    "guide_vertical_left_x": -13.0,
+    "cloth_opening": [
+      96.0,
+      204.0,
+      128.0,
+      190.0
+    ],
+    "head_y_rail_kind": "gy",
+    "tool_roll_clearance_requirement": {
+      "axis_separation_mm": 42.0,
+      "rail_half_width_mm": 20.0
+    }
+  },
+  "fasteners": {
+    "M2": {
+      "clearance": 2.2,
+      "head_d_max": 3.98,
+      "head_height_max": 2.0,
+      "nut_af_max": 4.0,
+      "nut_height_max": 1.6
+    },
+    "M3": {
+      "clearance": 3.4,
+      "head_d_max": 5.68,
+      "head_height_max": 3.0,
+      "nut_af_max": 5.5,
+      "nut_height_max": 2.4
+    }
+  },
+  "physics": {
+    "brass_E_reference_MPa": 110316.117,
+    "screen_loads_N": [
+      0.05,
+      1.0,
+      2.0
+    ],
+    "screen_only": true,
+    "measured_properties_available": false
+  },
+  "assembly": {
+    "head_reference_tip": [
+      133.5,
+      150.0,
+      81.5
+    ],
+    "guide_reference_tip": [
+      136.0,
+      148.0,
+      81.25
+    ],
+    "head_roll_deg": 0.0,
+    "target_station_x": 136.0,
+    "head_capture_offset_x": -2.5
+  },
+  "stand": {
+    "side_x_ranges": [
+      [
+        11.0,
+        29.0
+      ],
+      [
+        291.0,
+        309.0
+      ]
+    ],
+    "side_y": [
+      10.0,
+      470.0
+    ],
+    "side_z": [
+      -408.0,
+      -8.0
+    ],
+    "back_x": [
+      29.0,
+      291.0
+    ],
+    "back_y": [
+      452.0,
+      470.0
+    ],
+    "back_z": [
+      -408.0,
+      -8.0
+    ],
+    "bracket_z": [
+      -70.0,
+      -350.0
+    ],
+    "top_nut_z": [
+      -14.0,
+      -11.6
+    ],
+    "top_bolt_length": 25.0,
+    "wood_thickness": 18.0
+  },
+  "take_down": {
+    "center": [
+      150.0,
+      165.0,
+      50.0
+    ],
+    "center_z_range": [
+      -320.0,
+      50.0
+    ],
+    "jaw_width": 100.0,
+    "jaw_height": 10.0,
+    "jaw_thickness": 4.0,
+    "pad_width": 88,
+    "pad_thickness": 1.0,
+    "gap": 2.0,
+    "bolt_x": [
+      -46.0,
+      46.0
+    ],
+    "bolt_length": 16.0,
+    "target_total_mass_g": 20.0,
+    "ideal_force_N": 0.196133
+  },
+  "feeder": {
+    "tower_bbox": [
+      12.0,
+      84.0,
+      416.0,
+      422.0,
+      12.0,
+      260.0
+    ],
+    "tower_window": [
+      32.0,
+      64.0,
+      110.0,
+      210.0
+    ],
+    "rod_x": [
+      24.0,
+      72.0
+    ],
+    "rod_y": 400.0,
+    "rod_z": [
+      116.0,
+      204.0
+    ],
+    "rod_d": 3.0,
+    "rod_bore": 3.2,
+    "rod_block_z": [
+      120.0,
+      200.0
+    ],
+    "fixed_pulleys": [
+      [
+        32,
+        406,
+        230
+      ],
+      [
+        64,
+        406,
+        230
+      ]
+    ],
+    "moving_pulley_x": 48.0,
+    "moving_pulley_y": 406,
+    "moving_center_z_range": [
+      130.0,
+      190.0
+    ],
+    "moving_center_z": 160.0,
+    "pulley_groove_radius": 8.0,
+    "pulley_flange_radius": 10.0,
+    "pulley_half_width": 3.0,
+    "bearing": [
+      3.0,
+      10.0,
+      4.0
+    ],
+    "bearing_sku": "623-2Z; qualified supplier and startup torque needed",
+    "main_total_mass_g": 12.848,
+    "counterweight_mass_g": 9.789,
+    "counter_pulley": [
+      88,
+      406,
+      250
+    ],
+    "counterweight_x": 96.0,
+    "counterweight_y": 406,
+    "counterweight_park_z": 118.0014975308,
+    "counterweight_low_sum_z": 320.0,
+    "rope_d": 1.0,
+    "rope_geometric_length_mm": 214.7067455089296,
+    "rope_cut_length_mm": 254,
+    "park_anchor": [
+      48,
+      406,
+      216
+    ],
+    "fairlead_center": [
+      102,
+      406,
+      238
+    ],
+    "fairlead_od": 6.0,
+    "fairlead_id": 3.0,
+    "fairlead_length": 10.0,
+    "base_bracket_x": [
+      20.0,
+      76.0
+    ],
+    "base_bracket_y": 434.0,
+    "low_nominal_tension_N": 0.014999270675,
+    "high_nominal_tension_N": 0.0629979179,
+    "nip_shift_x": -4,
+    "carrier_geometry": {
+      "bbox": [
+        18,
+        78,
+        397,
+        414,
+        -3,
+        3
+      ],
+      "front_relief": [
+        36,
+        60,
+        396,
+        410,
+        -4,
+        4
+      ],
+      "anchor_bbox": [
+        46,
+        50,
+        403,
+        414,
+        12,
+        16
+      ],
+      "lightening_windows": [
+        [
+          29,
+          35,
+          398,
+          407,
+          -4,
+          4
+        ],
+        [
+          61,
+          67,
+          398,
+          407,
+          -4,
+          4
+        ]
+      ],
+      "rod_bore_radius": 1.6,
+      "axle_bore_radius": 1.7,
+      "anchor_hole_z": 14,
+      "anchor_hole_radius": 0.75,
+      "axle_nut_y": 414,
+      "anchor_stem": [
+        46,
+        50,
+        410,
+        414,
+        -3,
+        16
+      ],
+      "anchor_x": 48,
+      "anchor_y": 406
+    },
+    "mass_admission": {
+      "polymer_density_max_g_cm3": 1.3,
+      "steel_density_max_g_cm3": 8.1,
+      "brass_density_max_g_cm3": 8.7,
+      "bearing_max_g": 1.6,
+      "additional_cord_adhesive_max_g": 0.25,
+      "total_mass_tolerance_g": 0.05
+    },
+    "pulley_plane_y": 406,
+    "counter_lead_pulley": [
+      56,
+      406,
+      250
+    ],
+    "moving_axle_length": 20,
+    "spacer_lengths": {
+      "fixed_back": 8,
+      "moving_back": 2,
+      "counter_back": 2,
+      "front": 4
+    },
+    "mode_support_pin": {
+      "diameter": 3,
+      "length": 25,
+      "underhead": [
+        28,
+        422,
+        155.5
+      ],
+      "carrier_center_z": 160,
+      "normal": [
+        0,
+        1,
+        0
+      ]
+    },
+    "ballast_regions": [
+      [
+        29,
+        35,
+        398,
+        407,
+        -3,
+        3
+      ],
+      [
+        61,
+        67,
+        398,
+        407,
+        -3,
+        3
+      ]
+    ],
+    "pulley_head_reliefs": {
+      "inner_radius": 4.2,
+      "outer_radius": 8.8,
+      "y": [
+        409.5,
+        412
+      ]
+    },
+    "idler_mount": [
+      76,
+      256
+    ],
+    "idler_bracket_bbox": [
+      72,
+      100,
+      410,
+      416,
+      244,
+      260
+    ],
+    "cord_geometry": {
+      "idler_height_mm": 250.0,
+      "idler_span_mm": 32.0,
+      "end_horizontal_offset_mm": 8.0,
+      "main_eye_above_center_mm": 14.0,
+      "counter_eye_above_center_mm": 10.0,
+      "midstroke_main_center_mm": 160.0,
+      "midstroke_counter_center_mm": 160.0
+    }
+  },
+  "handoff_aperture_admission": {
+    "plane_y": 165.0,
+    "x_half_clear": 4.5,
+    "z_clear": [
+      84.0,
+      89.5
+    ]
+  },
+  "handoff_trial": {
+    "station_index": 1,
+    "phases": [
+      {
+        "id": "S1_stage",
+        "head_tip": [
+          126,
+          145,
+          84
+        ],
+        "guide_tip": [
+          136,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S1_present",
+        "head_tip": [
+          126,
+          145,
+          84
+        ],
+        "guide_tip": [
+          136,
+          148,
+          81.25
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S2_open_before_sweep",
+        "head_tip": [
+          126,
+          145,
+          84
+        ],
+        "guide_tip": [
+          136,
+          148,
+          81.25
+        ],
+        "head_gate": 9,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S2_first_capture_open",
+        "head_tip": [
+          133.5,
+          150,
+          81.5
+        ],
+        "guide_tip": [
+          136,
+          148,
+          81.25
+        ],
+        "head_gate": 9,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S3_first_capture_closed",
+        "head_tip": [
+          133.5,
+          150,
+          81.5
+        ],
+        "guide_tip": [
+          136,
+          148,
+          81.25
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S3_withdraw_axially",
+        "head_tip": [
+          133.5,
+          150,
+          81.5
+        ],
+        "guide_tip": [
+          136,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S3_park_after_clear",
+        "head_tip": [
+          133.5,
+          150,
+          81.5
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S4_head_aside",
+        "head_tip": [
+          119.5,
+          140,
+          87
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S4_open_supports",
+        "head_tip": [
+          119.5,
+          140,
+          87
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S4_support_advance",
+        "head_tip": [
+          119.5,
+          140,
+          87
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          -17,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S4_support_close",
+        "head_tip": [
+          119.5,
+          140,
+          87
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          -17,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S4_support_castoff",
+        "head_tip": [
+          119.5,
+          140,
+          87
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 0,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S5_move_closed",
+        "head_tip": [
+          136,
+          167.6794919243,
+          114
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S5_before_clear",
+        "head_tip": [
+          136,
+          167.6794919243,
+          114
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 9,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S5_extended",
+        "head_tip": [
+          136,
+          185,
+          104
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 9,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S6_over_left",
+        "head_tip": [
+          136,
+          185,
+          104
+        ],
+        "guide_tip": [
+          132,
+          181,
+          111
+        ],
+        "head_gate": 9,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S6_over_right",
+        "head_tip": [
+          136,
+          185,
+          104
+        ],
+        "guide_tip": [
+          140,
+          181,
+          111
+        ],
+        "head_gate": 9,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S6_lower_right",
+        "head_tip": [
+          136,
+          185,
+          104
+        ],
+        "guide_tip": [
+          140,
+          181,
+          107
+        ],
+        "head_gate": 9,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S6_second_closed",
+        "head_tip": [
+          136,
+          185,
+          104
+        ],
+        "guide_tip": [
+          140,
+          181,
+          107
+        ],
+        "head_gate": 0,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S6_withdraw_guide",
+        "head_tip": [
+          136,
+          185,
+          104
+        ],
+        "guide_tip": [
+          140,
+          210,
+          117.555136794
+        ],
+        "head_gate": 0,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "HIGH"
+      },
+      {
+        "id": "S7_draw_both",
+        "head_tip": [
+          136,
+          167.6794919243,
+          114
+        ],
+        "guide_tip": [
+          140,
+          210,
+          117.555136794
+        ],
+        "head_gate": 0,
+        "head_roll": 20,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S8_head_clear",
+        "head_tip": [
+          119.5,
+          150,
+          94
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 90,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S8_open_retracted",
+        "head_tip": [
+          119.5,
+          150,
+          94
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 90,
+        "support_q": [
+          0,
+          25,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S8_restore",
+        "head_tip": [
+          119.5,
+          150,
+          94
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 90,
+        "support_q": [
+          0,
+          -6,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S9_layover_mid",
+        "head_tip": [
+          136,
+          152,
+          94
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 90,
+        "support_q": [
+          0,
+          -6,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S9_layover_end",
+        "head_tip": [
+          149.5,
+          152,
+          94
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 90,
+        "support_q": [
+          0,
+          -6,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S9_capture_on_supports",
+        "head_tip": [
+          149.5,
+          152,
+          94
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 90,
+        "support_q": [
+          0,
+          -6,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      },
+      {
+        "id": "S10_store",
+        "head_tip": [
+          149.5,
+          152,
+          94
+        ],
+        "guide_tip": [
+          96,
+          190,
+          96.5367498391805
+        ],
+        "head_gate": 0,
+        "head_roll": 90,
+        "support_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "support_gate_q": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "feed_mode": "LOW"
+      }
+    ],
+    "guide_parks_x": [
+      96,
+      200
+    ],
+    "midpoint_checks": [],
+    "reverse_checks": [],
+    "seated_strand_test": {
+      "radius_mm": 0.3,
+      "centers_uv": [
+        [
+          -1.2,
+          0.55
+        ],
+        [
+          1.2,
+          0.55
+        ]
+      ],
+      "w_extent_mm": [
+        -3,
+        3
+      ],
+      "gate_offsets": [
+        0,
+        4.5,
+        9
+      ]
+    }
+  }
+}

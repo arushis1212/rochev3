@@ -1,38 +1,38 @@
 {
-  "revision": "TRANSFER-T8",
-  "scope": "Nominal local46-part assembly at five discrete mechanism poses; saved203-state pre-seated bight-path auxiliary clearances",
+  "revision": "TRANSFER-T13",
+  "scope": "Nominal local52-part assembly at five discrete mechanism poses; saved203-state pre-seated bight-path auxiliary clearances",
   "poses": [
     {
       "phase": "park",
-      "parts": 46,
+      "parts": 52,
       "overlaps": [],
       "carriage_plate_distance_mm": 0.2999999999999998
     },
     {
       "phase": "extended",
-      "parts": 46,
+      "parts": 52,
       "overlaps": [],
       "carriage_plate_distance_mm": 0.2999999999999998
     },
     {
       "phase": "lifted",
-      "parts": 46,
+      "parts": 52,
       "overlaps": [],
       "carriage_plate_distance_mm": 0.2999999999999998
     },
     {
       "phase": "closed",
-      "parts": 46,
+      "parts": 52,
       "overlaps": [],
       "carriage_plate_distance_mm": 0.2999999999999998
     },
     {
       "phase": "withdrawn",
-      "parts": 46,
+      "parts": 52,
       "overlaps": [],
       "carriage_plate_distance_mm": 0.2999999999999998
     }
   ],
   "saved_yarn_states": 203,
-  "minimum_auxiliary_gap_lower_bound_mm": 0.0923117622904866
+  "minimum_auxiliary_gap_lower_bound_mm": 0.09231186229048643
 }

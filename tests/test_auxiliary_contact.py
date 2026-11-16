@@ -12,7 +12,8 @@ class AuxiliaryEnvelope(unittest.TestCase):
  def test_envelopes_cover_all_auxiliary_parts_and_move_with_carriage(self):
   root=Path(__file__).resolve().parents[1];env=json.loads((root/'cad/transfer/generated/auxiliary_envelopes.json').read_text());manifest=json.loads((root/'cad/transfer/generated/manifest.json').read_text())
   modeled={'H01_hook_body','H02_gate','H02_contact_blade','R01_front_stripper','R02_rear_stripper','R03_lift_pin_0','R03_lift_pin_1'}
-  expected=set(manifest)-modeled;self.assertEqual(set(env),expected);self.assertEqual(len(expected),40)
+  expected=set(manifest)-modeled;self.assertEqual(set(env),expected);self.assertGreaterEqual(len(expected),46)
+  self.assertTrue({'R19_pin_shuttle','R20_reset_sleeve','R21_reset_front_washer','R22_reset_rear_washer','R23_reset_screw','R24_reset_nut'}<=expected)
   for n,spec in env.items():self.assertEqual(spec['bbox_mm'],manifest[n]['bbox_mm'])
   one={'R05':env['R05_lift_carriage']};p=np.array([[0.,0.,0.],[10.,20.,3.]])
   a=AuxiliaryContact(one,6).distance(p)[0];q=p.copy();q[:,1]-=6

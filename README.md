@@ -14,7 +14,7 @@ engineering around a small, inexpensive physical prototype.
 ## Explore the design
 
 - **83 component variants:** editable CadQuery geometry with individual STEP/STL exports.
-- **522 assembly solids:** tooling, positioning stages, support bank, feeder,
+- **522 base-assembly solids:** tooling, positioning stages, support bank, feeder,
   fasteners, stand and fabric take-down.
 - **Mechanically controlled yarn:** a closable hook, paired supports, guided yarn
   presentation and a gravity/counterweight feeder.
@@ -70,3 +70,5 @@ The toolkit also includes [three-dimensional CAD contact and strand mechanics](d
 [Material length and contact integration](docs/CONTACT_INTEGRATION.md) documents spatial quadrature and conservative motion bounds, with executable regression examples.
 
 [Coupled equilibrium and contact algorithms](docs/NUMERICAL_METHODS.md) describe the banded-clamp solver, exact contact broad phase and adaptive interpolation certificates.
+
+The [T13 transfer station](docs/LOOP_TRANSFER.md) adds an installed bracket and mechanically stopped pin shuttle. Its [557-solid assembled STEP](cad/transfer/installed/installation.step) and [nominal position checks](docs/INSTALLED_GEOMETRY.json) accompany the editable design.

@@ -3,22 +3,22 @@ import numpy as np
 from physics.roche_contact3d import HookContact,extrusion_distance,extrusion_contact_distance
 
 class TransferContact:
-    def __init__(self,profiles,advance,gate,plates=True,lift_mm=0.):
-        self.profiles=profiles;self.advance=advance;self.hook=HookContact(profiles,gate);self.plates=plates;self.lift_mm=lift_mm
+    def __init__(self,profiles,advance,gate,plates=True,lift_mm=0.,reset_mm=0.):
+        self.profiles=profiles;self.advance=advance;self.hook=HookContact(profiles,gate);self.plates=plates;self.lift_mm=lift_mm;self.reset_mm=reset_mm
     def components(self,p):
         local=p.copy();local[:,0]-=self.advance;parts=self.hook.components(local)
         if self.plates:
             parts += [extrusion_distance(p,self.profiles[name]) for name in ['R01_front_stripper','R02_rear_stripper']]
         for name in ['R03_lift_pin_0','R03_lift_pin_1']:
             if name in self.profiles:
-                local=p.copy();local[:,1]-=self.lift_mm;parts.append(extrusion_distance(local,self.profiles[name]))
+                local=p.copy();local[:,1]-=self.lift_mm;local[:,0]-=self.reset_mm;parts.append(extrusion_distance(local,self.profiles[name]))
         return parts
     def contact_components(self,p,radius):
         local=p.copy();local[:,0]-=self.advance;parts=self.hook.contact_components(local,radius)
         if self.plates:parts += [extrusion_contact_distance(p,self.profiles[name],radius) for name in ['R01_front_stripper','R02_rear_stripper']]
         for name in ['R03_lift_pin_0','R03_lift_pin_1']:
             if name in self.profiles:
-                local=p.copy();local[:,1]-=self.lift_mm;parts.append(extrusion_contact_distance(local,self.profiles[name],radius))
+                local=p.copy();local[:,1]-=self.lift_mm;local[:,0]-=self.reset_mm;parts.append(extrusion_contact_distance(local,self.profiles[name],radius))
         return parts
     def distance(self,p):
         parts=self.components(p);d,g=parts[0]

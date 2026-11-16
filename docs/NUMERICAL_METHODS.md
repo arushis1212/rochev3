@@ -24,3 +24,5 @@ suite with the README's command.
 A [nested endpoint experiment](ENDPOINT_REFINEMENT.json) records33 through2049 material nodes. The final refinement changes rod energy by0.133%, clamp position by0.01025mm and material-point position by0.06370mm. These quantities describe one synthetic, quasistatic castoff endpoint on the T6 reference geometry.
 
 Exact line/arc distance evaluation also has a compiled numerical implementation. Random points, profile vertices and independent reference calculations check equivalence; no fast-math transformations are enabled. Adaptive moving-solid subdivision uses the same Lipschitz bounds with smaller temporal cells.
+
+Yarn gravity is available as a reference-length mass term. Each edge contributes half its weight to each endpoint; total nodal weight equals the prescribed linear mass times total reference length and gravity. A source reference of1786dtex corresponds to0.1786g/m. The source cotton mass and the declared synthetic stiffness parameters remain distinct inputs. Analytic tests check total force, energy translation and gradients.

@@ -1,9 +1,9 @@
 {
-  "revision": "TRANSFER-T8",
+  "revision": "TRANSFER-T13",
   "gate_stop_back_u_mm": -95.0,
   "lift_ear_u_mm": [
-    14.0,
-    17.0
+    46,
+    49
   ],
   "lift_ear_v_mm": [
     6.0,
@@ -11,18 +11,18 @@
   ],
   "lift_ear_half_w_mm": 4.0,
   "fork_u_mm": [
-    21.2,
-    27.2
+    53.2,
+    59.2
   ],
   "fork_v_mm": [
-    20.0,
-    28.0
+    20,
+    42
   ],
-  "fork_wing_inner_w_mm": 6.5,
+  "fork_wing_inner_w_mm": 20.0,
   "lift_stop_center_v_mm": 24.0,
   "lift_stop_sleeve_u_mm": [
-    13.8,
-    23.2
+    45.8,
+    55.2
   ],
   "lift_stop_pilot_d_mm": 3.195,
   "lift_stop_screw_length_mm": 16.0,
@@ -40,7 +40,7 @@
   "pin_counterbore_d_mm": 4.18,
   "scope": "Dimensioned local manual stop and clamp hardware; no whole-machine mount or qualified retention load claimed.",
   "frame_port_d_mm": 3.4,
-  "frame_port_v_mm": 24.0,
+  "frame_port_v_mm": 38.0,
   "frame_port_w_mm": [
     -7.0,
     7.0
@@ -50,5 +50,64 @@
     4.5,
     6.1
   ],
-  "pin_clamp_boss_halfwidth_mm": 3.5
+  "pin_clamp_boss_halfwidth_mm": 3.5,
+  "fork_wing_outer_w_mm": 24.0,
+  "anchor_crossbar_u_mm": [
+    2.4256,
+    8.4256
+  ],
+  "pin_shuttle_u_mm": [
+    20,
+    26
+  ],
+  "pin_shuttle_v_mm": [
+    -9,
+    2.5
+  ],
+  "pin_shuttle_half_w_mm": 5.0,
+  "pin_end_u_mm": 26.0,
+  "reset_bridge_u_mm": [
+    14.5,
+    18.0
+  ],
+  "reset_bridge_v_mm": [
+    -9,
+    -3
+  ],
+  "reset_stop_axis_v_mm": -6.0,
+  "reset_sleeve_u_mm": [
+    18,
+    32
+  ],
+  "reset_washer_front_u_mm": [
+    18,
+    20
+  ],
+  "reset_washer_rear_u_mm": [
+    32,
+    34
+  ],
+  "reset_stop_screw_seat_u_mm": 34.0,
+  "reset_stop_screw_length_mm": 20.0,
+  "reset_nut_face_u_mm": 16.1,
+  "anchor_crossbar_v_mm": [
+    24,
+    30
+  ],
+  "verge_relief_global_box_mm": [
+    110,
+    160,
+    169.8,
+    171.8256,
+    90,
+    100.2
+  ],
+  "bank_relief_global_box_mm": [
+    149.8,
+    194.2,
+    177.8,
+    284.2,
+    79.8,
+    107.5
+  ]
 }

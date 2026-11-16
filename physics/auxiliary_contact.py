@@ -11,11 +11,12 @@ def box_distance3d(points,lo,hi):
     return distance,normal
 
 class AuxiliaryContact:
-    def __init__(self,envelopes,lift=0.,advance=0.,gate=0.):self.envelopes=envelopes;self.lift=lift;self.advance=advance;self.gate=gate
+    def __init__(self,envelopes,lift=0.,advance=0.,gate=0.,reset=0.):self.reset=reset;self.envelopes=envelopes;self.lift=lift;self.advance=advance;self.gate=gate
     def bounds(self,spec):
         b=np.array(spec['bbox_mm']);lo=b[::2].copy();hi=b[1::2].copy()
         kind=spec.get('motion','lift' if spec.get('moves_with_lift') else 'fixed')
         shift={'fixed':[0,0,0],'lift':[0,self.lift,0],'head':[self.advance,0,0],'gate':[self.advance-self.gate,0,0]}[kind]
+        if spec.get('resettable',False):shift[0]+=self.reset
         return lo+shift,hi+shift
     def components(self,p):
         result=[]

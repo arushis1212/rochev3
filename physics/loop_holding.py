@@ -61,10 +61,19 @@ def contact_counts(rest,cfg):
     return minimum if spacing is None else np.maximum(minimum,np.ceil(rest/spacing).astype(int))
 
 
+def rod_gravity(q,rest,linear_density_g_per_m):
+    if not np.isfinite(linear_density_g_per_m) or linear_density_g_per_m<0:raise ValueError('Nonnegative finite yarn linear density required')
+    edge_weight=np.asarray(rest)*linear_density_g_per_m*.00980665/1000
+    nodal=np.zeros(len(q));nodal[:-1]+=edge_weight/2;nodal[1:]+=edge_weight/2
+    gradient=np.zeros_like(q);gradient[:,2]=nodal
+    return float(nodal@q[:,2]),gradient
+
+
 def objective(q,rest,center,angles,cfg,obstacle):
     n,da,db=bar_direction(angles);offsets=np.array(cfg['active_attachment_offsets_x_mm'])
     p=q.copy();p[[0,-1]]=center+offsets[:,None]*n
     E,g=energy_gradient(p,rest,cfg['EA_N'],cfg['B_Nmm2'])
+    G,gg=rod_gravity(p,rest,cfg.get('yarn_linear_density_g_per_m',0.));E+=G;g+=gg
     C,h=contact_energy3d(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],obstacle,contact_counts(rest,cfg))
     S,j,_=self_contact(p,rest,cfg['yarn_radius_mm'],cfg['penalty_N_per_mm2'],self_pairs(rest,cfg['yarn_radius_mm']));g+=h+j
     xx=np.array(cfg['neighbor_support_x_mm']);yz=cfg['support_contact_yz_mm'];anchors=np.column_stack([xx,np.full(len(xx),yz[0]),np.full(len(xx),yz[1])]);po=xx-cfg['clamp_initial_center_xyz_mm'][0]

@@ -1,0 +1,241 @@
+{
+  "revision": "TRANSFER-T13-ROUTE2",
+  "scope": "Discrete nominal single-station assembly including physical bracket and reset hardware",
+  "poses": [
+    {
+      "phase": "park",
+      "parts": 557,
+      "advance_mm": 0,
+      "gate_mm": 16.5,
+      "lift_mm": 0,
+      "head_tip": [
+        136.0,
+        167.6794919243,
+        114.0
+      ],
+      "guide_tip": [
+        96,
+        190,
+        96.5367498391805
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "extended",
+      "parts": 557,
+      "advance_mm": 8.75,
+      "gate_mm": 16.5,
+      "lift_mm": 0,
+      "head_tip": [
+        136.0,
+        175.25721420741385,
+        109.625
+      ],
+      "guide_tip": [
+        96,
+        190,
+        96.5367498391805
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "lifted",
+      "parts": 557,
+      "advance_mm": 8.75,
+      "gate_mm": 16.5,
+      "lift_mm": 6,
+      "head_tip": [
+        136.0,
+        175.25721420741385,
+        109.625
+      ],
+      "guide_tip": [
+        96,
+        190,
+        96.5367498391805
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "closed",
+      "parts": 557,
+      "advance_mm": 8.75,
+      "gate_mm": 0,
+      "lift_mm": 6,
+      "head_tip": [
+        136.0,
+        175.25721420741385,
+        109.625
+      ],
+      "guide_tip": [
+        96,
+        190,
+        96.5367498391805
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "withdrawn",
+      "parts": 557,
+      "advance_mm": -8.5,
+      "gate_mm": 0,
+      "lift_mm": 6,
+      "head_tip": [
+        136.0,
+        160.31827599213227,
+        118.25
+      ],
+      "guide_tip": [
+        96,
+        190,
+        96.5367498391805
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "S6_over_left",
+      "parts": 557,
+      "advance_mm": 8.75,
+      "gate_mm": 16.5,
+      "lift_mm": 6,
+      "head_tip": [
+        136.0,
+        175.25721420741385,
+        109.625
+      ],
+      "guide_tip": [
+        136.26255452101202,
+        186.93374267164333,
+        127.34934055606963
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "S6_over_right",
+      "parts": 557,
+      "advance_mm": 8.75,
+      "gate_mm": 16.5,
+      "lift_mm": 6,
+      "head_tip": [
+        136.0,
+        175.25721420741385,
+        109.625
+      ],
+      "guide_tip": [
+        157.87548479908793,
+        183.00051102339813,
+        120.5367835033711
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "S6_align_right",
+      "parts": 557,
+      "advance_mm": 8.75,
+      "gate_mm": 16.5,
+      "lift_mm": 6,
+      "head_tip": [
+        136.0,
+        175.25721420741385,
+        109.625
+      ],
+      "guide_tip": [
+        157.87548479908793,
+        178.67038400447595,
+        123.0367835033711
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "S6_lower_right",
+      "parts": 557,
+      "advance_mm": 8.75,
+      "gate_mm": 16.5,
+      "lift_mm": 6,
+      "head_tip": [
+        136.0,
+        175.25721420741385,
+        109.625
+      ],
+      "guide_tip": [
+        151.20609200423738,
+        169.50838095181334,
+        107.16772871705831
+      ],
+      "roll_deg": 20,
+      "joint_limit_violations": [],
+      "overlaps": []
+    },
+    {
+      "phase": "S8_head_clear",
+      "parts": 557,
+      "advance_mm": 0,
+      "gate_mm": 0,
+      "lift_mm": 6,
+      "head_tip": [
+        119.5,
+        150,
+        94
+      ],
+      "guide_tip": [
+        96,
+        190,
+        96.5367498391805
+      ],
+      "roll_deg": 90,
+      "joint_limit_violations": [],
+      "overlaps": []
+    }
+  ],
+  "reset_poses": [
+    {
+      "phase": "reset_middle",
+      "parts": 557,
+      "lift_mm": 6,
+      "reset_mm": 3,
+      "overlaps": []
+    },
+    {
+      "phase": "reset_out",
+      "parts": 557,
+      "lift_mm": 6,
+      "reset_mm": 6,
+      "overlaps": []
+    },
+    {
+      "phase": "reset_lowered",
+      "parts": 557,
+      "lift_mm": 0,
+      "reset_mm": 6,
+      "overlaps": []
+    },
+    {
+      "phase": "reset_returned",
+      "parts": 557,
+      "lift_mm": 0,
+      "reset_mm": 0,
+      "overlaps": []
+    }
+  ],
+  "mount": {
+    "parts": 5,
+    "single_bracket_solid": true,
+    "all_valid": true
+  }
+}

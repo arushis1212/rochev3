@@ -4,7 +4,7 @@ import sys,json,hashlib
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
 from cad.r5m2 import build as base
 from cad.r5m2.export_contact import wire_points
-from cad.transfer.interfaces import add_interfaces,motion_kind
+from cad.transfer.interfaces import add_interfaces,motion_kind,resets_with_shuttle
 cq=base.cq;ROOT=base.ROOT
 C=json.loads((ROOT/'spec/transfer_candidate.json').read_text());T=base.T
 OUT=ROOT/'cad/transfer/generated'
@@ -56,7 +56,19 @@ def parts():
         rear=(-u0-th,C['anchor_bolt_v_mm'],w)
         parts['R09_anchor_screw_'+str(i)]=cq.Workplane(obj=base.place(base.bolt(3,C['anchor_bolt_length_mm']),head,(0,0,1),(1,0,0)))
         parts['R10_anchor_nut_'+str(i)]=cq.Workplane(obj=base.place(base.nut(3).rotate((0,0,0),(0,0,1),C['anchor_nut_rotation_deg']),rear,(0,0,1),(-1,0,0)))
-    return add_interfaces(base,C,parts)
+    parts=add_interfaces(base,C,parts)
+    I=json.loads((ROOT/'spec/transfer_interfaces.json').read_text())
+    if 'verge_relief_global_box_mm' in I:
+        # Convert a world-fixed nominal clearance pocket to the authored local frame.
+        import math
+        angle=math.radians(T['inclination_deg']);u=(0,math.cos(angle),-math.sin(angle));tip=(136,167.6794919243,114);origin=(tip[0],tip[1]-5*u[1],tip[2]-5*u[2])
+        loc=cq.Location(cq.Plane(origin=origin,xDir=u,normal=(1,0,0)))
+        cut=base.box(*I['verge_relief_global_box_mm']).val().moved(loc.inverse).rotate((0,0,0),(1,0,0),-20)
+        parts['R05_lift_carriage']=parts['R05_lift_carriage'].cut(cq.Workplane(obj=cut))
+        if 'bank_relief_global_box_mm' in I:
+            cut=base.box(*I['bank_relief_global_box_mm']).val().moved(loc.inverse).rotate((0,0,0),(1,0,0),-20)
+            parts['R06_anchor']=parts['R06_anchor'].cut(cq.Workplane(obj=cut))
+    return parts
 def main():
     OUT.mkdir(exist_ok=True,parents=True);ps=parts();profiles={};manifest={}
     for name,p in ps.items():
@@ -69,7 +81,7 @@ def main():
     for name,p in ps.items():
         cq.exporters.export(p,str(OUT/(name+'.step')));cq.exporters.export(p,str(OUT/(name+'.stl')),tolerance=.03,angularTolerance=.1)
     modeled={'H01_hook_body','H02_gate','H02_contact_blade','R01_front_stripper','R02_rear_stripper','R03_lift_pin_0','R03_lift_pin_1'}
-    auxiliary={name:{'bbox_mm':value['bbox_mm'],'motion':motion_kind(name),'moves_with_lift':motion_kind(name)=='lift'} for name,value in manifest.items() if name not in modeled}
+    auxiliary={name:{'bbox_mm':value['bbox_mm'],'motion':motion_kind(name),'resettable':resets_with_shuttle(name),'moves_with_lift':motion_kind(name)=='lift'} for name,value in manifest.items() if name not in modeled}
     for n,d in [('manifest.json',manifest),('contact_profiles.json',profiles),('auxiliary_envelopes.json',auxiliary)]: (OUT/n).write_text(json.dumps(d,indent=2)+'\n')
     print(json.dumps(manifest,indent=2))
 if __name__=='__main__':main()

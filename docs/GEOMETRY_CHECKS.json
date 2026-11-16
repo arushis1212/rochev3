@@ -1,5 +1,5 @@
 {
-  "design_revision": "R5-M2-D21",
+  "design_revision": "R5-M2-D22",
   "scope": "Nominal discrete rigid assembly geometry and all-roll tool-to-Z-rail bound",
   "sampled_states": 69,
   "overlap_occurrences": 0,

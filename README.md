@@ -44,9 +44,11 @@ research prototype being developed toward physical stitch demonstrations.
 
 ## Current design
 
-Revision **R5-M2-D21** uses a42mm head offset for rotating-tool clearance and
+Revision **R5-M2-D22** uses a42mm head offset for rotating-tool clearance and
 finite-radius cord geometry shared by the feeder calculation and CAD. A component
 mass model accounts for the complete moving assembly and its ballast allocation.
+D22 uses an8.25mm shaft advance,16.75mm return and a barrel ending12mm behind
+the tool datum, with explicit conditional loop-clearance calculations.
 
 Created by [arushis1212](https://github.com/arushis1212).
 See [research references](docs/REFERENCES.md) for the textile and mechanics work
@@ -58,3 +60,5 @@ The numerical toolkit includes a planar extensible-rod model with large-angle
 bending and finite-radius contact. Analytic stretch/cantilever checks, energy
 gradients and continuous clearance bounds are covered by executable tests.
 Run `.venv/bin/python examples/rod_energy.py` for a minimal reference case.
+
+The toolkit also includes [three-dimensional CAD contact and strand mechanics](docs/STRAND_MECHANICS.md), with analytic and solid-model regression checks.

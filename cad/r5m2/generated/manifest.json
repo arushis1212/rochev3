@@ -1,6 +1,6 @@
 {
-  "revision": "R5-M2-D21",
-  "spec_sha256": "a9dcac800df28a966610c8d697fcf1e0e798d06c19b2137a1e22a5b0288a5980",
+  "revision": "R5-M2-D22",
+  "spec_sha256": "520df7c3e4349a3099a0e3861f6bf2c748856f1fa2380cc3401099a50f3025f9",
   "cadquery": "2.8.0",
   "scope": "Nominal research-fixture solid geometry",
   "status": "Research prototype",
@@ -34,10 +34,10 @@
     "H03_barrel_stop": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 11061.062572975363,
+      "volume_mm3": 10296.341232984201,
       "bbox_mm": [
         -94.0,
-        -7.9999999,
+        -11.9999999,
         -8.0000001,
         15.0,
         -8.0000001,

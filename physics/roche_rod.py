@@ -2,7 +2,7 @@
 Units: mm,N,N*mm. Isotropic bend, no twist/friction/self-contact in this local test.
 """
 import numpy as np
-from scipy.optimize import minimize
+from physics.banded_newton import minimize_banded
 
 def energy_gradient(q,rest,EA,B):
     e=np.diff(q,axis=0);length=np.linalg.norm(e,axis=1)
@@ -49,9 +49,10 @@ def solve(q,rest,EA,B,radius,box,k=100.,samples=4,maxiter=1000):
         p=np.vstack([endpoints[0],x.reshape(-1,2),endpoints[1]])
         a,g=energy_gradient(p,rest,EA,B);b,h=contact_energy(p,radius,k,box,samples,rest)
         return a+b,(g+h)[1:-1].ravel()
-    opt=minimize(evaluate,start,jac=True,method='L-BFGS-B',options={'maxiter':maxiter,'ftol':1e-13,'gtol':1e-7,'maxls':40})
-    p=np.vstack([endpoints[0],opt.x.reshape(-1,2),endpoints[1]])
-    return p,{'optimizer_success':bool(opt.success),'message':str(opt.message),'iterations':int(opt.nit),'energy_Nmm':float(opt.fun),'free_node_residual_N':float(np.max(np.abs(opt.jac)))}
+    x,diagnostic=minimize_banded(evaluate,start,bandwidth=5,maxiter=min(maxiter,300))
+    p=np.vstack([endpoints[0],x.reshape(-1,2),endpoints[1]])
+    return p,diagnostic
+
 
 def clearance_bound(q,radius,box,spacing=.005):
     # Signed distance to a closed solid is1-Lipschitz. For each segment all its

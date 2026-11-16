@@ -1,5 +1,5 @@
 {
-  "revision": "R5-M2-D21",
+  "revision": "R5-M2-D22",
   "units": "mm except explicit suffixes",
   "cameras": false,
   "tolerances": {
@@ -52,7 +52,7 @@
     "gate_tail_hole_d": 2.2,
     "gate_stroke": 9.0,
     "barrel_back": -60.0,
-    "barrel_front": -8.0,
+    "barrel_front": -12.0,
     "barrel_d": 16.0,
     "barrel_slot_width": 1.8256,
     "barrel_slot_bottom": -2.05,
@@ -1213,8 +1213,8 @@
         "id": "S5_extended",
         "head_tip": [
           136,
-          185,
-          104
+          174.82420150553284,
+          109.875
         ],
         "guide_tip": [
           96,
@@ -1241,13 +1241,13 @@
         "id": "S6_over_left",
         "head_tip": [
           136,
-          185,
-          104
+          174.82420150553284,
+          109.875
         ],
         "guide_tip": [
           132,
-          181,
-          111
+          170.82420150553284,
+          116.875
         ],
         "head_gate": 9,
         "head_roll": 20,
@@ -1269,13 +1269,13 @@
         "id": "S6_over_right",
         "head_tip": [
           136,
-          185,
-          104
+          174.82420150553284,
+          109.875
         ],
         "guide_tip": [
           140,
-          181,
-          111
+          170.82420150553284,
+          116.875
         ],
         "head_gate": 9,
         "head_roll": 20,
@@ -1297,13 +1297,13 @@
         "id": "S6_lower_right",
         "head_tip": [
           136,
-          185,
-          104
+          174.82420150553284,
+          109.875
         ],
         "guide_tip": [
           140,
-          181,
-          107
+          170.82420150553284,
+          112.875
         ],
         "head_gate": 9,
         "head_roll": 20,
@@ -1325,13 +1325,13 @@
         "id": "S6_second_closed",
         "head_tip": [
           136,
-          185,
-          104
+          174.82420150553284,
+          109.875
         ],
         "guide_tip": [
           140,
-          181,
-          107
+          170.82420150553284,
+          112.875
         ],
         "head_gate": 0,
         "head_roll": 20,
@@ -1353,13 +1353,13 @@
         "id": "S6_withdraw_guide",
         "head_tip": [
           136,
-          185,
-          104
+          174.82420150553284,
+          109.875
         ],
         "guide_tip": [
           140,
-          210,
-          117.555136794
+          199.82420150553284,
+          123.430136794
         ],
         "head_gate": 0,
         "head_roll": 20,
@@ -1381,13 +1381,13 @@
         "id": "S7_draw_both",
         "head_tip": [
           136,
-          167.6794919243,
-          114
+          160.31827599213227,
+          118.25
         ],
         "guide_tip": [
           140,
-          210,
-          117.555136794
+          199.82420150553284,
+          123.430136794
         ],
         "head_gate": 0,
         "head_roll": 20,
@@ -1630,5 +1630,19 @@
         9
       ]
     }
+  },
+  "shaft_handoff": {
+    "loop_center_initial_u_interval_mm": [
+      -2.7,
+      2.7
+    ],
+    "yarn_radius_max_mm": 0.3,
+    "axial_registration_allowance_mm": 0.2,
+    "extension_mm": 8.25,
+    "withdrawal_beyond_initial_mm": 8.5,
+    "barrel_front_mm": -12.0,
+    "gate_open_front_mm": -4.5,
+    "shaft_envelope_margin_mm": 0.55,
+    "nose_clear_margin_mm": 0.3
   }
 }

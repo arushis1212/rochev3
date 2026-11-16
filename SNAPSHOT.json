@@ -1,6 +1,7 @@
 {
   "design_revision": "R5-M2-D21",
   "content_sha256": {
+    ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
     "README.md": "82b954df4bfb4112eb9a3f27c3f8d60ec22fee3f8d63d44682161242db142f4f",

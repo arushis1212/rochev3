@@ -22,10 +22,9 @@ contact-scale Newton stencil resolves shallow active contacts. Exact segment/AAB
 culling evaluates the original reference-quadrature samples only where a contact
 penalty can be nonzero. Dense-oracle tests check identical energies and forces;
 a bounded secant predictor supplies an initial guess without changing constraints.
-The current T14 dataset contains five freshly evaluated saved states, starting
-at advance0.001785714mm and ending−1.107142857mm, with force, capture,
-clearance and centerline-interpolation checks. The lower stripper slots widen
-to halfwidth1.45mm belowv2.5 and taper back to1.0128mm byv3.5.
+The fixed-guide reference dataset was evaluated on T14 geometry; it remains an
+explicit historical equation/test fixture. Current T15 lower slots use1.55mm
+halfwidth belowv2.5, tapering to1.0128mm byv3.5. Current whole-feed [endpoint data](WHOLE_FEED.json) uses the free guide-mouth material point and translating feeder.
 
 These are synthetic, quasistatic component experiments with one old bight and a
 locked guide material endpoint. Two-loop single-crochet formation, metered feed,

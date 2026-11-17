@@ -1,0 +1,278 @@
+{
+  "revision": "T15",
+  "scope": "Synthetic frictionless quasistatic whole-material endpoints with one old bight, fixed nip and free translating feeder",
+  "nodes": 95,
+  "reference_material_length_mm": 804.5309777608705,
+  "penalty_N_per_mm2": 8000,
+  "accepted_states": [
+    {
+      "energy_Nmm": 43.668260560281084,
+      "force_residual_N": 2.2365399246146445e-11,
+      "optimizer_success": true,
+      "clamp_in_domain": true,
+      "feeder_z_mm": 157.6483586466396,
+      "self_gap_mm": 0.41456573313382783,
+      "maximum_strain": 0.04966364854386307,
+      "hook_capture_retained": true,
+      "state_mm": [
+        -1.1071428571428577,
+        0.0,
+        6.0,
+        0.0
+      ],
+      "sampled_surface_gap_mm": -0.000672279695540734,
+      "polyline_gap_lower_bound_mm": -0.001672238924058246,
+      "profile_chord_error_bound_mm": 0,
+      "newton": {
+        "optimizer_success": true,
+        "message": "force_residual",
+        "iterations": 13,
+        "energy_Nmm": 43.668260560281084,
+        "free_node_residual_N": 2.2365399246146445e-11,
+        "max_solver_damping_N_per_mm": 0.8776871582612835,
+        "full_hessian_fallbacks": 0
+      },
+      "upstream_native": {
+        "assembly_solids": 557,
+        "minimum_gap_lower_bound_mm": -0.000353781562340727,
+        "worst_part_edge": [
+          "GUIDE_TOOL_G06_exit_insert",
+          0
+        ],
+        "violations": [],
+        "exact_queries": 151,
+        "scope": "Upstream material edges against full native scene at specified feeder height and mode; no swept-path or cloth-clamp certificate."
+      },
+      "transition": {
+        "solid_centerline_bound_mm": 0.2732203219802102,
+        "nonlocal_centerline_bound_mm": 0.9872576411541242,
+        "max_node_motion_mm": 0.027308091979703658,
+        "max_rigid_motion_mm": 0.0011933917728867982,
+        "subdivisions": 1,
+        "samples_evaluated": 2,
+        "spatial_spacing_mm": 0.02,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.02677967801978981,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "energy_Nmm": 43.80423585103412,
+      "force_residual_N": 4.4831743786083456e-11,
+      "optimizer_success": true,
+      "clamp_in_domain": true,
+      "feeder_z_mm": 157.64838800130656,
+      "self_gap_mm": 0.41444142603281187,
+      "maximum_strain": 0.2442036679912598,
+      "hook_capture_retained": true,
+      "state_mm": [
+        -1.6,
+        0,
+        6,
+        0
+      ],
+      "sampled_surface_gap_mm": -0.004038803518883027,
+      "polyline_gap_lower_bound_mm": -0.005038671831587049,
+      "profile_chord_error_bound_mm": 0,
+      "newton": {
+        "optimizer_success": true,
+        "message": "force_residual",
+        "iterations": 0,
+        "energy_Nmm": 43.80423585103412,
+        "free_node_residual_N": 4.4831743786083456e-11,
+        "max_solver_damping_N_per_mm": 0.0,
+        "full_hessian_fallbacks": 0
+      },
+      "upstream_native": {
+        "assembly_solids": 557,
+        "minimum_gap_lower_bound_mm": -0.0005494023888343857,
+        "worst_part_edge": [
+          "GUIDE_TOOL_G06_exit_insert",
+          0
+        ],
+        "violations": [],
+        "exact_queries": 151,
+        "scope": "Upstream material edges against full native scene at specified feeder height and mode; no swept-path or cloth-clamp certificate."
+      },
+      "transition": {
+        "solid_centerline_bound_mm": 0.02039422920647943,
+        "nonlocal_centerline_bound_mm": 0.7403676885862303,
+        "max_node_motion_mm": 0.5481474748931632,
+        "max_rigid_motion_mm": 0.49285714285714244,
+        "subdivisions": 2,
+        "samples_evaluated": 3,
+        "spatial_spacing_mm": 0.02,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.27960577079352056,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "energy_Nmm": 44.127182046739776,
+      "force_residual_N": 5.00014332239021e-11,
+      "optimizer_success": true,
+      "clamp_in_domain": true,
+      "feeder_z_mm": 157.64838848341682,
+      "self_gap_mm": 0.414397495184173,
+      "maximum_strain": 0.4857632127212206,
+      "hook_capture_retained": true,
+      "state_mm": [
+        -2.092857142857143,
+        0,
+        6,
+        0
+      ],
+      "sampled_surface_gap_mm": -0.005143861997621235,
+      "polyline_gap_lower_bound_mm": -0.006143835855347848,
+      "profile_chord_error_bound_mm": 0,
+      "newton": {
+        "optimizer_success": true,
+        "message": "force_residual",
+        "iterations": 20,
+        "energy_Nmm": 44.127182046739776,
+        "free_node_residual_N": 5.00014332239021e-11,
+        "max_solver_damping_N_per_mm": 87.76873078519006,
+        "full_hessian_fallbacks": 0
+      },
+      "upstream_native": {
+        "assembly_solids": 557,
+        "minimum_gap_lower_bound_mm": -0.0005660288990798623,
+        "worst_part_edge": [
+          "GUIDE_TOOL_G06_exit_insert",
+          0
+        ],
+        "violations": [],
+        "exact_queries": 151,
+        "scope": "Upstream material edges against full native scene at specified feeder height and mode; no swept-path or cloth-clamp certificate."
+      },
+      "transition": {
+        "solid_centerline_bound_mm": 0.11671470329471001,
+        "nonlocal_centerline_bound_mm": 0.8909800665997722,
+        "max_node_motion_mm": 0.49366971433760276,
+        "max_rigid_motion_mm": 0.4928571428571429,
+        "subdivisions": 4,
+        "samples_evaluated": 5,
+        "spatial_spacing_mm": 0.02,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.18328529670528998,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "energy_Nmm": 44.42217392152237,
+      "force_residual_N": 1.3689853885917591e-09,
+      "optimizer_success": true,
+      "clamp_in_domain": true,
+      "feeder_z_mm": 157.65553693100165,
+      "self_gap_mm": 0.41433039990271403,
+      "maximum_strain": 0.5351542712907635,
+      "hook_capture_retained": true,
+      "state_mm": [
+        -2.585714285714286,
+        0,
+        6,
+        0
+      ],
+      "sampled_surface_gap_mm": -0.00703911893172432,
+      "polyline_gap_lower_bound_mm": -0.008039062810411925,
+      "profile_chord_error_bound_mm": 0,
+      "newton": {
+        "optimizer_success": true,
+        "message": "force_residual",
+        "iterations": 40,
+        "energy_Nmm": 44.42217392152237,
+        "free_node_residual_N": 1.3689853885917591e-09,
+        "max_solver_damping_N_per_mm": 877.6873078520102,
+        "full_hessian_fallbacks": 0
+      },
+      "upstream_native": {
+        "assembly_solids": 557,
+        "minimum_gap_lower_bound_mm": -0.0008991919676488713,
+        "worst_part_edge": [
+          "GUIDE_TOOL_G06_exit_insert",
+          0
+        ],
+        "violations": [],
+        "exact_queries": 151,
+        "scope": "Upstream material edges against full native scene at specified feeder height and mode; no swept-path or cloth-clamp certificate."
+      },
+      "transition": {
+        "solid_centerline_bound_mm": 0.09408494688017283,
+        "nonlocal_centerline_bound_mm": 0.7751193746109758,
+        "max_node_motion_mm": 0.9568441011669528,
+        "max_rigid_motion_mm": 0.4928571428571429,
+        "subdivisions": 4,
+        "samples_evaluated": 5,
+        "spatial_spacing_mm": 0.02,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.20591505311982716,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    },
+    {
+      "energy_Nmm": 44.405910392803406,
+      "force_residual_N": 5.111842490100604e-10,
+      "optimizer_success": true,
+      "clamp_in_domain": true,
+      "feeder_z_mm": 157.6593559279117,
+      "self_gap_mm": 0.4142425213656259,
+      "maximum_strain": 0.23123860697481913,
+      "hook_capture_retained": true,
+      "state_mm": [
+        -3.0785714285714287,
+        0,
+        6,
+        0
+      ],
+      "sampled_surface_gap_mm": -0.0028621788399005865,
+      "polyline_gap_lower_bound_mm": -0.003861868826791769,
+      "profile_chord_error_bound_mm": 0,
+      "newton": {
+        "optimizer_success": true,
+        "message": "force_residual",
+        "iterations": 72,
+        "energy_Nmm": 44.405910392803406,
+        "free_node_residual_N": 5.111842490100604e-10,
+        "max_solver_damping_N_per_mm": 877.6871591434642,
+        "full_hessian_fallbacks": 0
+      },
+      "upstream_native": {
+        "assembly_solids": 557,
+        "minimum_gap_lower_bound_mm": -0.0012480750097442206,
+        "worst_part_edge": [
+          "GUIDE_TOOL_G06_exit_insert",
+          0
+        ],
+        "violations": [],
+        "exact_queries": 151,
+        "scope": "Upstream material edges against full native scene at specified feeder height and mode; no swept-path or cloth-clamp certificate."
+      },
+      "transition": {
+        "solid_centerline_bound_mm": 0.05760713451649503,
+        "nonlocal_centerline_bound_mm": 0.8414276082296241,
+        "max_node_motion_mm": 1.3825193050880136,
+        "max_rigid_motion_mm": 0.4928571428571429,
+        "subdivisions": 8,
+        "samples_evaluated": 9,
+        "spatial_spacing_mm": 0.02,
+        "certified": true,
+        "finite_tube_gap_bound_mm": -0.24239286548350497,
+        "scope": "Linear interpolation centerline noncrossing, not dynamic stability or continuous finite-tube clearance."
+      }
+    }
+  ],
+  "native_mount": {
+    "fairlead_screw": "M3x14",
+    "underhead_xyz_mm": [
+      78,
+      422,
+      238
+    ],
+    "tip_y_mm": 408,
+    "nut_y_bounds_mm": [
+      410,
+      412.4
+    ],
+    "nominal_yarn_axial_reserve_mm": 1.7
+  }
+}

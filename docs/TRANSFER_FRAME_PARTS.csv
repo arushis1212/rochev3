@@ -6,3 +6,4 @@ M02_fork_screw_1,1,M3x16 bolt,152.73461379187677,158.41461379187677,222.06092946
 M03_fork_nut_1,1,M3 nut,152.5906889602624,158.55853862349113,234.90771821683617,240.1133638030778,108.84270364141048,115.45914628297763,45.908843985365415
 Right post mounting bolts,2,M3x30 REPLACES the two original M3x16 bodies; retained legacy instance keys
 Right post mounting nuts,2,M3 nuts relocated to y196; reuse if suitable
+Fairlead mounting screw,1,M3x14 REPLACES original M3x16; underhead(78 422 238); tipY408; nutY410 to412.4 reused

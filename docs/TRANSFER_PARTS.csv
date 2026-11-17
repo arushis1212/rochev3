@@ -2,8 +2,8 @@ instance,physical,quantity,u_min_mm,u_max_mm,v_min_mm,v_max_mm,w_min_mm,w_max_mm
 H01_hook_body,True,1,-60.0,5.0,-2.0,4.0,-0.8128,0.8128000000000002,340.6900767126774,Machined and finished metal tool
 H02_gate,True,1,-80.0,4.5,1.7,3.3256000000000006,-2.75,2.75,308.223458299933,Machined and finished metal tool
 H02_contact_blade,False,0,-80.0,4.5,1.7,3.3256000000000006,-0.8128000000000002,0.8128,219.92952605132047,Machined and finished metal tool
-R01_front_stripper,True,1,0.7999999999999998,2.4256000000000006,-12.0,24.0,-10.0,10.0,1019.6062266387135,Machined and finished metal tool
-R02_rear_stripper,True,1,-2.4256,-0.7999999999999996,-12.0,24.0,-10.0,10.0,1019.6062266387132,Machined and finished metal tool
+R01_front_stripper,True,1,0.7999999999999998,2.4256000000000006,-12.0,24.0,-10.0,10.0,1017.8830906387135,Machined and finished metal tool
+R02_rear_stripper,True,1,-2.4256,-0.7999999999999996,-12.0,24.0,-10.0,10.0,1017.8830906387135,Machined and finished metal tool
 R08_guide_rod_0,True,1,4.2256,7.2256,-10.0,22.0,-8.5,-5.5,226.19467105846508,Cut polished metal pin or rod
 R08_guide_rod_1,True,1,4.2256,7.2256,-10.0,22.0,5.5,8.5,226.19467105846508,Cut polished metal pin or rod
 R03_lift_pin_0,True,1,-2.6256000000000004,26.0,-2.5,-1.5,-3.0,-2.0,22.482493666149992,Cut polished metal pin or rod

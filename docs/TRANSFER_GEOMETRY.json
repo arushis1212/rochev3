@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T14",
+  "revision": "TRANSFER-T15",
   "scope": "Nominal local52-part assembly at five discrete mechanism poses; saved203-state pre-seated bight-path auxiliary clearances",
   "poses": [
     {
@@ -34,5 +34,5 @@
     }
   ],
   "saved_yarn_states": 203,
-  "minimum_auxiliary_gap_lower_bound_mm": 0.12586305464005304
+  "minimum_auxiliary_gap_lower_bound_mm": 0.13269586728187371
 }

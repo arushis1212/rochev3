@@ -32,9 +32,11 @@ def mount_parts():
   items[f'M02_fork_screw_{j}']=transfer_to_world(bolt);items[f'M03_fork_nut_{j}']=transfer_to_world(nut)
  return items
 
-def installed(ps,tp,advance,gate,lift,guide,tip=None,roll=None,reset=0.):
+def installed(ps,tp,advance,gate,lift,guide,tip=None,roll=None,reset=0.,feed_mode='high',carrier_z=160):
  ref,u,origin=reference_frame();tip=ref+advance*u if tip is None else np.array(tip);roll=I['transfer_roll_deg'] if roll is None else roll
- scene=base.integrated_instances(ps,head_tip=tip.tolist(),guide_tip=guide,head_gate=gate,head_roll=roll,support_q=I['support_q_mm'],support_gate_q=I['support_gate_q_mm'],takedown_z=I['take_down_z_mm'])
+ scene=base.integrated_instances(ps,head_tip=tip.tolist(),guide_tip=guide,head_gate=gate,head_roll=roll,support_q=I['support_q_mm'],support_gate_q=I['support_gate_q_mm'],takedown_z=I['take_down_z_mm'],feed_mode=feed_mode,carrier_z=carrier_z)
+ length=I['fairlead_mount_screw_length_mm'];scene.pop('HW_M3x16_eye')
+ scene[f'HW_M3x{length}_eye']=base.place(base.bolt(3,length),I['fairlead_mount_screw_underhead_xyz_mm'],(1,0,0),(0,1,0))
  for source,dest in [('H01_hook_body','H01_hook_body'),('H02_gate','H02_gate'),('TH_H03_barrel_stop','H03_barrel_stop')]:
   solid=tp[source].val()
   if source=='H02_gate':solid=solid.translate((-gate,0,0))

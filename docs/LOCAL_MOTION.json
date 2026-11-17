@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T14",
+  "revision": "TRANSFER-T15",
   "scope": "Synthetic quasistatic pre-seated single-bight local transfer experiment",
   "commanded_targets": 197,
   "joined_accepted_states": 203,

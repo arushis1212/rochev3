@@ -14,3 +14,6 @@ Third-party papers and source CAD are not redistributed here.
 - [Numba compilation documentation](https://numba.readthedocs.io/en/stable/user/jit.html): compilation and caching used for the exact line/arc contact kernel.
 
 - Hanna, Singh and Virga(2018), [Partial constraint singularities in elastic rods](https://arxiv.org/abs/1711.00900): force, moment and energy balances at a material-throughflow boundary, with planar inextensible sleeve examples.
+
+- Kaldor, James and Marschner(2010), [Efficient Yarn-based Cloth with Adaptive Contact Linearization](https://research.cs.cornell.edu/YarnCloth/): yarn contact modeling context. Its adaptive linearization is not implemented here.
+- [Abaqus contact enforcement documentation](https://docs.software.vt.edu/abaqusv2026/English/SIMACAEITNRefMap/simaitn-c-contactconstraints.htm): numerical penalty enforcement and compliance; this project uses its own solver.

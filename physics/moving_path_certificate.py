@@ -2,10 +2,11 @@
 import numpy as np
 from physics.roche_contact3d import gap_bound,self_contact,self_pairs
 
-def certify_moving_path(a,b,state0,state1,rest,radius,obstacle_factory,max_subdivisions=32,spatial_spacing=.002):
+def certify_moving_path(a,b,state0,state1,rest,radius,obstacle_factory,max_subdivisions=32,spatial_spacing=.002,additional_rigid_motion_mm=0.):
     a=np.asarray(a);b=np.asarray(b);s0=np.asarray(state0);s1=np.asarray(state1)
     motion=float(np.max(np.linalg.norm(b-a,axis=1)));delta=s1-s0;du,dg,dh=delta[:3];dr=delta[3] if len(delta)>3 else 0.
-    rigid=float(max(abs(du),abs(du-dg),np.hypot(dh,dr)));pairs=self_pairs(rest,radius);cache={}
+    if additional_rigid_motion_mm<0:raise ValueError('Additional rigid displacement bound must be nonnegative')
+    rigid=float(max(abs(du),abs(du-dg),np.hypot(dh,dr),additional_rigid_motion_mm));pairs=self_pairs(rest,radius);cache={}
     def sample(t):
         if t not in cache:
             q=(1-t)*a+t*b;ob=obstacle_factory((1-t)*s0+t*s1)

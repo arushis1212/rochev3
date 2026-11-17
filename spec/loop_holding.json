@@ -1,10 +1,27 @@
 {
   "model": "3D active bight with rigid hanging clamp and six tension-only neighboring yarn load paths",
   "clamp_mass_g": 20.0,
-  "clamp_initial_center_xyz_mm": [150.0,165.0,50.0],
-  "active_attachment_offsets_x_mm": [-22.0,-6.0],
-  "neighbor_support_x_mm": [106.0,118.0,154.0,166.0,178.0,190.0],
-  "support_contact_yz_mm": [165.0,90.55],
+  "clamp_initial_center_xyz_mm": [
+    150.0,
+    165.0,
+    50.0
+  ],
+  "active_attachment_offsets_x_mm": [
+    -22.0,
+    -6.0
+  ],
+  "neighbor_support_x_mm": [
+    106.0,
+    118.0,
+    154.0,
+    166.0,
+    178.0,
+    190.0
+  ],
+  "support_contact_yz_mm": [
+    165.0,
+    90.55
+  ],
   "EA_N": 2.0,
   "B_Nmm2": 0.02,
   "yarn_radius_mm": 0.3,
@@ -14,9 +31,22 @@
   "bridge_segments": 12,
   "trial_front_verge_inner_y_mm": 164.0,
   "trial_front_verge_adopted": false,
-  "head_tip_trials_xyz_mm": [[136.0,167.6794919243,114.0],[136.0,183.0,104.125]],
-  "scope": "Conditional fabric load-path surrogate. Clamp translation and two orientation angles equilibrate; no fixed active yarn endpoints. Neighbor anchor coordinates are registered pocket centerlines, not literal welds to yarn. Six tension-only members approximate neighboring textile; their rest lengths/stiffness require qualification. No full stitch topology proof.",
+  "head_tip_trials_xyz_mm": [
+    [
+      136.0,
+      167.6794919243,
+      114.0
+    ],
+    [
+      136.0,
+      183.0,
+      104.125
+    ]
+  ],
   "parameter_status": "Actual CAD dimensions and designed20g clamp target; synthetic yarn EA/B and straight-member fabric surrogate. No measured textile constitutive data.",
-  "clamp_z_safety_bound_mm": [-320.0,50.0],
+  "clamp_z_safety_bound_mm": [
+    -320.0,
+    50.0
+  ],
   "safety_bound_status": "Numerical domain guard, NOT an installed endstop; boundary contact invalidates equilibrium acceptance."
 }

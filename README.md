@@ -2,27 +2,36 @@
 
 **Crochet through mechanical registration.**
 
-Roche explores how constrained yarn paths and repeatable tool motions can handle a deformable material without cameras. The first application is a manually actuated research fixture for stitch and swatch development.
+Roche explores how constrained yarn paths and repeatable tool motions can handle
+a deformable material without cameras. The first application is a manually
+actuated research prototype for stitch and swatch development.
 
-The current D25 / T16 design includes 85 base component variants and a 566-solid installed assembly. A closable hook, paired loop supports, gravity feeder and hanging clamp work together around a controlled yarn path. The return strand can deform around a smooth captured pin between two defined gripping lands.
+The current **D26-T17-S3-indexed-candidate** design contains **692 installed native solids**.
+It combines a closable hook, four paired-support stations, an indexed transfer
+module, a gravity feeder, two retained service nips and a hanging fabric clamp.
+Printed structural parts work with machined metal yarn-contact tools and
+purchased fasteners and bearings.
 
-- [Parametric dimensions](spec/r5_m2_fixture.json)
-- [Installed assembly STEP](cad/transfer/installed/installation.step)
-- [Individual parts](cad/r5m2/generated)
+- [Complete assembly STEP](cad/machine/generated/machine.step)
+- [Individual manufacturing profiles](manufacturing/current/cad)
 - [Parts register](docs/manufacturing_parts.csv)
-- [Mechanics and reference configuration](docs/ENGINEERING.md)
+- [Machine inputs](spec/current_machine.json)
+- [Engineering and mechanics](docs/ENGINEERING.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r cad/r5m2/requirements.lock.txt
-.venv/bin/python cad/r5m2/build.py
-.venv/bin/python cad/transfer/build.py
-.venv/bin/python cad/transfer/installation.py
+.venv/bin/python -m cad.r5m2.build
+.venv/bin/python -m cad.transfer.build
+.venv/bin/python -m cad.machine.assembly
 .venv/bin/python examples/feeder.py
+.venv/bin/python examples/rod_energy.py
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The numerical toolkit includes elastic rods, finite-radius contact, rigid-body virtual work and collision-aware solver steps. Examples use explicit benchmark material properties. Hardware is a research prototype being developed toward physical stitch demonstrations.
+The code regenerates native CAD and executes mechanics examples. Numerical
+examples declare their benchmark material properties; component measurements
+and physical stitch trials establish application performance.
 
 Created by [arushis1212](https://github.com/arushis1212).

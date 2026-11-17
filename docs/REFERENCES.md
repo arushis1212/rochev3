@@ -4,7 +4,7 @@
 - Bergou, Wardetzky, Robinson, Audoly and Grinspun (2008), [Discrete Elastic Rods](https://www.cs.columbia.edu/cg/rods/). Reference for numerical rod mechanics.
 - [CadQuery](https://cadquery.readthedocs.io/): parametric solid modeling tool used by this project.
 - [K&S Precision Metals](https://ksmetals.com/pages/material-specifications): stock material dimensions.
-- [Polymaker technical data](https://wiki.polymaker.com/polymaker-products/more-about-our-products/documents/technical-data-sheets/pla/polylite-tm-pla): typical polymer properties.
+- [Bambu PLA Basic technical data](https://store.bblcdn.eu/s8/default/073e722a4aa44f7cbfdc419d597475cc/Bambu_PLA_Basic_Technical_Data_Sheet.pdf) and [TPU95A HF technical data](https://store.bblcdn.com/s6/default/a6ca55f14aa54ddb92679d06df4700ae/Bambu_TPU_95A_HF_Technical_Data_Sheet.pdf): selected commercial polymer references; actual process properties require measurement.
 
 References credit prior work and explain the design's technical context.
 Third-party papers and source CAD are not redistributed here.

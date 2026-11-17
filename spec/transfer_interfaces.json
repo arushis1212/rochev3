@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T16",
+  "revision": "TRANSFER-T17",
   "gate_stop_back_u_mm": -95.0,
   "lift_ear_u_mm": [
     46,
@@ -37,6 +37,7 @@
   "pin_clamp_screw_length_mm": 4.0,
   "clamp_screw_clearance_mm": 2.2,
   "clamp_nut_pocket_af_mm": 4.2,
+  "clamp_nut_pocket_height_mm": 1.8,
   "pin_counterbore_d_mm": 4.18,
   "frame_port_d_mm": 3.4,
   "frame_port_v_mm": 38.0,
@@ -88,7 +89,7 @@
   ],
   "reset_stop_screw_seat_u_mm": 34.0,
   "reset_stop_screw_length_mm": 20.0,
-  "reset_nut_face_u_mm": 16.1,
+  "reset_nut_face_u_mm": 16.7,
   "anchor_crossbar_v_mm": [
     24,
     30

@@ -18,7 +18,7 @@ class EdgeContactTests(unittest.TestCase):
     if np.all(x>=lo-r)&np.all(x<=hi+r):expected.add((i,round(u,13)))
   self.assertEqual(got,expected)
  def test_fine_contact_energy_force_equivalent_to_dense(self):
-  cfg=json.loads((ROOT/'spec/transfer_holding.json').read_text());s=json.loads((ROOT/'spec/connected_yarn.json').read_text());profiles=json.loads((ROOT/'cad/transfer/generated/contact_profiles.json').read_text());base=json.loads((ROOT/'cad/r5m2/generated/contact_profiles.json').read_text())['profiles'];full=json.loads((ROOT/'spec/r5_m2_fixture.json').read_text());o,M=head_frame(cfg['head_tip_xyz_mm']);guide=o+M@np.array(s['guide_local_mm']);data=json.loads((ROOT/'docs/CONNECTED_CHECKPOINT.json').read_text());q=np.array(data['q']);rest=np.array(data['rest']);rng=np.random.default_rng(25)
+  cfg=json.loads((ROOT/'spec/transfer_holding.json').read_text());s=json.loads((ROOT/'spec/connected_yarn.json').read_text());profiles=json.loads((ROOT/'cad/transfer/generated/contact_profiles.json').read_text());base=json.loads((ROOT/'cad/r5m2/generated/contact_profiles.json').read_text())['profiles'];full=json.loads((ROOT/'spec/r5_m2_fixture.json').read_text());o,M=head_frame(cfg['head_tip_xyz_mm']);guide=o+M@np.array(s['guide_local_mm']);data=json.loads((ROOT/'tests/fixtures/contact_reference.json').read_text());q=np.array(data['q']);rest=np.array(data['rest']);rng=np.random.default_rng(25)
   for state in [[6.285714285714286,0,6,0],[-8.5,0,0,6],[0,16.5,0,0]]:
    ob=GuidedContact(WorldTransfer(profiles,base,cfg['head_tip_xyz_mm'],*state),guide,full['guide'])
    for points in [q,q+rng.normal(0,.1,q.shape)]:

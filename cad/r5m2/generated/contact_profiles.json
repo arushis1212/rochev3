@@ -1,6 +1,6 @@
 {
-  "revision": "R5-M2-D25",
-  "spec_sha256": "f81e90f80995d0bdc85cd535cbc82233cec0edf4c37660a48f39cea78c9ff221",
+  "revision": "R5-M2-D26",
+  "spec_sha256": "4747970c8124ffa0ddc51e52e97a1c6d57617a7ee1e039fa3bd7a525f170359d",
   "chord_error_bound_mm": 0.001,
   "profiles": {
     "H01_hook_body": {
@@ -4798,5 +4798,6 @@
         171.6256
       ]
     }
-  }
+  },
+  "finished_interfaces_sha256": "f53dc9f4262c40a3e317a98ba825dbf60242e3e33d498fcc06d4d95dfee63915"
 }

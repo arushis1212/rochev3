@@ -1,9 +1,8 @@
 {
-  "revision": "R5-M2-D25",
-  "spec_sha256": "56bdf548195a0f00b6734e4435bc67672ded49be45c21ca2578a01bca77d8c44",
+  "revision": "R5-M2-D26",
+  "spec_sha256": "4747970c8124ffa0ddc51e52e97a1c6d57617a7ee1e039fa3bd7a525f170359d",
+  "finished_interfaces_sha256": "f53dc9f4262c40a3e317a98ba825dbf60242e3e33d498fcc06d4d95dfee63915",
   "cadquery": "2.8.0",
-  "scope": "integrated rigid hook, support bank and guide XYZ assemblies; feeder, take-down and yarn unqualified",
-  "status": "Research prototype",
   "parts": {
     "H01_hook_body": {
       "solids": 1,
@@ -34,7 +33,7 @@
     "H03_barrel_stop": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 10296.341232984201,
+      "volume_mm3": 10284.17990388331,
       "bbox_mm": [
         -94.0,
         -11.9999999,
@@ -47,7 +46,7 @@
     "H04_bearing": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 11908.786760505918,
+      "volume_mm3": 12087.251625502235,
       "bbox_mm": [
         -48.0000001,
         -23.9999999,
@@ -60,10 +59,10 @@
     "H05_rear_collar": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 1521.7058417386418,
+      "volume_mm3": 1521.7058417386415,
       "bbox_mm": [
-        -55.2,
-        -48.2,
+        -55.07500000000001,
+        -48.07499999999998,
         -11.0,
         15.0,
         -11.0,
@@ -73,10 +72,10 @@
     "H06_front_collar": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 1521.7058417386418,
+      "volume_mm3": 1521.705841738642,
       "bbox_mm": [
-        -23.80000000000001,
-        -16.799999999999997,
+        -23.92500000000001,
+        -16.924999999999997,
         -11.0,
         15.0,
         -11.0,
@@ -125,7 +124,7 @@
     "G02_guide_mount": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 9440.67872349003,
+      "volume_mm3": 9434.689988805598,
       "bbox_mm": [
         -160.0000001,
         -129.9999999,
@@ -151,7 +150,7 @@
     "B01_bed": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 92387.782232642,
+      "volume_mm3": 92499.9772758182,
       "bbox_mm": [
         94.0,
         202.0,
@@ -164,7 +163,7 @@
     "B02_cover": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 34119.01276285919,
+      "volume_mm3": 34163.29433651282,
       "bbox_mm": [
         94.0,
         202.0,
@@ -177,7 +176,7 @@
     "B03_carriage": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 6304.331603271643,
+      "volume_mm3": 6317.451359865239,
       "bbox_mm": [
         -17.0,
         22.0,
@@ -190,7 +189,7 @@
     "B04_pair_holder": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 9613.022449112817,
+      "volume_mm3": 9630.055077360194,
       "bbox_mm": [
         -94.0,
         -30.0,
@@ -278,10 +277,23 @@
         60.0
       ]
     },
+    "B09_index_pin": {
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 288.0739932376926,
+      "bbox_mm": [
+        -2.84,
+        2.84,
+        -2.84,
+        2.84,
+        -30.0,
+        3.0
+      ]
+    },
     "F03_base_board": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 1760733.3311530147,
+      "volume_mm3": 1760733.3311530144,
       "bbox_mm": [
         0.0,
         320.0,
@@ -749,10 +761,10 @@
     "S03_back": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 1885746.2974006408,
+      "volume_mm3": 1881426.2974006406,
       "bbox_mm": [
-        29.0,
-        291.0,
+        29.30000000000001,
+        290.7,
         452.0,
         470.0,
         -408.0,
@@ -837,6 +849,19 @@
         5.0
       ]
     },
+    "D05_front_jaw": {
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 3779.878132260679,
+      "bbox_mm": [
+        -50.00000010000002,
+        50.00000010000002,
+        -5.250000100000004,
+        -1.2495305648212314,
+        -5.000000100000022,
+        5.000000100000022
+      ]
+    },
     "P01_tower": {
       "solids": 1,
       "valid": true,
@@ -892,7 +917,7 @@
     "P05_pulley_half": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 526.1476544379115,
+      "volume_mm3": 533.470047178972,
       "bbox_mm": [
         -10.0,
         10.0,
@@ -1041,8 +1066,8 @@
         22.0,
         401.0,
         411.0,
-        239.6,
-        243.6
+        239.5,
+        243.5
       ]
     },
     "P15_nip_pad": {
@@ -1100,15 +1125,16 @@
     "P20_rod": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 622.0353454107783,
+      "volume_mm3": 619.9147703696051,
       "bbox_mm": [
         -1.5,
         1.5,
         398.5,
         401.5,
         116.0,
-        204.0
+        203.7
       ]
     }
-  }
+  },
+  "scope": "Current parametric research prototype geometry."
 }

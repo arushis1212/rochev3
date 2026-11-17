@@ -1,0 +1,373 @@
+{
+  "revision": "R5-M2-D26-TRANSFER-T17-FITS",
+  "units": "mm unless explicitly named otherwise",
+  "base_overrides": {
+    "tool": {
+      "barrel_slot_width": 1.7506,
+      "bearing_bore_d": 16.1,
+      "collar_axial_gap": 0.075,
+      "barrel_nut_depth": 3.8
+    },
+    "support_bank": {
+      "cover_nut_roof_mm": 5.4,
+      "index_pin_bore": 3.05
+    },
+    "stand": {
+      "back_x": [
+        29.3,
+        290.7
+      ]
+    }
+  },
+  "general": {
+    "noncritical_print_tolerance_mm": 0.2,
+    "cut_outline_tolerance_mm": 0.05,
+    "clearance_holes": {
+      "M2": {
+        "nominal_mm": 2.2,
+        "plus_mm": 0.1,
+        "minus_mm": 0.0
+      },
+      "M3": {
+        "nominal_mm": 3.4,
+        "plus_mm": 0.1,
+        "minus_mm": 0.0
+      }
+    },
+    "mating_hole_position_error_per_part_mm": 0.05,
+    "combined_multilayer_M2_axis_error_max_mm": 0.08,
+    "nut_pockets": {
+      "M2": {
+        "af_mm": 4.2,
+        "af_plus_mm": 0.1,
+        "free_height_mm": 1.8,
+        "height_tolerance_mm": 0.05,
+        "nut_af_bounds_mm": [
+          3.82,
+          4.0
+        ]
+      },
+      "M3": {
+        "af_mm": 5.8,
+        "af_plus_mm": 0.1,
+        "free_height_mm": 2.7,
+        "height_tolerance_mm": 0.05,
+        "nut_af_bounds_mm": [
+          5.32,
+          5.5
+        ]
+      }
+    },
+    "counterbores": {
+      "M2_socket_d_mm": [
+        4.5,
+        4.6
+      ],
+      "M3_socket_d_mm": [
+        6.0,
+        6.1
+      ],
+      "M3_button_d_mm": [
+        6.4,
+        6.5
+      ],
+      "M3_socket_depth_mm": [
+        3.2,
+        3.3
+      ],
+      "M3_button_depth_mm": [
+        1.8,
+        1.85
+      ]
+    },
+    "finished_screw_length_tolerance_mm": 0.2,
+    "seat_datum_tolerance_mm": 0.05,
+    "minimum_full_nut_thread_projection_mm": {
+      "M2": 0.4,
+      "M3": 0.5
+    },
+    "minimum_blind_tip_clearance_mm": 0.2,
+    "printed_mating_face_flatness_parallelism_mm": 0.05,
+    "metal_spacer_face_flatness_parallelism_mm": 0.02,
+    "noncontact_edge_break_mm": [
+      0.15,
+      0.3
+    ],
+    "edge_break_scope": "Does not override explicit functional/yarn-contact profile radii"
+  },
+  "slide_bank": {
+    "channel_width_mm": [
+      20.35,
+      20.45
+    ],
+    "carriage_width_mm": [
+      19.95,
+      20.05
+    ],
+    "slide_floor_mm": [
+      5.95,
+      6.05
+    ],
+    "slide_cap_seat_mm": [
+      12.35,
+      12.45
+    ],
+    "carriage_flange_height_mm": [
+      5.95,
+      6.05
+    ],
+    "bank_floor_mm": [
+      7.95,
+      8.05
+    ],
+    "bank_cap_seat_mm": [
+      14.35,
+      14.45
+    ],
+    "neck_width_mm": [
+      11.95,
+      12.05
+    ],
+    "slide_cap_inner_edge_mm": [
+      6.95,
+      7.05
+    ],
+    "bank_cap_slot_width_mm": [
+      12.35,
+      12.45
+    ],
+    "sliding_face_straightness_mm": 0.05,
+    "inward_burr_step_max_mm": 0.02,
+    "endstop_thickness_mm": [
+      6.95,
+      7.05
+    ],
+    "carriage_length_mm": [
+      25.95,
+      26.05
+    ],
+    "rail_length_tolerance_mm": 0.1,
+    "tie_and_cap_relief_each_face_mm": [
+      0.15,
+      0.25
+    ],
+    "relief_relative_position_mm": 0.05,
+    "cap_nut_roof_mm": [
+      7.55,
+      7.65
+    ],
+    "endstop_nut_roof_mm": [
+      4.45,
+      4.55
+    ],
+    "carriage_nut_roof_mm": [
+      12.45,
+      12.55
+    ],
+    "button_head_seat_mm": [
+      14.55,
+      14.65
+    ],
+    "endstop_screw_seat_mm": [
+      12.75,
+      12.85
+    ],
+    "cover_nut_roof_mm": [
+      5.35,
+      5.45
+    ],
+    "cover_upper_seat_mm": [
+      18.3,
+      18.5
+    ],
+    "locked_loaded_registration_max_mm": 0.2,
+    "registration_scope": "Geometric running admission does not certify the whole loaded positioning chain"
+  },
+  "index_pin": {
+    "part_id": "B09_index_pin",
+    "make_or_buy": "fabricated_from_purchased_stock",
+    "material": "Machined metal; source rod and finished surface/straightness admission required",
+    "process": "Turn a one-piece smooth headed pin from >=6mm rod; not a threaded M3 screw",
+    "shaft_d_mm": 3.0,
+    "shaft_d_bounds_mm": [
+      2.995,
+      3.0
+    ],
+    "shaft_length_mm": 30.0,
+    "shaft_length_tolerance_mm": 0.05,
+    "head_d_mm": 5.68,
+    "head_height_mm": 3.0,
+    "head_dimension_tolerance_mm": 0.05,
+    "bore_mm": [
+      3.04,
+      3.06
+    ],
+    "common_axis_mismatch_max_mm": 0.01,
+    "pin_bow_max_mm": 0.01,
+    "hole_datum_error_sum_mm": 0.04
+  },
+  "tool": {
+    "barrel_slot_width_mm": [
+      1.7256,
+      1.7756
+    ],
+    "upper_passage_clearance_mm": [
+      0.05,
+      0.1
+    ],
+    "upper_passage_nominal_clearance_mm": 0.075,
+    "upper_passage_reference": "tool.gate_bottom + tool.gate_thickness; finish to actual assembled maximum gate top through motion",
+    "body_bottom_clearance_mm": [
+      0.05,
+      0.1
+    ],
+    "body_bottom_nominal_clearance_mm": 0.075,
+    "barrel_d_bounds_mm": [
+      15.98,
+      16.0
+    ],
+    "bearing_bore_bounds_mm": [
+      16.1,
+      16.12
+    ],
+    "bearing_cylindrical_form_error_mm": 0.01,
+    "bearing_axis_straightness_over_24_mm": 0.02,
+    "collar_bore_bounds_mm": [
+      16.18,
+      16.22
+    ],
+    "collar_split_bounds_mm": [
+      0.95,
+      1.05
+    ],
+    "total_collar_axial_float_mm": [
+      0.1,
+      0.2
+    ],
+    "minimum_centered_collar_gap_mm": 0.05,
+    "collar_face_flatness_parallelism_mm": 0.03,
+    "barrel_nut_depth_mm": [
+      3.75,
+      3.85
+    ],
+    "barrel_screw_underhead_seat_mm": [
+      4.95,
+      5.05
+    ],
+    "support_gate_travel_mm": [
+      8.9,
+      9.1
+    ],
+    "compensate_stop_slot_cap_centers": true,
+    "stop_slot_width_mm": [
+      3.355,
+      3.395
+    ],
+    "gate_stop_sleeve_length_mm": [
+      11.8244,
+      11.9244
+    ],
+    "functional_profile_scope": "Hook/gate retaining gap and nose profile unchanged; these passages are supporting guide surfaces"
+  },
+  "wood": {
+    "material": "Void-free birch plywood",
+    "base_thickness_mm": [
+      11.9,
+      12.1
+    ],
+    "stand_thickness_mm": [
+      17.9,
+      18.1
+    ],
+    "outline_tolerance_mm": 0.2,
+    "hole_coordinate_tolerance_mm": 0.1,
+    "foot_height_mm": [
+      7.95,
+      8.05
+    ],
+    "base_flatness_mm": 0.5,
+    "module_footprint_coplanarity_after_shimming_mm": 0.05,
+    "module_side_shim_total_max_mm": 0.5,
+    "stand_top_nut_depth_mm": [
+      5.95,
+      6.05
+    ],
+    "base_top_counterbore_depth_mm": [
+      1.95,
+      2.05
+    ],
+    "stand_top_pilot_depth_mm": [
+      7.9,
+      8.1
+    ],
+    "back_width_mm": [
+      261.3,
+      261.5
+    ],
+    "back_center_x_mm": [
+      159.95,
+      160.05
+    ],
+    "assembled_side_inner_opening_mm": [
+      261.8,
+      262.2
+    ],
+    "pedestal_height_mm": [
+      47.95,
+      48.05
+    ],
+    "matched_pedestal_foot_height_spread_mm": 0.05,
+    "bank_axis_setup_position_error_mm": 0.05
+  },
+  "reach": {
+    "head_x_origin_x_mm": 106.0,
+    "head_x_tool_center_mm": 148.0,
+    "nominal_head_x_range_mm": [
+      88.0,
+      208.0
+    ]
+  },
+  "transfer": {
+    "reset_nut_face_u_mm": [
+      16.65,
+      16.75
+    ],
+    "lift_stop_sleeve_length_mm": [
+      9.37,
+      9.43
+    ],
+    "reset_sleeve_length_mm": [
+      13.97,
+      14.03
+    ],
+    "reset_washer_thickness_mm": [
+      1.98,
+      2.02
+    ],
+    "reset_washer_od_mm": [
+      5.95,
+      6.05
+    ],
+    "reset_rear_washer_bore_mm": [
+      2.2,
+      2.3
+    ],
+    "shuttle_axial_thickness_mm": [
+      5.97,
+      6.03
+    ],
+    "stop_face_parallelism_mm": 0.02,
+    "reset_stroke_mm": [
+      5.9,
+      6.1
+    ],
+    "lift_stroke_mm": [
+      5.9,
+      6.1
+    ],
+    "active_gate_stroke_mm": [
+      16.4,
+      16.6
+    ]
+  }
+}

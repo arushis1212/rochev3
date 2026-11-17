@@ -1,0 +1,32 @@
+{
+  "revision": "D26-T17-S3-indexed-candidate",
+  "core": "spec/r5_m2_fixture.json",
+  "finished_fits": "spec/d26_finished_interfaces.json",
+  "transfer": "spec/transfer_candidate.json",
+  "transfer_interfaces": "spec/transfer_interfaces.json",
+  "indexed_transfer": "spec/indexed_transfer.json",
+  "service": "spec/machine_service.json",
+  "inventory_pose": {
+    "station_index": 1,
+    "transfer_position": "station",
+    "roll_deg": 20,
+    "advance_mm": 0,
+    "main_gate_mm": 16.5,
+    "lift_mm": 0,
+    "reset_mm": 0,
+    "feed_mode": "HIGH",
+    "carrier_z_mm": 160,
+    "inlet_nip": "CLOSED",
+    "outlet_nip": "OPEN",
+    "cradle_position": "HIGH_RELEASE",
+    "cradle_angle_deg": 90,
+    "cradle_indexed": false
+  },
+  "integration": {
+    "base_board": "Both index-frame and cradle ports cut into one actual F03 solid",
+    "fixed_transfer_bracket": "Superseded by captured X_T rail and physical keyed shoe",
+    "old_single_nip": "Replaced by retained two-nip service assembly",
+    "no_drawing_from_stale_exports": true
+  },
+  "scope": "Composed camera-free manually actuated crochet research prototype."
+}

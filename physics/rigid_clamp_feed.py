@@ -13,7 +13,7 @@ from physics.feeder_domain import feeder_potential
 
 class RigidClampFeedEquilibrium(FeedEquilibrium):
     angle_count=3
-    def __init__(self,q,rest,split,center,angles,z,cfg,obstacle,feeder,mode,fixture,fixed_section=None):
+    def __init__(self,q,rest,split,center,angles,z,cfg,obstacle,feeder,mode,fixture,fixed_section=None,nip_section=None):
         self.fixed_section=fixed_section;self.fixture=fixture;self.clamp_spec=fixture['cloth_clamp'];height=self.clamp_spec['attachment_height_above_com_mm'];self.angle_scale=self.clamp_spec['angular_scale_mm']
         self.attach_body=np.column_stack([cfg['active_attachment_offsets_x_mm'],[0.,0.],[height,height]])
         xx=np.asarray(cfg['neighbor_support_x_mm']);self.neighbor_body=np.column_stack([xx-cfg['clamp_initial_center_xyz_mm'][0],np.zeros(len(xx)),np.full(len(xx),height)])
@@ -22,10 +22,18 @@ class RigidClampFeedEquilibrium(FeedEquilibrium):
         self.fixed_indices=np.array(fixed_section['indices']if fixed_section else [0,split],dtype=int);self.fixed_body=np.array(fixed_section['body_xyz_mm'])if fixed_section else self.attach_body
         if fixed_section and fixed_section.get('gripped_edges'):
             self.clamp.set_gripped_edges(fixed_section)
-        if fixed_section:
-            self.free=np.array([i for i in range(len(q))if i not in set(self.fixed_indices)and i!=len(q)-1]);self.interior=3*len(self.free);self.x0=self.pack(q,center,angles,z)
+        self.nip_section=nip_section;self.nip_grip=None
+        if nip_section:
+            from physics.nip_grip import NipGrip
+            self.nip_grip=NipGrip(feeder,nip_section,len(q));obstacle.nip_pads.set_grip(self.nip_grip)
+            if set(self.nip_grip.indices)&set(self.fixed_indices):raise ValueError('Material cannot belong to nip and hanging clamp simultaneously')
+            self.q[self.nip_grip.indices]=self.nip_grip.xyz;self.nip=self.q[-1].copy()
+        if fixed_section or nip_section:
+            fixed=set(self.fixed_indices)|{len(q)-1}|(set(self.nip_grip.indices)if self.nip_grip else set())
+            self.free=np.array([i for i in range(len(q))if i not in fixed]);self.interior=3*len(self.free);self.x0=self.pack(self.q,center,angles,z)
     def unpack(self,x):
         m=self.interior;q=self.q.copy();q[self.free]=x[:m].reshape(-1,3);c=x[m:m+3];a=x[m+3:m+6];z=x[-1];R,_=rotation(a,self.angle_scale);q[self.fixed_indices]=c+self.fixed_body@R.T;q[-1]=self.nip
+        if self.nip_grip:q[self.nip_grip.indices]=self.nip_grip.xyz
         return q,c,a,z
     def set_obstacle_pose(self,x):
         m=self.interior;self.obstacle.moving.center[2]=x[-1];self.clamp.set_pose(x[m:m+3],x[m+3:m+6])
@@ -47,6 +55,9 @@ class RigidClampFeedEquilibrium(FeedEquilibrium):
         V,dV,_=feeder_potential(z,self.feeder,self.mode);_,mg=contact_energy3d(q,self.rest,rad,k,self.obstacle.moving,self.counts)
         self.last_info={'clamp_torque_residual_Nmm':torque.tolist(),'guide_reaction_N':g[-1].tolist(),'self_contact_gap_mm':gap,'clamp_contact_reaction_N':(-reaction.sum(axis=0)).tolist(),'neighbor_tensions_N':np.linalg.norm(pg,axis=1).tolist()}
         self.last_info['grip_reaction_N']={str(i):g[i].tolist()for i in self.fixed_indices}
+        if self.nip_grip:
+            load=g[self.nip_grip.indices].sum(axis=0)
+            self.last_info['nip_grip']={**self.nip_grip.metadata(),'force_on_yarn_N':load.tolist(),'force_on_frame_N':(-load).tolist(),'resultant_N':float(np.linalg.norm(load))}
         if self.fixed_section and self.fixed_section.get('grip_material_intervals_mm'):
             material=np.r_[0.,np.cumsum(self.rest)];lands=[]
             for lo,hi in self.fixed_section['grip_material_intervals_mm']:
@@ -59,5 +70,6 @@ class RigidClampFeedEquilibrium(FeedEquilibrium):
     def checkpoint(self,x,state):
         cp=super().checkpoint(x,state);cp.update(clamp_pose_model='geometric_datum_RzRyRx_v1',com_body_xyz_mm=self.clamp_spec.get('com_body_xyz_mm',[0.,0.,0.]),mass_reference_g=self.clamp_spec['mass_target_g'],scope='Six-DOF clamp datum, connected material and gravity feeder; numerical endpoint conditional on material properties and gripping retention.')
         cp['fixed_section']=self.fixed_section
+        cp['nip_section']=self.nip_section
         if self.fixed_section:cp['clamp_pose_model']='free_pin_wrap_geometric_datum_v1'if self.fixed_section.get('gripped_edges')else'legacy_fixed_arc_geometric_datum_v1'
         return cp

@@ -28,21 +28,38 @@ class Fairlead:
 
 class NipPads:
  boxes=[([10,401,238],[22,411,238.5]),([10,401,239.1],[22,411,239.6])]
+ def __init__(self,feeder=None):
+  self.grip=None
+  if feeder:
+   gap=feeder['nip_closed_gap_mm'];self.boxes=[([10,401,238],[22,411,238.5]),([10,401,238.5+gap],[22,411,239.+gap])]
+ def set_grip(self,grip):self.grip=grip;self.reduced={e:grip.reduce(self.boxes,e)for e in grip.edge_ids}
+ def distance_for_edges(self,p,edge_ids):
+  d,g=self.distance(p)
+  if self.grip:
+   for edge,reduced in self.reduced.items():
+    use=np.asarray(edge_ids)==edge;x,n=reduced.distance(p[use]);d[use]=x;g[use]=n
+  return d,g
  def distance(self,p):
   d,g=box_distance3d(p,*self.boxes[0]);x,n=box_distance3d(p,*self.boxes[1]);mask=x<d;d[mask]=x[mask];g[mask]=n[mask];return d,g
  def edge_contact_terms(self,q,rest,counts,radius):
   for lo,hi in self.boxes:
    e,t,w,p=edge_samples(q,rest,counts,lo,hi,radius)
    if len(e):
-    d,g=box_distance3d(p,lo,hi);yield e,t,w,d,g
+    d,g=box_distance3d(p,lo,hi)
+    if getattr(self,'grip',None):
+     from physics.fixture_contact import BoxUnion,subtract_box
+     for edge in self.grip.edge_ids:
+      reduced=BoxUnion(subtract_box((lo,hi),self.grip.cut_for_edge(edge)));use=e==edge;d[use],g[use]=reduced.distance(p[use])
+    yield e,t,w,d,g
 
 class ScrewCover(NipPads):
  def __init__(self,underhead,length,diameter,head_diameter,head_height):
   x,y,z=underhead;r=diameter/2;h=head_diameter/2
   self.boxes=[([x-r,y-length,z-r],[x+r,y,z+r]),([x-h,y,z-h],[x+h,y+head_height,z+h])]
+  self.grip=None
 
 class FeederContact:
- def __init__(self,base,z,auxiliary=()):self.base=base;self.fixed=[Pulley(32,230),Pulley(64,230),Fairlead(),NipPads(),*auxiliary];self.moving=Pulley(48,z)
+ def __init__(self,base,z,auxiliary=(),feeder=None):self.base=base;self.nip_pads=NipPads(feeder);self.fixed=[Pulley(32,230),Pulley(64,230),Fairlead(),self.nip_pads,*auxiliary];self.moving=Pulley(48,z)
  def edge_contact_terms(self,q,rest,counts,radius):
   yield from self.base.edge_contact_terms(q,rest,counts,radius)
   for pulley in self.fixed+[self.moving]:yield from pulley.edge_contact_terms(q,rest,counts,radius)

@@ -1,0 +1,533 @@
+{
+  "revision": "MACHINE-SERVICE-S3",
+  "units": "mm",
+  "cameras": false,
+  "counterweight_cradle": {
+    "rail_kind": "z",
+    "rail_origin_xyz_mm": [
+      116,
+      464,
+      139.0007487654
+    ],
+    "rail_xdir": [
+      0,
+      0,
+      1
+    ],
+    "rail_normal": [
+      0,
+      -1,
+      0
+    ],
+    "cup_center_xy_mm": [
+      96,
+      406
+    ],
+    "cup_height_mm": 25,
+    "cup_diameter_mm": 12,
+    "center_stops_mm": {
+      "HIGH": 118.0014975308,
+      "LOW": 160.0
+    },
+    "release_drop_mm": 3.0,
+    "stowed_angle_deg": 90.0,
+    "supported_angle_deg": 0.0,
+    "carriage_index_bore_mm": 3.4,
+    "rail_index_bore_mm": 3.4,
+    "index_screw_length_mm": 30,
+    "index_access_bore_mm": 6.4,
+    "index_pin_underhead_y_mm": 446,
+    "index_nut_back_y_mm": 472,
+    "index_storage_underhead_xyz_mm": [
+      130,
+      472,
+      194
+    ],
+    "upright_bbox_mm": [
+      96,
+      136,
+      464,
+      472,
+      12,
+      200
+    ],
+    "foot_bbox_mm": [
+      88,
+      144,
+      452,
+      478,
+      12,
+      20
+    ],
+    "base_holes_xy_mm": [
+      [
+        96,
+        460
+      ],
+      [
+        136,
+        460
+      ]
+    ],
+    "base_hole_diameter_mm": 3.4,
+    "base_screw_length_mm": 25,
+    "base_nut_bottom_z_mm": -2.4,
+    "rail_mount_z_offsets_mm": [
+      -8,
+      8
+    ],
+    "rail_mount_underhead_y_mm": 461.2,
+    "rail_mount_screw_length_mm": 16,
+    "adapter_bbox_relative_center_z_mm": [
+      110,
+      122,
+      440,
+      446,
+      -20.5,
+      12
+    ],
+    "adapter_shelf_bbox_relative_center_z_mm": [
+      110,
+      122,
+      404,
+      446,
+      -20.5,
+      -16.5
+    ],
+    "adapter_mount_z_offsets_mm": [
+      -8,
+      8
+    ],
+    "adapter_mount_underhead_y_mm": 440,
+    "adapter_mount_screw_length_mm": 16,
+    "tray_bbox_relative_center_z_mm": [
+      88,
+      120,
+      398,
+      414,
+      -16.5,
+      -12.5
+    ],
+    "tray_pivot_xy_mm": [
+      116,
+      410
+    ],
+    "tray_pivot_bore_mm": 3.4,
+    "tray_pivot_screw_length_mm": 12,
+    "tray_index_offset_xy_mm": [
+      -4,
+      -4
+    ],
+    "tray_index_bore_mm": 2.2,
+    "tray_index_screw_length_mm": 12,
+    "tray_ring_inner_radius_mm": 6.35,
+    "tray_ring_outer_radius_mm": 8,
+    "tray_ring_height_mm": 2,
+    "tray_top_relative_center_z_mm": -12.5,
+    "tray_index_hardware_bottom_relative_z_mm": -22.1,
+    "tray_pivot_nut_bottom_relative_z_mm": -22.9,
+    "tray_index_access": "Remove and reinstall the M2 index screw and nut at the other fixed shelf hole before releasing the tray. Pivot remains retained.",
+    "minimum_cup_release_clearance_mm": 1,
+    "maximum_service_load_N": 1.0,
+    "admission": {
+      "rail_clearance_and_fits": "Use existing finished manual slide fits; measure and lock at index. Existing nominal printed clearance is not certified repeatability.",
+      "cup_center_stop_error_max_mm": 0.25,
+      "tray_top_flatness_max_mm": 0.1,
+      "cup_max_outer_diameter_mm": 12.2,
+      "minimum_ring_radial_clearance_mm": 0.25,
+      "proof_load_N": 1.0,
+      "proof_seconds": 600,
+      "permanent_set_max_mm": 0.05,
+      "manual_transit_max_speed_mm_s": 2.0,
+      "requires": [
+        "Measured index seating and cup center",
+        "Proof with surrogate mass before cord service",
+        "No rail binding through release and switch positions",
+        "Full machine swept clearance and cord custody check"
+      ]
+    },
+    "procedure": [
+      "Close both service nips and support main carrier at Z160 before cord switching. These nips are a separate integration dependency.",
+      "From stowed tray, place slide 3 mm below the current cup center. Support slide manually, remove vertical index screw only after taking load, and loosen side lock.",
+      "Unlock M2 tray index, swivel tray to 0 degrees while below cup, reinstall M2 screw/nut. The M3 pivot always stays retained.",
+      "Raise slide until tray supports the cup at its actual center, engage vertical index screw at the selected HIGH or LOW hole, tighten its retaining nut and side lock before touching cord attachment.",
+      "For a mode change keep one hand on the slide, remove vertical index screw, loosen side lock and move cup continuously at at most 2 mm/s to the other index. Retain cup on tray, do not lift it by its cord.",
+      "At target, insert index screw/nut and lock slide, finish cord attachment, and establish cord support before lowering cradle 3 mm.",
+      "After load transfers to cord, lower cradle 3 mm, rotate tray to 90 degrees, reinstall tray index screw/nut, and leave vertical side lock tightened. The tray then clears the full counterweight travel."
+    ],
+    "tray_index_storage_underhead_xyz_mm": [
+      110,
+      472,
+      194
+    ],
+    "tray_index_storage_nut_front_y_mm": 462.4
+  },
+  "parts": {
+    "CS01_upright": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "FDM, 5 walls, 40% infill, 100% around holes; finish mounting faces"
+    },
+    "CS02_indexed_rail": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Existing A01_z rail with two additional through index holes"
+    },
+    "CS03_indexed_carriage": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Existing A02 carriage with central index bore"
+    },
+    "CS04_adapter": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "FDM, 100% nominal infill; finish tray seat and mounting faces"
+    },
+    "CS05_swivel_tray": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "FDM, 100% nominal infill; finish cup support and ring"
+    },
+    "CS06_cap_L": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Reuse A03_z_cap_L geometry"
+    },
+    "CS07_cap_R": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Reuse A04_z_cap_R geometry"
+    },
+    "CS08_stop_L": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Reuse A05_z_stop_L geometry"
+    },
+    "CS09_stop_R": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Reuse A06_z_stop_R geometry"
+    },
+    "HW_buttonM3x12": {
+      "quantity": 4,
+      "material": "steel",
+      "process": "buy"
+    },
+    "HW_M3x12": {
+      "quantity": 6,
+      "material": "steel",
+      "process": "buy; four rail stops, one side lock, one tray pivot"
+    },
+    "HW_M3x16": {
+      "quantity": 4,
+      "material": "steel",
+      "process": "buy; two rail mounts and two adapter mounts"
+    },
+    "HW_M3x25": {
+      "quantity": 2,
+      "material": "steel",
+      "process": "buy; base mounting"
+    },
+    "HW_M3x30": {
+      "quantity": 1,
+      "material": "steel",
+      "process": "buy; removable retained vertical index"
+    },
+    "HW_M3nut": {
+      "quantity": 17,
+      "material": "steel",
+      "process": "buy"
+    },
+    "HW_M2x12": {
+      "quantity": 1,
+      "material": "steel",
+      "process": "buy; tray angle index"
+    },
+    "HW_M2nut": {
+      "quantity": 1,
+      "material": "steel",
+      "process": "buy; tray angle index"
+    }
+  },
+  "service_nips": {
+    "reference_center_xyz_mm": [
+      16,
+      406,
+      238.75
+    ],
+    "installed_centers_xyz_mm": {
+      "IN": [
+        16,
+        406,
+        238.75
+      ],
+      "OUT": [
+        118,
+        406,
+        238
+      ]
+    },
+    "closed_gap_mm": 0.5,
+    "open_gap_mm": 1.5,
+    "upper_travel_mm": 1.0,
+    "pad_thickness_mm": 0.5,
+    "lower_body_top_z_mm": 238,
+    "upper_body_closed_bottom_z_mm": 239.5,
+    "upper_body_thickness_mm": 4,
+    "pad_bounds_xy_mm": [
+      10,
+      22,
+      401,
+      411
+    ],
+    "actuation_bolts_xy_mm": [
+      [
+        13,
+        409
+      ],
+      [
+        19,
+        409
+      ]
+    ],
+    "actuation_bore_diameter_mm": 2.2,
+    "actuation_screw_length_mm": 16,
+    "actuation_underhead_z_mm": 244.5,
+    "lower_nut_bottom_z_mm": 230.4,
+    "pad_shoulder_clearance_diameter_mm": 4.4,
+    "shoulder_od_mm": 4,
+    "shoulder_id_mm": 2.2,
+    "shoulder_length_mm": 1.5,
+    "open_shim_od_mm": 4,
+    "open_shim_bore_mm": 2.2,
+    "open_shim_slot_width_mm": 2.3,
+    "open_shim_thickness_mm": 1.0,
+    "upper_pad_fix_xy_mm": [
+      11.5,
+      403
+    ],
+    "lower_pad_fix_xy_mm": [
+      19,
+      403
+    ],
+    "upper_pad_screw_length_mm": 8,
+    "lower_pad_screw_length_mm": 12,
+    "pad_fix_bore_diameter_mm": 2.2,
+    "opposed_head_clearance_diameter_mm": 4.4,
+    "lower_opposed_head_pocket_z_mm": [
+      236.8,
+      239.0
+    ],
+    "upper_opposed_head_pocket_z_mm": [
+      238.8,
+      240.7
+    ],
+    "downstream_bracket_beam_bbox_mm": [
+      98,
+      128,
+      416,
+      422,
+      231,
+      243
+    ],
+    "downstream_bracket_connector_bbox_mm": [
+      98,
+      106,
+      410,
+      422,
+      234,
+      242
+    ],
+    "key_width_mm": 2,
+    "key_height_mm": 2,
+    "key_projection_mm": 2,
+    "key_pocket_width_mm": 2.05,
+    "key_pocket_height_mm": 2.05,
+    "key_pocket_depth_mm": 2.05,
+    "upstream_key_xz_mm": [
+      [
+        14,
+        239.2
+      ],
+      [
+        20,
+        239.2
+      ]
+    ],
+    "downstream_key_xz_mm": [
+      [
+        113.5,
+        238.5
+      ],
+      [
+        122.5,
+        238.5
+      ]
+    ],
+    "upstream_key_root_y_mm": 416,
+    "downstream_key_root_y_mm": 416,
+    "mount_bolt_length_mm": 16,
+    "mount_bolt_underhead_y_mm": 422,
+    "mount_nut_front_y_mm": 411,
+    "mount_z_relative_center_mm": -3.25,
+    "main_nut_thickness_mm": 1.6,
+    "finish_admission": {
+      "shoulder_length_tolerance_mm": 0.01,
+      "pad_thickness_tolerance_mm": 0.005,
+      "shim_thickness_tolerance_mm": 0.01,
+      "closed_gap_bounds_mm": [
+        0.48,
+        0.52
+      ],
+      "open_gap_bounds_mm": [
+        1.47,
+        1.53
+      ],
+      "key_width_height_tolerance_mm": 0.02,
+      "pocket_width_height_tolerance_mm": 0.02,
+      "grip_proof_N": 1.0,
+      "operation_resultant_ceiling_N": 0.5,
+      "hold_seconds": 600,
+      "slip_limit_mm": 0.05,
+      "yarn_lane_center_y_mm": 406,
+      "yarn_radius_admission_max_mm": 0.3,
+      "must_measure": [
+        "Same-lot compression force versus gap",
+        "Wet/dry friction and damage after hold",
+        "Reversal holding and creep",
+        "Pad flatness and opposed-head clearance",
+        "Nip opening release transient"
+      ]
+    },
+    "closed_state": "C-shims sit on top of upper jaw, beneath both M2 screw heads. Upper jaw bears on two 1.5 mm brass shoulders, placing the two 0.5 mm pad faces 0.5 mm apart.",
+    "open_state": "Move each 1.0 mm C-shim beneath upper jaw onto its shoulder. Upper jaw rises exactly the shim thickness; screws return to the same underhead plane and remain fully engaged.",
+    "opening_procedure": [
+      "Establish receiving nip grip before loosening donor nip. Keep one nip closed throughout service.",
+      "Support upper plate. Loosen each M2 actuator no more than 1.2 mm (three turns at 0.4 mm pitch); nuts and upper plate remain retained.",
+      "Slide each open C-shim out from under its screw head, raise the upper plate 1.0 mm and slide the shim onto its shoulder beneath the upper plate. Keep shims outside Y405.7\u2026406.3 yarn corridor.",
+      "Tighten both M2 screws against the hard open stack. Verify 1.47\u20261.53 mm metal-face gap before source payout.",
+      "Reverse the shim transfer to close; do not force yarn against a closed nip during payout. Prove grip before opening the other nip."
+    ],
+    "custody_sequence": [
+      "RUN: IN closed, OUT open; working material follows actual feeder and guide.",
+      "HOLD: close OUT while IN remains closed; record gripped material coordinate and verify grip.",
+      "REFILL: keep OUT closed, support carrier and open IN; append measured upstream material only at source, preserving existing material coordinates.",
+      "RELOCK: close and prove IN at carrier Z160; both nips are closed for mode/cord service.",
+      "RESUME: establish the selected feeder load and settle it, then open OUT; IN remains closed."
+    ],
+    "forbidden": "Both nips open simultaneously; changing fixed material IDs without a physical regrip; treating a geometric face gap as proof of friction force.",
+    "source_supply": "Finite manually measured supply packet upstream of IN; no automatic spool or infinite material source is implied.",
+    "pad_corner_notches_xy_mm": {
+      "lower": [
+        10,
+        12,
+        401,
+        402
+      ]
+    },
+    "shim_withdrawal_mm": 5.5,
+    "actuator_loosen_mm": 1.2,
+    "opening_phases": [
+      "LOOSEN_SCREWS",
+      "WITHDRAW_SHIMS",
+      "LIFT_UPPER",
+      "LOWER_SHIMS",
+      "INSERT_SHIMS",
+      "TIGHTEN_SCREWS"
+    ],
+    "upper_pad_shim_entry_slots_xy_mm": [
+      [
+        10,
+        13,
+        406.8,
+        411
+      ],
+      [
+        19,
+        22,
+        406.8,
+        411
+      ]
+    ],
+    "preferred_open_lane_midpoint_lift_mm": 0.5,
+    "open_uncompressed_yarn_radius_max_mm": 0.3,
+    "material_boundary_note": "Installed centers are closed gap midpoints. Opening raises upper pad only, moving midpoint by 0.5 mm. Use actual unilateral pad contacts and measured compression for closing; do not pin open yarn to the closed midpoint."
+  },
+  "nip_parts": {
+    "NS01_fairlead_bracket_extended": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Print extended keyed P10 replacement; finish original fairlead and bolt interfaces"
+    },
+    "NS02_tower_keyed": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Existing P01 tower with two shallow locating pockets; finish pockets"
+    },
+    "NS03_inlet_lower": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "P13 replacement with positive tower keys and pad-retainer access"
+    },
+    "NS04_outlet_lower": {
+      "quantity": 1,
+      "material": "PLA Basic",
+      "process": "Translated P13 replacement with bracket key pockets and pad-retainer access"
+    },
+    "NS05_upper": {
+      "quantity": 2,
+      "material": "PLA Basic",
+      "process": "Print 100% nominal infill; finish flat 4 mm thickness and screw/counter-head bores"
+    },
+    "NS06_lower_pad": {
+      "quantity": 2,
+      "material": "C260 brass",
+      "process": "Cut 0.5 mm K&S9842 sheet, finish to 0.500 \u00b1 0.005 mm, deburr/polish"
+    },
+    "NS07_upper_pad": {
+      "quantity": 2,
+      "material": "C260 brass",
+      "process": "Cut same sheet, finish to 0.500 \u00b1 0.005 mm, deburr/polish"
+    },
+    "NS08_shoulder": {
+      "quantity": 4,
+      "material": "C260 brass",
+      "process": "Turn common K&S1166 stock: OD4, ID2.2, L1.500 \u00b1 0.010 mm"
+    },
+    "NS09_open_shim": {
+      "quantity": 4,
+      "material": "C260 brass",
+      "process": "Turn common K&S1166 stock: OD4, ID2.2, thickness1.000 \u00b1 0.010; slot2.3 wide open radially"
+    },
+    "HW_M2x16": {
+      "quantity": 4,
+      "material": "steel",
+      "process": "buy; retained actuator screws"
+    },
+    "HW_M2x8": {
+      "quantity": 2,
+      "material": "steel",
+      "process": "buy; upper pad retainers"
+    },
+    "HW_M2x12": {
+      "quantity": 2,
+      "material": "steel",
+      "process": "buy; lower pad retainers"
+    },
+    "HW_M3x16": {
+      "quantity": 2,
+      "material": "steel",
+      "process": "buy; inlet/outlet mounts"
+    },
+    "HW_M2nut": {
+      "quantity": 8,
+      "material": "steel",
+      "process": "buy; actuator and pad retainer nuts"
+    },
+    "HW_M3nut": {
+      "quantity": 2,
+      "material": "steel",
+      "process": "buy; captive inlet/outlet mounts"
+    }
+  }
+}

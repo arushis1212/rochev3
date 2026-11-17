@@ -7,7 +7,8 @@ def mass_budget(cad, parts):
         rows.append({'part':name,'quantity':quantity,'solid_or_envelope_mm3':volume,'density_ceiling_g_cm3':rho,'mass_ceiling_g':quantity*volume*rho/1000,'category':category})
     for name,n in [('P04_carrier',1),('P05_pulley_half',2)]:add(name,n,parts[name].val().Volume(),a['polymer_density_max_g_cm3'],'solid polymer ceiling, not assumed infill')
     for name in ('P07_spacer4','P21_spacer2'):add(name,1,parts[name].val().Volume(),a['brass_density_max_g_cm3'],'solid brass')
-    for name,n,obj in [('M3x20',1,cad.bolt(3,20)),('M3nut',1,cad.nut(3)),('M2x8',2,cad.bolt(2,8)),('M2nut',2,cad.nut(2))]:add(name,n,obj.val().Volume(),a['steel_density_max_g_cm3'],'steel enclosing solid; threads unremoved')
+    join=f['pulley_join_screw_length_mm']
+    for name,n,obj in [('M3x20',1,cad.bolt(3,20)),('M3nut',1,cad.nut(3)),(f'M2x{join:g}',2,cad.bolt(2,join)),('M2nut',2,cad.nut(2))]:add(name,n,obj.val().Volume(),a['steel_density_max_g_cm3'],'steel enclosing solid; threads unremoved')
     rows.append({'part':'623-2Z','quantity':1,'mass_ceiling_g':a['bearing_max_g'],'category':'weighed acceptance ceiling; source typical1.5g'})
     rows.append({'part':'cord/adhesive','quantity':1,'mass_ceiling_g':a['additional_cord_adhesive_max_g'],'category':'weighed allocation'})
     total=sum(r['mass_ceiling_g'] for r in rows); target=f['main_total_mass_g']
@@ -26,7 +27,7 @@ def center_of_mass_screen(cad,ps):
     part(cad.place(cad.bolt(3,20),(48,400,0),(1,0,0),(0,-1,0)),a['steel_density_max_g_cm3'])
     part(cad.place(cad.nut(3),(48,414,0),(1,0,0),(0,1,0)),a['steel_density_max_g_cm3'])
     for x in (41.5,54.5):
-        part(cad.place(cad.bolt(2,8),(x,409,0),(1,0,0),(0,1,0)),a['steel_density_max_g_cm3'])
+        part(cad.place(cad.bolt(2,cad.S['feeder']['pulley_join_screw_length_mm']),(x,409,0),(1,0,0),(0,1,0)),a['steel_density_max_g_cm3'])
         part(cad.place(cad.nut(2),(x,401.4,0),(1,0,0),(0,1,0)),a['steel_density_max_g_cm3'])
     samples.extend([(a['bearing_max_g'],48,406,0),(a['additional_cord_adhesive_max_g'],48,406,14)])
     total=sum(x[0] for x in samples); ym=sum(m*y for m,x,y,z in samples); target=cad.S['feeder']['main_total_mass_g']; ballast=target-total

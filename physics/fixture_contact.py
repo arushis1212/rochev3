@@ -56,7 +56,7 @@ def clamp_pad_boxes(spec):
 
 def subtract_box(box,cut):
     """Exact disjoint box decomposition of box minus an axis-aligned cutter."""
-    lo,hi=map(np.asarray,box);a=np.maximum(lo,cut[0]);b=np.minimum(hi,cut[1])
+    lo,hi=[np.asarray(v,dtype=float)for v in box];a=np.maximum(lo,cut[0]);b=np.minimum(hi,cut[1])
     if np.any(a>=b):return [(lo,hi)]
     pieces=[]
     for axis in range(3):
@@ -80,7 +80,12 @@ class ClampContact(BoxUnion):
         self.pad_outer=p
         rigid=[([-w,-o,-h],[w,-p,h]),([-w,p,-h],[w,o,h])]
         for x in spec['bolt_x_mm']:
-            rigid.extend([([x-1.5,-o,-1.5],[x+1.5,16-o,1.5]),([x-2.84,-o-3,-2.84],[x+2.84,-o,2.84]),([x-3.2,o,-3.2],[x+3.2,o+2.4,3.2])])
+            flat=spec.get('front_fastener')
+            length=(flat['overall_length_mm']+flat['length_tolerance_mm']+flat['seated_recess_range_mm'][1]) if flat else 16.
+            rigid.extend([([x-1.5,-o,-1.5],[x+1.5,length-o,1.5]),([x-3.2,o,-3.2],[x+3.2,o+2.4,3.2])])
+            # A qualified flush cone is wholly inside the conservative jaw box.
+            # Old socket heads protrude beyond that box and must be retained.
+            if not flat:rigid.append(([x-2.84,-o-3,-2.84],[x+2.84,-o,2.84]))
         self.rigid=BoxUnion(rigid);self.pads=BoxUnion(clamp_pad_boxes(spec))
         self.spacers=[];envelopes=list(rigid)+list(self.pads.boxes)
         spacer=spec.get('stop_spacer')

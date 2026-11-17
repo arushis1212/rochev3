@@ -1,5 +1,6 @@
-"""Parametric crochet research fixture, millimetres.
-Dimensions: spec/r5_m2_fixture.json. Exports OpenCascade solids, STEP and STL.
+"""R5-M2 experimental tooling and manual slide CAD, millimetres.
+Authoritative dimensions: spec/r5_m2_fixture.json. Not a machine release.
+No image generation or presentation rendering. Exports real OpenCascade solids.
 """
 from pathlib import Path
 import json, math, hashlib, argparse, sys
@@ -233,13 +234,14 @@ def support_carriage():
 
 def support_bed():
     B=S['support_bank']; ox,oy,oz=B['bank_origin']; W=B['bank_width']; L=B['bank_length']; f=B['bank_floor']; h=B['bank_top']
-    b=box(ox-W/2,ox+W/2,oy-L/2,oy+L/2,oz,oz+h)
+    front=oy-L/2+B.get('bank_front_relief_depth_mm',0.)
+    b=box(ox-W/2,ox+W/2,front,oy+L/2,oz,oz+h)
     for i in range(B['station_count']):
         x=B['first_station_x']+i*B['station_pitch']
         b=b.cut(box(x-P['channel_width']/2,x+P['channel_width']/2,oy-L/2-1,oy+L/2+1,oz+f,oz+h+1))
     # End ties fit into relieved rails; they are separate parts, not overlapping solids.
     for sign in (-1,1):
-        y=oy+sign*(L/2-P['endstop_thickness']/2); e=B['cover_bed_relief_clearance']
+        y=(front+P['endstop_thickness']/2) if sign<0 else (oy+L/2-P['endstop_thickness']/2); e=B['cover_bed_relief_clearance']
         b=b.cut(box(ox-W/2-1,ox+W/2+1,y-P['endstop_thickness']/2-e,y+P['endstop_thickness']/2+e,oz+f,oz+h+1))
     for x in B['bank_cap_bolt_x']:
         for y in B['bank_cap_bolt_y']:
@@ -255,13 +257,14 @@ def support_bed():
 
 def support_cap():
     B=S['support_bank']; ox,oy,oz=B['bank_origin']; W=B['bank_width']; L=B['bank_length']; z=oz+B['bank_top']
-    b=box(ox-W/2,ox+W/2,oy-L/2,oy+L/2,z,z+B['bank_cap_thickness'])
+    front=oy-L/2+B.get('bank_front_relief_depth_mm',0.)
+    b=box(ox-W/2,ox+W/2,front,oy+L/2,z,z+B['bank_cap_thickness'])
     for i in range(B['station_count']):
         x=B['first_station_x']+i*B['station_pitch']; hw=B['bank_cap_slot_width']/2
         b=b.cut(box(x-hw,x+hw,oy-L/2-1,oy+L/2+1,z-1,z+B['bank_cap_thickness']+1))
     # End ties keep the cover one part; they are also positive carriage end stops.
     for sign in (-1,1):
-        y=oy+sign*(L/2-P['endstop_thickness']/2)
+        y=(front+P['endstop_thickness']/2) if sign<0 else (oy+L/2-P['endstop_thickness']/2)
         b=b.union(box(ox-W/2,ox+W/2,y-P['endstop_thickness']/2,y+P['endstop_thickness']/2,oz+B['bank_floor'],z+B['bank_cap_thickness']))
     for x in B['bank_cap_bolt_x']:
         for y in B['bank_cap_bolt_y']:
@@ -604,7 +607,7 @@ def joint_limit_violations(head_tip,guide_tip):
 
 def integrated_instances(ps,head_tip=None,guide_tip=None,head_gate=0,carrier_z=160,takedown_z=50,feed_mode="high",head_roll=0,support_q=None,support_gate_q=None):
     F=S['frame']; A=S['assembly']; G=S['guide']
-    hx,hy,hz=head_tip or A['head_reference_tip']; gx,gy,gz=guide_tip or A['guide_reference_tip']
+    hx,hy,hz=A['head_reference_tip'] if head_tip is None else head_tip; gx,gy,gz=A['guide_reference_tip'] if guide_tip is None else guide_tip
     th=math.radians(T['inclination_deg']); c=math.cos(th); sn=math.sin(th)
     # Mount-derived rigid transforms. See DIMENSIONS_AND_INTERFACES for the inverse map.
     hq=joint_coordinates((hx,hy,hz),(gx,gy,gz))['head']
@@ -679,7 +682,7 @@ def build():
     full_manifest=export_assembly(full,'integrated_rigid_fixture')
     (OUT/'integrated_instances.json').write_text(json.dumps(full_manifest,indent=2)+'\n')
     metadata={'revision':S['revision'],'spec_sha256':hashlib.sha256(SPEC.read_bytes()).hexdigest(),
-              'cadquery':cq.__version__,'scope':'Parametric crochet research fixture assembly',
+              'cadquery':cq.__version__,'scope':'integrated rigid hook, support bank and guide XYZ assemblies; research fixture geometry',
               'status':'Research prototype','parts':manifest}
     (OUT/'manifest.json').write_text(json.dumps(metadata,indent=2)+'\n')
     print(json.dumps({'parts':len(ps),'valid':True,'output':str(OUT),'scope':metadata['scope']}))

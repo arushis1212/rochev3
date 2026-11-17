@@ -38,7 +38,6 @@
   "clamp_screw_clearance_mm": 2.2,
   "clamp_nut_pocket_af_mm": 4.2,
   "pin_counterbore_d_mm": 4.18,
-  "scope": "Dimensioned local manual stop and clamp hardware; no whole-machine mount or qualified retention load claimed.",
   "frame_port_d_mm": 3.4,
   "frame_port_v_mm": 38.0,
   "frame_port_w_mm": [

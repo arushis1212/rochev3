@@ -1,6 +1,6 @@
 {
   "revision": "R5-M2-D22",
-  "spec_sha256": "520df7c3e4349a3099a0e3861f6bf2c748856f1fa2380cc3401099a50f3025f9",
+  "spec_sha256": "b37d26d4a55297ba8465116e7523c2b0e6a041e21e8cc32cc9bb42980071a396",
   "chord_error_bound_mm": 0.001,
   "profiles": {
     "H01_hook_body": {

@@ -32,7 +32,7 @@ def mount_parts():
   items[f'M02_fork_screw_{j}']=transfer_to_world(bolt);items[f'M03_fork_nut_{j}']=transfer_to_world(nut)
  return items
 
-def installed(ps,tp,advance,gate,lift,guide,tip=None,roll=None,reset=0.,feed_mode='high',carrier_z=160):
+def installed(ps,tp,advance,gate,lift,guide,tip=None,roll=None,reset=0.,feed_mode='high',carrier_z=160,clamp_pose=None):
  ref,u,origin=reference_frame();tip=ref+advance*u if tip is None else np.array(tip);roll=I['transfer_roll_deg'] if roll is None else roll
  scene=base.integrated_instances(ps,head_tip=tip.tolist(),guide_tip=guide,head_gate=gate,head_roll=roll,support_q=I['support_q_mm'],support_gate_q=I['support_gate_q_mm'],takedown_z=I['take_down_z_mm'],feed_mode=feed_mode,carrier_z=carrier_z)
  length=I['fairlead_mount_screw_length_mm'];scene.pop('HW_M3x16_eye')
@@ -48,6 +48,13 @@ def installed(ps,tp,advance,gate,lift,guide,tip=None,roll=None,reset=0.,feed_mod
  for j,z in enumerate(base.S['support_bank']['knockover_mount_holes_z']):
   scene[f"HW_M3x16_knockover_{I['post_index']}_{j}"]=base.place(base.bolt(3,I['post_mount_screw_length_mm']),(I['post_x_mm'],170,z),(1,0,0),(0,-1,0))
   scene[f"HW_M3nut_knockover_{I['post_index']}_{j}"]=base.place(base.nut(3),(I['post_x_mm'],I['post_mount_nut_y_mm'],z),(1,0,0),(0,1,0))
+ if clamp_pose is not None:
+  center,angles=clamp_pose;scale=base.S['cloth_clamp']['angular_scale_mm'];yaw,pitch,roll=np.asarray(angles)*180/math.pi/scale
+  for name,shape in list(scene.items()):
+   if name.startswith(('D01_','D02_','D03_','HW_M3x16_cloth_','HW_M3nut_cloth_')):
+    shape=shape.translate((-150,-165,-I['take_down_z_mm']))
+    shape=shape.rotate((0,0,0),(1,0,0),float(roll)).rotate((0,0,0),(0,1,0),float(-pitch)).rotate((0,0,0),(0,0,1),float(yaw))
+    scene[name]=shape.translate(tuple(center))
  return scene
 
 def cases():

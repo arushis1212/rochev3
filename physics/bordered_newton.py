@@ -21,7 +21,7 @@ def bordered_direction(A,B,C,gradient,damping=0.):
     cb=cho_solve(cho_factor(S,lower=True,check_finite=True),-gradient[m:]+B.T@z)
     return np.concatenate([-z-W@cb,cb])
 
-def minimize_bordered(evaluate,start,interior,local_safe,gtol=1e-8,maxiter=200,step=1e-6,max_step=.25,callback=None,spectral=False):
+def minimize_bordered(evaluate,start,interior,local_safe,gtol=1e-8,maxiter=200,step=1e-6,max_step=.25,callback=None,spectral=False,step_admissible=None):
     if spectral not in (False,True,'absolute'):raise ValueError('Unknown spectral search metric')
     x=start.copy();E,g=evaluate(x);iterations=0;reason='iteration_limit';largest_damping=0.;fallbacks=0
     for iteration in range(maxiter):
@@ -56,7 +56,8 @@ def minimize_bordered(evaluate,start,interior,local_safe,gtol=1e-8,maxiter=200,s
                 except ValueError:En=float('inf')
                 roundoff=32*np.finfo(float).eps*max(1.,abs(E))
                 force_improved=np.max(abs(g))<=1e-6 and np.max(abs(gn))<np.max(abs(g)) if np.isfinite(En) else False
-                if np.isfinite(En) and (En<=E+1e-4*alpha*slope or (force_improved and En<=E+roundoff)):accepted=True;break
+                if np.isfinite(En) and (En<=E+1e-4*alpha*slope or (force_improved and En<=E+roundoff)):
+                    if step_admissible is None or step_admissible(x,candidate):accepted=True;break
                 alpha*=.5
             if accepted:break
             damping=scale*1e-10 if damping==0 else damping*10

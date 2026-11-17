@@ -1,0 +1,13 @@
+{
+  "revision": "R5-M2-D24",
+  "component_variants": 84,
+  "valid_solids": true,
+  "threaded_reference_nodes": 401,
+  "assembly_solids": 558,
+  "reference_length_mm": 804.5309777608768,
+  "material_length_error_mm": 6.139089236967266e-12,
+  "self_gap_mm": 0.3253287538364792,
+  "native_gap_lower_bound_mm": -0.003997815419626294,
+  "native_collision_allowance_mm": 0.01,
+  "scope": "Manually threaded reference geometry and nominal part validity; a numerical fixture setup with declared material assumptions."
+}

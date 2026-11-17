@@ -46,6 +46,14 @@ class FeederContact:
  def edge_contact_terms(self,q,rest,counts,radius):
   yield from self.base.edge_contact_terms(q,rest,counts,radius)
   for pulley in self.fixed+[self.moving]:yield from pulley.edge_contact_terms(q,rest,counts,radius)
+ def clipped_distance(self,p,ceiling):
+  # Components outside an expanded enclosing AABB cannot lower this cutoff.
+  # Exact SDF values are retained for every potentially closer component.
+  cutoff=np.broadcast_to(np.asarray(ceiling,dtype=float),(len(p),));d=cutoff.copy()
+  for idx,value,_ in self.base.sparse_components(p,float(np.max(cutoff))):
+   d[idx]=np.minimum(d[idx],value)
+  for part in self.fixed+[self.moving]:d=np.minimum(d,part.distance(p)[0])
+  return d
  def distance(self,p):
   d,g=self.base.distance(p)
   for pulley in self.fixed+[self.moving]:

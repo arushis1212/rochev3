@@ -20,9 +20,14 @@ def parts(c):
     q=b(0,4,0,20,0,20).union(b(0,20,16,20,0,20))
     q=q.cut(cx(-1,5,1.7,10,10)).cut(cy(15,21,1.7,10,10))
     p['S04_bracket_L']=q;p['S05_bracket_R']=q.mirror('YZ').translate((20,0,0))
-    jaw=b(-50,50,-6,-2,-5,5)
-    for x in (-46,46):jaw=jaw.cut(cy(-7,-1,1.7,x,0))
-    p['D01_jaw']=jaw;p['D02_pad']=b(-44,44,-2,-1,-5,5)
+    C=S['cloth_clamp']; half=C['closed_face_gap_mm']/2; pad=half+C['pad_thickness_mm']; outer=pad+C['jaw_thickness_mm']; h=C['body_height_mm']/2
+    jaw=b(-C['body_width_mm']/2,C['body_width_mm']/2,-outer,-pad,-h,h)
+    for x in C['bolt_x_mm']:jaw=jaw.cut(cy(-outer-1,-pad+1,C['bolt_clearance_radius_mm'],x,0))
+    pad_shape=b(-C['pad_width_mm']/2,C['pad_width_mm']/2,-pad,-half,-h,h)
+    if C.get('return_pin'):
+        pin=C['return_pin'];px,py,pz=pin['center_body_mm'];socket=cy(pin['socket_back_y_mm'],-half+1,pin['socket_diameter_mm']/2,px,pz);jaw=jaw.cut(socket);pad_shape=pad_shape.cut(socket)
+        p['D03_return_pin']=cy(-pin['length_mm']/2,pin['length_mm']/2,pin['diameter_mm']/2,px,pz)
+    p['D01_jaw']=jaw;p['D02_pad']=pad_shape
     q=b(*S['feeder']['tower_bbox']);q=q.cut(b(32,64,415,423,110,210))
     for x,z in [(20,32),(76,32),(32,230),(64,230),(78,238),(76,256),(48,220),(16,235.5),(56,250),(28,155.5)]+[(x+6,z) for x in (24,72) for z in (120,200)]:q=q.cut(cy(415,423,1.7,x,z))
     for x in (24,72):
@@ -84,8 +89,10 @@ def add(items,ps,c,carrier_z=160,takedown_z=50,mode='high',support_pin=False):
             nut(f'HW_M3nut_stand_back_{side}_{j}',3,(x+10,470,z+10),(0,1,0))
     for side in ('A','B'):
         for name in ('D01_jaw','D02_pad'):obj(name,name+'_'+side,(150,165,takedown_z),'XZ' if side=='B' else None)
-    for i,x in enumerate((-46,46)):
-        screw(f'HW_M3x16_cloth_{i}',3,16,(150+x,159,takedown_z),(0,-1,0));nut(f'HW_M3nut_cloth_{i}',3,(150+x,171,takedown_z),(0,1,0))
+    C=c.S['cloth_clamp']; outer=C['closed_face_gap_mm']/2+C['pad_thickness_mm']+C['jaw_thickness_mm']
+    if C.get('return_pin'):obj('D03_return_pin',xyz=(150,165,takedown_z))
+    for i,x in enumerate(C['bolt_x_mm']):
+        screw(f'HW_M3x16_cloth_{i}',3,16,(150+x,165-outer,takedown_z),(0,-1,0));nut(f'HW_M3nut_cloth_{i}',3,(150+x,165+outer,takedown_z),(0,1,0))
     for name in ('P01_tower','P10_fairlead_bracket','P11_fairlead','P13_nip_lower','P14_nip_upper','P16_idler_bracket','P17_park_cleat'):obj(name)
     obj('P15_nip_pad','P15_pad_lower');obj('P15_nip_pad','P15_pad_upper',(0,0,1.1))
     for i,x in enumerate((13,19)):

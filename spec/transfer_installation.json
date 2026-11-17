@@ -102,7 +102,6 @@
   ],
   "take_down_z_mm": 40,
   "slice_seconds": 280,
-  "scope": "Single-station mounted transfer and manually stopped axial pin-reset candidate; connected stitch qualification remains separate.",
   "frame_port_v_mm": 38.0,
   "bank_relief_global_box_mm": [
     149.8,

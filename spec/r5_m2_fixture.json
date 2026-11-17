@@ -1,5 +1,5 @@
 {
-  "revision": "R5-M2-D22",
+  "revision": "R5-M2-D24",
   "units": "mm except explicit suffixes",
   "cameras": false,
   "tolerances": {
@@ -243,7 +243,8 @@
     "post_nut_y": [
       182,
       185.4
-    ]
+    ],
+    "bank_front_relief_depth_mm": 5.5
   },
   "guide": {
     "tube_od": 3.175,
@@ -489,6 +490,7 @@
     "screen_only": true,
     "measured_properties_available": false
   },
+  "open_release_requirements": [],
   "assembly": {
     "head_reference_tip": [
       133.5,
@@ -843,7 +845,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S1_present",
@@ -871,7 +874,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S2_open_before_sweep",
@@ -899,7 +903,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S2_first_capture_open",
@@ -927,7 +932,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S3_first_capture_closed",
@@ -955,7 +961,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S3_withdraw_axially",
@@ -983,7 +990,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S3_park_after_clear",
@@ -1011,7 +1019,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S4_head_aside",
@@ -1039,7 +1048,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S4_open_supports",
@@ -1067,7 +1077,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S4_support_advance",
@@ -1095,7 +1106,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S4_support_close",
@@ -1123,7 +1135,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S4_support_castoff",
@@ -1151,7 +1164,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S5_move_closed",
@@ -1179,7 +1193,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S5_before_clear",
@@ -1207,7 +1222,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S5_extended",
@@ -1235,7 +1251,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S6_over_left",
@@ -1263,7 +1280,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S6_over_right",
@@ -1291,7 +1309,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S6_lower_right",
@@ -1319,7 +1338,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S6_second_closed",
@@ -1347,7 +1367,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S6_withdraw_guide",
@@ -1375,7 +1396,8 @@
           0,
           0
         ],
-        "feed_mode": "HIGH"
+        "feed_mode": "HIGH",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S7_draw_both",
@@ -1403,7 +1425,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S8_head_clear",
@@ -1431,7 +1454,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S8_open_retracted",
@@ -1459,7 +1483,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S8_restore",
@@ -1487,7 +1512,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S9_layover_mid",
@@ -1515,7 +1541,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S9_layover_end",
@@ -1543,7 +1570,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S9_capture_on_supports",
@@ -1571,7 +1599,8 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       },
       {
         "id": "S10_store",
@@ -1599,9 +1628,11 @@
           0,
           0
         ],
-        "feed_mode": "LOW"
+        "feed_mode": "LOW",
+        "yarn_geometry_validated": false
       }
     ],
+    "known_missing": [],
     "guide_parks_x": [
       96,
       200
@@ -1644,5 +1675,40 @@
     "gate_open_front_mm": -4.5,
     "shaft_envelope_margin_mm": 0.55,
     "nose_clear_margin_mm": 0.3
+  },
+  "cloth_clamp": {
+    "body_width_mm": 100.0,
+    "pad_width_mm": 88.0,
+    "body_height_mm": 10.0,
+    "jaw_thickness_mm": 4.0,
+    "pad_thickness_mm": 1.0,
+    "closed_face_gap_mm": 0.6,
+    "bolt_x_mm": [
+      -46.0,
+      46.0
+    ],
+    "bolt_clearance_radius_mm": 1.7,
+    "attachment_height_above_com_mm": 5.0,
+    "mass_target_g": 20.0,
+    "com_body_xyz_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "angular_scale_mm": 44.0,
+    "return_pin": {
+      "center_body_mm": [
+        -6.0,
+        0.0,
+        2.0
+      ],
+      "diameter_mm": 3.0,
+      "length_mm": 8.4,
+      "socket_diameter_mm": 3.2,
+      "socket_depth_mm": 3.0,
+      "socket_back_y_mm": -4.3,
+      "centerline_radius_mm": 1.81,
+      "arc_segments": 24
+    }
   }
 }

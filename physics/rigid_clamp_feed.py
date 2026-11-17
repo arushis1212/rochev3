@@ -20,6 +20,8 @@ class RigidClampFeedEquilibrium(FeedEquilibrium):
         yz=cfg['support_contact_yz_mm'];self.anchors=np.column_stack([xx,np.full(len(xx),yz[0]),np.full(len(xx),yz[1])]);baseline=np.array(cfg['clamp_initial_center_xyz_mm'])+np.column_stack([self.neighbor_body[:,0],np.zeros((len(xx),2))]);self.neighbor_rest=np.linalg.norm(baseline-self.anchors,axis=1)
         self.clamp=ClampContact(self.clamp_spec,center,angles);bed,cover=bank_boxes(fixture);obstacle.fixed.extend([BoxUnion(bed),BoxUnion(cover),self.clamp]);super().__init__(q,rest,split,center,angles,z,cfg,obstacle,feeder,mode)
         self.fixed_indices=np.array(fixed_section['indices']if fixed_section else [0,split],dtype=int);self.fixed_body=np.array(fixed_section['body_xyz_mm'])if fixed_section else self.attach_body
+        if fixed_section and fixed_section.get('gripped_edges'):
+            self.clamp.set_gripped_edges(fixed_section)
         if fixed_section:
             self.free=np.array([i for i in range(len(q))if i not in set(self.fixed_indices)and i!=len(q)-1]);self.interior=3*len(self.free);self.x0=self.pack(q,center,angles,z)
     def unpack(self,x):
@@ -39,13 +41,23 @@ class RigidClampFeedEquilibrium(FeedEquilibrium):
         _,reaction=contact_energy3d(q,self.rest,rad,k,self.clamp,self.counts)
         force=g[self.fixed_indices].sum(axis=0)+pg.sum(axis=0)+[0,0,weight]-reaction.sum(axis=0)
         localq=(q-c)@R
-        ag=np.array([np.sum(g[self.fixed_indices]*(self.fixed_body@D.T))+np.sum(pg*(self.neighbor_body@D.T))-np.sum(reaction*(localq@D.T))for D in dR])
-        torque=np.cross(self.fixed_body@R.T,g[self.fixed_indices]).sum(axis=0)+np.cross(self.neighbor_body@R.T,pg).sum(axis=0)-np.cross(q-c,reaction).sum(axis=0)
+        com=np.array(self.clamp_spec.get('com_body_xyz_mm',[0.,0.,0.]));gravity=np.array([0.,0.,weight])
+        ag=np.array([np.sum(g[self.fixed_indices]*(self.fixed_body@D.T))+np.sum(pg*(self.neighbor_body@D.T))-np.sum(reaction*(localq@D.T))+weight*(D@com)[2]for D in dR])
+        torque=np.cross(self.fixed_body@R.T,g[self.fixed_indices]).sum(axis=0)+np.cross(self.neighbor_body@R.T,pg).sum(axis=0)-np.cross(q-c,reaction).sum(axis=0)+np.cross(R@com,gravity)
         V,dV,_=feeder_potential(z,self.feeder,self.mode);_,mg=contact_energy3d(q,self.rest,rad,k,self.obstacle.moving,self.counts)
         self.last_info={'clamp_torque_residual_Nmm':torque.tolist(),'guide_reaction_N':g[-1].tolist(),'self_contact_gap_mm':gap,'clamp_contact_reaction_N':(-reaction.sum(axis=0)).tolist(),'neighbor_tensions_N':np.linalg.norm(pg,axis=1).tolist()}
-        return E+W+G+C+S+P+weight*c[2]+V,np.r_[g[self.free].ravel(),force,ag,dV-mg[:,2].sum()]
+        self.last_info['grip_reaction_N']={str(i):g[i].tolist()for i in self.fixed_indices}
+        if self.fixed_section and self.fixed_section.get('grip_material_intervals_mm'):
+            material=np.r_[0.,np.cumsum(self.rest)];lands=[]
+            for lo,hi in self.fixed_section['grip_material_intervals_mm']:
+                ids=self.fixed_indices[(material[self.fixed_indices]>=lo-1e-9)&(material[self.fixed_indices]<=hi+1e-9)]
+                on_yarn=g[ids].sum(axis=0);moment=np.cross(q[ids]-c,g[ids]).sum(axis=0)
+                lands.append({'material_interval_mm':[lo,hi],'constraint_force_on_yarn_N':on_yarn.tolist(),'force_on_clamp_N':(-on_yarn).tolist(),'moment_on_clamp_about_datum_Nmm':(-moment).tolist(),'resultant_N':float(np.linalg.norm(on_yarn))})
+            self.last_info['grip_land_reactions']=lands
+        self.last_info['world_com_mm']=(c+R@com).tolist()
+        return E+W+G+C+S+P+weight*(c+R@com)[2]+V,np.r_[g[self.free].ravel(),force,ag,dV-mg[:,2].sum()]
     def checkpoint(self,x,state):
-        cp=super().checkpoint(x,state);cp.update(clamp_pose_model='COM_RzRyRx_top_edge_v1',scope='Six-DOF clamp, connected material and gravity feeder; numerical endpoint conditional on material properties and gripping retention.')
+        cp=super().checkpoint(x,state);cp.update(clamp_pose_model='geometric_datum_RzRyRx_v1',com_body_xyz_mm=self.clamp_spec.get('com_body_xyz_mm',[0.,0.,0.]),mass_reference_g=self.clamp_spec['mass_target_g'],scope='Six-DOF clamp datum, connected material and gravity feeder; numerical endpoint conditional on material properties and gripping retention.')
         cp['fixed_section']=self.fixed_section
-        if self.fixed_section:cp['clamp_pose_model']='finite_return_pin_v1'
+        if self.fixed_section:cp['clamp_pose_model']='free_pin_wrap_geometric_datum_v1'if self.fixed_section.get('gripped_edges')else'legacy_fixed_arc_geometric_datum_v1'
         return cp

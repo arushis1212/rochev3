@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T15",
+  "revision": "TRANSFER-T16",
   "units": "mm,N,g",
   "heel_start_u": -7.5,
   "heel_floor_u": -2.2,
@@ -25,7 +25,7 @@
   "local_samples": 32,
   "gate_profile_radius_mm": 0.25,
   "lift_pin_radius_mm": 0.5,
-  "lift_pin_w_mm": 2.5,
+  "lift_pin_w_mm": 3.0,
   "lift_park_v_mm": -2.0,
   "lift_high_v_mm": 4.0,
   "lift_slot_clearance_mm": 0.1,
@@ -38,7 +38,7 @@
   ],
   "lift_guide_w_mm": 7.0,
   "lift_guide_radius_mm": 1.5,
-  "lift_bushing_bore_d_mm": 3.02,
+  "lift_bushing_bore_d_mm": 3.03,
   "lift_bushing_outer_d_mm": 6.0,
   "lift_bushing_v_offsets_mm": [
     5.0,
@@ -62,7 +62,28 @@
   "anchor_nut_rotation_deg": 30.0,
   "pin_reset_stroke_mm": 6.0,
   "pin_shuttle": true,
-  "stripper_lower_relief_halfwidth_mm": 1.55,
+  "stripper_lower_relief_halfwidth_mm": 1.8,
   "stripper_lower_relief_top_v_mm": 2.5,
-  "stripper_relief_transition_top_v_mm": 3.5
+  "stripper_relief_transition_top_v_mm": 3.5,
+  "lift_pin_running_bore_d_mm": 1.05,
+  "lift_guide_anchor_bore_d_mm": 3.03,
+  "manufacturing_fit_requirements": {
+    "lower_window_halfwidth_tolerance_mm": 0.05,
+    "guide_bore_tolerance_mm": 0.005,
+    "guide_rod_diameter_bounds_mm": [
+      2.995,
+      3.0
+    ],
+    "pin_bore_tolerance_mm": 0.01,
+    "pin_diameter_bounds_mm": [
+      0.995,
+      1.0
+    ],
+    "assembled_pin_bore_axis_mismatch_max_mm": 0.01,
+    "pin_bow_max_mm": 0.005,
+    "pin_bore_inward_defect_max_mm": 0.002,
+    "combined_registration_allowance_mm": 0.2,
+    "additional_relative_deflection_allowance_mm": 0.01,
+    "lower_window_inward_defect_max_mm": 0.01
+  }
 }

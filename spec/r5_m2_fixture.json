@@ -1,5 +1,5 @@
 {
-  "revision": "R5-M2-D24",
+  "revision": "R5-M2-D25",
   "units": "mm except explicit suffixes",
   "cameras": false,
   "tolerances": {
@@ -271,8 +271,8 @@
     "outer_tube_front": -30,
     "outer_tube_od": 7.9375,
     "outer_tube_wall": 0.3556,
-    "bushing_od": 7.12,
-    "bushing_bore": 3.275,
+    "bushing_od": 7.08,
+    "bushing_bore": 3.32,
     "bushing_length": 10.0,
     "rear_bushing_back": -100,
     "front_bushing_back": -40,
@@ -297,9 +297,9 @@
     "exit_insert_back": -18.0,
     "exit_insert_front": 0.0,
     "inner_tube_front": -3.0,
-    "exit_insert_bond_radial_nominal": 0.041275,
-    "outer_bush_bond_radial_nominal": 0.05315,
-    "bush_inner_bond_radial_nominal": 0.049375,
+    "exit_insert_bond_radial_nominal": 0.10625000000000007,
+    "outer_bush_bond_radial_nominal": 0.07315000000000005,
+    "bush_inner_bond_radial_nominal": 0.07250000000000001,
     "guide_load_screen_N": 0.5,
     "guide_E_sensitivity_MPa": [
       80000.0,
@@ -312,7 +312,14 @@
     "reducer_front": -3,
     "reducer_od": 2.38125,
     "reducer_wall": 0.3556,
-    "inner_lock_enabled": false
+    "inner_lock_enabled": false,
+    "reducer_finished_id": 1.8,
+    "reducer_finished_id_tolerance": 0.01,
+    "tube_overlap_finished_id": 2.6,
+    "tube_overlap_finished_id_tolerance": 0.01,
+    "tube_overlap_back": -18.0,
+    "tube_overlap_front": -3.0,
+    "bushing_finished_diameter_tolerance": 0.02
   },
   "slide": {
     "outside_width": 40.0,
@@ -1682,33 +1689,85 @@
     "body_height_mm": 10.0,
     "jaw_thickness_mm": 4.0,
     "pad_thickness_mm": 1.0,
-    "closed_face_gap_mm": 0.6,
+    "closed_face_gap_mm": 0.5,
     "bolt_x_mm": [
       -46.0,
-      46.0
+      46.0,
+      -12.0,
+      0.0
     ],
     "bolt_clearance_radius_mm": 1.7,
     "attachment_height_above_com_mm": 5.0,
-    "mass_target_g": 20.0,
+    "mass_target_g": 20.964959797456288,
     "com_body_xyz_mm": [
-      0.0,
-      0.0,
-      0.0
+      -1.302007361767808,
+      0.1422499326401619,
+      2.3177988260802106e-17
     ],
     "angular_scale_mm": 44.0,
     "return_pin": {
       "center_body_mm": [
         -6.0,
         0.0,
-        2.0
+        0.0
       ],
       "diameter_mm": 3.0,
       "length_mm": 8.4,
-      "socket_diameter_mm": 3.2,
+      "socket_diameter_mm": 3.02,
       "socket_depth_mm": 3.0,
-      "socket_back_y_mm": -4.3,
-      "centerline_radius_mm": 1.81,
-      "arc_segments": 24
+      "socket_back_y_mm": -4.25,
+      "centerline_radius_mm": 1.95,
+      "arc_segments": 24,
+      "diameter_tolerance_mm": 0.005,
+      "length_tolerance_mm": 0.03,
+      "socket_diameter_tolerance_mm": 0.005,
+      "socket_depth_tolerance_mm": 0.02,
+      "pin_envelope_uncertainty_mm": 0.065
+    },
+    "free_wrap_window": {
+      "x_mm": [
+        -9.0,
+        -3.0
+      ],
+      "z_mm": [
+        -3.0,
+        3.0
+      ],
+      "corner_radius_mm": 0.5,
+      "outline_tolerance_mm": 0.05
+    },
+    "stop_spacer": {
+      "length_mm": 2.5,
+      "length_tolerance_mm": 0.02,
+      "matched_length_spread_mm": 0.01,
+      "od_mm": 6.0,
+      "od_tolerance_mm": 0.05,
+      "bore_mm": 3.4,
+      "bore_plus_tolerance_mm": 0.1,
+      "pad_clearance_diameter_mm": 6.2
+    },
+    "grips": {
+      "first_x_mm": -22.0,
+      "return_x_mm": [
+        -7.95,
+        -4.05
+      ],
+      "land_z_mm": [
+        3.0,
+        5.0
+      ],
+      "exit_transition_mm": 0.35,
+      "setting_position_uncertainty_mm": 0.075,
+      "yarn_free_diameter_mm": [
+        0.55,
+        0.6
+      ],
+      "pad_thickness_tolerance_mm": 0.02,
+      "jaw_separation_tolerance_mm": 0.02,
+      "minimum_holding_proof_N": 1.0,
+      "operating_demand_ceiling_N": 0.5,
+      "initial_creep_test_seconds": 600,
+      "slip_limit_mm": 0.05
     }
   }
 }

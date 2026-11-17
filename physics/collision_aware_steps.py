@@ -21,7 +21,14 @@ def adaptive_solid_bound(q, obstacle, spacing=.004, ceiling=.32):
     for _ in range(24):
         if len(a)==0:break
         length=np.linalg.norm(b-a,axis=1);mid=(a+b)/2
-        d=obstacle.clipped_distance(mid,ceilings[ids]+length/2+1e-10) if hasattr(obstacle,'clipped_distance') else obstacle.distance(mid)[0];evaluations+=len(mid)
+        if hasattr(obstacle,'clipped_distance'):
+            cutoff=ceilings[ids]+length/2+1e-10
+            d=(obstacle.clipped_distance(mid,cutoff,edge_ids=ids)
+               if hasattr(obstacle,'distance_for_edges') else obstacle.clipped_distance(mid,cutoff))
+        elif hasattr(obstacle,'distance_for_edges'):
+            d=obstacle.distance_for_edges(mid,ids)[0]
+        else:d=obstacle.distance(mid)[0]
+        evaluations+=len(mid)
         if not np.all(np.isfinite(d)):raise ValueError('Nonfinite contact distance')
         sample=min(sample,float(np.min(d)));lower=d-length/2
         done=(lower>=ceilings[ids])|(length<=spacing)

@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T13",
+  "revision": "TRANSFER-T16",
   "gate_stop_back_u_mm": -95.0,
   "lift_ear_u_mm": [
     46,
@@ -24,7 +24,7 @@
     45.8,
     55.2
   ],
-  "lift_stop_pilot_d_mm": 3.195,
+  "lift_stop_pilot_d_mm": 3.3,
   "lift_stop_screw_length_mm": 16.0,
   "guide_screw_seat_w_mm": 12.5,
   "guide_screw_v_mm": 21.0,
@@ -63,7 +63,7 @@
     -9,
     2.5
   ],
-  "pin_shuttle_half_w_mm": 5.0,
+  "pin_shuttle_half_w_mm": 5.5,
   "pin_end_u_mm": 26.0,
   "reset_bridge_u_mm": [
     14.5,
@@ -108,5 +108,13 @@
     284.2,
     79.8,
     107.5
-  ]
+  ],
+  "reset_front_washer_bore_d_mm": 3.3,
+  "stop_fit_requirements": {
+    "pilot_and_front_washer_bore_tolerance_mm": 0.02,
+    "source_sleeve_od_bounds_mm": [
+      3.1242,
+      3.2258
+    ]
+  }
 }

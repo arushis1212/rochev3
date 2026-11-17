@@ -1,8 +1,8 @@
 {
-  "revision": "R5-M2-D24",
-  "spec_sha256": "40b6e533b89cc240cd198001cb5a42f539ce6f084d16a43dcdfad68900286395",
+  "revision": "R5-M2-D25",
+  "spec_sha256": "56bdf548195a0f00b6734e4435bc67672ded49be45c21ca2578a01bca77d8c44",
   "cadquery": "2.8.0",
-  "scope": "Nominal D24 research fixture geometry",
+  "scope": "integrated rigid hook, support bank and guide XYZ assemblies; feeder, take-down and yarn unqualified",
   "status": "Research prototype",
   "parts": {
     "H01_hook_body": {
@@ -112,7 +112,7 @@
     "G01_guide_tube": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 541.7473146920479,
+      "volume_mm3": 533.622100985972,
       "bbox_mm": [
         -175.0,
         -3.0,
@@ -307,7 +307,7 @@
     "G07_exit_reducer": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 33.944334024741366,
+      "volume_mm3": 28.63190480396429,
       "bbox_mm": [
         -18.0,
         -3.0,
@@ -346,27 +346,27 @@
     "G04_front_bush": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 313.91402478245857,
+      "volume_mm3": 307.1220978149382,
       "bbox_mm": [
         -40.0,
         -30.0,
-        -3.56,
-        3.56,
-        -3.56,
-        3.56
+        -3.54,
+        3.54,
+        -3.54,
+        3.54
       ]
     },
     "G05_rear_bush": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 313.91402478245857,
+      "volume_mm3": 307.1220978149382,
       "bbox_mm": [
         -100.0,
         -90.0,
-        -3.56,
-        3.56,
-        -3.56,
-        3.56
+        -3.54,
+        3.54,
+        -3.54,
+        3.54
       ]
     },
     "F05_guide_adapter": {
@@ -785,6 +785,19 @@
         20.0
       ]
     },
+    "D04_stop_spacer": {
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 47.98782778358409,
+      "bbox_mm": [
+        -3.0,
+        3.0,
+        -1.25,
+        1.25,
+        -3.0,
+        3.0
+      ]
+    },
     "D03_return_pin": {
       "solids": 1,
       "valid": true,
@@ -794,19 +807,19 @@
         -4.5,
         -4.2,
         4.2,
-        0.5,
-        3.5
+        -1.5,
+        1.5
       ]
     },
     "D01_jaw": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 3903.2389462694346,
+      "volume_mm3": 3833.2433194696578,
       "bbox_mm": [
         -50.0,
         50.0,
-        -5.3,
-        -1.2999999999999998,
+        -5.25,
+        -1.25,
         -5.0,
         5.0
       ]
@@ -814,12 +827,12 @@
     "D02_pad": {
       "solids": 1,
       "valid": true,
-      "volume_mm3": 871.9575228068101,
+      "volume_mm3": 776.80334014427,
       "bbox_mm": [
-        -44.0,
-        44.0,
-        -1.3,
-        -0.2999999999999998,
+        -44.000000000000014,
+        44.000000000000014,
+        -1.25,
+        -0.25,
         -5.0,
         5.0
       ]

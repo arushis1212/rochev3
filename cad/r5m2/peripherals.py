@@ -24,6 +24,12 @@ def parts(c):
     jaw=b(-C['body_width_mm']/2,C['body_width_mm']/2,-outer,-pad,-h,h)
     for x in C['bolt_x_mm']:jaw=jaw.cut(cy(-outer-1,-pad+1,C['bolt_clearance_radius_mm'],x,0))
     pad_shape=b(-C['pad_width_mm']/2,C['pad_width_mm']/2,-pad,-half,-h,h)
+    if C.get('free_wrap_window'):
+        win=C['free_wrap_window'];cut=b(*win['x_mm'],-pad-1,-half+1,*win['z_mm']).edges('|Y').fillet(win['corner_radius_mm'])
+        pad_shape=pad_shape.cut(cut)
+    if C.get('stop_spacer'):
+        sp=C['stop_spacer'];p['D04_stop_spacer']=cy(-sp['length_mm']/2,sp['length_mm']/2,sp['od_mm']/2).cut(cy(-sp['length_mm'],sp['length_mm'],sp['bore_mm']/2))
+        for x in C['bolt_x_mm']:pad_shape=pad_shape.cut(cy(-pad-1,-half+1,sp['pad_clearance_diameter_mm']/2,x,0))
     if C.get('return_pin'):
         pin=C['return_pin'];px,py,pz=pin['center_body_mm'];socket=cy(pin['socket_back_y_mm'],-half+1,pin['socket_diameter_mm']/2,px,pz);jaw=jaw.cut(socket);pad_shape=pad_shape.cut(socket)
         p['D03_return_pin']=cy(-pin['length_mm']/2,pin['length_mm']/2,pin['diameter_mm']/2,px,pz)
@@ -93,6 +99,7 @@ def add(items,ps,c,carrier_z=160,takedown_z=50,mode='high',support_pin=False):
     if C.get('return_pin'):obj('D03_return_pin',xyz=(150,165,takedown_z))
     for i,x in enumerate(C['bolt_x_mm']):
         screw(f'HW_M3x16_cloth_{i}',3,16,(150+x,165-outer,takedown_z),(0,-1,0));nut(f'HW_M3nut_cloth_{i}',3,(150+x,165+outer,takedown_z),(0,1,0))
+        if C.get('stop_spacer'):obj('D04_stop_spacer',f'D04_stop_spacer_{i}',(150+x,165,takedown_z))
     for name in ('P01_tower','P10_fairlead_bracket','P11_fairlead','P13_nip_lower','P14_nip_upper','P16_idler_bracket','P17_park_cleat'):obj(name)
     obj('P15_nip_pad','P15_pad_lower');obj('P15_nip_pad','P15_pad_upper',(0,0,1.1))
     for i,x in enumerate((13,19)):

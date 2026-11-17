@@ -11,9 +11,15 @@ def annular_cylinder(p,axis,origin,back,front,inner,outer):
 class GuidedContact:
     def __init__(self,base,tip,spec):
         self.base=base;self.tip=np.asarray(tip);a=np.deg2rad(spec['inclination_deg']);self.axis=np.array([0,-np.cos(a),-np.sin(a)])
-        self.tubes=[(-spec['tube_length'],spec['inner_tube_front'],spec['tube_od']/2-spec['tube_wall'],spec['tube_od']/2)]
+        inner=spec['tube_od']/2-spec['tube_wall'];outer=spec['tube_od']/2
+        if 'tube_overlap_finished_id' in spec:
+            self.tubes=[(-spec['tube_length'],spec['tube_overlap_back'],inner,outer),(spec['tube_overlap_back'],spec['tube_overlap_front'],spec['tube_overlap_finished_id']/2,outer)]
+            if spec['tube_overlap_front']<spec['inner_tube_front']:
+                self.tubes.append((spec['tube_overlap_front'],spec['inner_tube_front'],inner,outer))
+        else:self.tubes=[(-spec['tube_length'],spec['inner_tube_front'],inner,outer)]
         for prefix in ['exit_insert','reducer','outer_tube']:
-            self.tubes.append((spec[prefix+'_back'],spec[prefix+'_front'],spec[prefix+'_od']/2-spec[prefix+'_wall'],spec[prefix+'_od']/2))
+            bore=spec.get(prefix+'_finished_id',spec[prefix+'_od']-2*spec[prefix+'_wall'])/2
+            self.tubes.append((spec[prefix+'_back'],spec[prefix+'_front'],bore,spec[prefix+'_od']/2))
     def tubes_distance(self,p):return [annular_cylinder(p,self.axis,self.tip,*tube) for tube in self.tubes]
     def edge_contact_terms(self,q,rest,counts,radius):
         from physics.edge_contact import edge_samples

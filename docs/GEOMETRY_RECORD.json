@@ -1,13 +1,18 @@
 {
-  "revision": "R5-M2-D24",
-  "component_variants": 84,
+  "revision": "R5-M2-D25",
+  "transfer_revision": "TRANSFER-T16",
+  "component_variants": 85,
   "valid_solids": true,
-  "threaded_reference_nodes": 401,
-  "assembly_solids": 558,
+  "threaded_reference_nodes": 423,
+  "free_wrap_nodes": 35,
+  "assembly_solids": 566,
   "reference_length_mm": 804.5309777608768,
-  "material_length_error_mm": 6.139089236967266e-12,
-  "self_gap_mm": 0.3253287538364792,
-  "native_gap_lower_bound_mm": -0.003997815419626294,
+  "material_length_error_mm": 0.0,
+  "self_gap_mm": 0.3486934914424116,
+  "native_gap_lower_bound_mm": -0.004328054539491866,
   "native_collision_allowance_mm": 0.01,
-  "scope": "Manually threaded reference geometry and nominal part validity; a numerical fixture setup with declared material assumptions."
+  "rigid_clamp_gap_mm": 0.7737580036981058,
+  "rigid_clamp_required_reserve_mm": 0.3,
+  "grip_boundary_model": "Declared material in physical gripping lands uses reduced compression boundaries; pin, jaws, spacers and all free yarn retain collision checks.",
+  "scope": "Manually threaded nominal geometry; numerical fixture setup with declared material assumptions."
 }

@@ -51,7 +51,7 @@ def installed(ps,tp,advance,gate,lift,guide,tip=None,roll=None,reset=0.,feed_mod
  if clamp_pose is not None:
   center,angles=clamp_pose;scale=base.S['cloth_clamp']['angular_scale_mm'];yaw,pitch,roll=np.asarray(angles)*180/math.pi/scale
   for name,shape in list(scene.items()):
-   if name.startswith(('D01_','D02_','D03_','HW_M3x16_cloth_','HW_M3nut_cloth_')):
+   if name.startswith(('D01_','D02_','D03_','D04_','HW_M3x16_cloth_','HW_M3nut_cloth_')):
     shape=shape.translate((-150,-165,-I['take_down_z_mm']))
     shape=shape.rotate((0,0,0),(1,0,0),float(roll)).rotate((0,0,0),(0,1,0),float(-pitch)).rotate((0,0,0),(0,0,1),float(yaw))
     scene[name]=shape.translate(tuple(center))

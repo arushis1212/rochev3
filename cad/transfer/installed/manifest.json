@@ -1,5 +1,5 @@
 {
-  "revision": "TRANSFER-T15-ROUTE3",
+  "revision": "TRANSFER-T16-D25",
   "mount_parts": {
     "M01_frame_bracket": {
       "valid": true,
@@ -67,6 +67,6 @@
       ]
     }
   },
-  "assembly_solids": 557,
+  "assembly_solids": 566,
   "scope": "Nominal single-station physical mount candidate"
 }

@@ -10,5 +10,6 @@ class StripperReliefTests(unittest.TestCase):
    self.assertAlmostEqual(distance,C['stripper_lower_relief_halfwidth_mm']-T['body_thickness']/2-.3,places=7)
    self.assertGreater(distance,.3)
    self.assertTrue(shape.isInside(cq.Vector(u,6,1.3),1e-8))
-   self.assertTrue(shape.isInside(cq.Vector(u,.2,1.675),1e-8))
+   ligament_mid=(C['stripper_lower_relief_halfwidth_mm']+C['lift_pin_w_mm']-C['lift_pin_radius_mm']-C['lift_slot_clearance_mm'])/2
+   self.assertTrue(shape.isInside(cq.Vector(u,.2,ligament_mid),1e-8))
    self.assertTrue(shape.isValid());self.assertEqual(len(shape.Solids()),1)

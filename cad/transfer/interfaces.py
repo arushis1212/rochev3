@@ -54,7 +54,7 @@ def add_interfaces(base,C,parts):
         su0,su1=I['pin_shuttle_u_mm'];sv0,sv1=I['pin_shuttle_v_mm'];sw=I['pin_shuttle_half_w_mm'];pu=(su0+su1)/2
         shuttle=base.box(su0,su1,sv0,sv1,-sw,sw)
         for idx,sign in enumerate([-1,1]):
-            w=sign*C['lift_pin_w_mm'];shuttle=shuttle.cut(base.cyl_x(su0-1,su1+1,C['lift_pin_radius_mm'],park,w))
+            w=sign*C['lift_pin_w_mm'];shuttle=shuttle.cut(base.cyl_x(su0-1,su1+1,C['lift_pin_running_bore_d_mm']/2,park,w))
             shuttle=shuttle.cut(base.cyl_y(park,sv1+1,clear,pu,w)).cut(base.hex_y(0,nh,af,pu,w)).cut(base.box(pu+1.5,su1+1,0,nh,w-af/2,w+af/2))
             parts[f'R16_pin_clamp_screw_{idx}']=cq.Workplane(obj=base.place(base.bolt(2,4),(pu,sv1,w),(1,0,0),(0,1,0)))
             parts[f'R17_pin_clamp_nut_{idx}']=cq.Workplane(obj=base.place(base.nut(2),(pu,0,w),(1,0,0),(0,1,0)))
@@ -62,14 +62,14 @@ def add_interfaces(base,C,parts):
         bu0,bu1=I['reset_bridge_u_mm'];bv0,bv1=I['reset_bridge_v_mm'];v=I['reset_stop_axis_v_mm']
         carriage=carriage.union(base.box(bu0,bu1,bv0,bv1,-sw,sw))
         for w in [-C['lift_pin_w_mm'],C['lift_pin_w_mm']]:carriage=carriage.union(base.box(bu0,bu1,bv0,park+C['lift_carriage_top_offsets_mm'][0],w-C['lift_carriage_column_width_mm']/2,w+C['lift_carriage_column_width_mm']/2))
-        for w in [-C['lift_pin_w_mm'],C['lift_pin_w_mm']]:carriage=carriage.cut(base.cyl_x(bu0-1,bu1+1,C['lift_pin_radius_mm'],park,w))
+        for w in [-C['lift_pin_w_mm'],C['lift_pin_w_mm']]:carriage=carriage.cut(base.cyl_x(bu0-1,bu1+1,C['lift_pin_running_bore_d_mm']/2,park,w))
         carriage=carriage.cut(base.cyl_x(bu0-1,bu1+1,clear,v,0))
         face=I['reset_nut_face_u_mm'];carriage=carriage.cut(cq.Workplane(obj=base.place(base.nut(2),(face,v,0),(0,0,1),(-1,0,0))))
         # Side opening exposes the captured nut; hardware is inserted before the sleeve.
         carriage=carriage.cut(base.box(face-nh,face,v-af/2,v+af/2,0,sw+1))
         sa,sb=I['reset_sleeve_u_mm'];od=T['stop_sleeve_od'];id_=T['stop_sleeve_id']
         parts['R20_reset_sleeve']=base.cyl_x(sa,sb,od/2,v).cut(base.cyl_x(sa-1,sb+1,id_/2,v))
-        for name,limits,hole in [('R21_reset_front_washer',I['reset_washer_front_u_mm'],od),('R22_reset_rear_washer',I['reset_washer_rear_u_mm'],2.2)]:
+        for name,limits,hole in [('R21_reset_front_washer',I['reset_washer_front_u_mm'],I['reset_front_washer_bore_d_mm']),('R22_reset_rear_washer',I['reset_washer_rear_u_mm'],2.2)]:
             parts[name]=base.cyl_x(*limits,3.,v).cut(base.cyl_x(limits[0]-1,limits[1]+1,hole/2,v))
         parts['R23_reset_screw']=cq.Workplane(obj=base.place(base.bolt(2,I['reset_stop_screw_length_mm']),(I['reset_stop_screw_seat_u_mm'],v,0),(0,0,1),(1,0,0)))
         parts['R24_reset_nut']=cq.Workplane(obj=base.place(base.nut(2),(face,v,0),(0,0,1),(-1,0,0)))
@@ -83,7 +83,7 @@ def add_interfaces(base,C,parts):
             carriage=carriage.cut(base.cyl_z(w0,w1,clear,pu,park))
             w0,w1=sorted([sign*nw0,sign*nw1])
             carriage=carriage.cut(base.hex_z(w0,w1,af,pu,park)).cut(base.box(pu+1.5,b+1,park-af/2,park+af/2,w0,w1))
-            carriage=carriage.cut(base.cyl_x(a-1,b+1,C['lift_pin_radius_mm'],park,w))
+            carriage=carriage.cut(base.cyl_x(a-1,b+1,C['lift_pin_running_bore_d_mm']/2,park,w))
             parts[f'R16_pin_clamp_screw_{idx}']=cq.Workplane(obj=base.place(base.bolt(2,I['pin_clamp_screw_length_mm']),(pu,park,sign*seat),(1,0,0),(0,0,sign)))
             parts[f'R17_pin_clamp_nut_{idx}']=cq.Workplane(obj=base.place(base.nut(2),(pu,park,sign*nw0),(1,0,0),(0,0,sign)))
     parts['R05_lift_carriage']=carriage;parts['R06_anchor']=anchor

@@ -171,7 +171,10 @@ def slide_stop(L,sign):
 
 def guide_tube():
     g=S['guide']; r=g['tube_od']/2
-    return cyl_x(-g['tube_length'],g.get('inner_tube_front',0),r).cut(cyl_x(-g['tube_length']-1,1,r-g['tube_wall']))
+    tube=cyl_x(-g['tube_length'],g.get('inner_tube_front',0),r).cut(cyl_x(-g['tube_length']-1,1,r-g['tube_wall']))
+    if 'tube_overlap_finished_id' in g:
+        tube=tube.cut(cyl_x(g['tube_overlap_back'],g['tube_overlap_front']+1,g['tube_overlap_finished_id']/2))
+    return tube
 
 def guide_insert():
     g=S['guide'];a=g['exit_insert_back'];b=g['exit_insert_front'];r=g['exit_insert_od']/2
@@ -179,7 +182,7 @@ def guide_insert():
 
 def guide_reducer():
     g=S['guide']; a=g['reducer_back']; b=g['reducer_front']; r=g['reducer_od']/2
-    return cyl_x(a,b,r).cut(cyl_x(a-1,b+1,r-g['reducer_wall']))
+    return cyl_x(a,b,r).cut(cyl_x(a-1,b+1,g.get('reducer_finished_id',2*(r-g['reducer_wall']))/2))
 
 def guide_mount():
     g=S['guide']; a,b,c=g['mount_block']; start=g['mount_back_u']; u=start+a/2

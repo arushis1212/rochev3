@@ -177,8 +177,9 @@ def solve3d(q,rest,EA,B,radius,obstacle,k=1000.,maxiter=100,samples=8):
 
 def gap_bound(q,radius,obstacle,spacing=.01,chord_error=.001):
     lower=float('inf');sample=float('inf')
-    for a,b in zip(q[:-1],q[1:]):
+    for edge,(a,b) in enumerate(zip(q[:-1],q[1:])):
         length=np.linalg.norm(b-a);n=max(1,int(np.ceil(length/spacing)))
-        d,_=obstacle.distance(a+(b-a)*np.linspace(0,1,n+1)[:,None]);m=float(np.min(d))-radius
+        points=a+(b-a)*np.linspace(0,1,n+1)[:,None]
+        d,_=obstacle.distance_for_edges(points,np.full(len(points),edge,dtype=int))if hasattr(obstacle,'distance_for_edges')else obstacle.distance(points);m=float(np.min(d))-radius
         sample=min(sample,m);lower=min(lower,m-length/(2*n)-chord_error)
     return {'sampled_surface_gap_mm':sample,'polyline_gap_lower_bound_mm':lower,'profile_chord_error_bound_mm':chord_error}

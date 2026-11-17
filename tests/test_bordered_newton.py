@@ -30,3 +30,9 @@ class BorderedNewton(unittest.TestCase):
   for metric in [True,'absolute']:
    x,r=minimize_bordered(f,np.array([.1,.2]),1,lambda x:True,maxiter=50,spectral=metric)
    self.assertTrue(r['optimizer_success']);self.assertAlmostEqual(x[0],1,places=7);self.assertLess(abs(x[1]),1e-8)
+
+ def test_absolute_damping_corrects_stiff_contact_without_scaling_it_away(self):
+  H=np.diag([1e-8,1e4]);linear=np.array([.01,0.])
+  def f(x):return .5*x@H@x+linear@x,H@x+linear
+  start=np.array([0.,.0014]);x,r=minimize_bordered(f,start,1,lambda x:True,maxiter=1,max_step=1.,spectral='absolute_damped')
+  self.assertLess(abs(f(x)[1][1]),.001);self.assertLessEqual(abs(x-start).max(),1.);self.assertLess(f(x)[0],f(start)[0]);self.assertFalse(r['optimizer_success'])

@@ -1,4 +1,4 @@
-"""Parametric guided loop-transfer research subassembly."""
+"""Local transfer candidate solids. No claim of full machine integration."""
 from pathlib import Path
 import sys,json,hashlib
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
@@ -40,7 +40,7 @@ def parts():
     carriage=base.box(a,b,v+top0,v+top1,-rodw-3,rodw+3)
     for w in [-pinw,pinw]:
         carriage=carriage.union(base.box(a,b,v-col,v+top0,w-col,w+col))
-        carriage=carriage.cut(base.cyl_x(a-1,b+1,C['lift_pin_radius_mm'],v,w))
+        carriage=carriage.cut(base.cyl_x(a-1,b+1,C['lift_pin_running_bore_d_mm']/2,v,w))
     lo,hi=C['lift_bushing_v_offsets_mm']
     for w in [-rodw,rodw]:
         carriage=carriage.union(base.cyl_y(v+lo,v+hi,C['lift_bushing_outer_d_mm']/2,rod_u,w))
@@ -51,7 +51,7 @@ def parts():
         hole=base.cyl_x(-u0-th-1,u0+th+C['anchor_depth_mm']+1,C['anchor_bolt_clearance_mm']/2,C['anchor_bolt_v_mm'],w)
         anchor=anchor.cut(hole);spacer=spacer.cut(hole)
     for i,w in enumerate([-rodw,rodw]):
-        low,high=C['lift_guide_v_bounds_mm'];anchor=anchor.cut(base.cyl_y(vlo-1,high,C['lift_guide_radius_mm'],rod_u,w))
+        low,high=C['lift_guide_v_bounds_mm'];anchor=anchor.cut(base.cyl_y(vlo-1,high,C['lift_guide_anchor_bore_d_mm']/2,rod_u,w))
         parts['R08_guide_rod_'+str(i)]=base.cyl_y(low,high,C['lift_guide_radius_mm'],rod_u,w)
     for i,w in enumerate([-pinw,pinw]):parts['R03_lift_pin_'+str(i)]=base.cyl_x(-u0-th-C['lift_pin_protrusion_mm'],b,C['lift_pin_radius_mm'],v,w)
     parts.update(R05_lift_carriage=carriage,R06_anchor=anchor,R07_plate_spacer=spacer)

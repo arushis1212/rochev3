@@ -46,14 +46,22 @@ class FeederContact:
  def edge_contact_terms(self,q,rest,counts,radius):
   yield from self.base.edge_contact_terms(q,rest,counts,radius)
   for pulley in self.fixed+[self.moving]:yield from pulley.edge_contact_terms(q,rest,counts,radius)
- def clipped_distance(self,p,ceiling):
+ def clipped_distance(self,p,ceiling,edge_ids=None):
   # Components outside an expanded enclosing AABB cannot lower this cutoff.
   # Exact SDF values are retained for every potentially closer component.
   cutoff=np.broadcast_to(np.asarray(ceiling,dtype=float),(len(p),));d=cutoff.copy()
   for idx,value,_ in self.base.sparse_components(p,float(np.max(cutoff))):
    d[idx]=np.minimum(d[idx],value)
-  for part in self.fixed+[self.moving]:d=np.minimum(d,part.distance(p)[0])
+  for part in self.fixed+[self.moving]:
+   values=part.distance_for_edges(p,edge_ids)if edge_ids is not None and hasattr(part,'distance_for_edges')else part.distance(p)
+   d=np.minimum(d,values[0])
   return d
+ def distance_for_edges(self,p,edge_ids):
+  d,g=self.base.distance(p)
+  for part in self.fixed+[self.moving]:
+   x,n=part.distance_for_edges(p,edge_ids)if hasattr(part,'distance_for_edges')else part.distance(p)
+   mask=x<d;d[mask]=x[mask];g[mask]=n[mask]
+  return d,g
  def distance(self,p):
   d,g=self.base.distance(p)
   for pulley in self.fixed+[self.moving]:
@@ -63,11 +71,12 @@ class FeederContact:
 def feeder_potential(z,feeder,mode='LOW'):
  if not feeder['moving_center_z_range'][0]<z<feeder['moving_center_z_range'][1]:raise ValueError('Feeder travel boundary reached')
  main=feeder['main_total_mass_g'];mc=feeder['counterweight_mass_g']if mode=='LOW'else 0.;g=feeder['cord_geometry'];radius=feeder['pulley_groove_radius']+feeder['rope_d']/2
- zc=counter_center(z+g['main_eye_above_center_mm'],feeder['rope_geometric_length_mm'],radius,g)
+ anchor=z+g['main_eye_above_center_mm']if mode=='LOW'else feeder['park_anchor'][2]
+ zc=counter_center(anchor,feeder['rope_geometric_length_mm'],radius,g)
  # Exact implicit derivative of constant finite-radius cord length.
  def leg_derivative(anchor):
   h=g['idler_height_mm']-anchor;a=g['end_horizontal_offset_mm'];d2=a*a+h*h;ell=np.sqrt(d2-radius*radius);return -(h*ell+radius*a)/d2
- dzc=-leg_derivative(z+g['main_eye_above_center_mm'])/leg_derivative(zc+g['counter_eye_above_center_mm'])
+ dzc=-leg_derivative(anchor)/leg_derivative(zc+g['counter_eye_above_center_mm'])if mode=='LOW'else 0.
  return .00980665*(main*z+mc*zc),.00980665*(main+mc*dzc),zc
 
 def upstream_route(guide,axis,subdiv=8,axial_entries=True):

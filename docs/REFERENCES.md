@@ -17,3 +17,5 @@ Third-party papers and source CAD are not redistributed here.
 
 - Kaldor, James and Marschner(2010), [Efficient Yarn-based Cloth with Adaptive Contact Linearization](https://research.cs.cornell.edu/YarnCloth/): yarn contact modeling context. Its adaptive linearization is not implemented here.
 - [Abaqus contact enforcement documentation](https://docs.software.vt.edu/abaqusv2026/English/SIMACAEITNRefMap/simaitn-c-contactconstraints.htm): numerical penalty enforcement and compliance; this project uses its own solver.
+
+- Dauphin et al.(2014), [Identifying and attacking the saddle point problem in high-dimensional non-convex optimization](https://proceedings.neurips.cc/paper_files/paper/2014/hash/04192426585542c54b96ba14445be996-Abstract.html): section6 motivates the absolute-eigenvalue search metric; its experiments concern optimization, not textile hardware.

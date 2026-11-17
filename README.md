@@ -76,3 +76,5 @@ The [T15 transfer station](docs/LOOP_TRANSFER.md) adds an installed bracket and 
 [Connected yarn mechanics](docs/CONNECTED_YARN.md) adds an explicit material chain, shared-clamp force balance and hollow-guide contact, with reproducible numerical checks.
 
 [Upstream feeder mechanics](docs/FEEDER_DOMAIN.md) introduces conserved material lengths, exact counterweight virtual work and native-geometry contact checks.
+
+A [saved whole-material equilibrium](docs/FEED_MESH_STUDY.json) can be re-evaluated with `examples/replay_feed.py`, using the same geometry, cloth attachments and gravity feeder.

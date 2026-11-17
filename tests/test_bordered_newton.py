@@ -27,5 +27,6 @@ class BorderedNewton(unittest.TestCase):
 
  def test_spectral_metric_handles_indefinite_curvature_without_changing_energy(self):
   def f(x):return (x[0]*x[0]-1)**2+.5*x[1]*x[1],np.array([4*x[0]*(x[0]*x[0]-1),x[1]])
-  x,r=minimize_bordered(f,np.array([.1,.2]),1,lambda x:True,maxiter=50,spectral=True)
-  self.assertTrue(r['optimizer_success']);self.assertAlmostEqual(x[0],1,places=7);self.assertLess(abs(x[1]),1e-8)
+  for metric in [True,'absolute']:
+   x,r=minimize_bordered(f,np.array([.1,.2]),1,lambda x:True,maxiter=50,spectral=metric)
+   self.assertTrue(r['optimizer_success']);self.assertAlmostEqual(x[0],1,places=7);self.assertLess(abs(x[1]),1e-8)

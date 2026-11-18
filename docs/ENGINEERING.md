@@ -35,3 +35,15 @@ analytic limits and energy gradients. Collision-aware steps use the1-Lipschitz
 distance bound: clearance decreases by no more than bounded relative movement.
 Material conservation, force equilibrium and geometric admissibility are checked
 separately. These numerical models state their constitutive and boundary assumptions.
+
+Material-bound aperture diagnostics follow actual reference coordinates through
+nonplanar loop geometry. Oriented segment/triangle intersections identify
+passage direction and material location; finite boundary clearance and virtual
+neck closure are reported separately. The diagnostic preserves the distinction
+between geometric passage and physical loop retention.
+
+Named contact-event monitors retain the original yarn quadrature and component
+distances. Relative material and pulley motion bound each trial gap change,
+including events inside a step whose endpoints are both clear. Buffered
+activation and separation can limit a numerical search step while the physical
+energy and force criteria remain unchanged.

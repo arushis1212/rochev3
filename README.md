@@ -24,6 +24,7 @@ purchased fasteners and bearings.
 - [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)
 - [Unilateral contact and friction benchmarks](docs/UNILATERAL_CONTACT.md)
+- [Newton contact solver and analytical tests](docs/SEMISMOOTH_CONTACT.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

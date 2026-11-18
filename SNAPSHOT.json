@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "fb1b2c52ecaa44b1437178378dd672c4df43df571717d21961a8f3e47d52b406",
+    "README.md": "b6b03625278d68f50ad6682262a702526a44bd79a7807f9b09179ed0fe488bb0",
     "cad/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cad/machine/__init__.py": "06f46ee86abc39c84e0a25c7c8a2b78863631d7efb4b898834e7142761742f37",
     "cad/machine/assembly.py": "129fb5f649c891b377e5e5e1583e9da3c95a579d0dee06060f2f1f310d20a3c1",
@@ -732,6 +732,9 @@
     "docs/images/assembly.png": "a62ce6cc64ef4549ddd696da8d927854b7a0e7d40b99a8d27deeabb4e73d4d17",
     "physics/convex_search.py": "f3d40b9ad3f34ccf9552724c0b0e70af8ba8d88fadd3007d9a47897ea0dde95c",
     "benchmarks/test_convex_search.py": "90f0aa73ce2c2caa92f8fb09e5526040589a84e4a53c8b847c5c39c37f631190",
-    "docs/CONVEX_SEARCH.md": "bd4dc4f875d7bbb5f47eb613b948c893533ce3cee153dcb1e6e2b468ff61e9e5"
+    "docs/CONVEX_SEARCH.md": "bd4dc4f875d7bbb5f47eb613b948c893533ce3cee153dcb1e6e2b468ff61e9e5",
+    "benchmarks/test_unilateral_contact.py": "3529c9413ad9a6813d6b8cc004c63dd3b91e6c7eb49131f6d440b4ef6825b512",
+    "docs/UNILATERAL_CONTACT.md": "a1cb94d99ff29169e5021b1f22664e34df3289dabf5f2fc6b8de55a2b08b5518",
+    "physics/unilateral_contact.py": "f55254429f3f6dd54b98242ab99c2ea459a0c5bacfb750e6191f44f1b9b249ae"
   }
 }

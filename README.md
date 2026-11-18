@@ -23,6 +23,7 @@ purchased fasteners and bearings.
 - [Engineering and mechanics](docs/ENGINEERING.md)
 - [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)
+- [Unilateral contact and friction benchmarks](docs/UNILATERAL_CONTACT.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

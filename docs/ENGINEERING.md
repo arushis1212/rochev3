@@ -55,3 +55,9 @@ accounted for in world coordinates. Analytical contact components receive the
 same translation as every native solid they cover; missing coverage or mixed
 motions within one component are rejected. This kinematic mapping is separate
 from travel, swept clearance and force checks.
+
+Continuous aperture checks cover each affine material step using interval
+triangle orientation and relative-motion distance bounds. A finite projection
+search verifies the same3D disk without changing its material coordinates or
+triangulation. [The method](APERTURE_GEOMETRY.md) separates diagnostic geometry
+from forces and physical loop retention.

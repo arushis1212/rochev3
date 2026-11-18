@@ -61,3 +61,8 @@ triangle orientation and relative-motion distance bounds. A finite projection
 search verifies the same3D disk without changing its material coordinates or
 triangulation. [The method](APERTURE_GEOMETRY.md) separates diagnostic geometry
 from forces and physical loop retention.
+
+A reusable finite-pin distance routine evaluates the retained native surface,
+including the curved rim of a capsule channel. Its tests compare signed
+distances with CAD boundary queries and check gradients and rigid transforms.
+[The geometric method](BORED_PIN_DISTANCE.md) defines its supported dimensions.

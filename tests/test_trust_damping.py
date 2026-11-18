@@ -25,6 +25,39 @@ class TrustDamping(unittest.TestCase):
         self.assertEqual(row['reason'], 'backtracking_relative_to_cap')
         self.assertEqual(row['next_damping_N_per_mm'], 4.)
 
+    def test_good_capped_fractions_accumulate_before_decaying(self):
+        control = AbsoluteDampingControl(accumulate_good_capped_steps=True)
+        for _ in range(9):
+            row = self.update(control, accepted_alpha=.1, proposed_cap_alpha=.1)
+            self.assertEqual(row['action'], 'hold')
+        row = self.update(control, accepted_alpha=.1, proposed_cap_alpha=.1)
+        self.assertEqual(row['action'], 'decay')
+        self.assertEqual(row['reason'], 'accumulated_good_capped_trials')
+        self.assertEqual(row['next_good_step_credit'], 0.)
+        self.assertEqual(row['next_damping_N_per_mm'], .5)
+
+    def test_backtracking_or_bad_model_clears_accumulated_credit(self):
+        for changes in [dict(accepted_alpha=.05, proposed_cap_alpha=.1),
+                        dict(accepted_alpha=.1, proposed_cap_alpha=.1, new_energy=9.9)]:
+            control = AbsoluteDampingControl(accumulate_good_capped_steps=True,
+                                             initial_good_step_credit=.8)
+            row = self.update(control, **changes)
+            self.assertEqual(row['next_good_step_credit'], 0.)
+
+    def test_saved_partial_credit_resumes_without_releasing_metric_early(self):
+        control = damping_from_config({'enabled': True, 'initial_N_per_mm': .03125,
+                                      'accumulate_good_capped_steps': True,
+                                      'initial_good_step_credit': .8})
+        row = self.update(control, used=.03125, accepted_alpha=.1, proposed_cap_alpha=.1)
+        self.assertEqual(row['action'], 'hold')
+        row = self.update(control, used=.03125, accepted_alpha=.1, proposed_cap_alpha=.1)
+        self.assertEqual(row['action'], 'decay')
+        self.assertEqual(row['next_damping_N_per_mm'], .015625)
+        for credit in [-.1, 1., float('nan')]:
+            with self.assertRaises(ValueError):
+                AbsoluteDampingControl(accumulate_good_capped_steps=True,
+                                       initial_good_step_credit=credit)
+
     def test_poor_physical_quadratic_agreement_increases_damping(self):
         row = self.update(AbsoluteDampingControl(), new_energy=9.9)
         self.assertEqual(row['reason'], 'poor_quadratic_agreement')
@@ -74,7 +107,7 @@ class TrustDamping(unittest.TestCase):
         limiter = ContactEventLimiter(lambda x, d: prepared(lambda a: x[0]+a*d[0], abs(d[0])))
         trace = []
         x, result = minimize_bordered(f, np.array([.1, .2]), 1, lambda x: True,
-                                      spectral='absolute_damped', damping_control={'enabled': True},
+                                      spectral='absolute_damped', damping_control={'enabled': True, 'accumulate_good_capped_steps': True},
                                       contact_event_limiter=limiter, maxiter=60,
                                       callback=lambda x, row: trace.append(row))
         self.assertTrue(result['optimizer_success'])
@@ -89,7 +122,7 @@ class TrustDamping(unittest.TestCase):
         trace = []
         x, result = minimize_bordered(f, np.array([.1, .2]), 1, lambda x: True,
                                       maxiter=80, spectral='absolute_damped',
-                                      damping_control={'enabled': True, 'initial_N_per_mm': 1.},
+                                      damping_control={'enabled': True, 'initial_N_per_mm': 1., 'accumulate_good_capped_steps': True},
                                       callback=lambda x, row: trace.append(row))
         self.assertTrue(result['optimizer_success'])
         self.assertAlmostEqual(x[0], 1., places=7)

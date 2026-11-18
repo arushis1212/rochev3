@@ -211,7 +211,7 @@ def limiter_from_config(model, config, budget_check=None):
         return None
     if not isinstance(config, dict):
         raise ValueError('Contact event configuration must be an object')
-    allowed = {'enabled', 'scope', 'activation_depth_mm', 'max_queries',
+    allowed = {'enabled', 'scope', 'activation_depth_mm', 'clamp_activation_depth_mm', 'max_queries',
                'max_depth', 'depth_tolerance_fraction', 'distance_roundoff_mm'}
     if set(config)-allowed:
         raise ValueError('Unknown contact event configuration fields')
@@ -219,8 +219,19 @@ def limiter_from_config(model, config, budget_check=None):
         raise ValueError('Contact event enabled flag must be boolean')
     if not config.get('enabled', False):
         return None
-    if config.get('scope') != 'front_stripper':
-        raise ValueError('Only the explicitly scoped front_stripper monitor is available')
-    options = {k: v for k, v in config.items() if k not in ('enabled', 'scope')}
-    return ContactEventLimiter(FrontStripperEventProvider(model),
-                               budget_check=budget_check, **options)
+    scope = config.get('scope')
+    if scope not in ('front_stripper', 'front_stripper_and_clamp'):
+        raise ValueError('Unknown explicitly scoped contact event monitor')
+    if scope == 'front_stripper' and 'clamp_activation_depth_mm' in config:
+        raise ValueError('A clamp depth requires the moving-clamp monitor')
+    options = {k: v for k, v in config.items()
+               if k not in ('enabled', 'scope', 'clamp_activation_depth_mm')}
+    front = ContactEventLimiter(FrontStripperEventProvider(model),
+                                budget_check=budget_check, **options)
+    if scope == 'front_stripper':
+        return front
+    from physics.clamp_contact_events import MovingClampEventProvider, CombinedContactLimiter
+    clamp_options = {**options, 'activation_depth_mm': config.get('clamp_activation_depth_mm', 1e-5)}
+    clamp = ContactEventLimiter(MovingClampEventProvider(model),
+                                budget_check=budget_check, **clamp_options)
+    return CombinedContactLimiter(front, clamp)

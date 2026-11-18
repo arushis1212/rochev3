@@ -213,4 +213,3 @@ def quadratic_direction(metric_inverse, gradient, gaps, jacobian, stiffness, *,
                    exact_physical_hessian_claimed=False,
                    finite_difference_contact_curvature_may_already_be_present=True,
                    all_future_contact_coverage_claimed=False)
-

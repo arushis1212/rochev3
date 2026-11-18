@@ -730,7 +730,7 @@
     "docs/ELASTIC_INTERFACES.md": "ac20c38ad70c9f3ccc77465046c4796ca8a35fc4691996edfb766b2f7b6c4553",
     "requirements-fea.txt": "8f7675731ae50d4f465a58d3d74740e61cdfb9938dfe161c456dc33116a8847a",
     "docs/images/assembly.png": "a62ce6cc64ef4549ddd696da8d927854b7a0e7d40b99a8d27deeabb4e73d4d17",
-    "physics/convex_search.py": "495c0341a9347c156ab86e5869d329b1ce6c37413a90301cc3b0fa0f37162a77",
+    "physics/convex_search.py": "f3d40b9ad3f34ccf9552724c0b0e70af8ba8d88fadd3007d9a47897ea0dde95c",
     "benchmarks/test_convex_search.py": "90f0aa73ce2c2caa92f8fb09e5526040589a84e4a53c8b847c5c39c37f631190",
     "docs/CONVEX_SEARCH.md": "bd4dc4f875d7bbb5f47eb613b948c893533ce3cee153dcb1e6e2b468ff61e9e5"
   }

@@ -17,6 +17,7 @@ purchased fasteners and bearings.
 - [Parts register](docs/manufacturing_parts.csv)
 - [Machine inputs](spec/current_machine.json)
 - [Engineering and mechanics](docs/ENGINEERING.md)
+- [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

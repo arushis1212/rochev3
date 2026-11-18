@@ -66,3 +66,8 @@ A reusable finite-pin distance routine evaluates the retained native surface,
 including the curved rim of a capsule channel. Its tests compare signed
 distances with CAD boundary queries and check gradients and rigid transforms.
 [The geometric method](BORED_PIN_DISTANCE.md) defines its supported dimensions.
+
+Elastic component calculations couple native interfaces through six rigid
+coordinates while preserving body loads, force and moment balance, and elastic
+work. [The component method and analytical benchmarks](ELASTIC_INTERFACES.md)
+describe the equations, assumptions and optional numerical environment.

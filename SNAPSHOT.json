@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "c77d814cb50b35fa2b21f45f5c7818a9cd0e7c07700677b442ee2dc150914205",
+    "README.md": "3c6ff39fd1d497ef86566ab02342bdc2d56e0a8d4d8afb08d73bf22bb4c8f866",
     "cad/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cad/machine/__init__.py": "06f46ee86abc39c84e0a25c7c8a2b78863631d7efb4b898834e7142761742f37",
     "cad/machine/assembly.py": "129fb5f649c891b377e5e5e1583e9da3c95a579d0dee06060f2f1f310d20a3c1",
@@ -313,7 +313,7 @@
     "cad/transfer/interfaces.py": "dd4b008a8742c05be50b682afa231cd16662f3f12b9ff3357066fb349ea31dd3",
     "docs/APERTURE_GEOMETRY.md": "0f89bb4fee364b6ddd69919a0c1e428ed797e093b6dcd637f79a9ba3dd3dd5c3",
     "docs/BORED_PIN_DISTANCE.md": "348e552b81cbe7429d5114d842f94487b0a16f8fff7888c1174810e3456ab875",
-    "docs/ENGINEERING.md": "192671a196e33e709db87c0749f714cb76cebf4b3d3b637a8a0b0f2396090a7b",
+    "docs/ENGINEERING.md": "a6360ca33131f029098fbe3b656c95909b57a7c680629774eefccc7f5563becf",
     "docs/GEOMETRY_RECORD.json": "ac64cc3023258fb9ecd37c0923de5998949846ec510201321eedc271287bc182",
     "docs/REFERENCES.md": "7e054fd69f321a7a8d311e085c674822b06a56e9ddb8ef0b6607131c4c99991c",
     "docs/installed_instances.csv": "f9885ccadadd1f0f918c1eb4cb18aa836cd6ef44dd5e7da0f92d052784f38f1a",
@@ -722,6 +722,12 @@
     "tests/test_transfer_manufacturing_fits.py": "74ef6b9bf7030c13c9c5580cd54308e7a4286c065910ad45519d5824a158c8d7",
     "tests/test_transfer_numerics.py": "cd030e5d4099e52b8181875db7c1f3b5ad845702f665f025ee56a05f8ab9e3d3",
     "tests/test_transfer_reset.py": "7972469bf4efd3952e51ffb06cff32994355b1c2df03947f0c9435654b5044ee",
-    "tests/test_trust_damping.py": "e86b5b128d30c29d7a5880cd7004ed926fc9f560dd7c797398c35e875d2af533"
+    "tests/test_trust_damping.py": "e86b5b128d30c29d7a5880cd7004ed926fc9f560dd7c797398c35e875d2af533",
+    "physics/rigid_port_elastic.py": "5ab6319cdb0fa4733276c868bea5c7bab1f24b23aa97b335bf5f048d4f59160c",
+    "physics/linear_elastic_screen.py": "4498779617cbe7f65d0058d8bd4e79b5823bb942747f1a9750021eaa689084d9",
+    "benchmarks/test_rigid_port.py": "7b75e6e7280793dc4b22061ff6c8d8383729035da939c65e433998620152a231",
+    "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/ELASTIC_INTERFACES.md": "ac20c38ad70c9f3ccc77465046c4796ca8a35fc4691996edfb766b2f7b6c4553",
+    "requirements-fea.txt": "8f7675731ae50d4f465a58d3d74740e61cdfb9938dfe161c456dc33116a8847a"
   }
 }

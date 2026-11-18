@@ -47,3 +47,11 @@ distances. Relative material and pulley motion bound each trial gap change,
 including events inside a step whose endpoints are both clear. Buffered
 activation and separation can limit a numerical search step while the physical
 energy and force criteria remain unchanged.
+
+Capture actuation uses an explicit affine map for head and guide translations
+and the sliding hook closure at fixed roll. Each axis carriage carries its
+downstream rails, tools and fasteners. The guide stage's rotated frame is
+accounted for in world coordinates. Analytical contact components receive the
+same translation as every native solid they cover; missing coverage or mixed
+motions within one component are rejected. This kinematic mapping is separate
+from travel, swept clearance and force checks.

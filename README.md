@@ -22,6 +22,7 @@ purchased fasteners and bearings.
 - [Machine inputs](spec/current_machine.json)
 - [Engineering and mechanics](docs/ENGINEERING.md)
 - [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
+- [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

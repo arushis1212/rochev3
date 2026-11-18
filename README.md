@@ -6,6 +6,10 @@ Roche explores how constrained yarn paths and repeatable tool motions can handle
 a deformable material without cameras. The first application is a manually
 actuated research prototype for stitch and swatch development.
 
+[![CAD views of the complete Roche machine and its stitch station, with the hook in orange, support bed in gold, and transfer mechanism in teal](docs/images/assembly.png)](cad/machine/generated/machine.step)
+
+*Both views use the same assembly pose. The detail shows how the closable hook (orange) sits beside the paired supports (gold) and transfer mechanism (teal).*
+
 The current **D26-T17-S3-indexed-candidate** design contains **692 installed native solids**.
 It combines a closable hook, four paired-support stations, an indexed transfer
 module, a gravity feeder, two retained service nips and a hanging fabric clamp.

@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "3c6ff39fd1d497ef86566ab02342bdc2d56e0a8d4d8afb08d73bf22bb4c8f866",
+    "README.md": "e0f2b3fe6f7992162d7bf54704021ff57303f87c801f82fa93529e68c0f819da",
     "cad/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cad/machine/__init__.py": "06f46ee86abc39c84e0a25c7c8a2b78863631d7efb4b898834e7142761742f37",
     "cad/machine/assembly.py": "129fb5f649c891b377e5e5e1583e9da3c95a579d0dee06060f2f1f310d20a3c1",
@@ -728,6 +728,7 @@
     "benchmarks/test_rigid_port.py": "7b75e6e7280793dc4b22061ff6c8d8383729035da939c65e433998620152a231",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "docs/ELASTIC_INTERFACES.md": "ac20c38ad70c9f3ccc77465046c4796ca8a35fc4691996edfb766b2f7b6c4553",
-    "requirements-fea.txt": "8f7675731ae50d4f465a58d3d74740e61cdfb9938dfe161c456dc33116a8847a"
+    "requirements-fea.txt": "8f7675731ae50d4f465a58d3d74740e61cdfb9938dfe161c456dc33116a8847a",
+    "docs/images/assembly.png": "a62ce6cc64ef4549ddd696da8d927854b7a0e7d40b99a8d27deeabb4e73d4d17"
   }
 }

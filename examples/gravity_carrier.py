@@ -41,5 +41,21 @@ def equilibrium(lateral_mm, contact_radius_mm=10.5, stiffness_n_per_mm=4.0, mass
             "residual_n": gradient, "vertical_stiffness_n_per_mm": tangent}
 
 
+def load_envelope(lateral_mm, contact_radius_mm, stiffness_n_per_mm, mass_kg, bias_n):
+    """Bound stable height under an additive, height-independent vertical load."""
+    gravity = 9.80665
+    weight = mass_kg * gravity
+    if not math.isfinite(bias_n) or bias_n < 0 or bias_n >= weight:
+        raise ValueError("The entire prescribed load interval must be finite and positive")
+    def at_load(force_n):
+        return equilibrium(lateral_mm, contact_radius_mm, stiffness_n_per_mm, force_n/gravity)
+    low_height = at_load(weight + bias_n)
+    high_height = at_load(weight - bias_n)
+    # The tangent grows with height on this branch, so the lowest height bounds it.
+    return {"load_interval_n": [weight-bias_n, weight+bias_n],
+            "stable_height_interval_mm": [low_height["height_mm"], high_height["height_mm"]],
+            "minimum_stiffness_n_per_mm": low_height["vertical_stiffness_n_per_mm"]}
+
+
 if __name__ == "__main__":
     print(json.dumps([equilibrium(x) for x in (5.5, 6.0, 6.5)], indent=2))

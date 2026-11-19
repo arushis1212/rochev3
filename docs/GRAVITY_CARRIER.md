@@ -15,4 +15,6 @@ python -m unittest benchmarks.test_gravity_carrier
 
 One test uses a 6–8–10 triangle and two 0.5 mm compressions at 1 N/mm. The two vertical components together support exactly 0.8 N at an 8 mm height. Other tests compare the derivative to a centered finite difference and exercise unloaded and overloaded cases.
 
+The same example bounds a range of applied forces. For any constant vertical load between 0.7 and 0.9 N, the stable height lies between 7.91913 and 8.07993 mm. The force derivative is positive and increases with height on this branch. The heavier endpoint therefore sets both the lowest height and the least restoring stiffness, 1.22916 N/mm. These bounds assume a steady applied load and frictionless normal contact.
+
 [Executable model](../examples/gravity_carrier.py) · [Analytical checks](../benchmarks/test_gravity_carrier.py)

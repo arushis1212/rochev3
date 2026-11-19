@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "d37e3b8bac9171c5e6e140f7ea33539f2a8c6b77c9f6f02920c4516509234c73",
+    "README.md": "585f4f320c6109731d0858063fc9b5585cbd8062ae17d27a157fe325cd24b247",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
     "benchmarks/test_convex_search.py": "90f0aa73ce2c2caa92f8fb09e5526040589a84e4a53c8b847c5c39c37f631190",
@@ -762,6 +762,9 @@
     "cad/service_driver/matched_driver.step": "0c20288a57e6eb0e65586e0e03ee907fded2e413fca60f167e45af95d18a853d",
     "benchmarks/test_yarn_sweep.py": "4d13f6d5821389faee9a65d37ba64de1028c231326fe5a41e24761bf2e2e81f0",
     "docs/YARN_CLEARANCE.md": "01d1031b3b837398fb3b645dd87fce0806d78128fff32b087740693221dc71f9",
-    "examples/yarn_sweep.py": "937b6df947acfd417c1c3160e2a09258e36cc73d2b10f9d5eac5e067ca989d9a"
+    "examples/yarn_sweep.py": "937b6df947acfd417c1c3160e2a09258e36cc73d2b10f9d5eac5e067ca989d9a",
+    "examples/gravity_carrier.py": "23c42636293a8e0b51630f08197721cdf4dd92529fc5278f098a5bc3e72b9914",
+    "benchmarks/test_gravity_carrier.py": "5bf643c7ddbeaa8d33088a448a986871a312c55f4777c25d8d01f5f90fdb2e03",
+    "docs/GRAVITY_CARRIER.md": "d5d6e380f63cd85f5659239528b39446af8858c8ea6d2bf26dfd8a6ad834a008"
   }
 }

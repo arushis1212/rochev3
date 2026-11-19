@@ -25,6 +25,7 @@ purchased fasteners and bearings.
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)
 - [Bounded quadratic solvers and analytical tests](docs/BOUNDED_QUADRATIC.md)
 - [Yarn length through a retracting guide](docs/GUIDE_TRAVEL.md)
+- [A gravity-loaded carrier supported by yarn](docs/GRAVITY_CARRIER.md)
 - [Continuous yarn self-clearance on an analytical coil](docs/YARN_CLEARANCE.md)
 - [Contact integration and analytical refinement](docs/CONTACT_INTEGRATION.md)
 - [Unilateral contact and friction benchmarks](docs/UNILATERAL_CONTACT.md)

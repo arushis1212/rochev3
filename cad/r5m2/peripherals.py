@@ -2,6 +2,17 @@
 Geometry is nominal; weights, friction, stiffness and yarn retention require tests.
 """
 
+def flat_clamp_screw(c):
+    """DIN7991 nominal conservative solid, top at z=0; L includes the head.
+
+    The receiving requirement additionally checks flush/recessed seating. The
+    internal hex and thread valleys are filled, not omitted contact material.
+    """
+    f=c.S['cloth_clamp']['front_fastener'];r=f['head_diameter_max_mm']/2
+    L=f['overall_length_mm'];h=r-1.5
+    cone=c.cq.Solid.makeCone(1.5,r,h,c.cq.Vector(0,0,-h),c.cq.Vector(0,0,1))
+    return c.cyl_z(-L,0,1.5).union(c.cq.Workplane('XY').newObject([cone]))
+
 def parts(c):
     b,cx,cy,cz,hz,hy=c.box,c.cyl_x,c.cyl_y,c.cyl_z,c.hex_z,c.hex_y
     p={}; S=c.S
@@ -13,16 +24,35 @@ def parts(c):
             q=q.cut(b(lo-1,x if i==0 else hi+1,y-3.4,y+3.4,-14,-11.6) if i==0 else b(x,hi+1,y-3.4,y+3.4,-14,-11.6))
         for z in (-60,-340):q=q.cut(cx(lo-1,hi+1,1.7,442,z))
         p[f'S0{i+1}_side']=q
-    q=b(29,291,452,470,-408,-8)
+    q=b(*S['stand']['back_x'],*S['stand']['back_y'],*S['stand']['back_z'])
     for x in (39,281):
         for z in (-60,-340):q=q.cut(cy(451,471,1.7,x,z))
     p['S03_back']=q
     q=b(0,4,0,20,0,20).union(b(0,20,16,20,0,20))
     q=q.cut(cx(-1,5,1.7,10,10)).cut(cy(15,21,1.7,10,10))
     p['S04_bracket_L']=q;p['S05_bracket_R']=q.mirror('YZ').translate((20,0,0))
-    jaw=b(-50,50,-6,-2,-5,5)
-    for x in (-46,46):jaw=jaw.cut(cy(-7,-1,1.7,x,0))
-    p['D01_jaw']=jaw;p['D02_pad']=b(-44,44,-2,-1,-5,5)
+    C=S['cloth_clamp']; half=C['closed_face_gap_mm']/2; pad=half+C['pad_thickness_mm']; outer=pad+C['jaw_thickness_mm']; h=C['body_height_mm']/2
+    jaw=b(-C['body_width_mm']/2,C['body_width_mm']/2,-outer,-pad,-h,h)
+    for x in C['bolt_x_mm']:jaw=jaw.cut(cy(-outer-1,-pad+1,C['bolt_clearance_radius_mm'],x,0))
+    pad_shape=b(-C['pad_width_mm']/2,C['pad_width_mm']/2,-pad,-half,-h,h)
+    if C.get('free_wrap_window'):
+        win=C['free_wrap_window'];cut=b(*win['x_mm'],-pad-1,-half+1,*win['z_mm']).edges('|Y').fillet(win['corner_radius_mm'])
+        pad_shape=pad_shape.cut(cut)
+    if C.get('stop_spacer'):
+        sp=C['stop_spacer'];p['D04_stop_spacer']=cy(-sp['length_mm']/2,sp['length_mm']/2,sp['od_mm']/2).cut(cy(-sp['length_mm'],sp['length_mm'],sp['bore_mm']/2))
+        for x in C['bolt_x_mm']:pad_shape=pad_shape.cut(cy(-pad-1,-half+1,sp['pad_clearance_diameter_mm']/2,x,0))
+    if C.get('return_pin'):
+        pin=C['return_pin'];px,py,pz=pin['center_body_mm'];socket=cy(pin['socket_back_y_mm'],-half+1,pin['socket_diameter_mm']/2,px,pz);jaw=jaw.cut(socket);pad_shape=pad_shape.cut(socket)
+        p['D03_return_pin']=cy(-pin['length_mm']/2,pin['length_mm']/2,pin['diameter_mm']/2,px,pz)
+    p['D01_jaw']=jaw;p['D02_pad']=pad_shape
+    if C.get('front_countersink'):
+        front=jaw;seat=C['front_countersink'];r=seat['mouth_diameter_mm']/2
+        import math
+        depth=(r-C['bolt_clearance_radius_mm'])/math.tan(math.radians(seat['included_angle_deg']/2))
+        for x in C['bolt_x_mm']:
+            cone=c.cq.Solid.makeCone(r,C['bolt_clearance_radius_mm'],depth,c.cq.Vector(x,-outer,0),c.cq.Vector(0,1,0))
+            front=front.cut(c.cq.Workplane('XY').newObject([cone]))
+        p['D05_front_jaw']=front
     q=b(*S['feeder']['tower_bbox']);q=q.cut(b(32,64,415,423,110,210))
     for x,z in [(20,32),(76,32),(32,230),(64,230),(78,238),(76,256),(48,220),(16,235.5),(56,250),(28,155.5)]+[(x+6,z) for x in (24,72) for z in (120,200)]:q=q.cut(cy(415,423,1.7,x,z))
     for x in (24,72):
@@ -40,7 +70,7 @@ def parts(c):
     q=q.cut(cy(*R['y'],R['outer_radius'],48,0).cut(cy(409,413,R['inner_radius'],48,0)))
     p['P04_carrier']=q
     q=cz(-3,0,10).cut(cz(-1.5,1,11).cut(cz(-2,2,8)))
-    q=q.cut(cz(-4,1,4.3)).cut(cz(-2.1,1,5.1))
+    q=q.cut(cz(-4,1,4.3)).cut(cz(-S['feeder']['pulley_bearing_pocket_depth_mm'],1,S['feeder']['pulley_bearing_pocket_diameter_mm']/2))
     for x in (-6.5,6.5):q=q.cut(cz(-4,1,1.1,x))
     p['P05_pulley_half']=q
     p['P06_623_bearing_envelope']=cz(-2,2,5).cut(cz(-3,3,1.5))
@@ -53,7 +83,8 @@ def parts(c):
     p['P12_foot']=q.cut(cz(11,19,1.7,0,434)).cut(cy(421,429,1.7,0,32))
     q=b(14,26,401,411,232,238).union(b(14,26,411,416,232,241))
     q=q.cut(cy(400,417,1.7,20,235.5)).cut(hy(411,414,5.8,20,235.5)).cut(b(13,21,411,414,232.5,238.5))
-    upper=b(14,26,401,411,239.6,243.6); pad=b(14,26,401,411,238,238.5)
+    upper_bottom=239.+S['feeder']['nip_closed_gap_mm']
+    upper=b(14,26,401,411,upper_bottom,upper_bottom+4); pad=b(14,26,401,411,238,238.5)
     for x in (17,23):
         q=q.cut(cz(231,239,1.1,x,409));upper=upper.cut(cz(239,245,1.1,x,409));pad=pad.cut(cz(237,240,1.1,x,409))
     p['P13_nip_lower']=q.translate((-4,0,0));p['P14_nip_upper']=upper.translate((-4,0,0));p['P15_nip_pad']=pad.translate((-4,0,0))
@@ -62,7 +93,7 @@ def parts(c):
     p['P16_idler_bracket']=q
     p['P17_park_cleat']=b(42,54,402,416,212,224).cut(cx(41,55,1,406,216)).cut(cy(401,417,1.7,48,220))
     p['P18_weight_cup']=cz(-12.5,12.5,6).cut(cz(-10.5,13,5)).cut(cy(-7,7,1,0,10))
-    p['P20_rod']=cz(116,204,1.5,0,400)
+    p['P20_rod']=cz(*S['feeder']['rod_z'],1.5,0,400)
     return p
 
 def add(items,ps,c,carrier_z=160,takedown_z=50,mode='high',support_pin=False):
@@ -83,13 +114,21 @@ def add(items,ps,c,carrier_z=160,takedown_z=50,mode='high',support_pin=False):
             screw(f'HW_M3x30_stand_back_{side}_{j}',3,30,(x+10,448,z+10),(0,-1,0))
             nut(f'HW_M3nut_stand_back_{side}_{j}',3,(x+10,470,z+10),(0,1,0))
     for side in ('A','B'):
-        for name in ('D01_jaw','D02_pad'):obj(name,name+'_'+side,(150,165,takedown_z),'XZ' if side=='B' else None)
-    for i,x in enumerate((-46,46)):
-        screw(f'HW_M3x16_cloth_{i}',3,16,(150+x,159,takedown_z),(0,-1,0));nut(f'HW_M3nut_cloth_{i}',3,(150+x,171,takedown_z),(0,1,0))
+        for name in ('D01_jaw','D02_pad'):
+            source='D05_front_jaw' if side=='A' and name=='D01_jaw' and 'D05_front_jaw'in ps else name
+            obj(source,name+'_'+side,(150,165,takedown_z),'XZ' if side=='B' else None)
+    C=c.S['cloth_clamp']; outer=C['closed_face_gap_mm']/2+C['pad_thickness_mm']+C['jaw_thickness_mm']
+    if C.get('return_pin'):obj('D03_return_pin',xyz=(150,165,takedown_z))
+    for i,x in enumerate(C['bolt_x_mm']):
+        if C.get('front_fastener'):
+            items[f'HW_M3x16_cloth_{i}']=c.place(flat_clamp_screw(c),(150+x,165-outer+C['front_fastener']['nominal_recess_mm'],takedown_z),(1,0,0),(0,-1,0))
+        else:screw(f'HW_M3x16_cloth_{i}',3,16,(150+x,165-outer,takedown_z),(0,-1,0))
+        nut(f'HW_M3nut_cloth_{i}',3,(150+x,165+outer,takedown_z),(0,1,0))
+        if C.get('stop_spacer'):obj('D04_stop_spacer',f'D04_stop_spacer_{i}',(150+x,165,takedown_z))
     for name in ('P01_tower','P10_fairlead_bracket','P11_fairlead','P13_nip_lower','P14_nip_upper','P16_idler_bracket','P17_park_cleat'):obj(name)
-    obj('P15_nip_pad','P15_pad_lower');obj('P15_nip_pad','P15_pad_upper',(0,0,1.1))
+    obj('P15_nip_pad','P15_pad_lower');obj('P15_nip_pad','P15_pad_upper',(0,0,.5+c.S['feeder']['nip_closed_gap_mm']))
     for i,x in enumerate((13,19)):
-        screw(f'HW_M2x16_nip_{i}',2,16,(x,409,243.6));nut(f'HW_M2nut_nip_{i}',2,(x,409,230.4))
+        screw(f'HW_M2x16_nip_{i}',2,16,(x,409,243.+c.S['feeder']['nip_closed_gap_mm']));nut(f'HW_M2nut_nip_{i}',2,(x,409,230.4))
     for x,z,label in [(78,238,'eye'),(76,256,'idler'),(16,235.5,'nip')]:
         screw('HW_M3x16_'+label,3,16,(x,422,z),(0,1,0));nut('HW_M3nut_'+label,3,(x,410 if label!='nip' else 411,z),(0,1,0))
     screw('HW_M3x30_cleat',3,30,(48,402,220),(0,-1,0));nut('HW_M3nut_cleat',3,(48,422,220),(0,1,0))
@@ -101,7 +140,8 @@ def add(items,ps,c,carrier_z=160,takedown_z=50,mode='high',support_pin=False):
         obj('P20_rod',f'P20_rod_{i}',(x,0,0))
         for z,name in [(120,'P02_lower_block'),(200,'P03_upper_block')]:
             obj(name,name+f'_{i}',(x,0,z))
-            screw(f'HW_M3x25_rod_{i}_{z}',3,25,(x+6,422,z),(0,1,0));nut(f'HW_M3nut_rod_{i}_{z}',3,(x+6,397.6,z),(0,1,0))
+            L=c.S['feeder']['rod_block_screw_length_mm']
+            screw(f'HW_M3x{L:g}_rod_{i}_{z}',3,L,(x+6,422,z),(0,1,0));nut(f'HW_M3nut_rod_{i}_{z}',3,(x+6,397.6,z),(0,1,0))
     obj('P04_carrier',xyz=(0,0,carrier_z))
     from physics.r5_feed_geometry import counter_center
     f=c.S['feeder'];g=f['cord_geometry'];R=f['pulley_groove_radius']+f['rope_d']/2
@@ -118,5 +158,6 @@ def add(items,ps,c,carrier_z=160,takedown_z=50,mode='high',support_pin=False):
         for name,at in [('P06_623_bearing_envelope',(x,406,z)),('P07_spacer4',(x,400,z)),(spacer,(x,408,z))]:items[f'{name}_{label}']=c.place(ps[name],at,(1,0,0),(0,1,0))
         screw(f'HW_M3x{L}_axle_{label}',3,L,(x,400,z),(0,-1,0));nut(f'HW_M3nut_axle_{label}',3,(x,nuty,z),(0,1,0))
         for j,dx in enumerate((-6.5,6.5)):
-            screw(f'HW_M2x8_pulley_{label}_{j}',2,8,(x+dx,409,z),(0,1,0));nut(f'HW_M2nut_pulley_{label}_{j}',2,(x+dx,401.4,z),(0,1,0))
+            join=c.S['feeder']['pulley_join_screw_length_mm']
+            screw(f'HW_M2x{join:g}_pulley_{label}_{j}',2,join,(x+dx,409,z),(0,1,0));nut(f'HW_M2nut_pulley_{label}_{j}',2,(x+dx,401.4,z),(0,1,0))
     return items

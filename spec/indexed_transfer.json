@@ -1,0 +1,471 @@
+{
+  "revision": "XT01-D26-T17",
+  "units": "mm and degrees",
+  "station_x_mm": [
+    112,
+    136,
+    160,
+    184
+  ],
+  "park_x_mm": 60,
+  "roll_detents_deg": [
+    -20,
+    20
+  ],
+  "rail_origin_mm": [
+    124,
+    300,
+    270
+  ],
+  "rail_kind": "gy",
+  "rail_length_mm": 180,
+  "beam_bounds_mm": [
+    16,
+    316,
+    272,
+    328,
+    252,
+    270
+  ],
+  "post_centers_x_mm": [
+    32,
+    300
+  ],
+  "post_y_mm": 300,
+  "post_halfwidth_mm": 16,
+  "post_halfdepth_mm": 20,
+  "post_bottom_top_mm": [
+    12,
+    252
+  ],
+  "foot_halfwidth_mm": 20,
+  "foot_halfdepth_mm": 28,
+  "foot_top_mm": 20,
+  "foot_bolt_offsets_y_mm": [
+    -24,
+    24
+  ],
+  "post_upper_nut_roof_mm": 248,
+  "post_upper_nut_floor_mm": 245.3,
+  "post_upper_pilot_bottom_mm": 241,
+  "beam_mount_screw_seat_mm": 266.8,
+  "beam_mount_screw_length_mm": 25,
+  "rail_mount_screw_length_mm": 14,
+  "beam_rail_nut_roof_mm": 264,
+  "base_mount_screw_length_mm": 25,
+  "carriage_width_mm": 20.34,
+  "carriage_flange_height_mm": 6.34,
+  "index_bore_mm": 3.02,
+  "index_port_xy_mm": [
+    -6,
+    5
+  ],
+  "index_beam_hole_bottom_mm": 263.5,
+  "index_pin_part_id": "XT12_index_pin",
+  "index_pin_seat_z_mm": 300,
+  "carrier_beam_bounds_mm": [
+    -16,
+    16,
+    236,
+    310,
+    288,
+    300
+  ],
+  "carrier_column_bounds_mm": [
+    -16,
+    16,
+    236,
+    268,
+    188,
+    300
+  ],
+  "carrier_face_u_mm": [
+    65.2,
+    73.2
+  ],
+  "carrier_face_v_mm": [
+    54,
+    80
+  ],
+  "carrier_face_half_w_mm": 38,
+  "carrier_mount_screw_length_mm": 20,
+  "carrier_mount_seat_z_mm": 296.8,
+  "shoe_u_mm": [
+    59.2,
+    65.2
+  ],
+  "shoe_base_v_mm": [
+    34,
+    44
+  ],
+  "shoe_base_half_w_mm": 16,
+  "shoe_stem_v_mm": [
+    44,
+    72
+  ],
+  "shoe_stem_half_w_mm": 16,
+  "shoe_nest_depth_mm": 0.5,
+  "shoe_nest_clearance_mm": 0.05,
+  "key_v_mm": 66,
+  "key_w_mm": [
+    -12,
+    12
+  ],
+  "key_shaft_d_mm": 3,
+  "key_bore_mm": 3.02,
+  "key_shoulder_length_mm": 14,
+  "key_thread_d_mm": 2,
+  "key_thread_length_mm": 4,
+  "key_head_vw_mm": [
+    5,
+    6
+  ],
+  "key_head_height_mm": 3,
+  "key_head_pocket_vw_mm": [
+    5.1,
+    6.1
+  ],
+  "key_head_boss_wall_mm": 2,
+  "key_head_boss_depth_mm": 3.3,
+  "diamond_width_w_mm": 2.9,
+  "diamond_length_mm": 6,
+  "guide_index_park_mm": [
+    208,
+    235,
+    60
+  ],
+  "manufacturing": {
+    "rigid_parts": "PLA with documented orientation; general parts40% infill plus solid bolt/key/rail lands. XT02 uprights and XT05 carrier require100% infill and at least6 walls. Effective directional stiffness remains measured acceptance, not bulk PLA modulus.",
+    "keys": "Machine from shared C260 rod7.9375mm; turned3mm shank/M2 die-cut tip, milled5x6 head and one diamond pilot. Exact machining price unresolved.",
+    "rail_floor_and_cap_seat_tolerance_mm": 0.015,
+    "carriage_width_and_flange_tolerance_mm": 0.01,
+    "index_key_bore_bounds_mm": [
+      3.015,
+      3.025
+    ],
+    "round_key_shaft_bounds_mm": [
+      2.995,
+      3
+    ],
+    "diamond_width_bounds_mm": [
+      2.89,
+      2.91
+    ],
+    "common_index_axis_mismatch_max_mm": 0.005,
+    "key_pattern_position_error_mm": 0.01,
+    "key_pattern_pitch_error_mm": 0.02,
+    "shoe_nest_relational_gap_mm": [
+      0.03,
+      0.07
+    ],
+    "key_face_flatness_parallelism_mm": 0.03,
+    "key_head_pocket_clearance_mm": [
+      0.05,
+      0.15
+    ],
+    "index_repeatability_loaded_tip_max_mm": 0.2,
+    "roll_registration_error_max_deg": 0.2,
+    "loaded_deflection_max_mm": 0.05,
+    "proof_force_N": 2,
+    "beam_material": "18mm void-free birch plywood;300x56 blank from shared two-panel stock; receiving thickness18.00+/-0.10mm; finish seating datums and proof complete assembly",
+    "post_section_mm": [
+      32,
+      40
+    ],
+    "key_common_axis_mismatch_max_mm": 0.005,
+    "fork_shoe_initial_registration_max_mm": 0.03,
+    "fork_shoe_loaded_slip_max_mm": 0.005,
+    "rail_channel_width_tolerance_mm": 0.015,
+    "unloaded_matched_registration_max_mm": 0.15,
+    "registration_allocation": "Match and gauge assembly <=0.15mm unloaded; under2N proof incremental shift<=0.05mm, total<=0.20mm. Individual hole bounds do not alone certify full mechanism registration.",
+    "arm_solid_section_I_mm4": 16819.2,
+    "deflection_allocation_mm": {
+      "post_pair": 0.018,
+      "beam": 0.012,
+      "carrier_and_shoe": 0.01,
+      "rail_and_joints": 0.01
+    },
+    "external_clearance_budget": {
+      "nominal_verge_and_neighbor_relief_gap_mm": 0.8,
+      "each_printed_profile_inward_error_max_mm": 0.2,
+      "relative_loaded_registration_max_mm": 0.2,
+      "remaining_manufactured_reserve_mm": 0.2
+    },
+    "rail_mount_head_running_fit": {
+      "floor_height_mm": 6,
+      "floor_tolerance_mm": 0.015,
+      "socket_seat_height_mm": 2.8,
+      "socket_seat_tolerance_mm": 0.02,
+      "M3_head_height_max_mm": 3,
+      "nominal_gap_mm": 0.2,
+      "worst_case_gap_mm": 0.165,
+      "required_gap_min_mm": 0.15
+    }
+  },
+  "operation": {
+    "index_preconditions": "Empty/reset transfer locked in actual upper30mm dock. Live loop retained elsewhere, guide at checked rear-lowpark. Remove index pin, move rail, reinsert at station or60park.",
+    "roll_change": "At a support station only: empty transfer lift at 6mm stop and manually supported. Withdraw both M2 nuts85mm along -u, and both locating keys65mm along +u through authored rear access channels. Withdraw complete shoe/module12mm along -u; lift/lower30mm and rekey as required, reseat, reposition and refit keys/nuts. Detached pieces remain explicit operator-held solids. Park60 is upper-dock only; no dock/rekey operation at park.",
+    "source_material_scope": "Dock/index/rekey requires emptymodule; operator support is explicit. No yarn/material reset or hidden solids.",
+    "fork_shoe_setting": "One-time gauge fork to shoe within0.03mm and tighten twoM3 bolts. Fork/shoe remain joined during index and rekey. Under the2N assembly proof relative joint slip<=0.005mm, included in the0.010mm rail/joint deflection allocation."
+  },
+  "carrier_bridge_bounds_mm": [
+    -11,
+    11,
+    250,
+    290,
+    151,
+    159
+  ],
+  "symmetric_verge_relief": true,
+  "parts": {
+    "XT02_upright": {
+      "material": "PLA",
+      "process": "PLA100% infill, at least6 walls; finish fits; verify directional component compliance and assembled2N proof",
+      "make_or_buy": "fabricated",
+      "source_id": "PRINT_PLA",
+      "cad_source": "cad/transfer/indexed.py",
+      "print_orientation": "original X minimum face down; build +X; post length Z lies along printer X",
+      "print_envelope_note": "240x56 footprint,40 height;5mm brim each side =>250x66; support4mm body offset above foot plane",
+      "brim_mm": 5,
+      "printer_build_envelope_mm": [
+        256,
+        256,
+        256
+      ]
+    },
+    "XT03_index_rail": {
+      "material": "PLA",
+      "process": "print and finish functional fits",
+      "make_or_buy": "fabricated",
+      "source_id": "PRINT_PLA",
+      "cad_source": "cad/transfer/indexed.py",
+      "print_orientation": "original Z minimum face down; build +Z",
+      "print_envelope_note": "180mm rail along bed X;5mm brim each side",
+      "brim_mm": 5,
+      "printer_build_envelope_mm": [
+        256,
+        256,
+        256
+      ]
+    },
+    "XT04_index_carriage": {
+      "material": "PLA",
+      "process": "print and finish functional fits",
+      "make_or_buy": "fabricated",
+      "source_id": "PRINT_PLA",
+      "cad_source": "cad/transfer/indexed.py",
+      "print_orientation": "original Z minimum face down; build +Z",
+      "print_envelope_note": "26x20.34 footprint;5mm brim each side",
+      "brim_mm": 5,
+      "printer_build_envelope_mm": [
+        256,
+        256,
+        256
+      ]
+    },
+    "XT05_carrier": {
+      "material": "PLA",
+      "process": "PLA100% infill, at least6 walls; finish fits; verify directional component compliance and assembled2N proof",
+      "make_or_buy": "fabricated",
+      "source_id": "PRINT_PLA",
+      "cad_source": "cad/transfer/indexed.py",
+      "print_orientation": "global Y minimum face down; build +Y; global Z length lies along printer X",
+      "print_envelope_note": "Native extents80.302560592X x74Y x188.792310644Z mm. WithY build axis and5mm brim, bed footprint198.792310644 x90.302560592 mm; height74mm. Support keyed faces/access corridors, then finish all seats.",
+      "brim_mm": 5,
+      "printer_build_envelope_mm": [
+        256,
+        256,
+        256
+      ]
+    },
+    "XT06_keyed_shoe": {
+      "material": "PLA",
+      "process": "print and finish functional fits",
+      "make_or_buy": "fabricated",
+      "source_id": "PRINT_PLA",
+      "cad_source": "cad/transfer/indexed.py",
+      "print_orientation": "local U maximum face down; build -U",
+      "print_envelope_note": "local V/W in bed plane;5mm brim each side; finish upper nest and both key bores",
+      "brim_mm": 5,
+      "printer_build_envelope_mm": [
+        256,
+        256,
+        256
+      ]
+    },
+    "XT10_lift_carriage": {
+      "material": "PLA",
+      "process": "print and finish functional fits",
+      "make_or_buy": "fabricated",
+      "source_id": "PRINT_PLA",
+      "cad_source": "cad/transfer/indexed.py",
+      "print_orientation": "local U maximum face down; build -U",
+      "print_envelope_note": "local V/W in bed plane;5mm brim; support relieved edges and finish running bores",
+      "brim_mm": 5,
+      "printer_build_envelope_mm": [
+        256,
+        256,
+        256
+      ]
+    },
+    "XT07_round_key": {
+      "material": "C260 brass",
+      "process": "turn/mill/die-cut M2; precise smooth locating shoulder",
+      "make_or_buy": "fabricated_from_purchased_stock",
+      "source_id": "KS1166",
+      "finished_length_mm": 21,
+      "cad_source": "cad/transfer/indexed.py"
+    },
+    "XT08_diamond_key": {
+      "material": "C260 brass",
+      "process": "turn/mill/die-cut M2; precise smooth locating shoulder",
+      "make_or_buy": "fabricated_from_purchased_stock",
+      "source_id": "KS1166",
+      "finished_length_mm": 21,
+      "cad_source": "cad/transfer/indexed.py"
+    },
+    "XT01_crossbeam": {
+      "material": "18mm birch plywood",
+      "process": "cut/drill/counterbore",
+      "make_or_buy": "fabricated_from_purchased_stock",
+      "source_id": "STAND_PANELS",
+      "blank_mm": [
+        300,
+        56,
+        18
+      ],
+      "cad_source": "cad/transfer/indexed.py"
+    },
+    "XT09_drilled_base": {
+      "material": "12mm birch plywood",
+      "process": "add four mounting holes to F03; replaces F03, not extra panel",
+      "make_or_buy": "fabricated_from_purchased_stock",
+      "source_id": "BASE_BOARD",
+      "replaces": "F03_base_board",
+      "cad_source": "cad/transfer/indexed.py"
+    },
+    "XT11_anchor": {
+      "material": "PLA",
+      "process": "print and finish functional fits",
+      "make_or_buy": "fabricated",
+      "source_id": "PRINT_PLA",
+      "cad_source": "cad/transfer/indexed.py",
+      "replaces": "R06_anchor",
+      "print_orientation": "local U maximum face down; build -U",
+      "print_envelope_note": "local V/W in bed plane;5mm brim; support fork wings and finish running bores",
+      "brim_mm": 5,
+      "printer_build_envelope_mm": [
+        256,
+        256,
+        256
+      ]
+    },
+    "XT12_index_pin": {
+      "material": "C260 brass",
+      "process": "turn36mm smooth3mm shaft and5.68x3 headed locator",
+      "make_or_buy": "fabricated_from_purchased_stock",
+      "source_id": "KS1166",
+      "finished_length_mm": 39,
+      "cad_source": "cad/transfer/indexed.py"
+    }
+  },
+  "dock_heights_mm": [
+    0,
+    30
+  ],
+  "manual_withdrawal_mm": 12,
+  "key_removal_mm": 65,
+  "nut_removal_mm": 85,
+  "carrier_upper_bridge_bounds_mm": [
+    -11,
+    11,
+    250,
+    290,
+    181,
+    193
+  ],
+  "carrier_riser_bounds_mm": [
+    -11,
+    11,
+    270,
+    298,
+    151,
+    193
+  ],
+  "index_pin_shaft_length_mm": 36,
+  "symmetric_bank_relief": true,
+  "carrier_rib_bounds_mm": [
+    [
+      -16,
+      -12,
+      236,
+      310,
+      300,
+      312
+    ],
+    [
+      12,
+      16,
+      236,
+      310,
+      300,
+      312
+    ]
+  ],
+  "service_station_x_mm": [
+    112,
+    136,
+    160,
+    184
+  ],
+  "service_lift_mm": 6,
+  "key_rear_access_end_u_mm": 143.2,
+  "service_tools": {
+    "nut_driver": {
+      "manufacturer": "Wiha",
+      "model": "PicoFinish265P 4.0mm,42450",
+      "manufacturer_url": "https://st.sw.erp.digicat.wiha.com/int/en/tools/screwdrivers/precision-screwdrivers/picofinish/hex/picofinish-fine-screwdriver/42450",
+      "blade_length_mm": 60,
+      "overall_length_mm": 160,
+      "manufacturer_handle_diameter_mm": 18,
+      "chosen_receiving_blade_outer_d_max_mm": 10,
+      "chosen_receiving_handle_d_max_mm": 24
+    },
+    "key_pushrod": {
+      "material": "C260 brass",
+      "source_id": "KS1166",
+      "quantity": 1,
+      "finished_length_mm": 80,
+      "finished_d_mm": 1.8,
+      "end_face": "flat, square, deburred",
+      "operation": "Push from exposed M2 thread end after nut removal; no plier grip required inside5.1x6.1 channel. Rear rod pushes head for insertion. At full65mm ejection the front free grip length is19.2mm. Withdraw tool fully before module motion. Limit axial push to2N; stop if a key binds."
+    }
+  },
+  "guide_tool_service": {
+    "condition": "At station160 or184 and+20deg transfer roll, use rear/high guide pose for key tool access. Other tested station/roll cases retain guide_index_park_mm.",
+    "station_x_mm": [
+      160,
+      184
+    ],
+    "roll_deg": 20,
+    "approach_xyz_mm": [
+      [
+        208,
+        235,
+        60
+      ],
+      [
+        208,
+        260,
+        60
+      ],
+      [
+        208,
+        260,
+        125
+      ]
+    ],
+    "return_order": "Reverse the approach after removing all service tools, before X indexing"
+  },
+  "nonfunctional_relief_extra_margin_mm": 0.6
+}

@@ -2,52 +2,57 @@
 
 **Crochet through mechanical registration.**
 
-Roche explores a different way to handle deformable materials: constrain the yarn
-and loops where the next operation happens, then use repeatable tool motions.
-The first application is a camera-free, manually actuated crochet research fixture
-for single-stitch and swatch development.
+Roche explores how constrained yarn paths and repeatable tool motions can handle
+a deformable material without cameras. The first application is a manually
+actuated research prototype for stitch and swatch development.
 
-This repository contains the current parametric design and executable mechanics
-tools. The project combines crochet knowledge, mechanism design and numerical
-engineering around a small, inexpensive physical prototype.
+[![CAD views of the complete Roche machine and its stitch station, with the hook in orange, support bed in gold, and transfer mechanism in teal](docs/images/assembly.png)](cad/machine/generated/machine.step)
 
-## Explore the design
+*Both views use the same assembly pose. The detail shows how the closable hook (orange) sits beside the paired supports (gold) and transfer mechanism (teal).*
 
-- **83 component variants:** editable CadQuery geometry with individual STEP/STL exports.
-- **522 assembly solids:** tooling, positioning stages, support bank, feeder,
-  fasteners, stand and fabric take-down.
-- **Mechanically controlled yarn:** a closable hook, paired supports, guided yarn
-  presentation and a gravity/counterweight feeder.
-- **Reproducible calculations:** complete moving-mass accounting, force balance,
-  finite-radius cord routing and explicit motion coordinates.
+The current **D26-T17-S3-indexed-candidate** design contains **692 installed native solids**.
+It combines a closable hook, four paired-support stations, an indexed transfer
+module, a gravity feeder, two retained service nips and a hanging fabric clamp.
+Printed structural parts work with machined metal yarn-contact tools and
+purchased fasteners and bearings.
 
-[Full assembly STEP](cad/r5m2/generated/integrated_rigid_fixture.step) ·
-[Individual parts](cad/r5m2/generated) ·
-[Design inputs](spec/r5_m2_fixture.json) ·
-[Engineering notes](docs/ENGINEERING.md)
-
-## Run it
-
-Use Python3.12 and a virtual environment:
+- [Complete assembly STEP](cad/machine/generated/machine.step)
+- [Individual manufacturing profiles](manufacturing/current/cad)
+- [Parts register](docs/manufacturing_parts.csv)
+- [Machine inputs](spec/current_machine.json)
+- [Engineering and mechanics](docs/ENGINEERING.md)
+- [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
+- [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)
+- [Bounded quadratic solvers and analytical tests](docs/BOUNDED_QUADRATIC.md)
+- [Yarn length through a retracting guide](docs/GUIDE_TRAVEL.md)
+- [A gravity-loaded carrier supported by yarn](docs/GRAVITY_CARRIER.md)
+- [Yarn weight and force balance](docs/YARN_WEIGHT.md)
+- [Continuous yarn self-clearance on an analytical coil](docs/YARN_CLEARANCE.md)
+- [Contact integration and analytical refinement](docs/CONTACT_INTEGRATION.md)
+- [Passing a folded strand through a ring](docs/BIGHT_PASSAGE.md)
+- [Measuring two-direction yarn compliance](docs/SECTION_CALIBRATION.md)
+- [A deformable yarn section against two supports](docs/TWO_CONTACT_SECTION.md)
+- [Unilateral contact and friction benchmarks](docs/UNILATERAL_CONTACT.md)
+- [Newton contact solver and analytical tests](docs/SEMISMOOTH_CONTACT.md)
+- [Piloted service driver and screw CAD](docs/PILOTED_DRIVER.md)
+- [Hex-drive fit and tolerance benchmark](docs/HEX_DRIVE_FIT.md)
+- [Sizing a retaining screw near moving yarn](docs/RETAINING_SCREW.md)
+- [Washer bearing area near a plate edge](docs/WASHER_SUPPORT.md)
+- [Research references](docs/REFERENCES.md)
 
 ```sh
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r cad/r5m2/requirements.lock.txt
-.venv/bin/python cad/r5m2/build.py
+.venv/bin/python -m cad.r5m2.build
+.venv/bin/python -m cad.transfer.build
+.venv/bin/python -m cad.machine.assembly
 .venv/bin/python examples/feeder.py
+.venv/bin/python examples/rod_energy.py
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The build exports native solid geometry and part meshes. All CAD lengths are in
-millimetres. The examples execute numerical design checks; the hardware is a
-research prototype being developed toward physical stitch demonstrations.
-
-## Current design
-
-Revision **R5-M2-D21** uses a42mm head offset for rotating-tool clearance and
-finite-radius cord geometry shared by the feeder calculation and CAD. A component
-mass model accounts for the complete moving assembly and its ballast allocation.
+The code regenerates native CAD and executes mechanics examples. Numerical
+examples declare their benchmark material properties; component measurements
+and physical stitch trials establish application performance.
 
 Created by [arushis1212](https://github.com/arushis1212).
-See [research references](docs/REFERENCES.md) for the textile and mechanics work
-that informs this project.

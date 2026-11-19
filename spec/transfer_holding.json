@@ -1,0 +1,70 @@
+{
+  "model": "3D active bight with rigid hanging clamp and six tension-only neighboring yarn load paths",
+  "clamp_mass_g": 20.0,
+  "clamp_initial_center_xyz_mm": [
+    150.0,
+    165.0,
+    40.0
+  ],
+  "active_attachment_offsets_x_mm": [
+    -22.0,
+    -6.0
+  ],
+  "neighbor_support_x_mm": [
+    106.0,
+    118.0,
+    154.0,
+    166.0,
+    178.0,
+    190.0
+  ],
+  "support_contact_yz_mm": [
+    165.0,
+    90.55
+  ],
+  "EA_N": 2.0,
+  "B_Nmm2": 0.02,
+  "yarn_radius_mm": 0.3,
+  "penalty_N_per_mm2": 1000.0,
+  "contact_samples_per_edge": 32,
+  "leg_segments": 12,
+  "bridge_segments": 8,
+  "trial_front_verge_inner_y_mm": 164.0,
+  "trial_front_verge_adopted": false,
+  "head_tip_trials_xyz_mm": [
+    [
+      136.0,
+      167.6794919243,
+      114.0
+    ],
+    [
+      136.0,
+      183.0,
+      104.125
+    ]
+  ],
+  "parameter_status": "Actual CAD dimensions and designed20g clamp target; synthetic yarn EA/B and straight-member fabric surrogate. No measured textile constitutive data.",
+  "clamp_z_safety_bound_mm": [
+    -320.0,
+    50.0
+  ],
+  "safety_bound_status": "Numerical domain guard, NOT an installed endstop; boundary contact invalidates equilibrium acceptance.",
+  "initial_route_knee_v_mm": -14.0,
+  "initial_route_w_mm": 4.0,
+  "outer_leg_segments": 2,
+  "inner_leg_segments": 2,
+  "head_tip_xyz_mm": [
+    136.0,
+    167.6794919243,
+    114.0
+  ],
+  "initial_height_rationale": "40mm is inside existing[-320,50] clamp range and leaves10mm headroom for6mm lift. Neighbor rest lengths follow the longer initial fabric gauge; these are declared surrogate setup inputs, not calibrated fabric.",
+  "BFGS_max_iterations": 600,
+  "newton_refinement_iterations": 50,
+  "contact_reference_spacing_mm": 0.05,
+  "solver_continuation": "SPD inverse-Hessian search metric may be reused between states; no changes to exact potential, gradients, acceptance or rest lengths.",
+  "contact_acceleration": "Expanded conservative solid AABBs cull only zero-penalty samples. Active point energies/gradients and dense clearance calculation unchanged.",
+  "solver_method": "BFGS",
+  "bordered_max_iterations": 200,
+  "newton_polish_method": "bordered"
+}

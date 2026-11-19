@@ -1,0 +1,740 @@
+{
+  "R08_guide_rod_0": {
+    "bbox_mm": [
+      4.2256,
+      7.2256,
+      -10.0,
+      22.0,
+      -8.5,
+      -5.5
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R08_guide_rod_1": {
+    "bbox_mm": [
+      4.2256,
+      7.2256,
+      -10.0,
+      22.0,
+      5.5,
+      8.5
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R05_lift_carriage": {
+    "bbox_mm": [
+      2.7256,
+      49.0,
+      -9.000000000000004,
+      28.0,
+      -10.0,
+      10.0
+    ],
+    "motion": "lift",
+    "resettable": false,
+    "moves_with_lift": true,
+    "boxes_mm": [
+      [
+        2.7256,
+        18.0,
+        6.0,
+        9.0,
+        -10.0,
+        10.0
+      ],
+      [
+        18.0,
+        49,
+        6.0,
+        9.0,
+        -4.0,
+        4.0
+      ],
+      [
+        46,
+        49,
+        6.0,
+        28.0,
+        -4.0,
+        4.0
+      ],
+      [
+        2.7256,
+        18.0,
+        -3.25,
+        6.0,
+        -4.25,
+        -1.75
+      ],
+      [
+        2.7256,
+        18.0,
+        -3.25,
+        6.0,
+        1.75,
+        4.25
+      ],
+      [
+        2.7256,
+        8.7256,
+        3.0,
+        11.0,
+        -10.0,
+        -4.0
+      ],
+      [
+        2.7256,
+        8.7256,
+        3.0,
+        11.0,
+        4.0,
+        10.0
+      ],
+      [
+        14.5,
+        18.0,
+        -9,
+        -3,
+        -5.5,
+        5.5
+      ],
+      [
+        14.5,
+        18.0,
+        -9,
+        6.0,
+        -4.25,
+        -1.75
+      ],
+      [
+        14.5,
+        18.0,
+        -9,
+        6.0,
+        1.75,
+        4.25
+      ]
+    ]
+  },
+  "R06_anchor": {
+    "bbox_mm": [
+      2.4255999999999998,
+      59.20000000000002,
+      17.9999999,
+      42.0,
+      -24.0,
+      24.000000000000004
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false,
+    "boxes_mm": [
+      [
+        2.4256,
+        8.4256,
+        18.0,
+        24.0,
+        -10.0,
+        10.0
+      ],
+      [
+        2.4256,
+        8.4256,
+        24,
+        30,
+        -24.0,
+        24.0
+      ],
+      [
+        53.2,
+        59.2,
+        20,
+        42,
+        -24.0,
+        24.0
+      ],
+      [
+        8.4256,
+        59.2,
+        20,
+        42,
+        -24.0,
+        -20.0
+      ],
+      [
+        3.2256,
+        8.2256,
+        18.5,
+        23.5,
+        -12.5,
+        -10.0
+      ],
+      [
+        8.4256,
+        59.2,
+        20,
+        42,
+        20.0,
+        24.0
+      ],
+      [
+        3.2256,
+        8.2256,
+        18.5,
+        23.5,
+        10.0,
+        12.5
+      ]
+    ]
+  },
+  "R07_plate_spacer": {
+    "bbox_mm": [
+      -0.8,
+      0.8,
+      18.0,
+      24.0,
+      -6.0,
+      6.0
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R09_anchor_screw_0": {
+    "bbox_mm": [
+      -7.574400000000001,
+      11.4256,
+      18.16,
+      23.84,
+      -5.84,
+      -0.16000000000000014
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R10_anchor_nut_0": {
+    "bbox_mm": [
+      -4.8256,
+      -2.4256,
+      17.824573519457058,
+      24.175426480542942,
+      -5.75,
+      -0.25
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R09_anchor_screw_1": {
+    "bbox_mm": [
+      -7.574400000000001,
+      11.4256,
+      18.16,
+      23.84,
+      0.16000000000000014,
+      5.84
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R10_anchor_nut_1": {
+    "bbox_mm": [
+      -4.8256,
+      -2.4256,
+      17.824573519457058,
+      24.175426480542942,
+      0.25,
+      5.75
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_H03_barrel_stop": {
+    "bbox_mm": [
+      -95.0,
+      -11.9999999,
+      -8.0000001,
+      15.0,
+      -8.0000001,
+      8.0000001
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_H04_bearing": {
+    "bbox_mm": [
+      -48.0000001,
+      -23.9999999,
+      -27.510189430364637,
+      18.624567890774696,
+      -12.000000000000002,
+      17.34975731354056
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_H05_rear_collar": {
+    "bbox_mm": [
+      -55.07500000000001,
+      -48.07499999999998,
+      -11.0,
+      15.0,
+      -11.0,
+      11.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_H06_front_collar": {
+    "bbox_mm": [
+      -23.92500000000001,
+      -16.924999999999997,
+      -11.0,
+      15.0,
+      -11.0,
+      11.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_H07_gate_knob": {
+    "bbox_mm": [
+      -80.0,
+      -68.0,
+      -6.3,
+      1.7000000000000002,
+      -6.0,
+      6.0
+    ],
+    "motion": "gate",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_H08_stop_sleeve": {
+    "bbox_mm": [
+      -75.5875,
+      -72.4125,
+      3.3255999999999992,
+      15.2,
+      -1.5875,
+      1.5875
+    ],
+    "motion": "gate",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2x12_body_0": {
+    "bbox_mm": [
+      -58.99,
+      -55.01,
+      -2.19,
+      1.79,
+      -7.0,
+      7.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2nut_body_0": {
+    "bbox_mm": [
+      -59.309401076758505,
+      -54.690598923241495,
+      -2.200000000000001,
+      1.8,
+      -5.800000000000001,
+      -4.200000000000001
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2x12_body_1": {
+    "bbox_mm": [
+      -45.99,
+      -42.01,
+      -2.19,
+      1.79,
+      -7.0,
+      7.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2nut_body_1": {
+    "bbox_mm": [
+      -46.309401076758505,
+      -41.690598923241495,
+      -2.200000000000001,
+      1.8,
+      -5.800000000000001,
+      -4.200000000000001
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2x12_body_2": {
+    "bbox_mm": [
+      -21.99,
+      -18.01,
+      -2.19,
+      1.79,
+      -7.0,
+      7.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2nut_body_2": {
+    "bbox_mm": [
+      -22.309401076758505,
+      -17.690598923241495,
+      -2.200000000000001,
+      1.8,
+      -5.800000000000001,
+      -4.200000000000001
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M3x20_collar_0": {
+    "bbox_mm": [
+      -54.415000000000006,
+      -48.735,
+      9.16,
+      14.84,
+      -13.0,
+      10.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M3nut_collar_0": {
+    "bbox_mm": [
+      -54.75042648054294,
+      -48.399573519457064,
+      9.25,
+      14.75,
+      -9.4,
+      -7.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M3x20_collar_1": {
+    "bbox_mm": [
+      -23.265,
+      -17.585,
+      9.16,
+      14.84,
+      -13.0,
+      10.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M3nut_collar_1": {
+    "bbox_mm": [
+      -23.600426480542943,
+      -17.24957351945706,
+      9.25,
+      14.75,
+      -9.4,
+      -7.0
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2x20_gate": {
+    "bbox_mm": [
+      -75.99,
+      -72.01,
+      -4.800000000000001,
+      17.2,
+      -1.99,
+      1.99
+    ],
+    "motion": "gate",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M2nut_gate": {
+    "bbox_mm": [
+      -76.3094010767585,
+      -71.6905989232415,
+      -3.9000000000000004,
+      -2.3,
+      -2.0,
+      2.000000000000001
+    ],
+    "motion": "gate",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M3x12_roll_lock": {
+    "bbox_mm": [
+      -38.84,
+      -33.16,
+      7.286418537534536,
+      22.866175271356568,
+      -10.637796382520062,
+      -1.4292282584241878
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "TH_HW_M3nut_roll_lock": {
+    "bbox_mm": [
+      -39.17542648054294,
+      -32.82457351945706,
+      10.523694579442493,
+      14.660067657619852,
+      -7.577648799716012,
+      -1.5884910414119093
+    ],
+    "motion": "head",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R11_lift_stop_sleeve": {
+    "bbox_mm": [
+      45.8,
+      55.2,
+      22.4125,
+      25.5875,
+      -1.5875,
+      1.5875
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R12_lift_stop_screw": {
+    "bbox_mm": [
+      43.2,
+      61.2,
+      22.01,
+      25.99,
+      -1.99,
+      1.99
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R13_lift_stop_nut": {
+    "bbox_mm": [
+      44.199999999999996,
+      45.8,
+      22.0,
+      26.0,
+      -2.309401076758503,
+      2.3094010767585034
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R14_rod_clamp_screw_0": {
+    "bbox_mm": [
+      3.7356,
+      7.7156,
+      19.01,
+      22.99,
+      -14.5,
+      -8.5
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R15_rod_clamp_nut_0": {
+    "bbox_mm": [
+      3.416198923241497,
+      8.035001076758503,
+      19.0,
+      23.0,
+      -11.6,
+      -10.0
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R14_rod_clamp_screw_1": {
+    "bbox_mm": [
+      3.7356,
+      7.7156,
+      19.01,
+      22.99,
+      8.5,
+      14.5
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R15_rod_clamp_nut_1": {
+    "bbox_mm": [
+      3.416198923241497,
+      8.035001076758503,
+      19.0,
+      23.0,
+      10.0,
+      11.6
+    ],
+    "motion": "fixed",
+    "resettable": false,
+    "moves_with_lift": false
+  },
+  "R16_pin_clamp_screw_0": {
+    "bbox_mm": [
+      21.01,
+      24.99,
+      -1.5,
+      4.5,
+      -4.99,
+      -1.01
+    ],
+    "motion": "lift",
+    "resettable": true,
+    "moves_with_lift": true
+  },
+  "R17_pin_clamp_nut_0": {
+    "bbox_mm": [
+      20.690598923241495,
+      25.309401076758505,
+      0.0,
+      1.6,
+      -5.0,
+      -0.9999999999999991
+    ],
+    "motion": "lift",
+    "resettable": true,
+    "moves_with_lift": true
+  },
+  "R16_pin_clamp_screw_1": {
+    "bbox_mm": [
+      21.01,
+      24.99,
+      -1.5,
+      4.5,
+      1.01,
+      4.99
+    ],
+    "motion": "lift",
+    "resettable": true,
+    "moves_with_lift": true
+  },
+  "R17_pin_clamp_nut_1": {
+    "bbox_mm": [
+      20.690598923241495,
+      25.309401076758505,
+      0.0,
+      1.6,
+      1.0,
+      5.000000000000001
+    ],
+    "motion": "lift",
+    "resettable": true,
+    "moves_with_lift": true
+  },
+  "R20_reset_sleeve": {
+    "bbox_mm": [
+      18.0,
+      32.0,
+      -7.5875,
+      -4.4125,
+      -1.5875,
+      1.5875
+    ],
+    "motion": "lift",
+    "resettable": false,
+    "moves_with_lift": true
+  },
+  "R21_reset_front_washer": {
+    "bbox_mm": [
+      18.0,
+      20.0,
+      -9.0,
+      -3.0,
+      -3.0,
+      3.0
+    ],
+    "motion": "lift",
+    "resettable": false,
+    "moves_with_lift": true
+  },
+  "R22_reset_rear_washer": {
+    "bbox_mm": [
+      32.0,
+      34.0,
+      -9.0,
+      -3.0,
+      -3.0,
+      3.0
+    ],
+    "motion": "lift",
+    "resettable": false,
+    "moves_with_lift": true
+  },
+  "R23_reset_screw": {
+    "bbox_mm": [
+      14.0,
+      36.0,
+      -7.99,
+      -4.01,
+      -1.99,
+      1.99
+    ],
+    "motion": "lift",
+    "resettable": false,
+    "moves_with_lift": true
+  },
+  "R24_reset_nut": {
+    "bbox_mm": [
+      15.1,
+      16.7,
+      -8.0,
+      -3.9999999999999996,
+      -2.309401076758503,
+      2.3094010767585034
+    ],
+    "motion": "lift",
+    "resettable": false,
+    "moves_with_lift": true
+  },
+  "R19_pin_shuttle": {
+    "bbox_mm": [
+      19.9999999,
+      26.0000001,
+      -9.0,
+      2.5,
+      -5.5,
+      5.5
+    ],
+    "motion": "lift",
+    "resettable": true,
+    "moves_with_lift": true
+  }
+}

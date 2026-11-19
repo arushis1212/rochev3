@@ -1,0 +1,120 @@
+{
+  "revision": "TRANSFER-T16-D25",
+  "units": "mm",
+  "reference_tip_xyz_mm": [
+    136,
+    167.6794919243,
+    114
+  ],
+  "head_inclination_deg": 30,
+  "transfer_roll_deg": 20,
+  "guide_park_xyz_mm": [
+    96,
+    190,
+    96.5367498391805
+  ],
+  "guide_local_waypoints_mm": {
+    "S6_over_left": [
+      15,
+      20,
+      -7
+    ],
+    "S6_over_right": [
+      15,
+      20,
+      16
+    ],
+    "S6_align_right": [
+      10,
+      20,
+      16
+    ],
+    "S6_lower_right": [
+      10,
+      0.5,
+      16
+    ]
+  },
+  "mount_plate_u_mm": [
+    59.2,
+    65.2
+  ],
+  "mount_plate_v_mm": [
+    34,
+    44
+  ],
+  "mount_plate_w_mm": [
+    -12,
+    28
+  ],
+  "mount_beam_xyz_bounds_mm": [
+    174,
+    232,
+    220,
+    240,
+    108,
+    132
+  ],
+  "mount_return_arm_xyz_bounds_mm": [
+    216,
+    232,
+    178,
+    240,
+    110,
+    132
+  ],
+  "mount_post_xyz_bounds_mm": [
+    216,
+    232,
+    178,
+    196,
+    100,
+    132
+  ],
+  "mount_rear_plate_xyz_bounds_mm": [
+    216,
+    232,
+    190,
+    196,
+    82,
+    110
+  ],
+  "frame_port_clearance_mm": 3.4,
+  "lift_stop_head_access_d_mm": 5.0,
+  "fork_mount_screw_length_mm": 16,
+  "fork_mount_screw_seat_u_mm": 53.2,
+  "fork_mount_nut_front_u_mm": 65.2,
+  "post_index": 1,
+  "post_x_mm": 224.0,
+  "post_mount_screw_length_mm": 30,
+  "post_mount_nut_y_mm": 196,
+  "support_q_mm": [
+    0,
+    25,
+    0,
+    0
+  ],
+  "support_gate_q_mm": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "take_down_z_mm": 40,
+  "slice_seconds": 280,
+  "frame_port_v_mm": 38.0,
+  "bank_relief_global_box_mm": [
+    149.8,
+    194.2,
+    177.8,
+    284.2,
+    79.8,
+    107.5
+  ],
+  "fairlead_mount_screw_length_mm": 14,
+  "fairlead_mount_screw_underhead_xyz_mm": [
+    78,
+    422,
+    238
+  ]
+}

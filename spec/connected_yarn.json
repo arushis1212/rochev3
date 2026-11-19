@@ -1,0 +1,767 @@
+{
+  "revision": "CONNECTED-C10",
+  "state_mm": [
+    8.75,
+    0,
+    6,
+    0
+  ],
+  "working_waypoints_local_mm": [
+    [
+      14,
+      -18,
+      -4
+    ],
+    [
+      9.75,
+      0,
+      -1.4
+    ],
+    [
+      9.75,
+      0,
+      0
+    ],
+    [
+      9.75,
+      0,
+      1.4
+    ],
+    [
+      8.71442478062692,
+      -0.9396926207859084,
+      16.52400526045877
+    ],
+    [
+      10,
+      0.5,
+      16
+    ]
+  ],
+  "segments_per_span": [
+    3,
+    3,
+    2,
+    2,
+    3,
+    2
+  ],
+  "guide_local_mm": [
+    10,
+    0.5,
+    16
+  ],
+  "yarn_linear_density_g_per_m": 0.1786,
+  "slice_seconds": 210,
+  "motion_step_mm": 0.5,
+  "reset_step_mm": 0.5,
+  "path_spatial_spacing_mm": 0.02,
+  "solver_method": "small_step_newton",
+  "newton_difference_step_mm": 1e-08,
+  "contact_reference_spacing_mm": 0.0125,
+  "use_secant_predictor": true,
+  "explicit_schedule": [
+    {
+      "phase": "draw",
+      "state_mm": [
+        8.257142857142856,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        7.764285714285714,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        7.271428571428571,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        6.7785714285714285,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        6.285714285714286,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        5.792857142857143,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        5.3,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        4.807142857142857,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        4.314285714285714,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        3.821428571428571,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        3.3285714285714283,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        2.8357142857142854,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        2.3428571428571425,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        1.8499999999999996,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        1.3571428571428568,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.8642857142857139,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.3714285714285719,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.3098214285714289,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.24821428571428594,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.18660714285714297,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.125,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.06339285714285703,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        0.0017857142857140573,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -0.059821428571428914,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -0.12142857142857189,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -0.6142857142857139,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -1.1071428571428577,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -1.5999999999999996,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -2.0928571428571434,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -2.5857142857142854,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -3.078571428571429,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -3.571428571428571,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -4.064285714285715,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -4.557142857142857,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -5.050000000000001,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -5.542857142857143,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -6.0357142857142865,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -6.5285714285714285,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -7.021428571428572,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -7.514285714285716,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -8.007142857142856,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "draw",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        0.5
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        1.0
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        1.5
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        2.0
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        2.5
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        3.0
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        3.5
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        4.0
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        4.5
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        5.0
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        5.5
+      ]
+    },
+    {
+      "phase": "withdraw_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        6,
+        6.0
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        5.5,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        5.0,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        4.5,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        4.0,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        3.5,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        3.0,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        2.5,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        2.0,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        1.5,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        1.0,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        0.5,
+        6
+      ]
+    },
+    {
+      "phase": "lower",
+      "state_mm": [
+        -8.5,
+        0,
+        0.0,
+        6
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        5.5
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        5.0
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        4.5
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        4.0
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        3.5
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        3.0
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        2.5
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        2.0
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        1.5
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        1.0
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        0.5
+      ]
+    },
+    {
+      "phase": "return_pins",
+      "state_mm": [
+        -8.5,
+        0,
+        0,
+        0.0
+      ]
+    }
+  ]
+}

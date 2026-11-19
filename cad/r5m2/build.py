@@ -1,5 +1,6 @@
-"""Parametric crochet research fixture, millimetres.
-Dimensions: spec/r5_m2_fixture.json. Exports OpenCascade solids, STEP and STL.
+"""R5-M2 experimental tooling and manual slide CAD, millimetres.
+Authoritative dimensions: spec/effective.py source loader. Not a machine release.
+No image generation or presentation rendering. Exports real OpenCascade solids.
 """
 from pathlib import Path
 import json, math, hashlib, argparse, sys
@@ -8,8 +9,9 @@ from functools import lru_cache
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
 from cad.r5m2 import peripherals
+from spec.effective import load_fixture
 SPEC=ROOT/'spec/r5_m2_fixture.json'
-S=json.loads(SPEC.read_text()); T=S['tool']; P=S['slide']
+S=load_fixture(ROOT); FINISH=S['finished_interfaces']; T=S['tool']; P=S['slide']
 OUT=ROOT/'cad/r5m2/generated'
 
 def box(x0,x1,y0,y1,z0,z1):
@@ -29,6 +31,19 @@ def hex_z(a,b,af,x=0,y=0):
 
 def hex_y(a,b,af,x=0,z=0):
     return cq.Workplane('XZ',origin=(x,a,z)).polygon(6,af/math.cos(math.pi/6)).extrude(-(b-a))
+
+def nut_pocket_limits(lo,hi,d):
+    """Keep the loaded high face; add free insertion height toward the low face."""
+    return min(lo,hi-FINISH['general']['nut_pockets'][f'M{d}']['free_height_mm']),hi
+
+def gate_stop_centers(travel):
+    """Capsule centres that give exactly travel after sleeve radial clearance."""
+    radial_clearance=T['stop_slot_side_clearance']/2
+    if travel <= 2*radial_clearance:
+        raise ValueError('Gate travel must exceed the slot diametral clearance')
+    closed=T['gate_tail_hole_u']-radial_clearance
+    opened=closed-travel+2*radial_clearance
+    return opened,closed
 
 def hook_body():
     t=T['body_thickness']
@@ -59,7 +74,7 @@ def gate():
     g=g.union(box(T['gate_back'],T['gate_tail_front'],y,y+h,-T['gate_tail_width']/2,T['gate_tail_width']/2))
     return g.cut(cyl_y(y-1,y+h+1,T['gate_tail_hole_d']/2,T['gate_tail_hole_u']))
 
-def barrel():
+def barrel(gate_travel=None,stop_plate_back=None):
     b=cyl_x(T['barrel_back'],T['barrel_front'],T['barrel_d']/2)
     b=b.cut(box(T['barrel_back']-1,T['barrel_front']+1,T['barrel_slot_bottom'],T['barrel_slot_top'],-T['barrel_slot_width']/2,T['barrel_slot_width']/2))
     for u in T['body_fix_holes_u']:
@@ -68,12 +83,14 @@ def barrel():
         b=b.cut(cyl_z(r-T['barrel_bolt_counterbore_depth'],r+1,T['barrel_bolt_counterbore_d']/2,u,v))
         b=b.cut(hex_z(-r-1,-r+T['barrel_nut_depth'],T['barrel_nut_across_flats'],u,v))
     # Rear bridge and slotted positive travel stop co-rotate with the barrel.
-    a=T['gate_stop_plate_back']; bnd=T['gate_stop_plate_front']; v=T['gate_stop_plate_offset_v']; w=T['gate_stop_plate_width']/2
+    a=T['gate_stop_plate_back'] if stop_plate_back is None else stop_plate_back
+    bnd=T['gate_stop_plate_front']; v=T['gate_stop_plate_offset_v']; w=T['gate_stop_plate_width']/2
     plate=box(a,bnd,v,v+T['gate_stop_plate_thickness'],-w,w)
     sleeve=S['tool']['stop_sleeve_od']; gap=S['tool']['stop_slot_side_clearance']
-    rad=(sleeve+gap)/2; c=T['gate_tail_hole_u']; stroke=T['gate_stroke']
-    slot=box(c-stroke,c,v-1,v+T['gate_stop_plate_thickness']+1,-rad,rad)
-    slot=slot.union(cyl_y(v-1,v+T['gate_stop_plate_thickness']+1,rad,c-stroke)).union(cyl_y(v-1,v+T['gate_stop_plate_thickness']+1,rad,c))
+    rad=(sleeve+gap)/2
+    opened,closed=gate_stop_centers(T['gate_stroke'] if gate_travel is None else gate_travel)
+    slot=box(opened,closed,v-1,v+T['gate_stop_plate_thickness']+1,-rad,rad)
+    slot=slot.union(cyl_y(v-1,v+T['gate_stop_plate_thickness']+1,rad,opened)).union(cyl_y(v-1,v+T['gate_stop_plate_thickness']+1,rad,closed))
     plate=plate.cut(slot)
     bridge=box(bnd-4,bnd,4,v+T['gate_stop_plate_thickness'],-w,w)
     return b.union(plate).union(bridge)
@@ -91,7 +108,7 @@ def bearing():
         ring=ring.cut(hex_y(v1-3.4,v1+1,P['nut_af'],x))
         ring=ring.cut(box(x-T['bearing_nut_access_width']/2,x+T['bearing_nut_access_width']/2,v1-3.4,v1,0,T['mount_tab_width']/2+1))
     # Radial roll clamp has a trapped nut and side insertion window.
-    u=(a+b)/2; lo,hi=T['roll_lock_nut_v']; hw=T['roll_lock_boss_width']/2
+    u=(a+b)/2; lo,hi=nut_pocket_limits(*T['roll_lock_nut_v'],3); hw=T['roll_lock_boss_width']/2
     ring=ring.union(box(u-T['roll_lock_boss_length']/2,u+T['roll_lock_boss_length']/2,8,T['roll_lock_boss_top_v'],-hw,hw))
     ring=ring.cut(cyl_x(a-1,b+1,T['bearing_bore_d']/2))
     ring=ring.cut(cyl_y(7,T['roll_lock_boss_top_v']+1,P['bolt_clearance']/2,u))
@@ -170,7 +187,10 @@ def slide_stop(L,sign):
 
 def guide_tube():
     g=S['guide']; r=g['tube_od']/2
-    return cyl_x(-g['tube_length'],g.get('inner_tube_front',0),r).cut(cyl_x(-g['tube_length']-1,1,r-g['tube_wall']))
+    tube=cyl_x(-g['tube_length'],g.get('inner_tube_front',0),r).cut(cyl_x(-g['tube_length']-1,1,r-g['tube_wall']))
+    if 'tube_overlap_finished_id' in g:
+        tube=tube.cut(cyl_x(g['tube_overlap_back'],g['tube_overlap_front']+1,g['tube_overlap_finished_id']/2))
+    return tube
 
 def guide_insert():
     g=S['guide'];a=g['exit_insert_back'];b=g['exit_insert_front'];r=g['exit_insert_od']/2
@@ -178,12 +198,12 @@ def guide_insert():
 
 def guide_reducer():
     g=S['guide']; a=g['reducer_back']; b=g['reducer_front']; r=g['reducer_od']/2
-    return cyl_x(a,b,r).cut(cyl_x(a-1,b+1,r-g['reducer_wall']))
+    return cyl_x(a,b,r).cut(cyl_x(a-1,b+1,g.get('reducer_finished_id',2*(r-g['reducer_wall']))/2))
 
 def guide_mount():
     g=S['guide']; a,b,c=g['mount_block']; start=g['mount_back_u']; u=start+a/2
     block=box(start,start+a,-b/2,b/2,-c/2,c/2).cut(cyl_x(start-1,start+a+1,g['mount_bore']/2))
-    lo,hi=g['outer_lock_nut_v']
+    lo,hi=nut_pocket_limits(*g['outer_lock_nut_v'],3)
     block=block.cut(cyl_y(0,b/2+1,g['tube_lock_hole_d']/2,u)).cut(hex_y(lo,hi,P['nut_af'],u))
     block=block.cut(box(u-3.4,u+3.4,lo,hi,0,c/2+1))
     for x in (u-g['mount_hole_pitch']/2,u+g['mount_hole_pitch']/2):
@@ -233,18 +253,19 @@ def support_carriage():
 
 def support_bed():
     B=S['support_bank']; ox,oy,oz=B['bank_origin']; W=B['bank_width']; L=B['bank_length']; f=B['bank_floor']; h=B['bank_top']
-    b=box(ox-W/2,ox+W/2,oy-L/2,oy+L/2,oz,oz+h)
+    front=oy-L/2+B.get('bank_front_relief_depth_mm',0.)
+    b=box(ox-W/2,ox+W/2,front,oy+L/2,oz,oz+h)
     for i in range(B['station_count']):
         x=B['first_station_x']+i*B['station_pitch']
         b=b.cut(box(x-P['channel_width']/2,x+P['channel_width']/2,oy-L/2-1,oy+L/2+1,oz+f,oz+h+1))
     # End ties fit into relieved rails; they are separate parts, not overlapping solids.
     for sign in (-1,1):
-        y=oy+sign*(L/2-P['endstop_thickness']/2); e=B['cover_bed_relief_clearance']
+        y=(front+P['endstop_thickness']/2) if sign<0 else (oy+L/2-P['endstop_thickness']/2); e=B['cover_bed_relief_clearance']
         b=b.cut(box(ox-W/2-1,ox+W/2+1,y-P['endstop_thickness']/2-e,y+P['endstop_thickness']/2+e,oz+f,oz+h+1))
     for x in B['bank_cap_bolt_x']:
         for y in B['bank_cap_bolt_y']:
             b=b.cut(cyl_z(oz-1,oz+h+1,S['fasteners']['M2']['clearance']/2,x,y))
-            b=b.cut(hex_z(oz-1,oz+4.4,T['barrel_nut_across_flats'],x,y))
+            b=b.cut(hex_z(oz-1,oz+B['cover_nut_roof_mm'],T['barrel_nut_across_flats'],x,y))
     for i in range(B['station_count']):
         x=B['first_station_x']+i*B['station_pitch']
         for q in B['index_offsets_y']: b=b.cut(cyl_z(oz-1,oz+h+1,B['index_pin_bore']/2,x,oy+q+B['index_arm_u']))
@@ -255,13 +276,14 @@ def support_bed():
 
 def support_cap():
     B=S['support_bank']; ox,oy,oz=B['bank_origin']; W=B['bank_width']; L=B['bank_length']; z=oz+B['bank_top']
-    b=box(ox-W/2,ox+W/2,oy-L/2,oy+L/2,z,z+B['bank_cap_thickness'])
+    front=oy-L/2+B.get('bank_front_relief_depth_mm',0.)
+    b=box(ox-W/2,ox+W/2,front,oy+L/2,z,z+B['bank_cap_thickness'])
     for i in range(B['station_count']):
         x=B['first_station_x']+i*B['station_pitch']; hw=B['bank_cap_slot_width']/2
         b=b.cut(box(x-hw,x+hw,oy-L/2-1,oy+L/2+1,z-1,z+B['bank_cap_thickness']+1))
     # End ties keep the cover one part; they are also positive carriage end stops.
     for sign in (-1,1):
-        y=oy+sign*(L/2-P['endstop_thickness']/2)
+        y=(front+P['endstop_thickness']/2) if sign<0 else (oy+L/2-P['endstop_thickness']/2)
         b=b.union(box(ox-W/2,ox+W/2,y-P['endstop_thickness']/2,y+P['endstop_thickness']/2,oz+B['bank_floor'],z+B['bank_cap_thickness']))
     for x in B['bank_cap_bolt_x']:
         for y in B['bank_cap_bolt_y']:
@@ -283,10 +305,11 @@ def support_holder():
     # Pair closes through one crossbar; same stop-slot geometry as hook tool.
     v=T['gate_stop_plate_offset_v']; back=T['gate_stop_plate_back']; front=T['gate_stop_plate_front']
     plate=box(back,front,v,v+T['gate_stop_plate_thickness'],-w,w)
-    rad=(T['stop_sleeve_od']+T['stop_slot_side_clearance'])/2; c=T['gate_tail_hole_u']; st=T['gate_stroke']
+    rad=(T['stop_sleeve_od']+T['stop_slot_side_clearance'])/2
+    opened,closed=gate_stop_centers(T['gate_stroke'])
     for off in (-B['pair_centers']/2,B['pair_centers']/2):
-        slot=box(c-st,c,v-1,v+T['gate_stop_plate_thickness']+1,off-rad,off+rad)
-        for x in (c-st,c): slot=slot.union(cyl_y(v-1,v+T['gate_stop_plate_thickness']+1,rad,x,off))
+        slot=box(opened,closed,v-1,v+T['gate_stop_plate_thickness']+1,off-rad,off+rad)
+        for x in (opened,closed): slot=slot.union(cyl_y(v-1,v+T['gate_stop_plate_thickness']+1,rad,x,off))
         plate=plate.cut(slot)
     b=b.union(plate).union(box(front-4,front,4,v+T['gate_stop_plate_thickness'],-w,w))
     # Two bottom-access screws into captive nuts, for mounting to carriage.
@@ -388,6 +411,11 @@ def base_foot():
     F=S['frame']; w=F['foot_width']/2; h=F['foot_height']
     return box(-w,w,-w,w,-h,0).cut(cyl_z(-h-1,1,P['bolt_clearance']/2)).cut(hex_z(-h-1,F['foot_nut_roof_z'],P['nut_af']))
 
+def index_pin():
+    """Turned smooth headed locator, physically distinct from threaded hardware."""
+    p=FINISH['index_pin']
+    return cyl_z(-p['shaft_length_mm'],0,p['shaft_d_mm']/2).union(cyl_z(0,p['head_height_mm'],p['head_d_mm']/2))
+
 def add_bank_mounts(items,ps):
     B=S['support_bank'];F=S['frame'];items['F03_base_board']=ps['F03_base_board'].val()
     for i,(x,y) in enumerate(B['bank_mount_holes']):
@@ -420,7 +448,7 @@ def parts():
             'H07_gate_knob':gate_knob(),'H08_stop_sleeve':stop_sleeve(),
             'G01_guide_tube':guide_tube(),'G02_guide_mount':guide_mount(),'A02_carriage':slide_carriage()}
     result.update(B01_bed=support_bed(),B02_cover=support_cap(),B03_carriage=support_carriage(),B04_pair_holder=support_holder(),B05_pair_knob=pair_knob(),B06_knockover=knockover(),F01_z_bracket=z_bracket(),F02_head_adapter=head_adapter())
-    result.update(B07_knockover_post=knockover_post(),B08_pedestal=bed_pedestal(),F03_base_board=base_board(),F04_foot=base_foot())
+    result.update(B07_knockover_post=knockover_post(),B08_pedestal=bed_pedestal(),B09_index_pin=index_pin(),F03_base_board=base_board(),F04_foot=base_foot())
     result.update(G07_exit_reducer=guide_reducer(),G06_exit_insert=guide_insert(),G03_outer_tube=guide_outer(),G04_front_bush=guide_bush(),G05_rear_bush=guide_bush(True),F05_guide_adapter=guide_adapter(),F06_guide_z_bracket=z_bracket(True))
     for name,L in sorted(P['lengths'].items()):
         if name=='y': continue # same manufactured 160mm part as x
@@ -498,7 +526,7 @@ def add_hook_hardware(items):
     items['HW_M2nut_gate']=place(nut(2),(T['gate_tail_hole_u'],vnut,0),(1,0,0),(0,1,0))
     u=(T['bearing_back']+T['bearing_front'])/2
     items['HW_M3x12_roll_lock']=place(bolt(3,12),(u,T['barrel_d']/2+12+T['roll_lock_clearance'],0),(1,0,0),(0,1,0))
-    items['HW_M3nut_roll_lock']=place(nut(3),(u,T['roll_lock_nut_v'][0],0),(1,0,0),(0,1,0))
+    items['HW_M3nut_roll_lock']=place(nut(3),(u,T['roll_lock_nut_v'][1]-S['fasteners']['M3']['nut_height_max'],0),(1,0,0),(0,1,0))
     return items
 
 def add_bank_hardware(items,support_q=None,gate_q=None):
@@ -520,7 +548,7 @@ def add_bank_hardware(items,support_q=None,gate_q=None):
             local=cq.Workplane().newObject([place(nut(2),(T['gate_tail_hole_u']-gate_q[i],vn,off),(1,0,0),(0,1,0))])
             items[f'HW_M2nut_gate_{i}_{j}']=place(local,origin,(0,-1,0),(-1,0,0))
         py=B['bank_origin'][1]+B['index_arm_u']+support_q[i]; pz=oz+B['bank_carriage_top']+B['index_arm_height']
-        if support_q[i] in B['index_offsets_y']: items[f'HW_M3x30_index_{i}']=bolt(3,B['index_pin_length']).translate((x,py,pz)).val()
+        if support_q[i] in B['index_offsets_y']: items[f'B09_index_pin_{i}']=index_pin().translate((x,py,pz)).val()
         # Upward mounting screws seat inside the carriage's bottom-access pockets.
         for j,du in enumerate((-P['mount_hole_pitch']/2,P['mount_hole_pitch']/2)):
             py=B['bank_origin'][1]+du+support_q[i]; under=oz+B['bank_carriage_top']-5.5
@@ -531,7 +559,7 @@ def add_bank_hardware(items,support_q=None,gate_q=None):
         for j,y in enumerate(B['bank_cap_bolt_y']):
             z=oz+B['bank_top']+B['bank_cap_thickness']
             items[f'HW_M2x16_cover_{i}_{j}']=bolt(2,16).translate((x,y,z)).val()
-            items[f'HW_M2nut_cover_{i}_{j}']=nut(2).translate((x,y,oz+4.4-S['fasteners']['M2']['nut_height_max'])).val()
+            items[f'HW_M2nut_cover_{i}_{j}']=nut(2).translate((x,y,oz+B['cover_nut_roof_mm']-S['fasteners']['M2']['nut_height_max'])).val()
     return items
 
 def transformed(items,origin,xdir,normal,prefix=''):
@@ -604,7 +632,7 @@ def joint_limit_violations(head_tip,guide_tip):
 
 def integrated_instances(ps,head_tip=None,guide_tip=None,head_gate=0,carrier_z=160,takedown_z=50,feed_mode="high",head_roll=0,support_q=None,support_gate_q=None):
     F=S['frame']; A=S['assembly']; G=S['guide']
-    hx,hy,hz=head_tip or A['head_reference_tip']; gx,gy,gz=guide_tip or A['guide_reference_tip']
+    hx,hy,hz=A['head_reference_tip'] if head_tip is None else head_tip; gx,gy,gz=A['guide_reference_tip'] if guide_tip is None else guide_tip
     th=math.radians(T['inclination_deg']); c=math.cos(th); sn=math.sin(th)
     # Mount-derived rigid transforms. See DIMENSIONS_AND_INTERFACES for the inverse map.
     hq=joint_coordinates((hx,hy,hz),(gx,gy,gz))['head']
@@ -638,7 +666,7 @@ def integrated_instances(ps,head_tip=None,guide_tip=None,head_gate=0,carrier_z=1
     local={k:ps[k].val() for k in ('G01_guide_tube','G02_guide_mount','G03_outer_tube','G04_front_bush','G05_rear_bush','G06_exit_insert','G07_exit_reducer')}
     u=G['mount_back_u']+G['mount_block'][0]/2
     local['HW_M3x12_outer_lock']=place(bolt(3,12),(u,G['outer_tube_od']/2+12+0.2,0),(1,0,0),(0,1,0))
-    local['HW_M3nut_outer_lock']=place(nut(3),(u,G['outer_lock_nut_v'][0],0),(1,0,0),(0,1,0))
+    local['HW_M3nut_outer_lock']=place(nut(3),(u,G['outer_lock_nut_v'][1]-S['fasteners']['M3']['nut_height_max'],0),(1,0,0),(0,1,0))
     for j,u in enumerate((-153,-137)):
         local[f'HW_M3x25_holder_{j}']=bolt(3,25).translate((u,G['mount_hole_offset_v'],8)).val()
         local[f'HW_M3nut_holder_{j}']=nut(3).translate((u,G['mount_hole_offset_v'],-14.4)).val()
@@ -679,7 +707,9 @@ def build():
     full_manifest=export_assembly(full,'integrated_rigid_fixture')
     (OUT/'integrated_instances.json').write_text(json.dumps(full_manifest,indent=2)+'\n')
     metadata={'revision':S['revision'],'spec_sha256':hashlib.sha256(SPEC.read_bytes()).hexdigest(),
-              'cadquery':cq.__version__,'scope':'Parametric crochet research fixture assembly',
+              'finished_interfaces_sha256':hashlib.sha256((ROOT/'spec/d26_finished_interfaces.json').read_bytes()).hexdigest(),
+              'effective_spec_sha256':hashlib.sha256(json.dumps(S,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
+              'cadquery':cq.__version__,'scope':'integrated rigid hook, support bank and guide XYZ assemblies; feeder, take-down and yarn unqualified',
               'status':'Research prototype','parts':manifest}
     (OUT/'manifest.json').write_text(json.dumps(metadata,indent=2)+'\n')
     print(json.dumps({'parts':len(ps),'valid':True,'output':str(OUT),'scope':metadata['scope']}))

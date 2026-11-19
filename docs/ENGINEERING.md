@@ -1,45 +1,73 @@
 # Mechanism and mathematics
 
-The initial hardware is a manually actuated research fixture. Its purpose is to
-study loop registration and stitch mechanics using printable structural pieces,
-metal yarn-contact tooling and purchased fasteners/bearings.
+Global X spans the stitch stations, Y points rearward and Z points upward.
+Lengths are millimetres. The numerical specifications define finished profiles,
+running fits and assembly datums; CadQuery constructs the corresponding solids.
 
-GlobalX spans the stitch stations, Y points toward the rear and Z points upward.
-The hook's localu axis points toward its tip. The JSON defines dimensions, motion
-coordinates and manufacturing admission values; the Python constructs the solids.
+The main hook has independent translation, roll and a sliding closure. Paired
+supports register prior loops. The separate transfer module uses stripper plates
+and retractable pins, carried on a captured indexed stage with a physically keyed
+shoe. Two retained nips and a supported counterweight provide explicit service
+interfaces for the moving-pulley feeder. Manual controls expose each operation
+for instrumented prototype development.
 
-| Subsystem | Design |
-|---|---|
-| Hook | Machined strip body, sliding closure, supported rotating barrel |
-| Registration | Four paired-support stations on24mm pitch |
-| Positioning | Manual XYZ stages for hook and guide; separate hook roll |
-| Guide | Stepped brass tubes and bonded reducing bushes |
-| Feeder | Moving pulley, central cord attachment, two counterweight idlers |
-| Fabric handling | Hanging clamp and an open passage through the base |
+The lower stripper window has a1.800 mm halfwidth. Subtracting0.050 mm edge
+error,0.8255 mm hook halfthickness,0.600 mm yarn diameter,0.200 mm combined
+registration,0.010 mm deflection and0.010 mm burr leaves0.1045 mm reserve under
+those drawing admissions. Critical fits must be finished and inspected after printing.
 
-The feeder uses T≈mg/2 for a symmetric, frictionless moving pulley. The target
-moving mass is12.848g; its model explicitly counts polymer parts, bearing,
-fasteners, brass spacers and a cord/adhesive allocation. A counterweight changes
-the ideal balance toT≈(m−mc)g/2. Real assembly mass and friction are measured
-quantities; density ceilings and allowances in the inputs are design admissions.
+Four matched2.50 mm spacers set the hanging-clamp jaw separation. A captured
+3 mm pin permits a free return wrap between actual gripping lands. Flush
+DIN7991 screws sit in the front jaw. Full-solid volume and declared densities
+give an18.9359749 g reference mass; weighing and balancing supply actual inputs.
+The clamp datum has six rigid-body degrees of freedom and gravity acts at
+c+R*b_COM, where R=Rz(yaw)Ry(-pitch)Rx(roll).
 
-For each countercord leg, h is the vertical drop from the idler center, a is the
-horizontal center offset, and R includes half the cord diameter. The straight
-length is√(h²+a²−R²), and the wrap contribution is
-R[π/2+atan2(h,a)−acos(R/√(h²+a²))]. Adding both legs and the32mm top span gives
-214.706745509mm effective length at the midstroke geometry. CAD solves this same
-constant-length constraint for the counterweight position. The254mm rough cut
-includes knot and trimming allowance.
+For vertical frictionless yarn legs, moving-pulley tension is approximately
+mg/2, or(m−mc)g/2 with the counterweight connected. The actual geometry uses
+finite-radius tangent lengths and wrap arcs. Its nominal effective cord length
+is214.706745509 mm;350 mm is the rough cut before seated terminations and trim.
+Material properties, drag and grip behavior require measurement for hardware predictions; numerical examples use declared benchmark assumptions.
 
-These equations define a quasistatic, inextensible, frictionless reference case.
-They are useful design calculations rather than measured textile behavior.
-The first hardware scope is single-stitch/swatch research; dimensional data here
-is prototype geometry, not an automatic garment-production program.
+Rod energy combines stretch EA(l−l0)²/(2l0), discrete bending
+2B(1−cosθ)/(lbar(1+cosθ)), finite-radius contact and gravity. Examples test
+analytic limits and energy gradients. Collision-aware steps use the1-Lipschitz
+distance bound: clearance decreases by no more than bounded relative movement.
+Material conservation, force equilibrium and geometric admissibility are checked
+separately. These numerical models state their constitutive and boundary assumptions.
 
-## Nominal geometry checks
+Material-bound aperture diagnostics follow actual reference coordinates through
+nonplanar loop geometry. Oriented segment/triangle intersections identify
+passage direction and material location; finite boundary clearance and virtual
+neck closure are reported separately. The diagnostic preserves the distinction
+between geometric passage and physical loop retention.
 
-The current design was checked at69 rigid assembly states, including selected
-reverse-row poses: zero solid overlaps and zero joint-limit violations. A
-bounding-radius calculation gives2.2712mm separation between the rotating tool
-and the Z rail throughout a complete roll. These are nominal rigid-geometry
-results. See [numerical record](GEOMETRY_CHECKS.json) for the evaluated states.
+Named contact-event monitors retain the original yarn quadrature and component
+distances. Relative material and pulley motion bound each trial gap change,
+including events inside a step whose endpoints are both clear. Buffered
+activation and separation can limit a numerical search step while the physical
+energy and force criteria remain unchanged.
+
+Capture actuation uses an explicit affine map for head and guide translations
+and the sliding hook closure at fixed roll. Each axis carriage carries its
+downstream rails, tools and fasteners. The guide stage's rotated frame is
+accounted for in world coordinates. Analytical contact components receive the
+same translation as every native solid they cover; missing coverage or mixed
+motions within one component are rejected. This kinematic mapping is separate
+from travel, swept clearance and force checks.
+
+Continuous aperture checks cover each affine material step using interval
+triangle orientation and relative-motion distance bounds. A finite projection
+search verifies the same3D disk without changing its material coordinates or
+triangulation. [The method](APERTURE_GEOMETRY.md) separates diagnostic geometry
+from forces and physical loop retention.
+
+A reusable finite-pin distance routine evaluates the retained native surface,
+including the curved rim of a capsule channel. Its tests compare signed
+distances with CAD boundary queries and check gradients and rigid transforms.
+[The geometric method](BORED_PIN_DISTANCE.md) defines its supported dimensions.
+
+Elastic component calculations couple native interfaces through six rigid
+coordinates while preserving body loads, force and moment balance, and elastic
+work. [The component method and analytical benchmarks](ELASTIC_INTERFACES.md)
+describe the equations, assumptions and optional numerical environment.

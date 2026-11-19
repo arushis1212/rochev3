@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "0061f8e76b19205bf3e80e8311422a1c4d610879d28a4881a20d3e2c439f0967",
+    "README.md": "75088f81d7e3085bf91afc3e849e8e68ba83488882d22ddf0f4660986de871e6",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
     "benchmarks/test_convex_search.py": "90f0aa73ce2c2caa92f8fb09e5526040589a84e4a53c8b847c5c39c37f631190",
@@ -752,6 +752,10 @@
     "docs/HEX_DRIVE_FIT.md": "f6a3705c230d926d324679b6953b1ad44f6d1fd18fad81c920782a303b7f9544",
     "docs/PILOTED_DRIVER.md": "d053ad60d15c29a6c2e9f2a6d1ee0492a6ab851275d0be292f7a77cab99d784a",
     "cad/service_driver/driver_tip.step": "5d5bbfabeb556e5a99924a5d023bb7e7206f0fd924818fe616c7d17ba012e756",
-    "cad/service_driver/station0_pin.step": "b42e3876ada62c7a0366e2a5751dce7d692259303b9622c2886e0ab70ea7c700"
+    "cad/service_driver/station0_pin.step": "b42e3876ada62c7a0366e2a5751dce7d692259303b9622c2886e0ab70ea7c700",
+    "docs/GUIDE_TRAVEL.md": "a8c0f368c1c1f0a36c1e851f890c3887bb4662aaa3dbee0bed58342728a45bd9",
+    "examples/guide_length.py": "7d8a4db6695667ec4077de39e1d56b0a98b3f6f71f0f8a431efbc1ef3f495577",
+    "examples/guide_travel.json": "de493357449e8fae9ef3e7b355b1e6ae96ec6a1d09b0016dc8dab23b28e1664b",
+    "benchmarks/test_guide_length.py": "e6514d189d2abaccc6048b2fd7f2ca5601b8b33e7d69ae2a08c4f9f8cf5ce3a1"
   }
 }

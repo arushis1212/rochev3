@@ -18,3 +18,11 @@ One test uses a 6–8–10 triangle and two 0.5 mm compressions at 1 N/mm. The t
 The same example bounds a range of applied forces. For any constant vertical load between 0.7 and 0.9 N, the stable height lies between 7.91913 and 8.07993 mm. The force derivative is positive and increases with height on this branch. The heavier endpoint therefore sets both the lowest height and the least restoring stiffness, 1.22916 N/mm. These bounds assume a steady applied load and frictionless normal contact.
 
 [Executable model](../examples/gravity_carrier.py) · [Analytical checks](../benchmarks/test_gravity_carrier.py)
+
+## Interpolation around a fixed wheel
+
+A straight line between two perfectly seated yarn positions can cut into the wheel. For centerline radius *R* and endpoint angle θ, the chord midpoint lies at radius *R* cos(θ/2). The greatest radial clearance loss is 2*R* sin²(θ/4). This exact bound applies over the entire minor arc of a rigid circular section. A constant axial advance along a helix leaves the radial calculation unchanged.
+
+For a 12 mm radius and a 60° turn, one chord cuts inward 1.607695 mm. Eight equal chords reduce this to 0.025693 mm. Ten are needed for a 0.020 mm radial allowance. A normal contact spring of stiffness *k* would add a force *k* times this spurious penetration while contact remains active. The centerline geometry alone gives no value for *k*.
+
+Run `python -m examples.wheel_wrap` for the interval table and `python -m unittest benchmarks.test_wheel_wrap` for the analytical and boundary checks. [Circular interpolation calculation](../examples/wheel_wrap.py) · [Tests](../benchmarks/test_wheel_wrap.py)

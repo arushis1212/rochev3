@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "05c7a56ca11f42e98681d059109c3503be79f1be6e53fca5e69a8c412939ec85",
+    "README.md": "c9fecf43109c86b82085de726b2757f06c22b314f903073fb539d7cf753d13e2",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bight_passage.py": "198597adeb69923c35915612cd305e1f8665ad4197483f8dd03d7eb0975ea5bc",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
@@ -782,6 +782,9 @@
     "tests/test_transfer_manufacturing_fits.py": "74ef6b9bf7030c13c9c5580cd54308e7a4286c065910ad45519d5824a158c8d7",
     "tests/test_transfer_numerics.py": "cd030e5d4099e52b8181875db7c1f3b5ad845702f665f025ee56a05f8ab9e3d3",
     "tests/test_transfer_reset.py": "7972469bf4efd3952e51ffb06cff32994355b1c2df03947f0c9435654b5044ee",
-    "tests/test_trust_damping.py": "e86b5b128d30c29d7a5880cd7004ed926fc9f560dd7c797398c35e875d2af533"
+    "tests/test_trust_damping.py": "e86b5b128d30c29d7a5880cd7004ed926fc9f560dd7c797398c35e875d2af533",
+    "examples/section_calibration.py": "4d65cc23f67a3f7cbdc140ca65cac3916fe23e171e4072debb6578f5c1bc2d65",
+    "benchmarks/test_section_calibration.py": "2df40f3ab2e87e631e505a16898149d97bffb1371c215c418f9b2e7df6a52c4c",
+    "docs/SECTION_CALIBRATION.md": "8750af1358d3727aabdbfd2577c01e700797b3e7832252789bbe1e96a56cc09b"
   }
 }

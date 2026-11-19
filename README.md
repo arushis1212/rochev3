@@ -39,6 +39,7 @@ purchased fasteners and bearings.
 - [Hex-drive fit and tolerance benchmark](docs/HEX_DRIVE_FIT.md)
 - [Sizing a retaining screw near moving yarn](docs/RETAINING_SCREW.md)
 - [Washer bearing area near a plate edge](docs/WASHER_SUPPORT.md)
+- [Guide motion between indexed wheel positions](docs/INDEXED_GUIDE.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

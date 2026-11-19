@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "01db5fb88312aad2db1e478e8b2cc91257e2dab15367ae7ecc0ef2549aa30773",
+    "README.md": "777dda9fa0e9f2454b95378a6d6db1f9c664b5e51eb6bfa3b55363b73ca365e1",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bight_passage.py": "198597adeb69923c35915612cd305e1f8665ad4197483f8dd03d7eb0975ea5bc",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
@@ -788,6 +788,9 @@
     "docs/SECTION_CALIBRATION.md": "8750af1358d3727aabdbfd2577c01e700797b3e7832252789bbe1e96a56cc09b",
     "docs/FINITE_SEGMENTS.md": "5a666345cb1ba59d239f6c99a1a58fe46eefb9a68e7460da1368eb6ab24ea472",
     "physics/finite_yarn_contact.py": "216071d05158d83d567d792015d8ebbceb01e7a8badda2a866eb257c5094ac62",
-    "benchmarks/test_finite_yarn_contact.py": "5a20ee5b34e5886bb5616170debe345ea7022779679380e3293eae1f64fbb822"
+    "benchmarks/test_finite_yarn_contact.py": "5a20ee5b34e5886bb5616170debe345ea7022779679380e3293eae1f64fbb822",
+    "examples/indexed_guide.py": "cb815fb41de62babc68dd1876906380d813be363b632a77dc902cbedbf1bc185",
+    "docs/INDEXED_GUIDE.md": "31db78fb51877d08efb72010bccf69a2258425590dff37ea8ac3bfc49e792385",
+    "benchmarks/test_indexed_guide.py": "e0467811a1f5e8df143115e7b31367eb5e9e616270570a19e4c288344c169e21"
   }
 }

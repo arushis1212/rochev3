@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "744a19e53ce202bc3040df33a58aa28c7382e595c6f404c520470662b19a4ae3",
+    "README.md": "b752f3a616dd805fa9d213631abbc433f5f13e83dbe562130d882644b1ce836b",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
     "benchmarks/test_convex_search.py": "90f0aa73ce2c2caa92f8fb09e5526040589a84e4a53c8b847c5c39c37f631190",
@@ -746,6 +746,9 @@
     "physics/crossed_rod_contact.py": "147b64abc44eb71c1c41e874536ee4c375142bbb6a434c479ce679cde2e075e9",
     "benchmarks/test_crossed_rod_contact.py": "a3ad60b977ea3627ece32781c0a0e71d136f00e72b87d74f490391a02f0309e6",
     "examples/crossed_rods.py": "9734f97170c740e048ec5394eb524371c8918519799e03929fd6d550ddc6561b",
-    "docs/CONTACT_INTEGRATION.md": "f64304a512ed6e85d0f5a5d5532f4a603b2225a82b5e561db8a109e8300ecbdf"
+    "docs/CONTACT_INTEGRATION.md": "f64304a512ed6e85d0f5a5d5532f4a603b2225a82b5e561db8a109e8300ecbdf",
+    "examples/hex_drive_fit.py": "116b8d47192712832c3f679dc32ef510ba0597daa772b1cb14798291152e8cda",
+    "benchmarks/test_hex_drive_fit.py": "f80462f45cb4228a8835772e14d058721c930f11b4504ba9be14b4b27c0140ef",
+    "docs/HEX_DRIVE_FIT.md": "f6a3705c230d926d324679b6953b1ad44f6d1fd18fad81c920782a303b7f9544"
   }
 }

@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "f3d79b083d9a8c508e47db98dad7b0f5cbc186de0431474eeb639df6aef5c28c",
+    "README.md": "c1a677966914d42f14b059986c48e606585582a09911b7ad99706476451414e3",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
     "benchmarks/test_convex_search.py": "90f0aa73ce2c2caa92f8fb09e5526040589a84e4a53c8b847c5c39c37f631190",
@@ -770,6 +770,9 @@
     "benchmarks/test_wheel_wrap.py": "e8c82f87801173a77d5de02504b36a1ca058c7e64caaae0d355bdfc565b1d76f",
     "docs/YARN_WEIGHT.md": "c81eecda60d44c9398dc93d99158054ad7d778e405179d7a528f1a66fd4bd229",
     "examples/yarn_weight.py": "28986c0b7ca7dd01d0045e5a44f2610fab08795dd598bd897f3da70025da1f08",
-    "benchmarks/test_yarn_weight.py": "a287a54a9641aff92c0def77f3de76d53759e6d39ace3d89dfb7b3e34e48dae3"
+    "benchmarks/test_yarn_weight.py": "a287a54a9641aff92c0def77f3de76d53759e6d39ace3d89dfb7b3e34e48dae3",
+    "examples/retaining_screw.py": "2fe6b4bb6c484a85090160442c2b3de2168a9d2b4b85efea1b3c082f779f6495",
+    "benchmarks/test_retaining_screw.py": "526ea9f3fb6fa7a33b3f4eeda44e22855ac5618935ba5e72fcd15063164e7fd3",
+    "docs/RETAINING_SCREW.md": "5ec440d4b833f63531d45e4ef5a63862983c4af91ac5518f6b3e1b4dc7e3b325"
   }
 }

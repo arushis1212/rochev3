@@ -33,6 +33,7 @@ purchased fasteners and bearings.
 - [Newton contact solver and analytical tests](docs/SEMISMOOTH_CONTACT.md)
 - [Piloted service driver and screw CAD](docs/PILOTED_DRIVER.md)
 - [Hex-drive fit and tolerance benchmark](docs/HEX_DRIVE_FIT.md)
+- [Sizing a retaining screw near moving yarn](docs/RETAINING_SCREW.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

@@ -27,6 +27,7 @@ purchased fasteners and bearings.
 - [Contact integration and analytical refinement](docs/CONTACT_INTEGRATION.md)
 - [Unilateral contact and friction benchmarks](docs/UNILATERAL_CONTACT.md)
 - [Newton contact solver and analytical tests](docs/SEMISMOOTH_CONTACT.md)
+- [Piloted service driver and screw CAD](docs/PILOTED_DRIVER.md)
 - [Hex-drive fit and tolerance benchmark](docs/HEX_DRIVE_FIT.md)
 - [Research references](docs/REFERENCES.md)
 

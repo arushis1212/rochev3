@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "ec239fb6d9da2e01cd153af2d7670070e37ac4ce1867b72fd80e4319306e1690",
+    "README.md": "5c2998886361e40e3e9a8699a8db0e78bb99f0bccff053aa04e25f31a9bb3c52",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
     "benchmarks/test_convex_search.py": "90f0aa73ce2c2caa92f8fb09e5526040589a84e4a53c8b847c5c39c37f631190",
@@ -776,6 +776,9 @@
     "docs/RETAINING_SCREW.md": "5ec440d4b833f63531d45e4ef5a63862983c4af91ac5518f6b3e1b4dc7e3b325",
     "examples/washer_support.py": "1de9e59a614a1dac4c0dbbea7f01ab96f5b12f219863eefd9cba421712783744",
     "benchmarks/test_washer_support.py": "33d6612bb6d7ab949fe1b629703b0ebdf1acd6acaad642878f3fdff18811e268",
-    "docs/WASHER_SUPPORT.md": "db8cd6aef32e049dc2c19d8abd8fe0075e18ebbf81c7159c4a74bc41a497760b"
+    "docs/WASHER_SUPPORT.md": "db8cd6aef32e049dc2c19d8abd8fe0075e18ebbf81c7159c4a74bc41a497760b",
+    "examples/two_contact_section.py": "c6dbdfe70617eb410c04186bc0bac2af44a14cd65a3d2cf247372ad4d9962639",
+    "benchmarks/test_two_contact_section.py": "0b9f2285142485a76c4ecaaabef08ad6340856a3dd62a876a6004be6cf7b5692",
+    "docs/TWO_CONTACT_SECTION.md": "0bf5e2d41d0499d9784d6e2fbb9778b28998bd446bc79b440c04d6058adc0e3c"
   }
 }

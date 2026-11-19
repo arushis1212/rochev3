@@ -29,6 +29,7 @@ purchased fasteners and bearings.
 - [Yarn weight and force balance](docs/YARN_WEIGHT.md)
 - [Continuous yarn self-clearance on an analytical coil](docs/YARN_CLEARANCE.md)
 - [Contact integration and analytical refinement](docs/CONTACT_INTEGRATION.md)
+- [Passing a folded strand through a ring](docs/BIGHT_PASSAGE.md)
 - [A deformable yarn section against two supports](docs/TWO_CONTACT_SECTION.md)
 - [Unilateral contact and friction benchmarks](docs/UNILATERAL_CONTACT.md)
 - [Newton contact solver and analytical tests](docs/SEMISMOOTH_CONTACT.md)

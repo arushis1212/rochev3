@@ -750,14 +750,15 @@
     "examples/hex_drive_fit.py": "116b8d47192712832c3f679dc32ef510ba0597daa772b1cb14798291152e8cda",
     "benchmarks/test_hex_drive_fit.py": "f80462f45cb4228a8835772e14d058721c930f11b4504ba9be14b4b27c0140ef",
     "docs/HEX_DRIVE_FIT.md": "f6a3705c230d926d324679b6953b1ad44f6d1fd18fad81c920782a303b7f9544",
-    "docs/PILOTED_DRIVER.md": "93fcfa445e434aa910db388246a1ea1903d00df95d7a0538fcf74bb34516bf1e",
+    "docs/PILOTED_DRIVER.md": "41a81848f161397e938649359f07ecf34c68c13bb7c575824e1617c5de009554",
     "cad/service_driver/driver_tip.step": "ac80d1d58a397f43407bff404aa2bbf259fbd75009707b2fb09049f58d37d4e1",
     "cad/service_driver/station0_pin.step": "5f60b03065e1eb3103382350ee80de9d8eb38d63ff0ea9f52a6b70666822b60e",
     "docs/GUIDE_TRAVEL.md": "a8c0f368c1c1f0a36c1e851f890c3887bb4662aaa3dbee0bed58342728a45bd9",
     "examples/guide_length.py": "7d8a4db6695667ec4077de39e1d56b0a98b3f6f71f0f8a431efbc1ef3f495577",
     "examples/guide_travel.json": "de493357449e8fae9ef3e7b355b1e6ae96ec6a1d09b0016dc8dab23b28e1664b",
     "benchmarks/test_guide_length.py": "e6514d189d2abaccc6048b2fd7f2ca5601b8b33e7d69ae2a08c4f9f8cf5ce3a1",
-    "cad/service_driver/service_poses.json": "88d7dd57af924d9c988863222058cfae2b34a8bad7b8d8640fe0e9ee048d05f1",
-    "examples/service_driver.py": "90b228ca3916e15ff6813530074bee208525b69b0b27758d737963759895f6dc"
+    "cad/service_driver/service_poses.json": "53326e05ef457cf60d8341c8fdbe91b5409cf10d320c648b66ade1d2df91c0a3",
+    "examples/service_driver.py": "4bd2241eb4184c27c1bc0dda34e9f1431d5f7ecb85655de32fb8b3053f5e6293",
+    "cad/service_driver/matched_driver.step": "0c20288a57e6eb0e65586e0e03ee907fded2e413fca60f167e45af95d18a853d"
   }
 }

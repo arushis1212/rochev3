@@ -1,4 +1,4 @@
-"""Replay the forty first-station service poses on the two published STEP solids."""
+"""Replay the forty first-station service poses on the published STEP shaft and screw."""
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -12,7 +12,7 @@ def run(directory):
         if sha256((directory / name).read_bytes()).hexdigest() != expected:
             raise ValueError(f"Unexpected STEP file at {name}")
     pin = cq.importers.importStep(str(directory / "station0_pin.step")).val()
-    tool = cq.importers.importStep(str(directory / "driver_tip.step")).val()
+    tool = cq.importers.importStep(str(directory / "matched_driver.step")).val()
     if any(len(part.Solids()) != 1 or not part.isValid() for part in (pin, tool)):
         raise ValueError("A component needs to be one valid solid")
     x, y, z = settings["socket_origin_mm"]

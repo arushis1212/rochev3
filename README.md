@@ -40,6 +40,7 @@ purchased fasteners and bearings.
 - [Sizing a retaining screw near moving yarn](docs/RETAINING_SCREW.md)
 - [Washer bearing area near a plate edge](docs/WASHER_SUPPORT.md)
 - [Guide motion between indexed wheel positions](docs/INDEXED_GUIDE.md)
+- [Passive work and stored energy along a command](docs/PASSIVE_WORK.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

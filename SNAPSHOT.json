@@ -811,10 +811,10 @@
     "docs/BRACKET_RING.md": "2a90eb210d6c9b89acd77a886f41aec5758e27376113a023c36b26c457ab41e3",
     "cad/bracket_ring/bracket_ring.step": "1641ab3f6a7ad2dacfda17f46381f09ee999d8a9b6c4a96ca13777e1cb3acaac",
     "cad/bracket_ring/geometry.json": "bd0eb09842001561ef27d5f5ff657ee1f1b006739bfe957b8120e113eb5e1161",
-    "docs/CAPTURE_GATE.md": "7e6f4ab9cdcecbd08fc184d6d1cac597ca16fa9cb574c0781f7f8a736b0659ce",
+    "docs/CAPTURE_GATE.md": "bb1888040ae94eb2c5ecd50816c0276f24a9cfd022b4701a26df04ceb884477c",
     "cad/capture_gate/hook_with_heel_relief.step": "9438937071834dfaedb28427aa6ea7b621e50caf0c7992f90cb896dadcbe48cf",
     "cad/capture_gate/gate_with_cam.step": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
-    "cad/capture_gate/geometry.json": "d2ec96cfbb409da6a0d2bd403e48efd6e100bd5dfd7b33284783fd6dcd00365b",
+    "cad/capture_gate/geometry.json": "72a6be38643d6ab1fe0e4af634ba5a51ce42e7cdd958a46e76d6c7a85d8aa28e",
     "cad/capture_gate/working_stop.step": "430e0cacc86ff137b80b92ca6f3691061841c588c9b24317433ee861fb28471a",
     "docs/PASSIVE_JAW.md": "22c824eef76e94496754cc15fb996745eaee0067fbd1b6e54c5212c65aeba2e8",
     "cad/capture_gate/drive_disk.step": "2dc1eccd02f101115b43f7f66b483f77afa9a88aa4df4e182a01564990b82004",
@@ -832,6 +832,7 @@
     "cad/capture_gate/gate_datum_sleeve.step": "85378e1a3de4bb36722980bafcb44b68dad58aabc8801d743c937b3fe0ec113f",
     "cad/capture_gate/rolling_gate_gauge.step": "cf8e332dbe2f4de1620d88c626cadb1627abf9d2fff349ec62f3c0c4d026efec",
     "examples/retained_loop_support.json": "f311ae2eaedf8013bf45b082afdaea65f435ac661e20e88dba97d398c96c9033",
-    "examples/self_seating_loop_support.json": "5dc98b7c4092a7252d53a7bc4af4da824f026c0832419e160120acaf56c6a4bf"
+    "examples/self_seating_loop_support.json": "5dc98b7c4092a7252d53a7bc4af4da824f026c0832419e160120acaf56c6a4bf",
+    "cad/capture_gate/retained_loop_mount.step": "534e113a4a695069ba9cb86105cd82b8daf51a8954c13827c72b335151077e73"
   }
 }

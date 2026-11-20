@@ -213,6 +213,23 @@
           134.0
         ]
       }
+    },
+    "retained_loop_mount.step": {
+      "sha256": "534e113a4a695069ba9cb86105cd82b8daf51a8954c13827c72b335151077e73",
+      "coordinates": "installed P5 machine world XYZ",
+      "solid_count": 18,
+      "bounds_mm": {
+        "min": [
+          131.29975646930933,
+          158.2056397370721,
+          76.86857897167569
+        ],
+        "max": [
+          140.39195860526968,
+          169.17937287327499,
+          87.26324946651431
+        ]
+      }
     }
   },
   "machining_paths": {

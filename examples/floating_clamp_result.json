@@ -1,0 +1,41 @@
+{
+  "configuration": "One modeled swatch-holding pose with three bonded yarn nodes moving with the fixture and other material coordinates held at their saved shape. The passive shoe follows its springs.",
+  "reference_clamp_mass_g": 23.93855,
+  "moment_length_scale_mm": 44.0,
+  "cases": [
+    {
+      "yarn_diameter_mm": 0.575,
+      "net_force_N": [
+        -8.197025732552092e-09,
+        3.841266405651966e-09,
+        3.8329090651378905e-08
+      ],
+      "net_moment_Nmm": [
+        -3.768747801422695e-08,
+        1.2336947904922901e-07,
+        -2.0462067228978198e-08
+      ],
+      "combined_error_N": 3.8329090651378905e-08,
+      "minimum_tangent_stiffness_N_mm": 0.4270854132306852,
+      "maximum_final_contact_compression_mm": 0.0008807872060574984,
+      "swept_contact_reserve_mm": 0.00768857725049836
+    },
+    {
+      "yarn_diameter_mm": 0.55,
+      "net_force_N": [
+        -9.77427307992905e-09,
+        -9.296254044333097e-11,
+        -4.0576278448334335e-10
+      ],
+      "net_moment_Nmm": [
+        3.183903253892173e-10,
+        1.643577271503993e-08,
+        -1.1240360089752321e-08
+      ],
+      "combined_error_N": 9.77427307992905e-09,
+      "minimum_tangent_stiffness_N_mm": 0.5175413956583808,
+      "maximum_final_contact_compression_mm": 0.0008538443162873777,
+      "swept_contact_reserve_mm": 0.005952874016369209
+    }
+  ]
+}

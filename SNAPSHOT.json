@@ -816,7 +816,7 @@
     "cad/capture_gate/gate_with_cam.step": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
     "cad/capture_gate/geometry.json": "cba659d48cff2330f5f9db3737b160e1b2b0e67c98a6ace1e7a5d5fe40ec35f3",
     "cad/capture_gate/working_stop.step": "430e0cacc86ff137b80b92ca6f3691061841c588c9b24317433ee861fb28471a",
-    "docs/PASSIVE_JAW.md": "20d1b7a6ac92a7f605609229d8bbe149bc5523f7c8b960b0dd2f5208f7998e4b",
+    "docs/PASSIVE_JAW.md": "19bce551edb01aaf0662cf7d39a835260df59d1e489bdb7a42b7fb6279ae51c6",
     "cad/capture_gate/drive_disk.step": "2dc1eccd02f101115b43f7f66b483f77afa9a88aa4df4e182a01564990b82004",
     "cad/capture_gate/roller_knob.step": "84a8e6d4af0a2497df9d989fb8bf11429c8ad377e85d91c0d9fe0991068b1102",
     "cad/capture_gate/motor_carrier.step": "62e8f850ae853cd9546ff68cccca220f0f14d72f086e43462c7b6e415b431db7",
@@ -824,6 +824,7 @@
     "cad/capture_gate/spring_motor_carrier.step": "126fdcfa96506c7a898f88dcbc132fd1a3adc7e5aaaf1445b2c1b73e4dff20cd",
     "cad/capture_gate/spring_drive_disk.step": "ff6e3225dfdde86c46d3d442a645c5d38a9424e0472a6086f8528236f6651e9b",
     "cad/capture_gate/reinforced_roller_knob.step": "ea1a37882140f4404c4b6439d118d0c5bb19df70fb75e95972a083b1a2067a19",
-    "cad/capture_gate/external_mill_center.step": "ebdc0a378ad4f6c6ba90df5aa5dad0e1096b1db882726fa047ae714e925abf28"
+    "cad/capture_gate/external_mill_center.step": "ebdc0a378ad4f6c6ba90df5aa5dad0e1096b1db882726fa047ae714e925abf28",
+    "examples/floating_clamp_result.json": "6b8bd57d1b7c368fb5be183bc86aa07d9a9a54a31abd309385f992d29e6d2c7d"
   }
 }

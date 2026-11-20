@@ -144,22 +144,22 @@
       }
     },
     "spring_drive_disk.step": {
-      "sha256": "3c99855ea263524c8dfc66200613b638f6f1fb2b1b9c2ac09c96c746b8494ac1",
-      "solid_count": 1,
-      "native_volume_mm3": 2798.25471471732,
+      "sha256": "ff6e3225dfdde86c46d3d442a645c5d38a9424e0472a6086f8528236f6651e9b",
       "coordinates": "head-local U,V,W at closed",
       "bounds_mm": {
         "min": [
-          -98.4,
-          -26.71304047422,
+          -98.400000099999,
+          -26.71324617896244,
           -23.7500001
         ],
         "max": [
-          -57.29282647511,
-          14.056228612619,
+          -57.292647682256096,
+          14.056371959189216,
           -17.9999999
         ]
-      }
+      },
+      "solid_count": 1,
+      "native_volume_mm3": 2798.315329500599
     },
     "reinforced_roller_knob.step": {
       "sha256": "ea1a37882140f4404c4b6439d118d0c5bb19df70fb75e95972a083b1a2067a19",
@@ -178,6 +178,26 @@
           12.95
         ]
       }
+    }
+  },
+  "machining_paths": {
+    "external_mill_center.step": {
+      "sha256": "ebdc0a378ad4f6c6ba90df5aa5dad0e1096b1db882726fa047ae714e925abf28",
+      "coordinates": "head-local U,V,W at closed",
+      "bounds_mm": {
+        "min": [
+          -99.899999999998,
+          -28.21324617899831,
+          -21.0000001
+        ],
+        "max": [
+          -55.792647682241444,
+          15.55637195917681,
+          -20.9999999
+        ]
+      },
+      "purpose": "External cutter centerline for a 3.000 mm diameter mill",
+      "edge_count": 154
     }
   }
 }

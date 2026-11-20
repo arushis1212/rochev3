@@ -1,0 +1,25 @@
+{
+  "coordinate_system": "installed machine in mm",
+  "parts": {
+    "spring_cup.step": {
+      "volume_mm3": 3.7870861005000602,
+      "centroid_mm": [
+        127.84809345228737,
+        163.00393102710848,
+        79.44224489454356
+      ],
+      "solids": 1,
+      "sha256": "529f41ad73f3d57c11f27096b3385e2f0ffdc0bdb39efdc73a11c61244552525"
+    },
+    "spring_mount.step": {
+      "volume_mm3": 62.12800688759838,
+      "centroid_mm": [
+        113.28045189431275,
+        168.9031832710642,
+        79.13593979769573
+      ],
+      "solids": 1,
+      "sha256": "d3973fa4b2602665378c1850de497946b4082193b04cb68029c53a257ba393f6"
+    }
+  }
+}

@@ -20,6 +20,7 @@ purchased fasteners and bearings.
 - [Individual manufacturing profiles](manufacturing/current/cad)
 - [Parts register](docs/manufacturing_parts.csv)
 - [Machine inputs](spec/current_machine.json)
+- [Spring-mounted yarn retainer and STEP files](docs/YARN_RETAINER.md)
 - [Engineering and mechanics](docs/ENGINEERING.md)
 - [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)

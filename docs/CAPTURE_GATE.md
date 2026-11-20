@@ -14,6 +14,10 @@ The complete service sweep gives a conservative lower bound of 0.07139 mm betwee
 
 For the modeled 0.550–0.600 mm yarn, a ±0.030 mm centerline allowance, ±0.010 mm cam profile and ±0.030 mm working command give 0.04285 to 0.17185 mm geometric overlap at engagement. That overlap calls for local yarn or hardware displacement. At 0.600 mm diameter a single freely moving normal coordinate settles 0.11879 mm away from its starting position under a 5.447 mN cam reaction, with the neighboring positions held. This result describes local capture mechanics. A yarn sample, profile inspection and a loaded full-cycle test establish the behavior of a fabricated pair.
 
+## Slide load during engagement
+
+The five sliding parts have an estimated total mass of 5.115 g at the modeled material densities. Opening the gate on the 30° incline lifts them by 0.425 mm and requires 25.079 mN against gravity. For a smooth 0.85 mm opening in two seconds, the modeled rigid-body inertia adds at most 0.00628 mN. With one yarn coordinate free and the original material law, the first contact occurs at 0.28495 mm. Across 27 positions the peak signed load is 26.30 mN. A continuous conservative bound is 97.29 mN before slide friction. Weighing the five parts and measuring the loaded slide force over the same stroke gives a direct bench comparison.
+
 ## Finishing the cam
 
 Cut the replacement gate from a blank that includes the 0.140 mm rise. Its tightest longitudinal curvature radius is 0.19048 mm. A nominal Ø0.30 mm ball tool fits both ramps. With 0.016 mm maximum longitudinal interpolation and 0.025 mm transverse spacing, ideal chord error and scalloping together leave at most 0.00122 mm of material in the surface-normal direction. An independent CAD check placed the tool center at 420 locations across the face. Spindle runout, workholding, burrs and polishing enter the remaining machining allowance. Research on brass microchannels supports measuring these errors on a finished part. [Brass microchannel experiments](https://doi.org/10.1016/j.jmapro.2020.04.079) · [Runout experiments in CuZn37 brass](https://doi.org/10.1007/s00170-018-2678-2)

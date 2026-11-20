@@ -17,3 +17,9 @@ For the modeled 0.550–0.600 mm yarn, a ±0.030 mm centerline allowance, ±0.01
 ## Finishing the cam
 
 Cut the replacement gate from a blank that includes the 0.140 mm rise. Its tightest longitudinal curvature radius is 0.19048 mm. A nominal Ø0.30 mm ball tool fits both ramps. With 0.016 mm maximum longitudinal interpolation and 0.025 mm transverse spacing, ideal chord error and scalloping together leave at most 0.00122 mm of material in the surface-normal direction. An independent CAD check placed the tool center at 420 locations across the face. Spindle runout, workholding, burrs and polishing enter the remaining machining allowance. Research on brass microchannels supports measuring these errors on a finished part. [Brass microchannel experiments](https://doi.org/10.1016/j.jmapro.2020.04.079) · [Runout experiments in CuZn37 brass](https://doi.org/10.1007/s00170-018-2678-2)
+
+## Setting the working position on the bench
+
+A removable gauge occupies 15.650 mm of the 16.5 mm stop slot. With the gate closed, insert the gauge from the top until its flange rests on the original plate. Keep the round nose seated against the rear of the slot and move the gate knob until its sleeve meets the gauge's flat face. This sets 0.850 mm nominal opening. The screw clears the seated gauge by 0.200 mm. Before lifting the gauge out, return the knob to its closed hard stop. The reverse insertion path has 0.4475 mm screw clearance. With the gauge removed, the gate can open fully. [Working stop STEP](../cad/capture_gate/working_stop.step)
+
+The tongue is 3.260 mm wide and 2.50 mm deep. Inspect its fit in the actual barrel and measure displacement from the closed stop under the intended opening load. The detachable gauge acts as a bench setup reference. The original gate knob supplies the operator interface.

@@ -41,6 +41,7 @@ purchased fasteners and bearings.
 - [Washer bearing area near a plate edge](docs/WASHER_SUPPORT.md)
 - [Guide motion between indexed wheel positions](docs/INDEXED_GUIDE.md)
 - [Passive work and stored energy along a command](docs/PASSIVE_WORK.md)
+- [Seven-turn spool payout between yarn marks](docs/SPOOL_PAYOUT.md)
 - [Research references](docs/REFERENCES.md)
 
 ```sh

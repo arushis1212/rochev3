@@ -126,9 +126,9 @@
       }
     },
     "spring_motor_carrier.step": {
-      "sha256": "ee645dc2007fa6aa1b00d672b540020ce5bf59d0d83a3037a46a210ad917675e",
+      "sha256": "126fdcfa96506c7a898f88dcbc132fd1a3adc7e5aaaf1445b2c1b73e4dff20cd",
       "solid_count": 1,
-      "native_volume_mm3": 33022.136745261334,
+      "native_volume_mm3": 33002.2413312653,
       "coordinates": "head-local U,V,W at closed",
       "bounds_mm": {
         "min": [
@@ -140,6 +140,24 @@
           -11.999999899999999,
           38.0,
           12.95
+        ]
+      }
+    },
+    "spring_drive_disk.step": {
+      "sha256": "3c99855ea263524c8dfc66200613b638f6f1fb2b1b9c2ac09c96c746b8494ac1",
+      "solid_count": 1,
+      "native_volume_mm3": 2798.25471471732,
+      "coordinates": "head-local U,V,W at closed",
+      "bounds_mm": {
+        "min": [
+          -98.4,
+          -26.71304047422,
+          -23.7500001
+        ],
+        "max": [
+          -57.29282647511,
+          14.056228612619,
+          -17.9999999
         ]
       }
     }

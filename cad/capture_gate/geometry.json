@@ -196,6 +196,23 @@
           2.75
         ]
       }
+    },
+    "rolling_gate_gauge.step": {
+      "sha256": "cf8e332dbe2f4de1620d88c626cadb1627abf9d2fff349ec62f3c0c4d026efec",
+      "coordinates": "parked P5 measurement pose, machine world XYZ",
+      "solid_count": 19,
+      "bounds_mm": {
+        "min": [
+          129.76664059626,
+          38.0,
+          -6.25
+        ],
+        "max": [
+          276.0,
+          99.652919944245,
+          134.0
+        ]
+      }
     }
   },
   "machining_paths": {

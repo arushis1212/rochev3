@@ -811,10 +811,10 @@
     "docs/BRACKET_RING.md": "2a90eb210d6c9b89acd77a886f41aec5758e27376113a023c36b26c457ab41e3",
     "cad/bracket_ring/bracket_ring.step": "1641ab3f6a7ad2dacfda17f46381f09ee999d8a9b6c4a96ca13777e1cb3acaac",
     "cad/bracket_ring/geometry.json": "bd0eb09842001561ef27d5f5ff657ee1f1b006739bfe957b8120e113eb5e1161",
-    "docs/CAPTURE_GATE.md": "ec8c516efef02fc26c429d891f9af4553ac7e823f662a079dc1394a49bb4c803",
+    "docs/CAPTURE_GATE.md": "cfd5460c81ce9109a4642d74f96b1d877ae5a1c6b66ccac93fb59efdc5b5c505",
     "cad/capture_gate/hook_with_heel_relief.step": "9438937071834dfaedb28427aa6ea7b621e50caf0c7992f90cb896dadcbe48cf",
     "cad/capture_gate/gate_with_cam.step": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
-    "cad/capture_gate/geometry.json": "72a6be38643d6ab1fe0e4af634ba5a51ce42e7cdd958a46e76d6c7a85d8aa28e",
+    "cad/capture_gate/geometry.json": "39171d2e18680357d49f22fcb54fb2d226ad1bab868a3732a6dd41fcdbb1c005",
     "cad/capture_gate/working_stop.step": "430e0cacc86ff137b80b92ca6f3691061841c588c9b24317433ee861fb28471a",
     "docs/PASSIVE_JAW.md": "22c824eef76e94496754cc15fb996745eaee0067fbd1b6e54c5212c65aeba2e8",
     "cad/capture_gate/drive_disk.step": "2dc1eccd02f101115b43f7f66b483f77afa9a88aa4df4e182a01564990b82004",
@@ -833,6 +833,10 @@
     "cad/capture_gate/rolling_gate_gauge.step": "cf8e332dbe2f4de1620d88c626cadb1627abf9d2fff349ec62f3c0c4d026efec",
     "examples/retained_loop_support.json": "f311ae2eaedf8013bf45b082afdaea65f435ac661e20e88dba97d398c96c9033",
     "examples/self_seating_loop_support.json": "5dc98b7c4092a7252d53a7bc4af4da824f026c0832419e160120acaf56c6a4bf",
-    "cad/capture_gate/retained_loop_mount.step": "534e113a4a695069ba9cb86105cd82b8daf51a8954c13827c72b335151077e73"
+    "cad/capture_gate/retained_loop_mount.step": "534e113a4a695069ba9cb86105cd82b8daf51a8954c13827c72b335151077e73",
+    "cad/capture_gate/supported_setting_station.step": "afb18282635f1e045a7bbef5c8a8b4c798f5e9c9c8d9f08511a5e1ca2e90d6a8",
+    "examples/gate_setting.py": "61c00ceed505889f2b0a45a6f6387582171d55acc5feb869eb6cbdd0d2ac50d4",
+    "examples/gate_setting_coefficients.json": "d081142d1fae91cbe5fa739d816de35f5798246ce461d24f3343ac251d891a4b",
+    "benchmarks/test_gate_setting.py": "3a8c7e443ef62777481ba0b877264d506d66bb849b54a8dd0dfb5e2857eabdd1"
   }
 }

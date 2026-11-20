@@ -286,6 +286,23 @@
           134.3064716451904
         ]
       }
+    },
+    "supported_setting_station.step": {
+      "sha256": "afb18282635f1e045a7bbef5c8a8b4c798f5e9c9c8d9f08511a5e1ca2e90d6a8",
+      "coordinates": "P5 world reference",
+      "solid_count": 22,
+      "bounds_mm": {
+        "min": [
+          129.76664059626,
+          38.0,
+          -6.25
+        ],
+        "max": [
+          276.0,
+          99.652919944247,
+          134.0
+        ]
+      }
     }
   }
 }

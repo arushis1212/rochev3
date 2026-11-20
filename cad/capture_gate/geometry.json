@@ -178,6 +178,24 @@
           12.95
         ]
       }
+    },
+    "gate_datum_sleeve.step": {
+      "sha256": "85378e1a3de4bb36722980bafcb44b68dad58aabc8801d743c937b3fe0ec113f",
+      "coordinates": "local gate U,V,W before opening",
+      "solid_count": 1,
+      "native_volume_mm3": 211.84203319584918,
+      "bounds_mm": {
+        "min": [
+          -76.15000000000035,
+          3.3256,
+          -2.75
+        ],
+        "max": [
+          -66.35,
+          21.03792968750059,
+          2.75
+        ]
+      }
     }
   },
   "machining_paths": {

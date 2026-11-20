@@ -40,6 +40,7 @@ purchased fasteners and bearings.
 - [Sizing a retaining screw near moving yarn](docs/RETAINING_SCREW.md)
 - [Washer bearing area near a plate edge](docs/WASHER_SUPPORT.md)
 - [Guide motion between indexed wheel positions](docs/INDEXED_GUIDE.md)
+- [Pressure and shear under a mounted bracket](docs/PLANAR_JOINT.md)
 - [Load transfer between indexed carriage stops](docs/INDEXED_LOAD_TRANSFER.md)
 - [Passive work and stored energy along a command](docs/PASSIVE_WORK.md)
 - [Seven-turn spool payout between yarn marks](docs/SPOOL_PAYOUT.md)

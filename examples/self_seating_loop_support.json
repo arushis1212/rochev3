@@ -1,0 +1,75 @@
+{
+  "yarn_diameter_mm": 0.6,
+  "required_surface_gap_mm": 0.025,
+  "qualified_time_us": 450,
+  "setup_advance_mm": 0.035,
+  "steel_leaf_mm": [
+    5.5,
+    1.0,
+    0.1
+  ],
+  "effective_moving_mass_mg": 3.223465163,
+  "assumed_tip_kinematics": "One independent translation per tip along its contact axis",
+  "cases": [
+    {
+      "seat_axis_errors_mm": [
+        0.0,
+        0.0
+      ],
+      "minimum_strand_surface_gap_mm": 0.028893713349802008,
+      "minimum_tip_to_foreign_yarn_or_stock_mm": 0.05311979181956582,
+      "maximum_force_mN": [
+        10.106860194237154,
+        10.347774248323041
+      ]
+    },
+    {
+      "seat_axis_errors_mm": [
+        0.01,
+        0.01
+      ],
+      "minimum_strand_surface_gap_mm": 0.028893714840401506,
+      "minimum_tip_to_foreign_yarn_or_stock_mm": 0.04905604322020661,
+      "maximum_force_mN": [
+        12.956107055218585,
+        13.274601363253907
+      ]
+    },
+    {
+      "seat_axis_errors_mm": [
+        -0.01,
+        -0.01
+      ],
+      "minimum_strand_surface_gap_mm": 0.028893711855713704,
+      "minimum_tip_to_foreign_yarn_or_stock_mm": 0.05779631555036112,
+      "maximum_force_mN": [
+        7.239406112532535,
+        7.392208193269272
+      ]
+    },
+    {
+      "seat_axis_errors_mm": [
+        -0.01,
+        0.01
+      ],
+      "minimum_strand_surface_gap_mm": 0.02889370002864744,
+      "minimum_tip_to_foreign_yarn_or_stock_mm": 0.05729330610788817,
+      "maximum_force_mN": [
+        10.803122163983536,
+        13.106570401629737
+      ]
+    },
+    {
+      "seat_axis_errors_mm": [
+        0.01,
+        -0.01
+      ],
+      "minimum_strand_surface_gap_mm": 0.02889369840134998,
+      "minimum_tip_to_foreign_yarn_or_stock_mm": 0.049562312268178074,
+      "maximum_force_mN": [
+        12.956107055218585,
+        11.193162870179174
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "outside_diameter_mm": 4.2,
+  "bore_diameter_mm": 3.1,
+  "thickness_mm": 0.8,
+  "axis": "X",
+  "floor_x_mm": 0.0,
+  "centroid_mm": [
+    0.4,
+    2.854005411552574e-14,
+    -1.9863464795313224e-16
+  ],
+  "single_solid_volume_mm3": 5.0453978016653185,
+  "sha256": "1641ab3f6a7ad2dacfda17f46381f09ee999d8a9b6c4a96ca13777e1cb3acaac"
+}

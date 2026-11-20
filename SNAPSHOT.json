@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "03c09aa8d1d5ee8ab156282ac9cee6d94cbb87b55df87cf7d685be603841d25a",
+    "README.md": "2b9fef0821b755054aa681225ba5fc3efc191557aef9a5906cca33cd17e49bbe",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bight_passage.py": "198597adeb69923c35915612cd305e1f8665ad4197483f8dd03d7eb0975ea5bc",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
@@ -815,6 +815,7 @@
     "cad/capture_gate/hook_with_heel_relief.step": "9438937071834dfaedb28427aa6ea7b621e50caf0c7992f90cb896dadcbe48cf",
     "cad/capture_gate/gate_with_cam.step": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
     "cad/capture_gate/geometry.json": "7296faf717ef5bd2688f624386ce9d53d52adbb142a9757abe79f38bde06635b",
-    "cad/capture_gate/working_stop.step": "430e0cacc86ff137b80b92ca6f3691061841c588c9b24317433ee861fb28471a"
+    "cad/capture_gate/working_stop.step": "430e0cacc86ff137b80b92ca6f3691061841c588c9b24317433ee861fb28471a",
+    "docs/PASSIVE_JAW.md": "20d1b7a6ac92a7f605609229d8bbe149bc5523f7c8b960b0dd2f5208f7998e4b"
   }
 }

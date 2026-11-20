@@ -88,6 +88,24 @@
           6.0
         ]
       }
+    },
+    "motor_carrier.step": {
+      "sha256": "62e8f850ae853cd9546ff68cccca220f0f14d72f086e43462c7b6e415b431db7",
+      "solid_count": 1,
+      "native_volume_mm3": 32889.02496936249,
+      "coordinates": "head-local U,V,W at closed",
+      "bounds_mm": {
+        "min": [
+          -127.0,
+          -15.05,
+          -33.0
+        ],
+        "max": [
+          -11.999999899999999,
+          38.0,
+          8.000000100000369
+        ]
+      }
     }
   }
 }

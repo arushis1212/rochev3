@@ -811,10 +811,10 @@
     "docs/BRACKET_RING.md": "2a90eb210d6c9b89acd77a886f41aec5758e27376113a023c36b26c457ab41e3",
     "cad/bracket_ring/bracket_ring.step": "1641ab3f6a7ad2dacfda17f46381f09ee999d8a9b6c4a96ca13777e1cb3acaac",
     "cad/bracket_ring/geometry.json": "bd0eb09842001561ef27d5f5ff657ee1f1b006739bfe957b8120e113eb5e1161",
-    "docs/CAPTURE_GATE.md": "395e392e215bfaff41014d07fe88bbf729c977db97f23b547773bc1a27f373c8",
+    "docs/CAPTURE_GATE.md": "eeb919df6e11a9f0a373b62e40ceabc3de1e7520a9e1040820095c348988ae9b",
     "cad/capture_gate/hook_with_heel_relief.step": "9438937071834dfaedb28427aa6ea7b621e50caf0c7992f90cb896dadcbe48cf",
     "cad/capture_gate/gate_with_cam.step": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
-    "cad/capture_gate/geometry.json": "da3e063042676ab9e0563eba18361cb860a4dfebe500ebdf4a8745fec681264f",
+    "cad/capture_gate/geometry.json": "743bf7df943b062a39527c4cb372092348043693e704d69988037ad4eb06ff9d",
     "cad/capture_gate/working_stop.step": "430e0cacc86ff137b80b92ca6f3691061841c588c9b24317433ee861fb28471a",
     "docs/PASSIVE_JAW.md": "20d1b7a6ac92a7f605609229d8bbe149bc5523f7c8b960b0dd2f5208f7998e4b",
     "cad/capture_gate/drive_disk.step": "2dc1eccd02f101115b43f7f66b483f77afa9a88aa4df4e182a01564990b82004",
@@ -822,6 +822,7 @@
     "cad/capture_gate/motor_carrier.step": "62e8f850ae853cd9546ff68cccca220f0f14d72f086e43462c7b6e415b431db7",
     "cad/capture_gate/spring_roller_knob.step": "4de4563a0f42347fbf5d3ef56657164847c1ffe6c55de23e1845daf899a82368",
     "cad/capture_gate/spring_motor_carrier.step": "126fdcfa96506c7a898f88dcbc132fd1a3adc7e5aaaf1445b2c1b73e4dff20cd",
-    "cad/capture_gate/spring_drive_disk.step": "3c99855ea263524c8dfc66200613b638f6f1fb2b1b9c2ac09c96c746b8494ac1"
+    "cad/capture_gate/spring_drive_disk.step": "3c99855ea263524c8dfc66200613b638f6f1fb2b1b9c2ac09c96c746b8494ac1",
+    "cad/capture_gate/reinforced_roller_knob.step": "ea1a37882140f4404c4b6439d118d0c5bb19df70fb75e95972a083b1a2067a19"
   }
 }

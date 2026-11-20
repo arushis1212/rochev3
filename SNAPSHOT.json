@@ -5,7 +5,7 @@
     ".gitattributes": "726b80caad5d83e3f0853bb5a28aaaf263f4b1925292889292496aed57968659",
     ".gitignore": "c305fdaceeb01d6ab8210f28cda55a357b8b6b59d909b9d78c984be3037f14be",
     "COPYRIGHT": "d06eb17fd71c4f85db8c54902ab8162aa66a1edd03bdbb877e9fd7817a317fee",
-    "README.md": "fa2e851a78e399fac847c8dea51ddbe5003ecfa6b7ffa63537ace4a60f7ca9d1",
+    "README.md": "03c09aa8d1d5ee8ab156282ac9cee6d94cbb87b55df87cf7d685be603841d25a",
     "benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "benchmarks/test_bight_passage.py": "198597adeb69923c35915612cd305e1f8665ad4197483f8dd03d7eb0975ea5bc",
     "benchmarks/test_bounded_dense_quadratic.py": "24c90bee33c6d4fc66abe9b901cdae8ce9c1d73a66f3392f8c837a1776867121",
@@ -810,6 +810,10 @@
     "tests/test_trust_damping.py": "e86b5b128d30c29d7a5880cd7004ed926fc9f560dd7c797398c35e875d2af533",
     "docs/BRACKET_RING.md": "2a90eb210d6c9b89acd77a886f41aec5758e27376113a023c36b26c457ab41e3",
     "cad/bracket_ring/bracket_ring.step": "1641ab3f6a7ad2dacfda17f46381f09ee999d8a9b6c4a96ca13777e1cb3acaac",
-    "cad/bracket_ring/geometry.json": "bd0eb09842001561ef27d5f5ff657ee1f1b006739bfe957b8120e113eb5e1161"
+    "cad/bracket_ring/geometry.json": "bd0eb09842001561ef27d5f5ff657ee1f1b006739bfe957b8120e113eb5e1161",
+    "docs/CAPTURE_GATE.md": "c623fcbaa0af869cb1c0abd2d883ec6b7d62b5e9a5aa3518f632232329bb7282",
+    "cad/capture_gate/hook_with_heel_relief.step": "9438937071834dfaedb28427aa6ea7b621e50caf0c7992f90cb896dadcbe48cf",
+    "cad/capture_gate/gate_with_cam.step": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
+    "cad/capture_gate/geometry.json": "99506cebb583c905ef4f9e5a5aac2a1d13dbe34f3576bccace538a945d135889"
   }
 }

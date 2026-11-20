@@ -1,0 +1,40 @@
+{
+  "units": "mm",
+  "coordinates": "individual part local coordinates",
+  "parts": {
+    "gate_with_cam.step": {
+      "sha256": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
+      "solid_count": 1,
+      "native_volume_mm3": 308.35134829987976,
+      "bounds_mm": {
+        "min": [
+          -80.0,
+          1.5599999,
+          -2.75
+        ],
+        "max": [
+          4.5,
+          3.3256000000000046,
+          2.75
+        ]
+      }
+    },
+    "hook_with_heel_relief.step": {
+      "sha256": "9438937071834dfaedb28427aa6ea7b621e50caf0c7992f90cb896dadcbe48cf",
+      "solid_count": 1,
+      "native_volume_mm3": 338.85412158688877,
+      "bounds_mm": {
+        "min": [
+          -60.0,
+          -1.999999999996,
+          -0.812799999999
+        ],
+        "max": [
+          4.999999999994,
+          4.000000000004787,
+          0.8128000000010001
+        ]
+      }
+    }
+  }
+}

@@ -199,5 +199,41 @@
       "purpose": "External cutter centerline for a 3.000 mm diameter mill",
       "edge_count": 154
     }
+  },
+  "station_parts_world_mm": {
+    "station_gauge.step": {
+      "sha256": "ee25d2ca5d1846c5a1e1751064d9f7683b3bfeae2c101b0fb550cec0dcb32eeb",
+      "coordinates": "original machine P5 setup pose, world XYZ",
+      "solid_count": 17,
+      "bounds_mm": {
+        "min": [
+          154.51664059626,
+          38.0,
+          -6.25
+        ],
+        "max": [
+          276.0,
+          97.0,
+          134.3064716451904
+        ]
+      }
+    },
+    "setting_shoe.step": {
+      "sha256": "a27142a5c19d2f9ec717792a21866c2a2147c0aa734f54104e3db593ab9b53a7",
+      "coordinates": "original machine P5 setup pose, world XYZ",
+      "solid_count": 1,
+      "bounds_mm": {
+        "min": [
+          154.51664059626,
+          60.966465061844,
+          115.13546365544
+        ],
+        "max": [
+          198.76664059626,
+          80.966465061844,
+          134.3064716451904
+        ]
+      }
+    }
   }
 }

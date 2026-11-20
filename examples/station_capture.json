@@ -1,0 +1,61 @@
+{
+  "scope": "Modeled local capture and unloading, original 0.600 mm yarn and two measured-profile designs. Time is relative to the saved stitch start.",
+  "cases": [
+    {
+      "rise_mm": 0.15,
+      "head_offset_mm": 0.05,
+      "gate_mm": 0.37400000000000005,
+      "touch_bounds_us": [
+        253.31113281250023,
+        253.31171875000027
+      ],
+      "release_bounds_us": [
+        265.48476562500065,
+        265.4853515625007
+      ],
+      "max_among_native_replay_samples_mN": 18.25887915205011
+    },
+    {
+      "rise_mm": 0.13,
+      "head_offset_mm": 0.05,
+      "gate_mm": 0.35000000000000003,
+      "touch_bounds_us": [
+        366.7951171875005,
+        366.79550781250043
+      ],
+      "release_bounds_us": [
+        376.31152343750074,
+        376.31191406250076
+      ],
+      "max_among_native_replay_samples_mN": 49.55779220774541
+    },
+    {
+      "rise_mm": 0.15,
+      "head_offset_mm": -0.01,
+      "gate_mm": 0.18200000000000002,
+      "touch_bounds_us": [
+        247.39941406250014,
+        247.40019531250016
+      ],
+      "release_bounds_us": [
+        261.1220703125005,
+        261.12285156250056
+      ],
+      "max_among_native_replay_samples_mN": 15.697517384455482
+    },
+    {
+      "rise_mm": 0.13,
+      "head_offset_mm": -0.01,
+      "gate_mm": 0.158,
+      "touch_bounds_us": [
+        331.04082031250044,
+        331.04121093750047
+      ],
+      "release_bounds_us": [
+        354.51140625000215,
+        354.51171875000205
+      ],
+      "max_among_native_replay_samples_mN": 21.082912096030686
+    }
+  ]
+}

@@ -36,3 +36,5 @@ At one swatch-holding pose, the 23.94 g clamp settles against two existing pins 
 | 0.550 mm | 0.0000098 mN | 64.19 mN | 117.15 mN | 0.518 N/mm |
 
 For each row, compare the largest absolute component of net force with the Euclidean norm of the net moment divided by the 44 mm reference length. The table reports the larger value. The two cases retain at least 0.007689 and 0.005953 mm, respectively, inside the modeled 0.010 mm compression limit throughout their approach. [Force vectors, moment vectors and reference length](../examples/floating_clamp_result.json)
+
+The next calculation releases ten yarn nodes at the two pin wraps along with the clamp, giving 36 free coordinates at the same pose. The independently integrated residual on the yarn is 1.77 nN at 0.575 mm and 2.02 nN at 0.550 mm. For the narrower yarn, pressure also reaches the finite end of the spring shoe. The lowest restoring stiffness is 0.4384 and 0.5231 N/mm respectively in the scaled coordinate system. Both modeled passages stay open throughout the approach. The material outside the released neighborhoods retains its recorded shape.

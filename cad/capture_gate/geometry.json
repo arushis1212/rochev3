@@ -52,6 +52,42 @@
           3.0
         ]
       }
+    },
+    "drive_disk.step": {
+      "sha256": "2dc1eccd02f101115b43f7f66b483f77afa9a88aa4df4e182a01564990b82004",
+      "solid_count": 1,
+      "native_volume_mm3": 4214.697581134263,
+      "coordinates": "head-local U,V,W at closed",
+      "bounds_mm": {
+        "min": [
+          -98.4,
+          -27.91193235956,
+          -23.7500001
+        ],
+        "max": [
+          -57.0776352406799,
+          13.528308478867363,
+          -17.9999999
+        ]
+      }
+    },
+    "roller_knob.step": {
+      "sha256": "84a8e6d4af0a2497df9d989fb8bf11429c8ad377e85d91c0d9fe0991068b1102",
+      "solid_count": 1,
+      "native_volume_mm3": 3087.748757733158,
+      "coordinates": "head-local U,V,W at closed",
+      "bounds_mm": {
+        "min": [
+          -105.4,
+          -6.300000000000001,
+          -17.5
+        ],
+        "max": [
+          -68.0,
+          1.7000000000000002,
+          6.0
+        ]
+      }
     }
   }
 }

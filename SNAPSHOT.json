@@ -811,7 +811,7 @@
     "docs/BRACKET_RING.md": "2a90eb210d6c9b89acd77a886f41aec5758e27376113a023c36b26c457ab41e3",
     "cad/bracket_ring/bracket_ring.step": "1641ab3f6a7ad2dacfda17f46381f09ee999d8a9b6c4a96ca13777e1cb3acaac",
     "cad/bracket_ring/geometry.json": "bd0eb09842001561ef27d5f5ff657ee1f1b006739bfe957b8120e113eb5e1161",
-    "docs/CAPTURE_GATE.md": "a8748766452d1392e269f761f81c19cc5a9b9d5269b101dbc629db39a8908eed",
+    "docs/CAPTURE_GATE.md": "cd769afb3b87a5cc6994868a99c38ec6cb7625422439bc05bc0ea6f13d732af4",
     "cad/capture_gate/hook_with_heel_relief.step": "9438937071834dfaedb28427aa6ea7b621e50caf0c7992f90cb896dadcbe48cf",
     "cad/capture_gate/gate_with_cam.step": "b25d82f6713fff600ba6756826ec0f3055e4af95545aea3ea30f18dd5261111d",
     "cad/capture_gate/geometry.json": "d2ec96cfbb409da6a0d2bd403e48efd6e100bd5dfd7b33284783fd6dcd00365b",
@@ -830,6 +830,7 @@
     "cad/capture_gate/setting_shoe.step": "a27142a5c19d2f9ec717792a21866c2a2147c0aa734f54104e3db593ab9b53a7",
     "examples/station_capture.json": "8ff650658dcd935fb3b26814ddcff1f4813ae58659f8222f7ad84fbc98562841",
     "cad/capture_gate/gate_datum_sleeve.step": "85378e1a3de4bb36722980bafcb44b68dad58aabc8801d743c937b3fe0ec113f",
-    "cad/capture_gate/rolling_gate_gauge.step": "cf8e332dbe2f4de1620d88c626cadb1627abf9d2fff349ec62f3c0c4d026efec"
+    "cad/capture_gate/rolling_gate_gauge.step": "cf8e332dbe2f4de1620d88c626cadb1627abf9d2fff349ec62f3c0c4d026efec",
+    "examples/retained_loop_support.json": "f311ae2eaedf8013bf45b082afdaea65f435ac661e20e88dba97d398c96c9033"
   }
 }

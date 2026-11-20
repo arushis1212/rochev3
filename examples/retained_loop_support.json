@@ -1,0 +1,40 @@
+{
+  "yarn_diameter_mm": 0.6,
+  "free_material_nodes": 103,
+  "tip_diameter_mm": 0.5,
+  "retained_edge_fraction": 0.675,
+  "tip_angles_about_yarn_degrees": [
+    75,
+    -70
+  ],
+  "nominal_gate_release_us": 376.312,
+  "nominal_heel_release_us": 398.309,
+  "continuous_machine_check_through_us": 442.5,
+  "conditions": "Frictionless material supports held on the specified centers, with material outside the released spans prescribed.",
+  "trials": {
+    "FINE": {
+      "first_25_micron_clearance_boundary_us": [
+        443.1817968750039,
+        443.18425781250374
+      ]
+    },
+    "SETBACK_1UM": {
+      "first_25_micron_clearance_boundary_us": [
+        365.3460937500005,
+        365.3496093750005
+      ]
+    },
+    "SETBACK_2P5UM": {
+      "first_25_micron_clearance_boundary_us": [
+        108.21078124999964,
+        108.21265624999965
+      ]
+    },
+    "SETBACK_5UM": {
+      "first_25_micron_clearance_boundary_us": [
+        108.19859374999963,
+        108.20015624999962
+      ]
+    }
+  }
+}

@@ -15,8 +15,8 @@ The reported times describe one simulated setup with the nominal gate setting. P
 
 ## The first load pulse
 
-The [numeric trace](../examples/forming_face/forming_pulse.csv) follows the working yarn and deforming brass together for 2.2 µs in the nominal setup, with zero assumed tangential friction on brass. Normal force grows from zero to 16.302 mN at the last midpoint. Each row gives the cell end time, its midpoint normal load, and the brass kinetic and strain energy at the end. The cumulative work can be compared directly to the sum of those energies. The full brass replay uses 23,688 displacement coordinates.
+The working yarn and deforming brass were simulated together from 305.500 to 309.500 µs. Across 160 successive 25 ns intervals, the normal force reaches 16.302 mN at the 88th midpoint and 33.235 mN at the 160th. The nominal model assumes zero tangential friction on brass. The trace gives each midpoint force alongside the kinetic energy, strain energy and accumulated external work at the end of that interval. The stored elastic history carries across the change from 54 to 264 surface displacement coordinates. [Download the force and energy trace](../examples/forming_face/forming_pulse.csv)
 
-A separate coupled simulation with an assumed sliding coefficient of 0.20 checks the effect of shear and yarn spin. At 305.800 µs, independent 25 ns and 12.5 ns calculations give 0.60477246 mN and 0.60477162 mN of instantaneous normal force, respectively. The coefficient is a sensitivity input for this yarn and finish.
+At an assumed brass sliding coefficient of 0.20, two independent simulations give 16.431678 mN and 16.431711 mN at the same 307.700 µs endpoint, using 25 ns and 12.5 ns steps. These results describe the beginning of loading in the nominal setup. A yarn lot and brass finish can be tested at the actual contact load and speed to determine their sliding coefficient.
 
-Run `python3 -m unittest benchmarks.test_forming_pulse` to check the 88 time intervals and the energy balance in the published trace.
+Run `python3 -m unittest benchmarks.test_forming_pulse` to check the timing, force samples and energy balance of the 160 intervals.

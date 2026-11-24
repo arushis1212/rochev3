@@ -2,6 +2,8 @@
 
 The printed barrel stop has a 3.175 mm diameter, 5.400 mm deep relief at the mouth of the guide slot. The cut gives the brass gate room as it travels past the two cheeks. The three existing M2 screws locate the part in the transfer head.
 
+The selected shop finish uses a 5.465 ± 0.010 mm cut and a 5.420 ± 0.010 mm insertion of the steel gauge. The selected files include the finished part, its matching gauge and the assembled head. The 5.400 mm part below is the starting blank for this small secondary operation. [Selected part and setup](selected/SETUP.md) · [Loaded inspection dimensions](selected/LOADED_INSPECTION.md)
+
 | File | Use |
 |---|---|
 | [Barrel stop STEP](RELIEVED_H03.step) | Edit or inspect the head-local dimensions in millimetres. |

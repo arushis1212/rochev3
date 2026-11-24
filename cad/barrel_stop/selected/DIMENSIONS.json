@@ -1,0 +1,45 @@
+{
+  "units": "mm",
+  "model": "H03 selected finish",
+  "assembly_member": "TOOL_H03_barrel_stop",
+  "mouth_plane_U": -12.0,
+  "tool_axis": "-U",
+  "tool_axis_VW": [
+    2.5,
+    0.0
+  ],
+  "nominal_cutter_diameter": 3.175,
+  "tool_center_depth": [
+    5.455,
+    5.475
+  ],
+  "measured_tool_envelope_diameter": [
+    3.15,
+    3.2
+  ],
+  "transverse_tool_registration_error_each": 0.04,
+  "max_tool_axis_error_deg": 0.2,
+  "pin_measured_diameter": [
+    2.895,
+    2.905
+  ],
+  "pin_actual_tip_depth": [
+    5.41,
+    5.43
+  ],
+  "transverse_pin_registration_error_each": 0.015,
+  "max_pin_axis_error_deg": 0.2,
+  "max_pin_tip_axial_chamfer": 0.025,
+  "maximum_profile_error_allowance": 0.002,
+  "nominal_pin_clearance": 0.04499999999999815,
+  "most_adverse_pin_to_smallest_qualified_cavity_clearance": 0.0025563524786608163,
+  "validated_assembly_members": 257,
+  "unchanged_geometry_fingerprints": 256,
+  "files": {
+    "H03_SELECTED_FINISHED.step": "4ce8c27a79aac2a4d2aec5fda511b2660ae3b696a130b75cd9141399baba1aaf",
+    "H03_SELECTED_FINISHED.stl": "dd1ffb2429aa560a5c9d09fd64533b7a6c680a8c50fad1e0cd92d506f81b5d43",
+    "GO_5P420_REFERENCE.step": "5ab4370425aca47f3e7c447407ff7c52cce1fa61a135701a7a887b93c2068051",
+    "P5_H03_SELECTED_FINISHED.step.gz": "94499635d8593260c65088e0705334ae54e09e7a33bd5aed2febd94e945dc13c"
+  },
+  "uncompressed_assembly_sha256": "563732cf1821d5ba92f6cd4c37ea7f8433a91d8794df41b19d6278d72482369c"
+}

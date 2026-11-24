@@ -11,7 +11,7 @@ python3 -m unittest benchmarks.test_forming_face
 
 The dataset contains both endpoints of a 0.600 mm diameter yarn segment, its velocity and its acceleration over two independently calculated incoming time steps. The 0.400 mm long face has a cubic height profile with a 0.130 mm drop. For each trial time the example minimizes the distance from the finite segment to that profile and checks the face width. Contact occurs when the minimum centerline distance reaches the yarn radius. The benchmark cross-checks the result against the native solid and includes an analytical test where the closest point lies at the end of the yarn segment.
 
-The reported times describe one simulated setup with the nominal gate setting. Physical timing depends on the loaded yarn, the gate setting and the difference between the fitted and manufactured surface. [Gate assembly and dimensions](P5_MOUNTING.md)
+Accounting for the modeled difference between the fitted surface and the native CAD puts first contact between 305.540785 and 305.595227 µs on the finer incoming trajectory. The second incoming trajectory brackets contact between 305.541230 and 305.595686 µs. Both brackets use the nominal installed reference geometry and its elastic surface field. Physical timing depends on the loaded yarn, the gate setting and the difference between the fitted and manufactured surface. [Gate assembly and dimensions](P5_MOUNTING.md)
 
 ## The first load pulse
 

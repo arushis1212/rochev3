@@ -1571,13 +1571,13 @@
     {
       "part": "TOOL_H02_gate",
       "group": "gate",
-      "description": "manufacturing geometry",
+      "description": "Full-width relieved nominal brass gate, middle rigid reference",
       "quantity": 1,
-      "volume_mm3": 306.3108131459896,
+      "volume_mm3": 305.8270219959433,
       "center_world_mm": [
-        132.76651401389574,
-        117.81428339401292,
-        105.40178876544024
+        132.7665138136537,
+        117.75693742653168,
+        105.43628844629512
       ],
       "world_limits_mm": [
         [
@@ -1592,8 +1592,8 @@
         ]
       ],
       "solids": 1,
-      "faces": 37,
-      "edges": 90
+      "faces": 41,
+      "edges": 102
     },
     {
       "part": "TOOL_H03_barrel_stop",

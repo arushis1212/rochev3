@@ -4,6 +4,8 @@ Open [P5_REGISTERED_ASSEMBLY.step](P5_REGISTERED_ASSEMBLY.step) directly in a ST
 
 To inspect the yarn-facing head, isolate `TOOL_H01_hook_body`, `TOOL_H02_gate`, `TOOL_H03_barrel_stop` and `stand_bearing`. To inspect the mount, isolate `local_register_frame`, `stand_receiver`, `F03_receiver_drilling`, and parts prefixed `hard_stop_`, `GN615_` or `fitted_pin_`. The slide is indexed in the P5 pose. The three spring leaves are shown in their manufactured, unloaded shape.
 
+The brass gate has a transverse recess with a nominal depth of 0.125 mm. A Ø6.35 mm tool forms it from the unshifted part datum. The STEP uses the middle rigid head setting with one 0.0508 mm foil. The other 256 members retain their original geometry and placement. [Machining and fitting the gate](INSTALL_GATE.md) · [CAD exchange measurements](GATE_EXCHANGE.json)
+
 ## Install the register
 
 1. Machine the frame from 6061-T6 to the supplied solid. Its envelope is 108 × 87 × 5.5 mm. Tap the two front holes M3 × 0.5 along Y at X 204 and 265, Z 15.3. Tap the right stop hole M3 × 0.5 along X at Y 73, Z 15.0. The three opposing plunger axes are at Z 14.75. Use M4 × 0.7 threads there. Inspect all threaded bores and mating screws using the intended threads. The CAD represents their major diameters.

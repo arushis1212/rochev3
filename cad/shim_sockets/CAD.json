@@ -1,0 +1,202 @@
+{
+  "receiving_scope": "Installed manufacturing reference. No temporary cassette insertion during machine operation.",
+  "sockets": [
+    {
+      "socket": 0,
+      "datum_mouth_coupon_mm": [
+        5.068483392838033,
+        0.8009975969119694,
+        18.097180115058123
+      ],
+      "axial_direction": [
+        -0.2585040211966406,
+        0.9659199840568408,
+        -0.013200584259777997
+      ],
+      "up_direction": [
+        -0.03803216111784237,
+        0.0034780182790202507,
+        0.9992704629426196
+      ],
+      "lateral_direction": [
+        -0.9652612215073562,
+        -0.25881747968111335,
+        -0.03583694274967134
+      ],
+      "cartridge_outside_filled_original_mm3": 1.540589799869279,
+      "edge_potting_mm3": 0.8510309799869902,
+      "original_coupon_material_in_cartridge_mm3": 6.467692800000909,
+      "hard_datum_area_sample_fractions": {
+        "lower": 1.0,
+        "side": 0.7004595123347976,
+        "back": 1.0
+      },
+      "open_insertion_envelope": {
+        "gap_mm": 0.0,
+        "overlap_mm3": 0.0
+      },
+      "insertion_stations": [
+        {
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 0.49684413296458435,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 8.49684413296459,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "full_leaf": {
+        "gap_mm": 0.02999999999999783,
+        "overlap_mm3": 0.0
+      },
+      "wide_witness": {
+        "gap_mm": 0.00999999999999573,
+        "overlap_mm3": 0.0
+      },
+      "baseline_leaf": {
+        "gap_mm": 0.02999999999971341,
+        "overlap_mm3": 0.0
+      },
+      "baseline_witness": {
+        "gap_mm": 0.009999999999637134,
+        "overlap_mm3": 0.0
+      },
+      "top_to_middle": {
+        "gap_mm": 0.0,
+        "overlap_mm3": 0.0
+      },
+      "bottom_to_middle": {
+        "gap_mm": 0.0,
+        "overlap_mm3": 0.0
+      }
+    },
+    {
+      "socket": 1,
+      "datum_mouth_coupon_mm": [
+        8.955008885596328,
+        0.7811804991657709,
+        15.123763407925864
+      ],
+      "axial_direction": [
+        0.3104112450900894,
+        0.7522049362659707,
+        0.5812336817311324
+      ],
+      "up_direction": [
+        -0.31486572613547326,
+        -0.49556396675183034,
+        0.809491154591804
+      ],
+      "lateral_direction": [
+        -0.8969417112760458,
+        0.4342857224389235,
+        -0.08301492551885295
+      ],
+      "cartridge_outside_filled_original_mm3": 1.5405897879412573,
+      "edge_potting_mm3": 0.8510309799872463,
+      "original_coupon_material_in_cartridge_mm3": 6.467692799999018,
+      "hard_datum_area_sample_fractions": {
+        "lower": 1.0,
+        "side": 0.91120325333097,
+        "back": 1.0
+      },
+      "open_insertion_envelope": {
+        "gap_mm": 4.440892098500626e-16,
+        "overlap_mm3": 0.0
+      },
+      "insertion_stations": [
+        {
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 0.8399999999999993,
+          "overlap_mm3": 0.0
+        },
+        {
+          "gap_mm": 5.7629497167057115,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "full_leaf": {
+        "gap_mm": 0.029999999999999187,
+        "overlap_mm3": 0.0
+      },
+      "wide_witness": {
+        "gap_mm": 0.009999999999997776,
+        "overlap_mm3": 0.0
+      },
+      "baseline_leaf": {
+        "gap_mm": 0.029999999999954112,
+        "overlap_mm3": 0.0
+      },
+      "baseline_witness": {
+        "gap_mm": 0.009999999999842153,
+        "overlap_mm3": 0.0
+      },
+      "top_to_middle": {
+        "gap_mm": 4.440892098500626e-16,
+        "overlap_mm3": 0.0
+      },
+      "bottom_to_middle": {
+        "gap_mm": 8.881784197001252e-16,
+        "overlap_mm3": 0.0
+      }
+    }
+  ],
+  "cover_external_positive_difference_mm3": 45.52590969364806,
+  "original_minus_laminated_mm3": 1.7835568497340264,
+  "original_coupon_mm3": 1130.040719467645,
+  "open_coupon_mm3": 1153.8869701264473,
+  "component_volumes_mm3": {
+    "tinned_edge_0_-1_-1": 0.04966131057697106,
+    "tinned_edge_0_-1_1": 0.04966131259958482,
+    "tinned_edge_0_1_-1": 0.049661310576974295,
+    "tinned_edge_0_1_1": 0.04966131259957878,
+    "keeper_pin_0": 1.0037388528219398,
+    "pin_end_retainer_0": 0.09471901850573222,
+    "base_plate_0": 3.617129247396708,
+    "cap_plate_0": 3.6171292473967065,
+    "U_spacer_0": 0.5656588542304392,
+    "edge_potting_0": 0.8510309799869902,
+    "tinned_edge_1_-1_-1": 0.04966131057697151,
+    "tinned_edge_1_-1_1": 0.04966131154488008,
+    "tinned_edge_1_1_-1": 0.04966131057697225,
+    "tinned_edge_1_1_1": 0.049661311544879974,
+    "keeper_pin_1": 1.0037388528219393,
+    "pin_end_retainer_1": 0.0947190185057322,
+    "base_plate_1": 3.61712924739678,
+    "cap_plate_1": 3.617129250511116,
+    "U_spacer_1": 0.5656588542304537,
+    "edge_potting_1": 0.8510309799872463,
+    "open_printed_coupon": 1153.8869701264473
+  },
+  "full_cover_vs_coupon_modification_symmetric_differences_mm3": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "source_solid_sha256": "56c33cd39e58f31ad81f20dbfcb488a91921664bc3a6a017c3a10dee2ec2dc54",
+  "datum": "interpreted in signed coupon axes, related to the B02 plate by root_coupon/nominal/GEOMETRY.json"
+}

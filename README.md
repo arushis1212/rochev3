@@ -23,6 +23,7 @@ purchased fasteners and bearings.
 - [Spring-mounted yarn retainer and STEP files](docs/YARN_RETAINER.md)
 - [Sliding crochet gate, hook and individual STEP files](docs/CAPTURE_GATE.md)
 - [257-member registered hook station, single STEP and installation instructions](cad/registered_station/README.md)
+- [Shim-defined spring sockets, printable test coupon and metal cutting drawings](cad/shim_sockets/README.md)
 - [Hook, stripper and spring mounting dimensions](docs/P5_MOUNTING.md)
 - [Engineering and mechanics](docs/ENGINEERING.md)
 - [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)

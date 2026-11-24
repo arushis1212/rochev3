@@ -1,0 +1,482 @@
+{
+  "rows": [
+    {
+      "socket": 0,
+      "pin_to_crossdrilled_cartridge_nominal": {
+        "gap_mm": 0.049999999999252746,
+        "overlap_mm3": 0.0
+      },
+      "sweep_pairs": {
+        "tinned_edge_0_-1_-1": {
+          "gap_mm": 0.04999999999953777,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_-1_1": {
+          "gap_mm": 0.049999999999686476,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_-1": {
+          "gap_mm": 0.049999999999431166,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_1": {
+          "gap_mm": 0.04999999999979046,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_0": {
+          "gap_mm": 0.04999999999953777,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_0": {
+          "gap_mm": 0.049999999999686476,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_0": {
+          "gap_mm": 0.04999999999955601,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_0": {
+          "gap_mm": 0.049999999999701346,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_-1": {
+          "gap_mm": 5.149813031770987,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_1": {
+          "gap_mm": 5.10136997774072,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_-1": {
+          "gap_mm": 3.4676446092959208,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_1": {
+          "gap_mm": 3.321100640166744,
+          "overlap_mm3": 0.0
+        },
+        "keeper_pin_1": {
+          "gap_mm": 2.5093593961590828,
+          "overlap_mm3": 0.0
+        },
+        "pin_end_retainer_1": {
+          "gap_mm": 5.226723956614485,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_1": {
+          "gap_mm": 3.5460951230375266,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_1": {
+          "gap_mm": 3.2087710687176023,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_1": {
+          "gap_mm": 3.3984549121809966,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_1": {
+          "gap_mm": 3.0188072612390746,
+          "overlap_mm3": 0.0
+        },
+        "open_printed_coupon": {
+          "gap_mm": 0.04999999999969721,
+          "overlap_mm3": 0.0
+        }
+      },
+      "reverse_sweep_pairs": {
+        "tinned_edge_0_-1_-1": {
+          "gap_mm": 0.04999999999953777,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_-1_1": {
+          "gap_mm": 0.04999999999968626,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_-1": {
+          "gap_mm": 0.04999999999943063,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_1": {
+          "gap_mm": 0.04999999999978908,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_0": {
+          "gap_mm": 0.04999999999953777,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_0": {
+          "gap_mm": 0.04999999999968626,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_0": {
+          "gap_mm": 0.04999999999955601,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_0": {
+          "gap_mm": 0.04999999999978488,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_-1": {
+          "gap_mm": 2.484736910032217,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_1": {
+          "gap_mm": 2.4821453894348426,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_-1": {
+          "gap_mm": 1.352065412953166,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_1": {
+          "gap_mm": 1.3154722865306703,
+          "overlap_mm3": 0.0
+        },
+        "keeper_pin_1": {
+          "gap_mm": 1.018033666501314,
+          "overlap_mm3": 0.0
+        },
+        "pin_end_retainer_1": {
+          "gap_mm": 2.682171576706159,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_1": {
+          "gap_mm": 1.2659458604908067,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_1": {
+          "gap_mm": 1.1910816099939232,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_1": {
+          "gap_mm": 1.2004327005605946,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_1": {
+          "gap_mm": 1.0784973316887505,
+          "overlap_mm3": 0.0
+        },
+        "open_printed_coupon": {
+          "gap_mm": 0.03642345825593974,
+          "overlap_mm3": 0.0
+        }
+      },
+      "stroke_length_mm": 3.8,
+      "clearance_events": [
+        {
+          "direction": "up",
+          "translation_mm": 0.0,
+          "gap_mm": 0.049999999999252746,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "up",
+          "translation_mm": 0.04,
+          "gap_mm": 0.009999999999978804,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "up",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.02284150281535709
+        },
+        {
+          "direction": "down",
+          "translation_mm": 0.0,
+          "gap_mm": 0.049999999999252746,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "down",
+          "translation_mm": 0.04,
+          "gap_mm": 0.009999999999398324,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "down",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.02284150226426481
+        },
+        {
+          "direction": "rear",
+          "translation_mm": 0.0,
+          "gap_mm": 0.049999999999252746,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "rear",
+          "translation_mm": 0.04,
+          "gap_mm": 0.01000000000001548,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "rear",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.02284150255988
+        },
+        {
+          "direction": "forward",
+          "translation_mm": 0.0,
+          "gap_mm": 0.049999999999252746,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "forward",
+          "translation_mm": 0.04,
+          "gap_mm": 0.009999999999627696,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "forward",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.022841502560087778
+        }
+      ]
+    },
+    {
+      "socket": 1,
+      "pin_to_crossdrilled_cartridge_nominal": {
+        "gap_mm": 0.04999999999912765,
+        "overlap_mm3": 0.0
+      },
+      "sweep_pairs": {
+        "tinned_edge_0_-1_-1": {
+          "gap_mm": 1.1367299970096656,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_-1_1": {
+          "gap_mm": 1.415852536973818,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_-1": {
+          "gap_mm": 2.304009665507627,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_1": {
+          "gap_mm": 2.3888612012687793,
+          "overlap_mm3": 0.0
+        },
+        "keeper_pin_0": {
+          "gap_mm": 0.9659455686327274,
+          "overlap_mm3": 0.0
+        },
+        "pin_end_retainer_0": {
+          "gap_mm": 0.891876167600322,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_0": {
+          "gap_mm": 0.8244220449675091,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_0": {
+          "gap_mm": 1.4273999560226547,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_0": {
+          "gap_mm": 1.2243191694167324,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_0": {
+          "gap_mm": 2.189312094283461,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_-1": {
+          "gap_mm": 0.049999999999408844,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_1": {
+          "gap_mm": 0.049999999999523204,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_-1": {
+          "gap_mm": 0.04999999999931057,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_1": {
+          "gap_mm": 0.04999999999954592,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_1": {
+          "gap_mm": 0.0499999999994718,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_1": {
+          "gap_mm": 0.04999999999954592,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_1": {
+          "gap_mm": 0.049999999999408844,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_1": {
+          "gap_mm": 0.049999999999703885,
+          "overlap_mm3": 0.0
+        },
+        "open_printed_coupon": {
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.059346475879613024
+        }
+      },
+      "reverse_sweep_pairs": {
+        "tinned_edge_0_-1_-1": {
+          "gap_mm": 2.941814722904107,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_-1_1": {
+          "gap_mm": 3.0544596408834916,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_-1": {
+          "gap_mm": 4.749242488909998,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_0_1_1": {
+          "gap_mm": 4.786786630385179,
+          "overlap_mm3": 0.0
+        },
+        "keeper_pin_0": {
+          "gap_mm": 2.509359396159055,
+          "overlap_mm3": 0.0
+        },
+        "pin_end_retainer_0": {
+          "gap_mm": 2.41951637429215,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_0": {
+          "gap_mm": 2.8650095925579926,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_0": {
+          "gap_mm": 3.12615525532664,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_0": {
+          "gap_mm": 2.997620047645558,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_0": {
+          "gap_mm": 4.84141874276282,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_-1": {
+          "gap_mm": 0.049999999999409225,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_-1_1": {
+          "gap_mm": 0.04999999999952418,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_-1": {
+          "gap_mm": 0.049999999999310846,
+          "overlap_mm3": 0.0
+        },
+        "tinned_edge_1_1_1": {
+          "gap_mm": 0.049999999999547344,
+          "overlap_mm3": 0.0
+        },
+        "base_plate_1": {
+          "gap_mm": 0.04999999999947062,
+          "overlap_mm3": 0.0
+        },
+        "cap_plate_1": {
+          "gap_mm": 0.049999999999547344,
+          "overlap_mm3": 0.0
+        },
+        "U_spacer_1": {
+          "gap_mm": 0.049999999999409225,
+          "overlap_mm3": 0.0
+        },
+        "edge_potting_1": {
+          "gap_mm": 0.04999999999969506,
+          "overlap_mm3": 0.0
+        },
+        "open_printed_coupon": {
+          "gap_mm": 0.04999999999946091,
+          "overlap_mm3": 0.0
+        }
+      },
+      "stroke_length_mm": 3.8,
+      "clearance_events": [
+        {
+          "direction": "up",
+          "translation_mm": 0.0,
+          "gap_mm": 0.04999999999912765,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "up",
+          "translation_mm": 0.04,
+          "gap_mm": 0.009999999999439013,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "up",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.022841502264354007
+        },
+        {
+          "direction": "down",
+          "translation_mm": 0.0,
+          "gap_mm": 0.04999999999912765,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "down",
+          "translation_mm": 0.04,
+          "gap_mm": 0.01000000000021484,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "down",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.022841502352187966
+        },
+        {
+          "direction": "rear",
+          "translation_mm": 0.0,
+          "gap_mm": 0.04999999999912765,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "rear",
+          "translation_mm": 0.04,
+          "gap_mm": 0.010000000000025792,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "rear",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.02284150255988727
+        },
+        {
+          "direction": "forward",
+          "translation_mm": 0.0,
+          "gap_mm": 0.04999999999912765,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "forward",
+          "translation_mm": 0.04,
+          "gap_mm": 0.009999999999493359,
+          "overlap_mm3": 0.0
+        },
+        {
+          "direction": "forward",
+          "translation_mm": 0.08,
+          "gap_mm": 0.0,
+          "overlap_mm3": 0.022841502674557493
+        }
+      ]
+    }
+  ],
+  "all_native_pairs": 210,
+  "max_unintended_overlap_mm3": 0.0
+}

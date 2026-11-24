@@ -21,3 +21,13 @@ class OutletTravel(unittest.TestCase):
         self.assertAlmostEqual(min(r["remaining_travel_mm"] for r in rows),.0048338795354,places=10)
         self.assertAlmostEqual(rows[0]["steel_yarn_force_mN"],3.4377257154,places=8)
         self.assertEqual(rows[-1]["steel_yarn_force_mN"],0.)
+
+    def test_moving_shoe_trace(self):
+        with (FOLDER/"moving_shoe.csv").open(newline="") as source:
+            rows=[{key:float(value) for key,value in row.items()} for row in csv.DictReader(source)]
+        self.assertEqual(len(rows),1703)
+        self.assertEqual([r["time_us"] for r in rows],sorted({r["time_us"] for r in rows}))
+        self.assertEqual((rows[0]["time_us"],rows[-1]["time_us"]),(0.,309.6))
+        self.assertAlmostEqual(max(r["steel_yarn_force_mN"] for r in rows),85.783,delta=.001)
+        self.assertGreater(.006-max(r["height_mm"] for r in rows),.00317)
+        self.assertGreater(min(r["sphere_bearing_force_mN"] for r in rows),0.)

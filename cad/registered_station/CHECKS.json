@@ -1,0 +1,114 @@
+{
+  "units": "mm, N, degrees C unless otherwise stated",
+  "members": 257,
+  "geometry_exchange": {
+    "maximum_position_difference_mm": 8.455458555545192e-12,
+    "maximum_volume_difference_mm3": 1.3969838619232178e-09,
+    "two_way_solid_difference_mm3": {
+      "F03_receiver_drilling": [
+        0.0,
+        0.0
+      ],
+      "stand_receiver": [
+        0.0,
+        0.0
+      ],
+      "local_register_frame": [
+        0.0,
+        0.0
+      ],
+      "SQ_COMMON_REAR_METAL_BRIDGE": [
+        0.0,
+        0.0
+      ],
+      "B02_three_root_cover": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "positive_contact_loading": {
+    "upper_normal_and_tangent_N": [
+      2.0,
+      0.4
+    ],
+    "minimum_hard_stop_force_N": 4.0183400723842775,
+    "spring_force_limits_N": [
+      6,
+      14.5
+    ],
+    "condition": "fixed receiving contact geometry and friction-free in-plane equilibrium; springs retained throughout"
+  },
+  "frame_flexibility": [
+    {
+      "h_mm": 2.0,
+      "maximum_incremental_equivalent_Y_from_front_frame_mm": 3.0464495644886202e-05,
+      "first_thread_direct_mm_N": 5.842567327863123e-06,
+      "second_thread_direct_mm_N": 3.433503794152535e-06
+    },
+    {
+      "h_mm": 1.4,
+      "maximum_incremental_equivalent_Y_from_front_frame_mm": 3.091019095211577e-05,
+      "first_thread_direct_mm_N": 5.920732452350249e-06,
+      "second_thread_direct_mm_N": 3.5030320817795036e-06
+    },
+    {
+      "h_mm": 1.05,
+      "maximum_incremental_equivalent_Y_from_front_frame_mm": 3.099430223879691e-05,
+      "first_thread_direct_mm_N": 5.9300241167275935e-06,
+      "second_thread_direct_mm_N": 3.530152072458343e-06
+    }
+  ],
+  "frame_boundary_condition": "Two side and two front pin walls treated as fixed. The bare aluminum frame carries axial thread loads on the engaged surfaces. Material modulus 68.9 GPa.",
+  "four_bolt_mount": {
+    "source_upper_only_equal_stiffness_four_bolt_group_max_uplift_N": 3.852252452028646,
+    "including_conservative_self_weight_moment_N": 6.339235399332416,
+    "conditional_minimum_verified_residual_clamp_N_per_screw": 20.0,
+    "assumed_density_upper_g_cm3": 8.6,
+    "model": "rigid receiver; equal four-clamp stiffness; separate loaded reseat/indication test for board and seating"
+  },
+  "service_clearances_mm": {
+    "Y": 1.2300000000000004,
+    "X": 0.3000000000000007,
+    "lift": 0.3000000000000007
+  },
+  "tactile": {
+    "direction_world": [
+      1.1689008499508352e-16,
+      -0.21892626764815581,
+      -0.9757414049499222
+    ],
+    "working_center_world_mm": [
+      132.76664059626003,
+      90.68449131018707,
+      98.93112361737799
+    ],
+    "sample_axial_X_mm": [
+      -1.2,
+      0,
+      1.2
+    ],
+    "nominal_center_clearance_mm": 1.2017081786995627,
+    "nominal_edge_clearance_mm": 0.42510038668949857,
+    "acceptance": {
+      "tolerance_equivalent_Y_um": 5.0,
+      "normal_projection": 0.21892626764815581,
+      "normal_limit_um": 1.094631338240779,
+      "recorded_deviation_limit_um": 0.25,
+      "worst_case_error_allocations_um": {
+        "certified_operating_head_master_normal_um": 0.2,
+        "loaded_directional_bearing_diameter_um": 0.15,
+        "calibrated_comparator_including_scale_and_resolution_um": 0.15,
+        "reseat_and_drift_um": 0.1,
+        "temperature_change_um": 0.08,
+        "probing_force_and_contact_deformation_um": 0.08,
+        "alignment_and_Abbe_um": 0.03
+      },
+      "total_error_bound_um": 0.7899999999999999,
+      "residual_guard_um": 0.05463133824077915,
+      "yoke_and_post_normal_compliance_mm_N": 0.001178639450799132,
+      "nominal_variation_um_per_0p02N": 0.02357278901598264,
+      "thermal_example_normal_um_per_K": 2.5330246872499984
+    }
+  }
+}

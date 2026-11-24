@@ -1,0 +1,6945 @@
+{
+  "units": "mm",
+  "frame": "F62 world XYZ",
+  "components": [
+    {
+      "part": "0_inner_left",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 6.622389600500375,
+      "center_world_mm": [
+        134.12304059625998,
+        111.50142511574006,
+        112.16349876623998
+      ],
+      "world_limits_mm": [
+        [
+          133.57944059626,
+          109.75142511574,
+          110.41349876624
+        ],
+        [
+          134.66664059626,
+          113.25142511574,
+          113.91349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "0_inner_right",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 6.622389600500373,
+      "center_world_mm": [
+        131.41024059626,
+        111.50142511574002,
+        112.16349876623998
+      ],
+      "world_limits_mm": [
+        [
+          130.86664059626,
+          109.75142511574,
+          110.41349876624
+        ],
+        [
+          131.95384059626,
+          113.25142511574,
+          113.91349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "0_outer_left",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 7.918604194858727,
+      "center_world_mm": [
+        136.31664059626,
+        111.50142511574002,
+        112.16349876623997
+      ],
+      "world_limits_mm": [
+        [
+          135.66664059626,
+          109.75142511574,
+          110.41349876624
+        ],
+        [
+          136.96664059626,
+          113.25142511574,
+          113.91349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "0_outer_right",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 12.791591391695,
+      "center_world_mm": [
+        128.81664059626,
+        111.50142511574006,
+        112.16349876624
+      ],
+      "world_limits_mm": [
+        [
+          127.76664059626,
+          109.75142511574,
+          110.41349876624
+        ],
+        [
+          129.86664059626,
+          113.25142511574,
+          113.91349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "1_inner_left",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 6.622389600500378,
+      "center_world_mm": [
+        134.12304059625998,
+        122.75975536494006,
+        105.66349876624
+      ],
+      "world_limits_mm": [
+        [
+          133.57944059626,
+          121.00975536494,
+          103.91349876624
+        ],
+        [
+          134.66664059626,
+          124.50975536494,
+          107.41349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "1_inner_right",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 6.622389600500378,
+      "center_world_mm": [
+        131.41024059626,
+        122.75975536494006,
+        105.66349876623998
+      ],
+      "world_limits_mm": [
+        [
+          130.86664059626,
+          121.00975536494,
+          103.91349876624
+        ],
+        [
+          131.95384059626,
+          124.50975536494,
+          107.41349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "1_outer_left",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 7.918604194858732,
+      "center_world_mm": [
+        136.31664059626,
+        122.75975536494003,
+        105.66349876623998
+      ],
+      "world_limits_mm": [
+        [
+          135.66664059626,
+          121.00975536494,
+          103.91349876624
+        ],
+        [
+          136.96664059626,
+          124.50975536494,
+          107.41349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "1_outer_right",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 12.791591391695006,
+      "center_world_mm": [
+        128.81664059626,
+        122.75975536494003,
+        105.66349876624001
+      ],
+      "world_limits_mm": [
+        [
+          127.76664059626,
+          121.00975536494,
+          103.91349876624
+        ],
+        [
+          129.86664059626,
+          124.50975536494,
+          107.41349876624
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "B01_bed",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 75879.01177685912,
+      "center_world_mm": [
+        146.06220620878003,
+        211.17133376914967,
+        65.25430074921043
+      ],
+      "world_limits_mm": [
+        [
+          94.0,
+          165.5,
+          60.0
+        ],
+        [
+          202.0,
+          260.0,
+          74.4
+        ]
+      ],
+      "solids": 1,
+      "faces": 332,
+      "edges": 945
+    },
+    {
+      "part": "B02_three_root_cover",
+      "group": "cover_and_board",
+      "description": "integral cover, one physical item",
+      "quantity": 1,
+      "volume_mm3": 33864.82980242951,
+      "center_world_mm": [
+        147.8923449678348,
+        212.28792918296676,
+        74.94617198418192
+      ],
+      "world_limits_mm": [
+        [
+          94.0,
+          163.81258294664767,
+          68.0
+        ],
+        [
+          202.0,
+          260.0,
+          87.22827500031131
+        ]
+      ],
+      "solids": 1,
+      "faces": 280,
+      "edges": 801
+    },
+    {
+      "part": "F03_receiver_drilling",
+      "group": "receiver register",
+      "description": "drilled and dowel-potted station board",
+      "quantity": 1,
+      "volume_mm3": 1752806.6516827336,
+      "center_world_mm": [
+        160.38372450530713,
+        243.99489480848086,
+        5.9983318934786025
+      ],
+      "world_limits_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          320.0,
+          480.0,
+          12.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 79,
+      "edges": 201
+    },
+    {
+      "part": "GN615_M4_K_0",
+      "group": "receiver register",
+      "description": "M4 spring plunger",
+      "quantity": 1,
+      "volume_mm3": 113.65863341667637,
+      "center_world_mm": [
+        204.00000000000003,
+        101.87709884278019,
+        14.750000000000046
+      ],
+      "world_limits_mm": [
+        [
+          202.0,
+          97.0,
+          12.75
+        ],
+        [
+          206.0,
+          106.4,
+          16.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 5
+    },
+    {
+      "part": "GN615_M4_K_1",
+      "group": "receiver register",
+      "description": "M4 spring plunger",
+      "quantity": 1,
+      "volume_mm3": 113.65863341667655,
+      "center_world_mm": [
+        265.0,
+        101.87709884278017,
+        14.750000000000048
+      ],
+      "world_limits_mm": [
+        [
+          263.0,
+          97.0,
+          12.75
+        ],
+        [
+          267.0,
+          106.4,
+          16.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 5
+    },
+    {
+      "part": "GN615_M4_K_2",
+      "group": "receiver register",
+      "description": "M4 spring plunger",
+      "quantity": 1,
+      "volume_mm3": 113.65863341667651,
+      "center_world_mm": [
+        191.12290115721981,
+        73.0,
+        14.749999999999954
+      ],
+      "world_limits_mm": [
+        [
+          186.6,
+          71.0,
+          12.75
+        ],
+        [
+          196.0,
+          75.0,
+          16.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 5
+    },
+    {
+      "part": "HW_M2nut_cover_0_0",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091082318,
+      "center_world_mm": [
+        99.99999999999416,
+        178.00000000000003,
+        64.60000000000002
+      ],
+      "world_limits_mm": [
+        [
+          97.690598923241,
+          175.99999999999994,
+          63.8
+        ],
+        [
+          102.30940107675,
+          180.00000000000009,
+          65.4
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_0_1",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.14370209108224,
+      "center_world_mm": [
+        99.99999999999416,
+        241.99999999999994,
+        55.2
+      ],
+      "world_limits_mm": [
+        [
+          97.690598923241,
+          239.99999999999994,
+          54.4
+        ],
+        [
+          102.30940107675,
+          244.00000000000009,
+          56.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_1_0",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091088688,
+      "center_world_mm": [
+        123.99999999999353,
+        178.00000000000003,
+        64.59999999999997
+      ],
+      "world_limits_mm": [
+        [
+          121.69059892324,
+          175.99999999999994,
+          63.8
+        ],
+        [
+          126.30940107675,
+          180.00000000000009,
+          65.4
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_1_1",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.14370209108861,
+      "center_world_mm": [
+        123.99999999999355,
+        242.0,
+        55.20000000000001
+      ],
+      "world_limits_mm": [
+        [
+          121.69059892324,
+          239.99999999999994,
+          54.4
+        ],
+        [
+          126.30940107675,
+          244.00000000000009,
+          56.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_2_0",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.14370209108866,
+      "center_world_mm": [
+        147.99999999999358,
+        178.00000000000006,
+        64.6
+      ],
+      "world_limits_mm": [
+        [
+          145.69059892324,
+          175.99999999999994,
+          63.8
+        ],
+        [
+          150.30940107675,
+          180.00000000000006,
+          65.4
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_2_1",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091088578,
+      "center_world_mm": [
+        147.99999999999358,
+        242.00000000000009,
+        55.20000000000001
+      ],
+      "world_limits_mm": [
+        [
+          145.69059892324,
+          239.99999999999994,
+          54.4
+        ],
+        [
+          150.30940107675,
+          244.00000000000006,
+          56.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_3_0",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.14370209108866,
+      "center_world_mm": [
+        171.99999999999352,
+        178.00000000000006,
+        64.6
+      ],
+      "world_limits_mm": [
+        [
+          169.69059892324,
+          175.99999999999994,
+          63.8
+        ],
+        [
+          174.30940107675,
+          180.00000000000006,
+          65.4
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_3_1",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091088578,
+      "center_world_mm": [
+        171.99999999999355,
+        242.00000000000003,
+        55.2
+      ],
+      "world_limits_mm": [
+        [
+          169.69059892324,
+          239.99999999999994,
+          54.4
+        ],
+        [
+          174.30940107675,
+          244.00000000000006,
+          56.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_4_0",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.14370209108866,
+      "center_world_mm": [
+        195.99999999999352,
+        178.00000000000006,
+        64.6
+      ],
+      "world_limits_mm": [
+        [
+          193.69059892324,
+          175.99999999999994,
+          63.8
+        ],
+        [
+          198.30940107675,
+          180.00000000000006,
+          65.4
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2nut_cover_4_1",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091088578,
+      "center_world_mm": [
+        195.99999999999355,
+        242.00000000000009,
+        55.20000000000001
+      ],
+      "world_limits_mm": [
+        [
+          193.69059892324,
+          239.99999999999994,
+          54.4
+        ],
+        [
+          198.30940107675,
+          244.00000000000006,
+          56.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "HW_M2x16_cover_0_0",
+      "group": "cover_and_board",
+      "description": "M2 x 16 front cover screw",
+      "quantity": 1,
+      "volume_mm3": 76.25305104719678,
+      "center_world_mm": [
+        100.0,
+        178.0,
+        72.04906726241244
+      ],
+      "world_limits_mm": [
+        [
+          98.01,
+          176.01,
+          61.0
+        ],
+        [
+          101.99,
+          179.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_0_1",
+      "group": "cover_and_board",
+      "description": "M2 x 24 rear cover screw",
+      "quantity": 1,
+      "volume_mm3": 101.38579227591511,
+      "center_world_mm": [
+        99.99999999999997,
+        242.0,
+        68.31852174169022
+      ],
+      "world_limits_mm": [
+        [
+          98.01,
+          240.01,
+          53.0
+        ],
+        [
+          101.99,
+          243.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_1_0",
+      "group": "cover_and_board",
+      "description": "M2 x 16 front cover screw",
+      "quantity": 1,
+      "volume_mm3": 76.25305104719679,
+      "center_world_mm": [
+        124.0,
+        178.0,
+        72.04906726241244
+      ],
+      "world_limits_mm": [
+        [
+          122.01,
+          176.01,
+          61.0
+        ],
+        [
+          125.99,
+          179.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_1_1",
+      "group": "cover_and_board",
+      "description": "M2 x 24 rear cover screw",
+      "quantity": 1,
+      "volume_mm3": 101.38579227591514,
+      "center_world_mm": [
+        123.99999999999999,
+        242.0,
+        68.31852174169022
+      ],
+      "world_limits_mm": [
+        [
+          122.01,
+          240.01,
+          53.0
+        ],
+        [
+          125.99,
+          243.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_2_0",
+      "group": "cover_and_board",
+      "description": "M2 x 16 front cover screw",
+      "quantity": 1,
+      "volume_mm3": 76.25305104719698,
+      "center_world_mm": [
+        147.99999999999997,
+        178.0,
+        72.04906726241245
+      ],
+      "world_limits_mm": [
+        [
+          146.01,
+          176.01,
+          61.0
+        ],
+        [
+          149.99,
+          179.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_2_1",
+      "group": "cover_and_board",
+      "description": "M2 x 24 rear cover screw",
+      "quantity": 1,
+      "volume_mm3": 101.38579227591534,
+      "center_world_mm": [
+        147.99999999999994,
+        242.0,
+        68.31852174169023
+      ],
+      "world_limits_mm": [
+        [
+          146.01,
+          240.01,
+          53.0
+        ],
+        [
+          149.99,
+          243.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_3_0",
+      "group": "cover_and_board",
+      "description": "M2 x 16 front cover screw",
+      "quantity": 1,
+      "volume_mm3": 76.25305104719698,
+      "center_world_mm": [
+        172.0,
+        178.0,
+        72.04906726241245
+      ],
+      "world_limits_mm": [
+        [
+          170.01,
+          176.01,
+          61.0
+        ],
+        [
+          173.99,
+          179.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_3_1",
+      "group": "cover_and_board",
+      "description": "M2 x 24 rear cover screw",
+      "quantity": 1,
+      "volume_mm3": 101.38579227591534,
+      "center_world_mm": [
+        171.99999999999997,
+        242.0,
+        68.31852174169023
+      ],
+      "world_limits_mm": [
+        [
+          170.01,
+          240.01,
+          53.0
+        ],
+        [
+          173.99,
+          243.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_4_0",
+      "group": "cover_and_board",
+      "description": "M2 x 16 front cover screw",
+      "quantity": 1,
+      "volume_mm3": 76.25305104719696,
+      "center_world_mm": [
+        195.99999999999997,
+        178.0,
+        72.04906726241245
+      ],
+      "world_limits_mm": [
+        [
+          194.01,
+          176.01,
+          61.0
+        ],
+        [
+          197.99,
+          179.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "HW_M2x16_cover_4_1",
+      "group": "cover_and_board",
+      "description": "M2 x 24 rear cover screw",
+      "quantity": 1,
+      "volume_mm3": 101.3857922759153,
+      "center_world_mm": [
+        196.0,
+        242.00000000000003,
+        68.31852174169026
+      ],
+      "world_limits_mm": [
+        [
+          194.01,
+          240.01,
+          53.0
+        ],
+        [
+          197.99,
+          243.99,
+          79.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "PLATE_LEFT",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 273.87549195754417,
+      "center_world_mm": [
+        135.16664059625995,
+        114.17270052709718,
+        118.6158179508741
+      ],
+      "world_limits_mm": [
+        [
+          134.66664059626,
+          98.87405611984,
+          102.90072999097913
+        ],
+        [
+          135.66664059626,
+          127.29001125326,
+          130.92532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 15,
+      "edges": 39
+    },
+    {
+      "part": "PLATE_RIGHT",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 273.87549195754417,
+      "center_world_mm": [
+        130.36664059625997,
+        114.1727005270972,
+        118.6158179508741
+      ],
+      "world_limits_mm": [
+        [
+          129.86664059626,
+          98.87405611984,
+          102.90072999097913
+        ],
+        [
+          130.86664059626,
+          127.29001125326,
+          130.92532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 15,
+      "edges": 39
+    },
+    {
+      "part": "R0_ball_glue",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.0011699218823652885,
+      "center_world_mm": [
+        133.89956792884809,
+        159.2821371427066,
+        83.54568727907217
+      ],
+      "world_limits_mm": [
+        [
+          133.74605163723942,
+          159.13676343928404,
+          83.46751702625566
+        ],
+        [
+          134.04052027358185,
+          159.43560955678404,
+          83.588783972786
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 7
+    },
+    {
+      "part": "R0_formed_leaf",
+      "group": "retained_tips",
+      "description": "steel leaf, single physical component",
+      "quantity": 1,
+      "volume_mm3": 0.9203381142218129,
+      "center_world_mm": [
+        133.53545345944318,
+        162.86871128691666,
+        86.12102607950538
+      ],
+      "world_limits_mm": [
+        [
+          131.86013991466805,
+          158.2055180064321,
+          85.99233648460871
+        ],
+        [
+          135.23329174942194,
+          167.44773913967168,
+          86.250865907269
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 15
+    },
+    {
+      "part": "R0_root_glue",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.212307200002199,
+      "center_world_mm": [
+        132.691891718241,
+        166.02074404777414,
+        86.07794934986961
+      ],
+      "world_limits_mm": [
+        [
+          131.80772180393927,
+          164.4735408630677,
+          85.96027806438167
+        ],
+        [
+          133.59276702534163,
+          167.50552625863,
+          86.19647370117879
+        ]
+      ],
+      "solids": 1,
+      "faces": 11,
+      "edges": 24
+    },
+    {
+      "part": "R0_sphere",
+      "group": "retained_tips",
+      "description": "metal",
+      "quantity": 1,
+      "volume_mm3": 0.06544984694978771,
+      "center_world_mm": [
+        133.8388394995,
+        159.3212829469,
+        83.323783972786
+      ],
+      "world_limits_mm": [
+        [
+          133.5888394995,
+          159.0712829469,
+          83.073783972786
+        ],
+        [
+          134.0888394995,
+          159.5712829469,
+          83.573783972786
+        ]
+      ],
+      "solids": 1,
+      "faces": 1,
+      "edges": 1
+    },
+    {
+      "part": "R0_stem_bond",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.0021396563663555646,
+      "center_world_mm": [
+        134.61950751016678,
+        158.81806064557304,
+        86.17638358456439
+      ],
+      "world_limits_mm": [
+        [
+          134.42754626517146,
+          158.63634423457788,
+          86.11895130350817
+        ],
+        [
+          134.81146877485853,
+          158.9997770438621,
+          86.23381593772483
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "R0_wire",
+      "group": "retained_tips",
+      "description": "metal",
+      "quantity": 1,
+      "volume_mm3": 0.21258927822649654,
+      "center_world_mm": [
+        134.29324257562692,
+        159.0283725673349,
+        84.98419533836847
+      ],
+      "world_limits_mm": [
+        [
+          133.75085548411067,
+          158.6282506760815,
+          83.48507051982465
+        ],
+        [
+          134.8293955831463,
+          159.4325129864393,
+          86.46054051429871
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 5
+    },
+    {
+      "part": "R186_ball",
+      "group": "retained_tips",
+      "description": "older retained support member",
+      "quantity": 1,
+      "volume_mm3": 4.1887902047863985,
+      "center_world_mm": [
+        128.20768390642,
+        163.86704189772,
+        79.763219261504
+      ],
+      "world_limits_mm": [
+        [
+          127.20768390641999,
+          162.86704189772,
+          78.763219261504
+        ],
+        [
+          129.20768390642,
+          164.86704189772,
+          80.763219261504
+        ]
+      ],
+      "solids": 1,
+      "faces": 1,
+      "edges": 1
+    },
+    {
+      "part": "R186_ball_glue",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.10027125958463978,
+      "center_world_mm": [
+        127.97830808012712,
+        163.3324596309041,
+        79.5635163173737
+      ],
+      "world_limits_mm": [
+        [
+          127.18768390641999,
+          162.84704189771998,
+          78.74321926150401
+        ],
+        [
+          129.04977017421868,
+          164.16832649130527,
+          80.63381230224729
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 4
+    },
+    {
+      "part": "R186_cup",
+      "group": "retained_tips",
+      "description": "older retained support member",
+      "quantity": 1,
+      "volume_mm3": 3.78708597313583,
+      "center_world_mm": [
+        127.89576547277528,
+        163.11503514790033,
+        79.48374968839705
+      ],
+      "world_limits_mm": [
+        [
+          126.57795588316363,
+          162.09291696884927,
+          78.1490982941945
+        ],
+        [
+          129.28545233487637,
+          164.29393021067074,
+          80.87405756366549
+        ]
+      ],
+      "solids": 1,
+      "faces": 8,
+      "edges": 17
+    },
+    {
+      "part": "R186_film",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.0373163406755863,
+      "center_world_mm": [
+        127.47382105438979,
+        162.87483179370307,
+        79.35085217458013
+      ],
+      "world_limits_mm": [
+        [
+          126.57049696972362,
+          162.3489881946,
+          78.874696401335
+        ],
+        [
+          128.39912361604274,
+          163.37280345615136,
+          79.82700794782211
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 15
+    },
+    {
+      "part": "R186_single_leaf",
+      "group": "retained_tips",
+      "description": "older retained support member",
+      "quantity": 1,
+      "volume_mm3": 1.8649999999826725,
+      "center_world_mm": [
+        119.73953780388781,
+        166.131668363537,
+        79.3313702649507
+      ],
+      "world_limits_mm": [
+        [
+          111.0874109051,
+          162.26206970325,
+          78.842226551971
+        ],
+        [
+          128.3916647026,
+          170.00126702385,
+          79.82051397794798
+        ]
+      ],
+      "solids": 1,
+      "faces": 6,
+      "edges": 12
+    },
+    {
+      "part": "R1_ball_glue",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.0011699218836868828,
+      "center_world_mm": [
+        134.10397030380963,
+        159.6140556892197,
+        82.17788988549704
+      ],
+      "world_limits_mm": [
+        [
+          133.951948467243,
+          159.46057642796825,
+          82.127271739756
+        ],
+        [
+          134.23873961656653,
+          159.7593941479702,
+          82.26780993503395
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 7
+    },
+    {
+      "part": "R1_formed_leaf",
+      "group": "retained_tips",
+      "description": "steel leaf, single physical component",
+      "quantity": 1,
+      "volume_mm3": 0.9203381142120834,
+      "center_world_mm": [
+        136.39427192245313,
+        163.23495599835755,
+        82.07380399220398
+      ],
+      "world_limits_mm": [
+        [
+          134.4731216505604,
+          159.4625103005263,
+          79.26376245618368
+        ],
+        [
+          138.28837451379,
+          166.94185832692077,
+          84.8331997372631
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 15
+    },
+    {
+      "part": "R1_root_glue",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.21230720000603662,
+      "center_world_mm": [
+        137.4072196096616,
+        165.6895843745273,
+        83.97051141795109
+      ],
+      "world_limits_mm": [
+        [
+          136.44547110341165,
+          164.31960403835805,
+          83.01417605577483
+        ],
+        [
+          138.34890830503645,
+          167.0109547166942,
+          84.88928551932669
+        ]
+      ],
+      "solids": 1,
+      "faces": 11,
+      "edges": 24
+    },
+    {
+      "part": "R1_sphere",
+      "group": "retained_tips",
+      "description": "metal",
+      "quantity": 1,
+      "volume_mm3": 0.06544984694978769,
+      "center_world_mm": [
+        134.02058191144,
+        159.57470721036,
+        82.392271739756
+      ],
+      "world_limits_mm": [
+        [
+          133.77058191144,
+          159.32470721036,
+          82.142271739756
+        ],
+        [
+          134.27058191144,
+          159.82470721036,
+          82.642271739756
+        ]
+      ],
+      "solids": 1,
+      "faces": 1,
+      "edges": 1
+    },
+    {
+      "part": "R1_stem_bond",
+      "group": "retained_tips",
+      "description": "cured bond volume",
+      "quantity": 1,
+      "volume_mm3": 0.0021396563661806554,
+      "center_world_mm": [
+        135.09254141463404,
+        160.08053382798835,
+        79.6363613186391
+      ],
+      "world_limits_mm": [
+        [
+          134.9117932399085,
+          159.91442888516406,
+          79.48365880918611
+        ],
+        [
+          135.27328959019152,
+          160.24663877126596,
+          79.78906382589189
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "R1_wire",
+      "group": "retained_tips",
+      "description": "metal",
+      "quantity": 1,
+      "volume_mm3": 0.2125892782449157,
+      "center_world_mm": [
+        134.6445369601861,
+        159.86913350838574,
+        80.7881400630987
+      ],
+      "world_limits_mm": [
+        [
+          133.958544782137,
+          159.4636890359136,
+          79.34743655895484
+        ],
+        [
+          135.3219687864998,
+          160.2705386018169,
+          82.25085141934456
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 5
+    },
+    {
+      "part": "ROLLER_LEFT",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 53.014376029327806,
+      "center_world_mm": [
+        137.01664059626,
+        101.15405611984008,
+        128.64532994068
+      ],
+      "world_limits_mm": [
+        [
+          135.76664059626,
+          98.15405611984,
+          125.64532994068
+        ],
+        [
+          138.26664059626,
+          104.15405611984,
+          131.64532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "ROLLER_RIGHT",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 53.014376029327806,
+      "center_world_mm": [
+        128.51664059626006,
+        101.15405611984008,
+        128.64532994068
+      ],
+      "world_limits_mm": [
+        [
+          127.26664059626,
+          98.15405611984,
+          125.64532994068
+        ],
+        [
+          129.76664059626,
+          104.15405611984,
+          131.64532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "SQ_COMMON_REAR_METAL_BRIDGE",
+      "group": "cover_and_board",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 49645.07397163393,
+      "center_world_mm": [
+        156.09308908103182,
+        249.65032124091334,
+        40.10565677628951
+      ],
+      "world_limits_mm": [
+        [
+          94.0,
+          230.0,
+          10.0
+        ],
+        [
+          210.0,
+          260.0,
+          62.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 223,
+      "edges": 638
+    },
+    {
+      "part": "TOOL_F02_head_adapter",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 13931.382597526532,
+      "center_world_mm": [
+        106.38380992472598,
+        114.74902796383377,
+        76.46353119852006
+      ],
+      "world_limits_mm": [
+        [
+          77.766640596261,
+          102.19565374979135,
+          63.973633187094
+        ],
+        [
+          141.76664059626,
+          126.98026344063129,
+          93.973633187095
+        ]
+      ],
+      "solids": 1,
+      "faces": 22,
+      "edges": 62
+    },
+    {
+      "part": "TOOL_H01_hook_body",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 339.20510158397934,
+      "center_world_mm": [
+        132.76664195389236,
+        135.84697310172572,
+        98.14115745284583
+      ],
+      "world_limits_mm": [
+        [
+          131.95384059626,
+          107.97834890439,
+          77.709204772245
+        ],
+        [
+          133.57944059626,
+          165.91198744848,
+          115.22234449305
+        ]
+      ],
+      "solids": 1,
+      "faces": 33,
+      "edges": 90
+    },
+    {
+      "part": "TOOL_H02_gate",
+      "group": "gate",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 306.3108131459896,
+      "center_world_mm": [
+        132.76651401389574,
+        117.81428339401292,
+        105.40178876544024
+      ],
+      "world_limits_mm": [
+        [
+          130.01664059626,
+          89.55703258981241,
+          79.451437249875
+        ],
+        [
+          135.51664059626,
+          163.46249086826,
+          122.16913415842
+        ]
+      ],
+      "solids": 1,
+      "faces": 37,
+      "edges": 90
+    },
+    {
+      "part": "TOOL_H03_barrel_stop",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 32580.73654093704,
+      "center_world_mm": [
+        144.11106728291995,
+        89.9115639973844,
+        106.5048132223333
+      ],
+      "world_limits_mm": [
+        [
+          119.81664059626,
+          41.779646850834,
+          82.56209035520295
+        ],
+        [
+          165.76664059626,
+          154.3725683860415,
+          158.50843155582
+        ]
+      ],
+      "solids": 1,
+      "faces": 128,
+      "edges": 367
+    },
+    {
+      "part": "TOOL_H04_bearing",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 12087.250996717548,
+      "center_world_mm": [
+        132.6074761422644,
+        125.37553186916367,
+        94.1941565825227
+      ],
+      "world_limits_mm": [
+        [
+          120.76664059626,
+          106.1956537498,
+          72.97363318708793
+        ],
+        [
+          144.76664059626,
+          145.98026344063229,
+          119.57875095361
+        ]
+      ],
+      "solids": 1,
+      "faces": 55,
+      "edges": 147
+    },
+    {
+      "part": "TOOL_H05_rear_collar",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 1521.7058417413007,
+      "center_world_mm": [
+        132.76664059625992,
+        114.81098640203122,
+        107.04582706486943
+      ],
+      "world_limits_mm": [
+        [
+          121.76664059626,
+          105.56852401802,
+          94.5374126287178
+        ],
+        [
+          143.76664059626,
+          124.6307018445221,
+          120.55407312711762
+        ]
+      ],
+      "solids": 1,
+      "faces": 12,
+      "edges": 30
+    },
+    {
+      "part": "TOOL_H06_front_collar",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 1521.7058417384565,
+      "center_world_mm": [
+        132.76664059625992,
+        141.78767772991156,
+        91.47082706486911
+      ],
+      "world_limits_mm": [
+        [
+          121.76664059626,
+          132.54521534590828,
+          78.96241262872213
+        ],
+        [
+          143.76664059626,
+          151.6073931724021,
+          104.97907312711762
+        ]
+      ],
+      "solids": 1,
+      "faces": 12,
+      "edges": 30
+    },
+    {
+      "part": "TOOL_H07_gate_knob",
+      "group": "gate",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 4929.964888258136,
+      "center_world_mm": [
+        134.6879601610356,
+        83.7485940178877,
+        130.18476103951014
+      ],
+      "world_limits_mm": [
+        [
+          119.81664059626,
+          65.11272358875817,
+          116.17040832346
+        ],
+        [
+          150.26664059626,
+          104.76185092036,
+          141.79513076294
+        ]
+      ],
+      "solids": 1,
+      "faces": 54,
+      "edges": 150
+    },
+    {
+      "part": "TOOL_H08_stop_sleeve",
+      "group": "gate",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 221.78664839747765,
+      "center_world_mm": [
+        132.76664059596163,
+        90.98537038851299,
+        106.65716649229356
+      ],
+      "world_limits_mm": [
+        [
+          130.01664059626,
+          84.03718223751484,
+          101.24965035806
+        ],
+        [
+          135.51664059626,
+          99.18791667602513,
+          118.91161648905417
+        ]
+      ],
+      "solids": 1,
+      "faces": 20,
+      "edges": 43
+    },
+    {
+      "part": "TOOL_HW_M2nut_body_0",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091151965,
+      "center_world_mm": [
+        137.76664059625995,
+        111.50142511573999,
+        112.16349876624
+      ],
+      "world_limits_mm": [
+        [
+          136.96664059626,
+          109.50142511573993,
+          109.85409768948
+        ],
+        [
+          138.56664059626,
+          113.50142511574008,
+          114.472899843
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M2nut_body_1",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091151965,
+      "center_world_mm": [
+        137.76664059626,
+        122.75975536493999,
+        105.66349876624001
+      ],
+      "world_limits_mm": [
+        [
+          136.96664059626,
+          120.75975536493993,
+          103.35409768948
+        ],
+        [
+          138.56664059626,
+          124.75975536494008,
+          107.972899843
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M2nut_body_2",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.14370209114076,
+      "center_world_mm": [
+        137.76664059626006,
+        143.54436505576,
+        93.66349876624639
+      ],
+      "world_limits_mm": [
+        [
+          136.96664059626,
+          141.54436505575995,
+          91.35409768948738
+        ],
+        [
+          138.56664059626,
+          145.54436505576044,
+          95.97289984300564
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M2nut_gate",
+      "group": "gate",
+      "description": "M2 nut",
+      "quantity": 1,
+      "volume_mm3": 17.143702091133044,
+      "center_world_mm": [
+        132.76664059626034,
+        97.9656705073048,
+        123.32698739326095
+      ],
+      "world_limits_mm": [
+        [
+          130.76664059626,
+          95.56561389778925,
+          121.47966270933834
+        ],
+        [
+          134.76664059626037,
+          100.36572711682152,
+          125.1743120771875
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M2x12_body_0",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.581153978039474,
+      "center_world_mm": [
+        130.98346572853774,
+        111.50142511573999,
+        112.16349876623998
+      ],
+      "world_limits_mm": [
+        [
+          125.76664059626,
+          109.51142511574001,
+          110.17349876624
+        ],
+        [
+          139.76664059626,
+          113.49142511574,
+          114.15349876623999
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M2x12_body_1",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397803947,
+      "center_world_mm": [
+        130.98346572853774,
+        122.75975536493999,
+        105.66349876623998
+      ],
+      "world_limits_mm": [
+        [
+          125.76664059626,
+          120.76975536494001,
+          103.67349876624
+        ],
+        [
+          139.76664059626,
+          124.74975536494,
+          107.65349876623999
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M2x12_body_2",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397803937,
+      "center_world_mm": [
+        130.9834657285378,
+        143.54436505576,
+        93.66349876624702
+      ],
+      "world_limits_mm": [
+        [
+          125.76664059626,
+          141.55436505576,
+          91.67349876624701
+        ],
+        [
+          139.76664059626,
+          145.53436505576002,
+          95.653498766247
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M2x20_gate",
+      "group": "gate",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 91.79796565642363,
+      "center_world_mm": [
+        132.76664059626003,
+        91.91307694838967,
+        112.8406189548457
+      ],
+      "world_limits_mm": [
+        [
+          130.77664059626,
+          85.44445147456973,
+          103.62472600684565
+        ],
+        [
+          134.75664059626,
+          99.68157669899114,
+          125.29922860012007
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M3nut_bearing_0",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398537405,
+      "center_world_mm": [
+        132.76664059626,
+        116.55975536493969,
+        94.92478375931975
+      ],
+      "world_limits_mm": [
+        [
+          130.01664059626,
+          113.20975536494,
+          92.29784003450594
+        ],
+        [
+          135.51664059626023,
+          119.9097553649406,
+          97.55172748413312
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M3nut_bearing_1",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.908843985369444,
+      "center_world_mm": [
+        132.76664059626012,
+        130.4161618254898,
+        86.92478375931962
+      ],
+      "world_limits_mm": [
+        [
+          130.01664059626,
+          127.06616182549,
+          84.29784003450594
+        ],
+        [
+          135.51664059626,
+          133.76616182549017,
+          89.55172748413307
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M3nut_collar_0",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.9088439852591,
+      "center_world_mm": [
+        140.96664059626,
+        110.09961293126983,
+        98.88548884007076
+      ],
+      "world_limits_mm": [
+        [
+          139.76664059626,
+          107.34961293127,
+          95.710062359533
+        ],
+        [
+          142.16664059626,
+          112.84961293127,
+          102.06091532061171
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M3nut_collar_1",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398537031,
+      "center_world_mm": [
+        140.96664059626,
+        137.0763042591588,
+        83.3104888400761
+      ],
+      "world_limits_mm": [
+        [
+          139.76664059626,
+          134.3263042591525,
+          80.13506235952846
+        ],
+        [
+          142.16664059626,
+          139.82630425916,
+          86.48591532062333
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M3nut_roll_lock",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398531631,
+      "center_world_mm": [
+        132.7666405962607,
+        136.2879585952113,
+        113.0950340961969
+      ],
+      "world_limits_mm": [
+        [
+          130.01664059625918,
+          132.93795859520958,
+          110.46809037138
+        ],
+        [
+          135.51664059626083,
+          139.63795859521363,
+          115.7219778210104
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TOOL_HW_M3x12_roll_lock",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 160.83949076721325,
+      "center_world_mm": [
+        132.76664059626,
+        138.51029592879286,
+        116.94423526951972
+      ],
+      "world_limits_mm": [
+        [
+          129.92664059626,
+          132.4389204895335,
+          107.92830453689972
+        ],
+        [
+          135.60664059626,
+          143.69747074195914,
+          123.08868559366054
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M3x20_collar_0",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 217.38815853192193,
+      "center_world_mm": [
+        131.74531013011122,
+        110.09961293126999,
+        98.885488840076
+      ],
+      "world_limits_mm": [
+        [
+          122.76664059626,
+          107.25961293127,
+          96.04548884007599
+        ],
+        [
+          145.76664059626,
+          112.93961293127,
+          101.725488840076
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M3x20_collar_1",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 217.38815853192187,
+      "center_world_mm": [
+        131.7453101301112,
+        137.07630425916,
+        83.31048884007602
+      ],
+      "world_limits_mm": [
+        [
+          122.76664059626,
+          134.23630425916,
+          80.470488840076
+        ],
+        [
+          145.76664059626,
+          139.91630425916,
+          86.15048884007601
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M3x25_bearing_0",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 252.73107588482233,
+      "center_world_mm": [
+        132.76664059626003,
+        109.8042943646246,
+        83.22398207822665
+      ],
+      "world_limits_mm": [
+        [
+          129.92664059626,
+          101.7002432181925,
+          72.02735374546117
+        ],
+        [
+          135.60664059626,
+          119.45879347061648,
+          98.44606505143028
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TOOL_HW_M3x25_bearing_1",
+      "group": "head_mount",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 252.7310758848223,
+      "center_world_mm": [
+        132.76664059626,
+        123.66070082517497,
+        75.22398207822732
+      ],
+      "world_limits_mm": [
+        [
+          129.92664059626,
+          115.5566496787425,
+          64.02735374546445
+        ],
+        [
+          135.60664059626,
+          133.3151999311665,
+          90.44606505143028
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R01_front_stripper",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 999.7744680025326,
+      "center_world_mm": [
+        137.85276435367624,
+        167.2913047892594,
+        130.10204015925956
+      ],
+      "world_limits_mm": [
+        [
+          122.56926026326,
+          156.72914288256993,
+          112.62063909911393
+        ],
+        [
+          153.53498145664,
+          178.40119419534005,
+          148.53213307706608
+        ]
+      ],
+      "solids": 1,
+      "faces": 36,
+      "edges": 102
+    },
+    {
+      "part": "TRANSFER_R02_rear_stripper",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 999.7744679995678,
+      "center_world_mm": [
+        137.85276435368291,
+        164.4978532468115,
+        131.71484015925557
+      ],
+      "world_limits_mm": [
+        [
+          122.56926026326,
+          153.93569134011994,
+          114.23343909911392
+        ],
+        [
+          153.53498145664,
+          175.60774265289007,
+          150.14493307706607
+        ]
+      ],
+      "solids": 1,
+      "faces": 36,
+      "edges": 102
+    },
+    {
+      "part": "TRANSFER_R03_lift_pin_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 53.70258497520163,
+      "center_world_mm": [
+        132.21497406475015,
+        172.3020550362785,
+        120.46430657667173
+      ],
+      "world_limits_mm": [
+        [
+          131.46497406475,
+          158.76632349408985,
+          112.19813942245176
+        ],
+        [
+          132.96497406475,
+          185.86947653125014,
+          128.71217752812825
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 11
+    },
+    {
+      "part": "TRANSFER_R03_lift_pin_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 53.70258497517288,
+      "center_world_mm": [
+        138.41694536194,
+        171.17338856329258,
+        118.50939890068504
+      ],
+      "world_limits_mm": [
+        [
+          137.66694536194,
+          157.63765702110985,
+          110.24323174646176
+        ],
+        [
+          139.16694536194,
+          184.74081005827014,
+          126.75726985213825
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 11
+    },
+    {
+      "part": "TRANSFER_R05_lift_carriage",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 9257.815586395256,
+      "center_world_mm": [
+        139.10644757842442,
+        182.67216914394143,
+        125.23608502377319
+      ],
+      "world_limits_mm": [
+        [
+          125.91903350549,
+          163.06001040851,
+          108.91042331003582
+        ],
+        [
+          152.9213693610267,
+          207.72661299282058,
+          141.11553031694
+        ]
+      ],
+      "solids": 1,
+      "faces": 46,
+      "edges": 111
+    },
+    {
+      "part": "TRANSFER_R06_anchor",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 15344.771288828302,
+      "center_world_mm": [
+        147.1279060839799,
+        204.54359828690792,
+        134.52971109423
+      ],
+      "world_limits_mm": [
+        [
+          120.28777996764221,
+          172.1971289952303,
+          108.68734788856636
+        ],
+        [
+          172.91746891854297,
+          238.455855565834,
+          163.57545780209
+        ]
+      ],
+      "solids": 1,
+      "faces": 182,
+      "edges": 524
+    },
+    {
+      "part": "TRANSFER_R07_plate_spacer",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 86.14655113951474,
+      "center_world_mm": [
+        143.1824230098359,
+        173.21613742362487,
+        143.5897513083284
+      ],
+      "world_limits_mm": [
+        [
+          136.51820685514,
+          170.08771773944,
+          138.97116946792758
+        ],
+        [
+          149.84663916453312,
+          176.34455710781137,
+          148.20833314874
+        ]
+      ],
+      "solids": 1,
+      "faces": 8,
+      "edges": 18
+    },
+    {
+      "part": "TRANSFER_R09_anchor_screw_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 189.11382464957595,
+      "center_world_mm": [
+        140.36334514747995,
+        177.40478286224277,
+        142.35622826770924
+      ],
+      "world_limits_mm": [
+        [
+          137.52334514748,
+          166.4195448201897,
+          136.3060335597625
+        ],
+        [
+          143.20334514748,
+          185.04402749209052,
+          149.5645838121865
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R09_anchor_screw_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 189.1138246496083,
+      "center_world_mm": [
+        146.00150087219015,
+        176.37872243226607,
+        140.5790394713484
+      ],
+      "world_limits_mm": [
+        [
+          143.16150087219,
+          165.39348439020972,
+          134.5288447634025
+        ],
+        [
+          148.84150087219,
+          184.01796706212053,
+          147.7873950158265
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R10_anchor_nut_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398539835,
+      "center_world_mm": [
+        140.3633451474761,
+        170.58930593465294,
+        146.291145706511
+      ],
+      "world_limits_mm": [
+        [
+          137.23616053031387,
+          168.0581130343,
+          143.10699099935
+        ],
+        [
+          143.49052976464,
+          173.12049883500603,
+          149.475300413672
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TRANSFER_R10_anchor_nut_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398538411,
+      "center_world_mm": [
+        146.00150087219336,
+        169.5632455046767,
+        144.51395691015534
+      ],
+      "world_limits_mm": [
+        [
+          142.87431625503,
+          167.03205260432398,
+          141.32980220298802
+        ],
+        [
+          149.12868548935614,
+          172.09443840502357,
+          147.69811161732
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TRANSFER_R31_collet_cap_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 416.86948281045477,
+      "center_world_mm": [
+        138.0937706916289,
+        173.8169264469234,
+        115.17939792825183
+      ],
+      "world_limits_mm": [
+        [
+          134.28989928336566,
+          162.16350169231944,
+          107.35762466416583
+        ],
+        [
+          141.87670715168,
+          184.90284056746,
+          123.46891485322999
+        ]
+      ],
+      "solids": 1,
+      "faces": 20,
+      "edges": 52
+    },
+    {
+      "part": "TRANSFER_R31_collet_cap_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 416.8694828106077,
+      "center_world_mm": [
+        131.45844395296086,
+        174.65171564246475,
+        117.4861048920534
+      ],
+      "world_limits_mm": [
+        [
+          127.71205093787,
+          163.36057219395946,
+          109.43101159324878
+        ],
+        [
+          135.29885880618,
+          186.0999110691,
+          125.54230178230999
+        ]
+      ],
+      "solids": 1,
+      "faces": 20,
+      "edges": 52
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.581153978004224,
+      "center_world_mm": [
+        135.98941457700616,
+        166.05685789888452,
+        121.18951542589477
+      ],
+      "world_limits_mm": [
+        [
+          132.3351669821963,
+          161.84908287288266,
+          115.78759013409038
+        ],
+        [
+          139.93312992490576,
+          171.06634843800862,
+          128.91839105714993
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.581153978099266,
+      "center_world_mm": [
+        140.12406210845603,
+        165.30441358356356,
+        119.8862436418896
+      ],
+      "world_limits_mm": [
+        [
+          136.46981451364633,
+          161.09663855756267,
+          114.48431835009038
+        ],
+        [
+          144.06777745635577,
+          170.31390412268863,
+          127.6151192731499
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_2",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397806763,
+      "center_world_mm": [
+        135.98941457700477,
+        176.4491627442946,
+        115.1895154258915
+      ],
+      "world_limits_mm": [
+        [
+          132.3351669821963,
+          172.24138771829266,
+          109.78759013409038
+        ],
+        [
+          139.93312992490576,
+          181.4586532834186,
+          122.9183910571499
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_3",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397809922,
+      "center_world_mm": [
+        140.12406210845603,
+        175.6967184289736,
+        113.8862436418896
+      ],
+      "world_limits_mm": [
+        [
+          136.46981451364633,
+          171.48894340297267,
+          108.48431835009038
+        ],
+        [
+          144.06777745635577,
+          180.70620896809862,
+          121.6151192731499
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_4",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397809314,
+      "center_world_mm": [
+        133.9220908112744,
+        169.89718167167416,
+        119.84115131788634
+      ],
+      "world_limits_mm": [
+        [
+          130.2678432164663,
+          165.68940664567268,
+          114.43922602608038
+        ],
+        [
+          137.86580615917578,
+          174.90667221079863,
+          127.5700269491499
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_5",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397805776,
+      "center_world_mm": [
+        129.7874432798144,
+        170.6496259869942,
+        121.14442310188068
+      ],
+      "world_limits_mm": [
+        [
+          126.13319568500633,
+          166.44185096099267,
+          115.74249781008038
+        ],
+        [
+          133.73115862771576,
+          175.65911652611862,
+          128.87329873313993
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_6",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397802986,
+      "center_world_mm": [
+        133.92209081127578,
+        180.28948651709408,
+        113.8411513178896
+      ],
+      "world_limits_mm": [
+        [
+          130.2678432164663,
+          176.08171149109268,
+          108.43922602608038
+        ],
+        [
+          137.86580615917578,
+          185.29897705621863,
+          121.5700269491499
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R32_M2x12_collet_7",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 62.58115397806762,
+      "center_world_mm": [
+        129.78744327981477,
+        181.04193083240463,
+        115.14442310188151
+      ],
+      "world_limits_mm": [
+        [
+          126.13319568500633,
+          176.83415580640266,
+          109.74249781008038
+        ],
+        [
+          133.73115862771576,
+          186.05142137152862,
+          122.8732987331399
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R34_taper_key_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 162.51573728254286,
+      "center_world_mm": [
+        146.6096590198012,
+        182.58843158493437,
+        131.82304097921246
+      ],
+      "world_limits_mm": [
+        [
+          127.8467792918143,
+          178.08221291155849,
+          125.89656612393547
+        ],
+        [
+          158.69115197924424,
+          186.9260231547986,
+          138.5845600258698
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "TRANSFER_R34_taper_key_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 153.74077727561408,
+      "center_world_mm": [
+        146.49634095077133,
+        193.00135863237173,
+        125.8587596809793
+      ],
+      "world_limits_mm": [
+        [
+          127.8467792918143,
+          188.48170706696138,
+          119.89656612393547
+        ],
+        [
+          158.69115197924424,
+          197.3183280002086,
+          132.5845600258698
+        ]
+      ],
+      "solids": 1,
+      "faces": 16,
+      "edges": 35
+    },
+    {
+      "part": "TRANSFER_R36_key_nut_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 30.001478659489756,
+      "center_world_mm": [
+        131.08775117026104,
+        185.41318780306995,
+        136.71566226800493
+      ],
+      "world_limits_mm": [
+        [
+          129.0881412145081,
+          183.17377370274,
+          134.09603925029748
+        ],
+        [
+          133.08736112601267,
+          187.6526019034,
+          139.33528528571
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TRANSFER_R36_key_nut_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 30.00147865949227,
+      "center_world_mm": [
+        131.08775117025945,
+        195.80549264848065,
+        130.7156622680052
+      ],
+      "world_limits_mm": [
+        [
+          129.0881412145081,
+          193.56607854815,
+          128.096039250298
+        ],
+        [
+          133.08736112601187,
+          198.04490674881,
+          133.33528528571
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "TRANSFER_R37_M3x16_draw",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 189.11382464948522,
+      "center_world_mm": [
+        151.0242623577117,
+        180.59612526724436,
+        116.37226521272339
+      ],
+      "world_limits_mm": [
+        [
+          139.40534816048148,
+          176.56987474598796,
+          111.53259896075613
+        ],
+        [
+          158.74387537744497,
+          184.09513478559293,
+          121.3056125724547
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R38_draw_lower_washer",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 69.98683034075358,
+      "center_world_mm": [
+        152.13438244568553,
+        180.3940999329976,
+        116.02234706939608
+      ],
+      "world_limits_mm": [
+        [
+          149.95443541866155,
+          175.38224849392697,
+          111.09861541098094
+        ],
+        [
+          154.31432947270847,
+          185.40595137207302,
+          120.94607872780907
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R39_draw_upper_washer",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 69.98683034070423,
+      "center_world_mm": [
+        154.48361399765534,
+        179.96657475384836,
+        115.28185173758592
+      ],
+      "world_limits_mm": [
+        [
+          152.30366697063155,
+          174.95472331476697,
+          110.35812007917093
+        ],
+        [
+          156.66356102467847,
+          184.97842619292302,
+          120.20558339599907
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R40_disc_stack_CLEARANCE_ENVELOPE",
+      "group": "stripper_and_index_frame",
+      "description": "clearance envelope",
+      "quantity": 1,
+      "volume_mm3": 62.309563293101746,
+      "center_world_mm": [
+        153.30899822166873,
+        180.18033734342245,
+        115.65209940348551
+      ],
+      "world_limits_mm": [
+        [
+          151.18484516127836,
+          175.96321227498828,
+          111.46617575254929
+        ],
+        [
+          155.43315128206166,
+          184.3974624118617,
+          119.83802305443072
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R41_spring_guide",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 4.816061537940807,
+      "center_world_mm": [
+        153.16804432854786,
+        180.20598885416788,
+        115.69652912338465
+      ],
+      "world_limits_mm": [
+        [
+          151.9201884694286,
+          178.1328442498828,
+          113.60855720694038
+        ],
+        [
+          154.41590018767138,
+          182.27913345846721,
+          117.78450103984963
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "TRANSFER_R42_steel_lower_spreader",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 193.2280269002539,
+      "center_world_mm": [
+        134.181307887862,
+        173.4805635288057,
+        114.88092418677273
+      ],
+      "world_limits_mm": [
+        [
+          126.93105257438,
+          161.83968686295572,
+          106.77066917873005
+        ],
+        [
+          141.43156320134287,
+          184.7393267757143,
+          123.21179248010996
+        ]
+      ],
+      "solids": 1,
+      "faces": 18,
+      "edges": 48
+    },
+    {
+      "part": "TRANSFER_R43_steel_upper_spreader",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 184.6674633801189,
+      "center_world_mm": [
+        133.9641250968253,
+        173.24577887857458,
+        114.32746179758574
+      ],
+      "world_limits_mm": [
+        [
+          126.71386978336712,
+          161.5413344558557,
+          106.25390765107004
+        ],
+        [
+          141.2143804103329,
+          184.4409743686143,
+          122.69503095245996
+        ]
+      ],
+      "solids": 1,
+      "faces": 18,
+      "edges": 48
+    },
+    {
+      "part": "XT01_crossbeam",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 284360.9909484485,
+      "center_world_mm": [
+        162.1030477193334,
+        299.9748162365686,
+        260.48706633374707
+      ],
+      "world_limits_mm": [
+        [
+          12.0,
+          272.0,
+          252.0
+        ],
+        [
+          312.0,
+          328.0,
+          270.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 102,
+      "edges": 240
+    },
+    {
+      "part": "XT02_upright_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 299824.7713964651,
+      "center_world_mm": [
+        31.9999999999999,
+        300.0000000000001,
+        128.8156299217889
+      ],
+      "world_limits_mm": [
+        [
+          12.0,
+          272.0,
+          12.0
+        ],
+        [
+          52.0,
+          328.0,
+          252.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 27,
+      "edges": 59
+    },
+    {
+      "part": "XT02_upright_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 299824.77139646513,
+      "center_world_mm": [
+        300.00000000000006,
+        300.0000000000001,
+        128.81562992178885
+      ],
+      "world_limits_mm": [
+        [
+          280.0,
+          272.0,
+          12.0
+        ],
+        [
+          320.0,
+          328.0,
+          252.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 27,
+      "edges": 59
+    },
+    {
+      "part": "XT05_carrier",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 629540.5766171591,
+      "center_world_mm": [
+        136.3856235264884,
+        262.34182818252776,
+        258.2559033360835
+      ],
+      "world_limits_mm": [
+        [
+          95.84871970396996,
+          207.99999999999264,
+          127.20768935593706
+        ],
+        [
+          176.15128029602758,
+          320.0,
+          348.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 165,
+      "edges": 445
+    },
+    {
+      "part": "XT06_keyed_shoe",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 7132.291821857737,
+      "center_world_mm": [
+        154.13692620713093,
+        242.11923031866357,
+        138.5618430592659
+      ],
+      "world_limits_mm": [
+        [
+          132.59360294047696,
+          227.85668221616461,
+          116.82995104225904
+        ],
+        [
+          175.66053225203024,
+          256.37931672702,
+          160.23260318077
+        ]
+      ],
+      "solids": 1,
+      "faces": 14,
+      "edges": 36
+    },
+    {
+      "part": "XT07_round_key",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 286.34954084941387,
+      "center_world_mm": [
+        147.29701801005953,
+        262.3150928688938,
+        145.7154764020706
+      ],
+      "world_limits_mm": [
+        [
+          143.62288978939,
+          243.7159445401598,
+          136.74193596021
+        ],
+        [
+          150.97114623073213,
+          274.4824288560258,
+          157.03104996555433
+        ]
+      ],
+      "solids": 1,
+      "faces": 10,
+      "edges": 18
+    },
+    {
+      "part": "XT08_diamond_key",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 286.04125601601845,
+      "center_world_mm": [
+        169.8496409089199,
+        258.22382415679516,
+        138.59923124709277
+      ],
+      "world_limits_mm": [
+        [
+          166.17551268825,
+          239.6117028202598,
+          129.63318077479
+        ],
+        [
+          173.52376912959218,
+          270.378187136112,
+          149.92229478012433
+        ]
+      ],
+      "solids": 1,
+      "faces": 14,
+      "edges": 30
+    },
+    {
+      "part": "XT12_index_pin",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 740.4633353546224,
+      "center_world_mm": [
+        115.99999999999996,
+        317.00000000000006,
+        315.97904426364727
+      ],
+      "world_limits_mm": [
+        [
+          113.16,
+          314.16,
+          264.0
+        ],
+        [
+          118.84,
+          319.84,
+          361.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M2nut_key_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091120147,
+      "center_world_mm": [
+        147.2970180100562,
+        246.98722583226967,
+        154.56502456176182
+      ],
+      "world_limits_mm": [
+        [
+          145.12689085979,
+          245.15724746664,
+          152.19540905573774
+        ],
+        [
+          149.4671451603255,
+          248.81720419790403,
+          156.93464006779
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M2nut_key_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 17.143702091136504,
+      "center_world_mm": [
+        169.84964090892225,
+        242.88298411236445,
+        147.4562693763432
+      ],
+      "world_limits_mm": [
+        [
+          167.6795137586545,
+          241.05300574673,
+          145.08665387032
+        ],
+        [
+          172.01976805919,
+          244.712962478,
+          149.82588488237243
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M3nut_base_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398536238,
+      "center_world_mm": [
+        31.99999999999994,
+        276.00000000000006,
+        -1.2
+      ],
+      "world_limits_mm": [
+        [
+          28.824573519456795,
+          273.25,
+          -2.4
+        ],
+        [
+          35.17542648054321,
+          278.75,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M3nut_base_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398536238,
+      "center_world_mm": [
+        31.99999999999994,
+        324.00000000000006,
+        -1.2
+      ],
+      "world_limits_mm": [
+        [
+          28.824573519456795,
+          321.25,
+          -2.4
+        ],
+        [
+          35.17542648054321,
+          326.75,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M3nut_base_2",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398543176,
+      "center_world_mm": [
+        299.9999999999932,
+        275.9999999999999,
+        -1.2000000000000002
+      ],
+      "world_limits_mm": [
+        [
+          296.8245735194483,
+          273.25,
+          -2.4
+        ],
+        [
+          303.1754264805417,
+          278.75,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M3nut_base_3",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398543176,
+      "center_world_mm": [
+        299.9999999999932,
+        323.99999999999983,
+        -1.2000000000000002
+      ],
+      "world_limits_mm": [
+        [
+          296.8245735194483,
+          321.25,
+          -2.4
+        ],
+        [
+          303.1754264805417,
+          326.75,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M3nut_fork_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398527888,
+      "center_world_mm": [
+        142.41891710087083,
+        239.9046820132315,
+        126.29769882035721
+      ],
+      "world_limits_mm": [
+        [
+          139.4349922692585,
+          237.30185922010926,
+          122.98947749957
+        ],
+        [
+          145.4028419324815,
+          242.5075048063507,
+          129.60592014114
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M3nut_fork_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.908843985448385,
+      "center_world_mm": [
+        155.57461379187728,
+        237.51054100995012,
+        122.15092496219145
+      ],
+      "world_limits_mm": [
+        [
+          152.590688960257,
+          234.9077182168286,
+          118.84270364140073
+        ],
+        [
+          158.558538623493,
+          240.1133638030704,
+          125.45914628297322
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_HW_M3x16_fork_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 189.1138246497544,
+      "center_world_mm": [
+        142.41891710087,
+        232.0943151017701,
+        130.80701625915373
+      ],
+      "world_limits_mm": [
+        [
+          139.57891710087,
+          224.45507047191947,
+          123.59866071467351
+        ],
+        [
+          145.25891710087,
+          243.07955314383028,
+          136.8572109670975
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M3x16_fork_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 189.11382464975466,
+      "center_world_mm": [
+        155.57461379187004,
+        229.70017409849015,
+        126.66024240099371
+      ],
+      "world_limits_mm": [
+        [
+          152.73461379187,
+          222.06092946863947,
+          119.45188685651351
+        ],
+        [
+          158.41461379187,
+          240.68541214055028,
+          132.7104371089375
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M3x24_beam_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 245.66249241423014,
+      "center_world_mm": [
+        31.999999999999986,
+        300.0,
+        257.9773678718312
+      ],
+      "world_limits_mm": [
+        [
+          29.16,
+          297.16,
+          241.8
+        ],
+        [
+          34.84,
+          302.84,
+          268.8
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M3x24_beam_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 245.66249241422992,
+      "center_world_mm": [
+        300.0,
+        300.00000000000006,
+        257.9773678718311
+      ],
+      "world_limits_mm": [
+        [
+          297.16,
+          297.16,
+          241.8
+        ],
+        [
+          302.84,
+          302.84,
+          268.8
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M3x25_base_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 252.73107588480715,
+      "center_world_mm": [
+        31.99999999999999,
+        276.00000000000006,
+        11.710922000626562
+      ],
+      "world_limits_mm": [
+        [
+          29.16,
+          273.16,
+          -5.0
+        ],
+        [
+          34.84,
+          278.84,
+          23.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M3x25_base_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 252.73107588480715,
+      "center_world_mm": [
+        31.99999999999999,
+        324.00000000000006,
+        11.710922000626562
+      ],
+      "world_limits_mm": [
+        [
+          29.16,
+          321.16,
+          -5.0
+        ],
+        [
+          34.84,
+          326.84,
+          23.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M3x25_base_2",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 252.73107588480693,
+      "center_world_mm": [
+        300.0,
+        276.0,
+        11.710922000626539
+      ],
+      "world_limits_mm": [
+        [
+          297.16,
+          273.16,
+          -5.0
+        ],
+        [
+          302.84,
+          278.84,
+          23.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_HW_M3x25_base_3",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 252.73107588480693,
+      "center_world_mm": [
+        300.0,
+        324.0,
+        11.710922000626539
+      ],
+      "world_limits_mm": [
+        [
+          297.16,
+          321.16,
+          -5.0
+        ],
+        [
+          302.84,
+          326.84,
+          23.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_P1_dowel_0_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.132741228718306,
+      "center_world_mm": [
+        32.0,
+        290.0,
+        251.99999999999997
+      ],
+      "world_limits_mm": [
+        [
+          31.0,
+          289.0,
+          248.0
+        ],
+        [
+          33.0,
+          291.0,
+          256.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_P1_dowel_0_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.132741228718306,
+      "center_world_mm": [
+        32.0,
+        310.0,
+        251.99999999999997
+      ],
+      "world_limits_mm": [
+        [
+          31.0,
+          309.0,
+          248.0
+        ],
+        [
+          33.0,
+          311.0,
+          256.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_P1_dowel_1_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.13274122871827,
+      "center_world_mm": [
+        299.99999999999994,
+        290.0,
+        251.99999999999997
+      ],
+      "world_limits_mm": [
+        [
+          299.0,
+          289.0,
+          248.0
+        ],
+        [
+          301.0,
+          291.0,
+          256.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_P1_dowel_1_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.13274122871827,
+      "center_world_mm": [
+        299.99999999999994,
+        310.0,
+        251.99999999999997
+      ],
+      "world_limits_mm": [
+        [
+          299.0,
+          309.0,
+          248.0
+        ],
+        [
+          301.0,
+          311.0,
+          256.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_PG01_MGN12_rail_EXTERNAL_ENVELOPE",
+      "group": "stripper_and_index_frame",
+      "description": "clearance envelope",
+      "quantity": 1,
+      "volume_mm3": 19671.823961465518,
+      "center_world_mm": [
+        123.99999999999865,
+        300.0000000000003,
+        272.93279494546033
+      ],
+      "world_limits_mm": [
+        [
+          14.0,
+          294.0,
+          269.0
+        ],
+        [
+          234.0,
+          306.0,
+          277.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 33,
+      "edges": 66
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499766,
+      "center_world_mm": [
+        24.0,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          21.16,
+          297.16,
+          264.5
+        ],
+        [
+          26.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499772,
+      "center_world_mm": [
+        49.00000000000001,
+        299.99999999999994,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          46.16,
+          297.16,
+          264.5
+        ],
+        [
+          51.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_2",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499772,
+      "center_world_mm": [
+        74.0,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          71.16,
+          297.16,
+          264.5
+        ],
+        [
+          76.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_3",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499772,
+      "center_world_mm": [
+        99.00000000000001,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          96.16,
+          297.16,
+          264.5
+        ],
+        [
+          101.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_4",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499772,
+      "center_world_mm": [
+        124.00000000000001,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          121.16,
+          297.16,
+          264.5
+        ],
+        [
+          126.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_5",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499763,
+      "center_world_mm": [
+        149.0,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          146.16,
+          297.16,
+          264.5
+        ],
+        [
+          151.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_6",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499763,
+      "center_world_mm": [
+        174.0,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          171.16,
+          297.16,
+          264.5
+        ],
+        [
+          176.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_7",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499763,
+      "center_world_mm": [
+        199.0,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          196.16,
+          297.16,
+          264.5
+        ],
+        [
+          201.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG02_M3x8_rail_8",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499763,
+      "center_world_mm": [
+        224.00000000000003,
+        300.0,
+        271.6538505289501
+      ],
+      "world_limits_mm": [
+        [
+          221.16,
+          297.16,
+          264.5
+        ],
+        [
+          226.84,
+          302.84,
+          275.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG03_MGN12H_block_EXTERNAL_ENVELOPE",
+      "group": "stripper_and_index_frame",
+      "description": "clearance envelope",
+      "quantity": 1,
+      "volume_mm3": 9519.039831411927,
+      "center_world_mm": [
+        135.99999999999991,
+        299.9999999999999,
+        277.6879243671698
+      ],
+      "world_limits_mm": [
+        [
+          113.1,
+          286.5,
+          272.0
+        ],
+        [
+          158.9,
+          313.5,
+          282.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 18,
+      "edges": 36
+    },
+    {
+      "part": "XT_PG04_M3x7p8_finished_block_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 131.15144019088243,
+      "center_world_mm": [
+        126.0,
+        289.99999999999994,
+        286.22988588346885
+      ],
+      "world_limits_mm": [
+        [
+          123.16,
+          287.16,
+          279.2
+        ],
+        [
+          128.84,
+          292.84,
+          290.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG04_M3x7p8_finished_block_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 131.15144019088243,
+      "center_world_mm": [
+        126.0,
+        309.99999999999994,
+        286.22988588346885
+      ],
+      "world_limits_mm": [
+        [
+          123.16,
+          307.16,
+          279.2
+        ],
+        [
+          128.84,
+          312.84,
+          290.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG04_M3x7p8_finished_block_2",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 131.1514401908823,
+      "center_world_mm": [
+        145.99999999999997,
+        290.0,
+        286.22988588346885
+      ],
+      "world_limits_mm": [
+        [
+          143.16,
+          287.16,
+          279.2
+        ],
+        [
+          148.84,
+          292.84,
+          290.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG04_M3x7p8_finished_block_3",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 131.1514401908823,
+      "center_world_mm": [
+        145.99999999999997,
+        309.99999999999994,
+        286.22988588346885
+      ],
+      "world_limits_mm": [
+        [
+          143.16,
+          307.16,
+          279.2
+        ],
+        [
+          148.84,
+          312.84,
+          290.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG05_lower_spreader",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 22723.246464140764,
+      "center_world_mm": [
+        136.05674216383315,
+        299.9517691607409,
+        286.4661097127228
+      ],
+      "world_limits_mm": [
+        [
+          103.0,
+          280.0,
+          282.0
+        ],
+        [
+          169.0,
+          320.0,
+          291.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 31,
+      "edges": 63
+    },
+    {
+      "part": "XT_PG07_stop_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 1615.8435405156445,
+      "center_world_mm": [
+        22.67496038815794,
+        318.9909100110055,
+        276.7481026583126
+      ],
+      "world_limits_mm": [
+        [
+          19.0,
+          311.0,
+          269.0
+        ],
+        [
+          31.0,
+          327.0,
+          290.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 20,
+      "edges": 42
+    },
+    {
+      "part": "XT_PG07_stop_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 1615.8435405156438,
+      "center_world_mm": [
+        221.32503961184204,
+        318.99091001100544,
+        276.74810265831235
+      ],
+      "world_limits_mm": [
+        [
+          213.0,
+          311.0,
+          269.0
+        ],
+        [
+          225.0,
+          327.0,
+          290.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 20,
+      "edges": 42
+    },
+    {
+      "part": "XT_PG08_M3x8_stop_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499763,
+      "center_world_mm": [
+        27.000000000000004,
+        319.0,
+        269.9538505289501
+      ],
+      "world_limits_mm": [
+        [
+          24.16,
+          316.16,
+          262.8
+        ],
+        [
+          29.84,
+          321.84,
+          273.8
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG08_M3x8_stop_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 132.56515688499763,
+      "center_world_mm": [
+        216.99999999999994,
+        319.0,
+        269.95385052895006
+      ],
+      "world_limits_mm": [
+        [
+          214.16,
+          316.16,
+          262.8
+        ],
+        [
+          219.84,
+          321.84,
+          273.8
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG09_stop_dowel_0_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.13274122871831,
+      "center_world_mm": [
+        24.0,
+        314.0,
+        268.49999999999994
+      ],
+      "world_limits_mm": [
+        [
+          23.0,
+          313.0,
+          264.5
+        ],
+        [
+          25.0,
+          315.0,
+          272.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_PG09_stop_dowel_0_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.13274122871831,
+      "center_world_mm": [
+        24.0,
+        324.0,
+        268.49999999999994
+      ],
+      "world_limits_mm": [
+        [
+          23.0,
+          323.0,
+          264.5
+        ],
+        [
+          25.0,
+          325.0,
+          272.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_PG09_stop_dowel_1_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.1327412287183,
+      "center_world_mm": [
+        219.99999999999997,
+        314.0,
+        268.5
+      ],
+      "world_limits_mm": [
+        [
+          219.0,
+          313.0,
+          264.5
+        ],
+        [
+          221.0,
+          315.0,
+          272.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_PG09_stop_dowel_1_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 25.1327412287183,
+      "center_world_mm": [
+        219.99999999999997,
+        323.99999999999994,
+        268.5
+      ],
+      "world_limits_mm": [
+        [
+          219.0,
+          323.0,
+          264.5
+        ],
+        [
+          221.0,
+          325.0,
+          272.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "XT_PG10_top_clamp_plate_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 1350.4293142971412,
+      "center_world_mm": [
+        108.88937646811398,
+        299.6303489129908,
+        349.4949080504047
+      ],
+      "world_limits_mm": [
+        [
+          103.0,
+          280.0,
+          348.0
+        ],
+        [
+          115.00000000000175,
+          320.0,
+          351.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 13,
+      "edges": 27
+    },
+    {
+      "part": "XT_PG10_top_clamp_plate_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 1379.7945183866066,
+      "center_world_mm": [
+        163.0,
+        299.99999999999994,
+        349.49501641881534
+      ],
+      "world_limits_mm": [
+        [
+          157.0,
+          280.0,
+          348.0
+        ],
+        [
+          169.0,
+          320.0,
+          351.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 12,
+      "edges": 24
+    },
+    {
+      "part": "XT_PG11_M3x74_finished_body_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 599.0916659430819,
+      "center_world_mm": [
+        109.0,
+        284.00000000000006,
+        318.8851202537222
+      ],
+      "world_limits_mm": [
+        [
+          106.16,
+          281.16,
+          277.0
+        ],
+        [
+          111.84,
+          286.84,
+          354.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG11_M3x74_finished_body_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 599.0916659430819,
+      "center_world_mm": [
+        109.0,
+        316.00000000000006,
+        318.8851202537222
+      ],
+      "world_limits_mm": [
+        [
+          106.16,
+          313.16,
+          277.0
+        ],
+        [
+          111.84,
+          318.84,
+          354.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG11_M3x74_finished_body_2",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 599.0916659430809,
+      "center_world_mm": [
+        162.99999999999994,
+        284.0,
+        318.88512025372216
+      ],
+      "world_limits_mm": [
+        [
+          160.16,
+          281.16,
+          277.0
+        ],
+        [
+          165.84,
+          286.84,
+          354.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG11_M3x74_finished_body_3",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 599.0916659430809,
+      "center_world_mm": [
+        162.99999999999994,
+        316.0,
+        318.88512025372216
+      ],
+      "world_limits_mm": [
+        [
+          160.16,
+          313.16,
+          277.0
+        ],
+        [
+          165.84,
+          318.84,
+          354.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "XT_PG12_M3nut_body_0",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398543132,
+      "center_world_mm": [
+        108.99999999999315,
+        283.9999999999998,
+        280.8
+      ],
+      "world_limits_mm": [
+        [
+          105.8245735194483,
+          281.25,
+          279.6
+        ],
+        [
+          112.17542648054172,
+          286.75,
+          282.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_PG12_M3nut_body_1",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.90884398543132,
+      "center_world_mm": [
+        108.99999999999315,
+        315.9999999999998,
+        280.8
+      ],
+      "world_limits_mm": [
+        [
+          105.8245735194483,
+          313.25,
+          279.6
+        ],
+        [
+          112.17542648054172,
+          318.75,
+          282.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_PG12_M3nut_body_2",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.908843985431325,
+      "center_world_mm": [
+        162.99999999999315,
+        283.99999999999983,
+        280.8
+      ],
+      "world_limits_mm": [
+        [
+          159.82457351944828,
+          281.25,
+          279.6
+        ],
+        [
+          166.17542648054172,
+          286.75,
+          282.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_PG12_M3nut_body_3",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 45.908843985431325,
+      "center_world_mm": [
+        162.99999999999315,
+        315.99999999999983,
+        280.8
+      ],
+      "world_limits_mm": [
+        [
+          159.82457351944828,
+          313.25,
+          279.6
+        ],
+        [
+          166.17542648054172,
+          318.75,
+          282.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "XT_PG13_index_seat_spacer",
+      "group": "stripper_and_index_frame",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 146.79091673898253,
+      "center_world_mm": [
+        116.00000000000003,
+        316.99999999999994,
+        353.0
+      ],
+      "world_limits_mm": [
+        [
+          113.25,
+          314.25,
+          348.0
+        ],
+        [
+          118.75,
+          319.75,
+          358.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "drive_fixed_pin_nut",
+      "group": "head_register",
+      "description": "static spring anchor member",
+      "quantity": 1,
+      "volume_mm3": 8.91472508739053,
+      "center_world_mm": [
+        119.16664059626001,
+        88.36848147475762,
+        114.89606505142999
+      ],
+      "world_limits_mm": [
+        [
+          118.51664059626,
+          86.52096061335035,
+          113.29606505143
+        ],
+        [
+          119.81664059626,
+          90.21600233616465,
+          116.49606505143
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "drive_fixed_pin_screw",
+      "group": "head_register",
+      "description": "static spring anchor member",
+      "quantity": 1,
+      "volume_mm3": 27.394687939302877,
+      "center_world_mm": [
+        122.69829197240682,
+        88.36848147475699,
+        114.89606505143
+      ],
+      "world_limits_mm": [
+        [
+          116.71664059626,
+          86.868481474757,
+          113.39606505143
+        ],
+        [
+          126.31664059626,
+          89.868481474757,
+          116.39606505143
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "drive_fixed_pin_sleeve",
+      "group": "head_register",
+      "description": "static spring anchor member",
+      "quantity": 1,
+      "volume_mm3": 1.2902521028293346,
+      "center_world_mm": [
+        122.26664059626002,
+        88.36848147475699,
+        114.89606505143001
+      ],
+      "world_limits_mm": [
+        [
+          121.52664059626,
+          87.368481474757,
+          113.89606505143
+        ],
+        [
+          123.00664059626,
+          89.368481474757,
+          115.89606505143
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "fitted_pin_0",
+      "group": "receiver register",
+      "description": "fitted locating dowel",
+      "quantity": 1,
+      "volume_mm3": 177.18582566246423,
+      "center_world_mm": [
+        188.0,
+        67.49999999999999,
+        10.250000000000002
+      ],
+      "world_limits_mm": [
+        [
+          186.0,
+          65.5,
+          3.2
+        ],
+        [
+          190.0,
+          69.5,
+          17.3
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "fitted_pin_1",
+      "group": "receiver register",
+      "description": "fitted locating dowel",
+      "quantity": 1,
+      "volume_mm3": 177.18582566246428,
+      "center_world_mm": [
+        284.0,
+        67.5,
+        10.250000000000004
+      ],
+      "world_limits_mm": [
+        [
+          282.0,
+          65.5,
+          3.2
+        ],
+        [
+          286.0,
+          69.5,
+          17.3
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "fitted_pin_2",
+      "group": "receiver register",
+      "description": "fitted locating dowel",
+      "quantity": 1,
+      "volume_mm3": 177.18582566246414,
+      "center_world_mm": [
+        209.50000000000003,
+        32.5,
+        10.250000000000004
+      ],
+      "world_limits_mm": [
+        [
+          207.5,
+          30.5,
+          3.2
+        ],
+        [
+          211.5,
+          34.5,
+          17.3
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "fitted_pin_3",
+      "group": "receiver register",
+      "description": "fitted locating dowel",
+      "quantity": 1,
+      "volume_mm3": 177.18582566246428,
+      "center_world_mm": [
+        259.49999999999994,
+        32.5,
+        10.250000000000002
+      ],
+      "world_limits_mm": [
+        [
+          257.5,
+          30.5,
+          3.2
+        ],
+        [
+          261.5,
+          34.5,
+          17.3
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "frame_M4x25_0",
+      "group": "receiver register",
+      "description": "M4 \u00d7 25 frame bolt",
+      "quantity": 1,
+      "volume_mm3": 468.0973053848787,
+      "center_world_mm": [
+        215.99999999999997,
+        30.000000000000004,
+        9.768456375838982
+      ],
+      "world_limits_mm": [
+        [
+          212.5,
+          26.5,
+          -7.5
+        ],
+        [
+          219.5,
+          33.5,
+          21.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "frame_M4x25_1",
+      "group": "receiver register",
+      "description": "M4 \u00d7 25 frame bolt",
+      "quantity": 1,
+      "volume_mm3": 468.09730538487895,
+      "center_world_mm": [
+        284.0,
+        30.000000000000004,
+        9.768456375838982
+      ],
+      "world_limits_mm": [
+        [
+          280.5,
+          26.5,
+          -7.5
+        ],
+        [
+          287.5,
+          33.5,
+          21.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "frame_M4x25_2",
+      "group": "receiver register",
+      "description": "M4 \u00d7 25 frame bolt",
+      "quantity": 1,
+      "volume_mm3": 468.097305384879,
+      "center_world_mm": [
+        284.0,
+        104.99999999999999,
+        9.76845637583898
+      ],
+      "world_limits_mm": [
+        [
+          280.5,
+          101.5,
+          -7.5
+        ],
+        [
+          287.5,
+          108.5,
+          21.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "frame_M4x25_3",
+      "group": "receiver register",
+      "description": "M4 \u00d7 25 frame bolt",
+      "quantity": 1,
+      "volume_mm3": 468.09730538487884,
+      "center_world_mm": [
+        188.0,
+        105.00000000000001,
+        9.76845637583898
+      ],
+      "world_limits_mm": [
+        [
+          184.5,
+          101.5,
+          -7.5
+        ],
+        [
+          191.5,
+          108.5,
+          21.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "frame_nut_0",
+      "group": "receiver register",
+      "description": "M4 nut",
+      "quantity": 1,
+      "volume_mm3": 95.58039734740022,
+      "center_world_mm": [
+        215.99999999999292,
+        29.999999999999552,
+        -2.4
+      ],
+      "world_limits_mm": [
+        [
+          211.95854811566647,
+          26.499999999999996,
+          -4.0
+        ],
+        [
+          220.04145188432352,
+          33.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "frame_nut_1",
+      "group": "receiver register",
+      "description": "M4 nut",
+      "quantity": 1,
+      "volume_mm3": 95.58039734740022,
+      "center_world_mm": [
+        283.99999999999295,
+        29.999999999999535,
+        -2.3999999999999995
+      ],
+      "world_limits_mm": [
+        [
+          279.9585481156665,
+          26.499999999999996,
+          -4.0
+        ],
+        [
+          288.0414518843236,
+          33.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "frame_nut_2",
+      "group": "receiver register",
+      "description": "M4 nut",
+      "quantity": 1,
+      "volume_mm3": 95.58039734740011,
+      "center_world_mm": [
+        283.99999999999295,
+        104.99999999999953,
+        -2.399999999999999
+      ],
+      "world_limits_mm": [
+        [
+          279.9585481156665,
+          101.5,
+          -4.0
+        ],
+        [
+          288.0414518843236,
+          108.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "frame_nut_3",
+      "group": "receiver register",
+      "description": "M4 nut",
+      "quantity": 1,
+      "volume_mm3": 95.58039734740014,
+      "center_world_mm": [
+        187.9999999999929,
+        104.99999999999956,
+        -2.4000000000000004
+      ],
+      "world_limits_mm": [
+        [
+          183.95854811566647,
+          101.5,
+          -4.0
+        ],
+        [
+          192.04145188432352,
+          108.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "frame_washer_0",
+      "group": "receiver register",
+      "description": "M4 washer",
+      "quantity": 1,
+      "volume_mm3": 39.27619135517956,
+      "center_world_mm": [
+        216.0000000000001,
+        30.000000000000004,
+        -0.4
+      ],
+      "world_limits_mm": [
+        [
+          211.5,
+          25.5,
+          -0.8
+        ],
+        [
+          220.5,
+          34.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "frame_washer_1",
+      "group": "receiver register",
+      "description": "M4 washer",
+      "quantity": 1,
+      "volume_mm3": 39.276191355179705,
+      "center_world_mm": [
+        284.00000000000006,
+        30.0,
+        -0.39999999999999997
+      ],
+      "world_limits_mm": [
+        [
+          279.5,
+          25.5,
+          -0.8
+        ],
+        [
+          288.5,
+          34.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "frame_washer_2",
+      "group": "receiver register",
+      "description": "M4 washer",
+      "quantity": 1,
+      "volume_mm3": 39.276191355179705,
+      "center_world_mm": [
+        284.00000000000006,
+        104.99999999999997,
+        -0.3999999999999999
+      ],
+      "world_limits_mm": [
+        [
+          279.5,
+          100.5,
+          -0.8
+        ],
+        [
+          288.5,
+          109.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "frame_washer_3",
+      "group": "receiver register",
+      "description": "M4 washer",
+      "quantity": 1,
+      "volume_mm3": 39.276191355179556,
+      "center_world_mm": [
+        188.00000000000014,
+        105.0,
+        -0.4000000000000001
+      ],
+      "world_limits_mm": [
+        [
+          183.5,
+          100.5,
+          -0.8
+        ],
+        [
+          192.5,
+          109.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "gate_axle",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 80.11061266653968,
+      "center_world_mm": [
+        153.109777851162,
+        73.834979915471,
+        136.33120869101998
+      ],
+      "world_limits_mm": [
+        [
+          146.26664059626,
+          71.334979915471,
+          133.83120869102
+        ],
+        [
+          156.26664059626,
+          76.334979915471,
+          138.83120869102
+        ]
+      ],
+      "solids": 1,
+      "faces": 7,
+      "edges": 9
+    },
+    {
+      "part": "gate_ear_spacer",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 2.010815647838262,
+      "center_world_mm": [
+        150.61664059626003,
+        73.834979915471,
+        136.33120869102
+      ],
+      "world_limits_mm": [
+        [
+          150.26664059626,
+          72.034979915471,
+          134.53120869102
+        ],
+        [
+          150.96664059626,
+          75.63497991547099,
+          138.13120869102002
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "gate_head_spacer",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 2.010815647838343,
+      "center_world_mm": [
+        153.91664059625998,
+        73.83497991547092,
+        136.33120869101992
+      ],
+      "world_limits_mm": [
+        [
+          153.56664059626,
+          72.034979915471,
+          134.53120869102
+        ],
+        [
+          154.26664059626,
+          75.63497991547099,
+          138.13120869102002
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "gate_nut",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 17.143702091144423,
+      "center_world_mm": [
+        148.71664059625994,
+        73.83497991547178,
+        136.33120869102666
+      ],
+      "world_limits_mm": [
+        [
+          147.91664059626,
+          71.52557885606694,
+          134.33106713717
+        ],
+        [
+          149.51664059626,
+          76.14438097487606,
+          138.33135024488
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "gate_pin_nut",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 8.914725087398242,
+      "center_world_mm": [
+        119.16664059626002,
+        68.18617975422103,
+        126.54442899909935
+      ],
+      "world_limits_mm": [
+        [
+          118.51664059626,
+          66.33865890669902,
+          124.94431575601655
+        ],
+        [
+          119.81664059626,
+          70.03370060174397,
+          128.14454224218346
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "gate_pin_screw",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 27.394687939302973,
+      "center_world_mm": [
+        122.69829197240684,
+        68.186179754222,
+        126.54442899910002
+      ],
+      "world_limits_mm": [
+        [
+          116.71664059626,
+          66.686179754222,
+          125.0444289991
+        ],
+        [
+          126.31664059626,
+          69.686179754222,
+          128.0444289991
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "gate_pin_sleeve",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 1.2902521028293572,
+      "center_world_mm": [
+        122.26664059626002,
+        68.186179754222,
+        126.54442899909996
+      ],
+      "world_limits_mm": [
+        [
+          121.52664059626,
+          67.186179754222,
+          125.5444289991
+        ],
+        [
+          123.00664059626,
+          69.186179754222,
+          127.5444289991
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "gate_roller",
+      "group": "gate",
+      "description": "gate follower or spring-pin hardware",
+      "quantity": 1,
+      "volume_mm3": 53.01437602932791,
+      "center_world_mm": [
+        152.26664059625998,
+        73.83497991547102,
+        136.33120869101998
+      ],
+      "world_limits_mm": [
+        [
+          151.01664059626,
+          70.834979915471,
+          133.33120869102
+        ],
+        [
+          153.51664059626,
+          76.834979915471,
+          139.33120869102
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "hard_stop_0",
+      "group": "receiver register",
+      "description": "M3 flat-end adjusting screw",
+      "quantity": 1,
+      "volume_mm3": 137.44467859455347,
+      "center_world_mm": [
+        204.00000000000003,
+        27.72857142857144,
+        15.299999999999995
+      ],
+      "world_limits_mm": [
+        [
+          202.5,
+          18.0,
+          13.8
+        ],
+        [
+          205.5,
+          38.0,
+          16.8
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "hard_stop_1",
+      "group": "receiver register",
+      "description": "M3 flat-end adjusting screw",
+      "quantity": 1,
+      "volume_mm3": 137.44467859455335,
+      "center_world_mm": [
+        265.0,
+        27.728571428571435,
+        15.299999999999992
+      ],
+      "world_limits_mm": [
+        [
+          263.5,
+          18.0,
+          13.8
+        ],
+        [
+          266.5,
+          38.0,
+          16.8
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "hard_stop_2",
+      "group": "receiver register",
+      "description": "M3 flat-end adjusting screw",
+      "quantity": 1,
+      "volume_mm3": 137.44467859455344,
+      "center_world_mm": [
+        286.27142857142866,
+        73.00000000000001,
+        15.00000000000001
+      ],
+      "world_limits_mm": [
+        [
+          276.0,
+          71.5,
+          13.5
+        ],
+        [
+          296.0,
+          74.5,
+          16.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "jam_M3_0",
+      "group": "receiver register",
+      "description": "M3 jam nut",
+      "quantity": 1,
+      "volume_mm3": 45.90884398544676,
+      "center_world_mm": [
+        203.99999999999332,
+        22.800000000000008,
+        15.30000000000004
+      ],
+      "world_limits_mm": [
+        [
+          200.82457351944828,
+          21.6,
+          12.549999999999999
+        ],
+        [
+          207.17542648054172,
+          24.0,
+          18.05
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "jam_M3_1",
+      "group": "receiver register",
+      "description": "M3 jam nut",
+      "quantity": 1,
+      "volume_mm3": 45.90884398544653,
+      "center_world_mm": [
+        264.99999999999335,
+        22.799999999999997,
+        15.300000000000033
+      ],
+      "world_limits_mm": [
+        [
+          261.8245735194483,
+          21.6,
+          12.549999999999999
+        ],
+        [
+          268.1754264805417,
+          24.0,
+          18.05
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "jam_M3_2",
+      "group": "receiver register",
+      "description": "M3 jam nut",
+      "quantity": 1,
+      "volume_mm3": 35.598086099835704,
+      "center_world_mm": [
+        291.2000000000001,
+        72.99999999999997,
+        15.000000000000021
+      ],
+      "world_limits_mm": [
+        [
+          290.0,
+          70.59999999999988,
+          12.3
+        ],
+        [
+          292.4,
+          75.40000000000012,
+          17.7
+        ]
+      ],
+      "solids": 1,
+      "faces": 8,
+      "edges": 18
+    },
+    {
+      "part": "local_register_frame",
+      "group": "receiver register",
+      "description": "6061-T6 receiver locating frame",
+      "quantity": 1,
+      "volume_mm3": 19429.28661763284,
+      "center_world_mm": [
+        240.548971685056,
+        69.19748987374506,
+        14.744106265738067
+      ],
+      "world_limits_mm": [
+        [
+          182.0,
+          24.0,
+          12.0
+        ],
+        [
+          290.0,
+          111.0,
+          17.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 28,
+      "edges": 78
+    },
+    {
+      "part": "lower_end_screw",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 33.20268455683589,
+      "center_world_mm": [
+        127.081334211913,
+        101.15405611983992,
+        128.64532994068014
+      ],
+      "world_limits_mm": [
+        [
+          124.91664059626,
+          99.25405611984,
+          126.74532994068
+        ],
+        [
+          130.91664059626,
+          103.05405611984001,
+          130.54532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 12,
+      "edges": 24
+    },
+    {
+      "part": "lower_end_washer",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 2.073074160250918,
+      "center_world_mm": [
+        127.06664059626004,
+        101.15405611984005,
+        128.64532994068
+      ],
+      "world_limits_mm": [
+        [
+          126.91664059626,
+          99.35405611984001,
+          126.84532994068
+        ],
+        [
+          127.21664059626,
+          102.95405611984,
+          130.44532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "lower_inner_left",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 0.30629742974335555,
+      "center_world_mm": [
+        135.71664059626002,
+        101.15405611984002,
+        128.64532994068003
+      ],
+      "world_limits_mm": [
+        [
+          135.66664059626,
+          99.35405611984001,
+          126.84532994068
+        ],
+        [
+          135.76664059626,
+          102.95405611984,
+          130.44532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "lower_inner_right",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 0.30629742974335544,
+      "center_world_mm": [
+        129.81664059626,
+        101.15405611983999,
+        128.64532994067991
+      ],
+      "world_limits_mm": [
+        [
+          129.76664059626,
+          99.35405611984001,
+          126.84532994068
+        ],
+        [
+          129.86664059626,
+          102.95405611984,
+          130.44532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "lower_stepped_axle",
+      "group": "head_register",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 72.52630337873171,
+      "center_world_mm": [
+        133.93726665414894,
+        101.15405611984006,
+        128.64532994068003
+      ],
+      "world_limits_mm": [
+        [
+          127.21664059626,
+          99.35405611984001,
+          126.84532994068
+        ],
+        [
+          139.01664059626,
+          102.95405611984,
+          130.44532994068
+        ]
+      ],
+      "solids": 1,
+      "faces": 11,
+      "edges": 21
+    },
+    {
+      "part": "plug_retainer_0",
+      "group": "receiver register",
+      "description": "cured pad retainer",
+      "quantity": 1,
+      "volume_mm3": 0.5051680986972542,
+      "center_world_mm": [
+        204.00000000000196,
+        95.99999999999955,
+        14.750000000000039
+      ],
+      "world_limits_mm": [
+        [
+          201.98,
+          95.0,
+          12.73
+        ],
+        [
+          206.02,
+          97.0,
+          16.77
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "plug_retainer_1",
+      "group": "receiver register",
+      "description": "cured pad retainer",
+      "quantity": 1,
+      "volume_mm3": 0.5051680986972293,
+      "center_world_mm": [
+        265.0000000000042,
+        96.00000000000023,
+        14.750000000000055
+      ],
+      "world_limits_mm": [
+        [
+          262.98,
+          95.0,
+          12.73
+        ],
+        [
+          267.02,
+          97.0,
+          16.77
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "plug_retainer_2",
+      "group": "receiver register",
+      "description": "cured pad retainer",
+      "quantity": 1,
+      "volume_mm3": 0.5051680986972009,
+      "center_world_mm": [
+        197.00000000000082,
+        73.00000000000048,
+        14.749999999999964
+      ],
+      "world_limits_mm": [
+        [
+          196.0,
+          70.98,
+          12.73
+        ],
+        [
+          198.0,
+          75.02,
+          16.77
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "potted_annulus_0",
+      "group": "receiver register",
+      "description": "cured pin potting",
+      "quantity": 1,
+      "volume_mm3": 235.77652865191396,
+      "center_world_mm": [
+        188.00000000000009,
+        67.5,
+        7.453097934710194
+      ],
+      "world_limits_mm": [
+        [
+          184.5,
+          64.0,
+          3.0
+        ],
+        [
+          191.5,
+          71.0,
+          12.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "potted_annulus_1",
+      "group": "receiver register",
+      "description": "cured pin potting",
+      "quantity": 1,
+      "volume_mm3": 235.77652865191388,
+      "center_world_mm": [
+        284.0000000000001,
+        67.5,
+        7.453097934710196
+      ],
+      "world_limits_mm": [
+        [
+          280.5,
+          64.0,
+          3.0
+        ],
+        [
+          287.5,
+          71.0,
+          12.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "potted_annulus_2",
+      "group": "receiver register",
+      "description": "cured pin potting",
+      "quantity": 1,
+      "volume_mm3": 235.7765286519139,
+      "center_world_mm": [
+        209.50000000000009,
+        32.50000000000001,
+        7.453097934710196
+      ],
+      "world_limits_mm": [
+        [
+          206.0,
+          29.0,
+          3.0
+        ],
+        [
+          213.0,
+          36.0,
+          12.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "potted_annulus_3",
+      "group": "receiver register",
+      "description": "cured pin potting",
+      "quantity": 1,
+      "volume_mm3": 235.77652865191396,
+      "center_world_mm": [
+        259.50000000000006,
+        32.5,
+        7.453097934710193
+      ],
+      "world_limits_mm": [
+        [
+          256.0,
+          29.0,
+          3.0
+        ],
+        [
+          263.0,
+          36.0,
+          12.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "preload_wear_plug_0",
+      "group": "receiver register",
+      "description": "hardened steel backing pad",
+      "quantity": 1,
+      "volume_mm3": 25.132741228718324,
+      "center_world_mm": [
+        204.0,
+        95.99999999999999,
+        14.75
+      ],
+      "world_limits_mm": [
+        [
+          202.0,
+          95.0,
+          12.75
+        ],
+        [
+          206.0,
+          97.0,
+          16.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "preload_wear_plug_1",
+      "group": "receiver register",
+      "description": "hardened steel backing pad",
+      "quantity": 1,
+      "volume_mm3": 25.13274122871836,
+      "center_world_mm": [
+        264.99999999999994,
+        95.99999999999997,
+        14.749999999999996
+      ],
+      "world_limits_mm": [
+        [
+          263.0,
+          95.0,
+          12.75
+        ],
+        [
+          267.0,
+          97.0,
+          16.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "preload_wear_plug_2",
+      "group": "receiver register",
+      "description": "hardened steel backing pad",
+      "quantity": 1,
+      "volume_mm3": 25.132741228718352,
+      "center_world_mm": [
+        196.99999999999997,
+        72.99999999999999,
+        14.749999999999998
+      ],
+      "world_limits_mm": [
+        [
+          196.0,
+          71.0,
+          12.75
+        ],
+        [
+          198.0,
+          75.0,
+          16.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 3,
+      "edges": 3
+    },
+    {
+      "part": "stand_axle",
+      "group": "station",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 24.680069372843487,
+      "center_world_mm": [
+        133.80694270441052,
+        90.68449131018703,
+        98.931123617378
+      ],
+      "world_limits_mm": [
+        [
+          130.98664059626,
+          88.784491310187,
+          97.031123617378
+        ],
+        [
+          135.74664059626,
+          92.584491310187,
+          100.83112361737801
+        ]
+      ],
+      "solids": 1,
+      "faces": 11,
+      "edges": 21
+    },
+    {
+      "part": "stand_bearing",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 53.01437602932779,
+      "center_world_mm": [
+        132.76664059626003,
+        90.68449131018707,
+        98.93112361737799
+      ],
+      "world_limits_mm": [
+        [
+          131.51664059626,
+          87.684491310187,
+          95.931123617378
+        ],
+        [
+          134.01664059626,
+          93.684491310187,
+          101.931123617378
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_bolt_0",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 405.2654523130829,
+      "center_world_mm": [
+        202.99999999999994,
+        44.0,
+        8.308139534883772
+      ],
+      "world_limits_mm": [
+        [
+          199.5,
+          40.5,
+          -6.25
+        ],
+        [
+          206.5,
+          47.5,
+          17.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_bolt_1",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 405.2654523130831,
+      "center_world_mm": [
+        266.99999999999994,
+        44.0,
+        8.308139534883773
+      ],
+      "world_limits_mm": [
+        [
+          263.5,
+          40.5,
+          -6.25
+        ],
+        [
+          270.5,
+          47.5,
+          17.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_bolt_2",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 405.26545231308324,
+      "center_world_mm": [
+        267.0,
+        91.0,
+        8.30813953488377
+      ],
+      "world_limits_mm": [
+        [
+          263.5,
+          87.5,
+          -6.25
+        ],
+        [
+          270.5,
+          94.5,
+          17.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_bolt_3",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 405.26545231308313,
+      "center_world_mm": [
+        203.0,
+        90.99999999999999,
+        8.308139534883772
+      ],
+      "world_limits_mm": [
+        [
+          199.5,
+          87.5,
+          -6.25
+        ],
+        [
+          206.5,
+          94.5,
+          17.75
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_nut_0",
+      "group": "station",
+      "description": "M4 x 0.7, 7 mm AF, model uses major-diameter hole",
+      "quantity": 1,
+      "volume_mm3": 95.58039734740026,
+      "center_world_mm": [
+        202.9999999999929,
+        43.99999999999956,
+        -2.399999999999999
+      ],
+      "world_limits_mm": [
+        [
+          198.95854811566647,
+          40.5,
+          -4.0
+        ],
+        [
+          207.04145188432352,
+          47.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "stand_board_nut_1",
+      "group": "station",
+      "description": "M4 x 0.7, 7 mm AF, model uses major-diameter hole",
+      "quantity": 1,
+      "volume_mm3": 95.5803973474002,
+      "center_world_mm": [
+        266.9999999999929,
+        43.999999999999524,
+        -2.399999999999999
+      ],
+      "world_limits_mm": [
+        [
+          262.9585481156665,
+          40.5,
+          -4.0
+        ],
+        [
+          271.0414518843236,
+          47.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "stand_board_nut_2",
+      "group": "station",
+      "description": "M4 x 0.7, 7 mm AF, model uses major-diameter hole",
+      "quantity": 1,
+      "volume_mm3": 95.58039734740011,
+      "center_world_mm": [
+        266.9999999999929,
+        90.99999999999955,
+        -2.399999999999999
+      ],
+      "world_limits_mm": [
+        [
+          262.9585481156665,
+          87.5,
+          -4.0
+        ],
+        [
+          271.0414518843236,
+          94.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "stand_board_nut_3",
+      "group": "station",
+      "description": "M4 x 0.7, 7 mm AF, model uses major-diameter hole",
+      "quantity": 1,
+      "volume_mm3": 95.58039734740015,
+      "center_world_mm": [
+        202.99999999999284,
+        90.99999999999953,
+        -2.3999999999999995
+      ],
+      "world_limits_mm": [
+        [
+          198.95854811566647,
+          87.5,
+          -4.0
+        ],
+        [
+          207.04145188432352,
+          94.5,
+          -0.7999999999999998
+        ]
+      ],
+      "solids": 1,
+      "faces": 9,
+      "edges": 21
+    },
+    {
+      "part": "stand_board_washer_0",
+      "group": "station",
+      "description": "M4 ISO 7089 steel washer",
+      "quantity": 1,
+      "volume_mm3": 39.27619135517957,
+      "center_world_mm": [
+        203.00000000000009,
+        44.00000000000001,
+        -0.4
+      ],
+      "world_limits_mm": [
+        [
+          198.5,
+          39.5,
+          -0.8
+        ],
+        [
+          207.5,
+          48.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_washer_1",
+      "group": "station",
+      "description": "M4 ISO 7089 steel washer",
+      "quantity": 1,
+      "volume_mm3": 39.276191355179705,
+      "center_world_mm": [
+        266.99999999999994,
+        43.99999999999999,
+        -0.3999999999999999
+      ],
+      "world_limits_mm": [
+        [
+          262.5,
+          39.5,
+          -0.8
+        ],
+        [
+          271.5,
+          48.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_washer_2",
+      "group": "station",
+      "description": "M4 ISO 7089 steel washer",
+      "quantity": 1,
+      "volume_mm3": 39.276191355179705,
+      "center_world_mm": [
+        267.00000000000006,
+        90.99999999999999,
+        -0.39999999999999986
+      ],
+      "world_limits_mm": [
+        [
+          262.5,
+          86.5,
+          -0.8
+        ],
+        [
+          271.5,
+          95.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "stand_board_washer_3",
+      "group": "station",
+      "description": "M4 ISO 7089 steel washer",
+      "quantity": 1,
+      "volume_mm3": 39.27619135517957,
+      "center_world_mm": [
+        203.0000000000001,
+        91.00000000000003,
+        -0.4000000000000001
+      ],
+      "world_limits_mm": [
+        [
+          198.5,
+          86.5,
+          -0.8
+        ],
+        [
+          207.5,
+          95.5,
+          0.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "stand_flange_bolt_0",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 156.09788497524283,
+      "center_world_mm": [
+        196.34211229437318,
+        64.017265061844,
+        123.13546365544002
+      ],
+      "world_limits_mm": [
+        [
+          190.76664059626,
+          61.267265061844,
+          120.38546365544
+        ],
+        [
+          205.76664059626,
+          66.767265061844,
+          125.88546365544
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_flange_bolt_1",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 156.09788497524283,
+      "center_world_mm": [
+        196.34211229437315,
+        78.017265061844,
+        123.13546365544002
+      ],
+      "world_limits_mm": [
+        [
+          190.76664059626,
+          75.267265061844,
+          120.38546365544
+        ],
+        [
+          205.76664059626,
+          80.767265061844,
+          125.88546365544
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_foot",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 6587.337599181441,
+      "center_world_mm": [
+        215.32686170264438,
+        71.01726506184401,
+        21.030602147065107
+      ],
+      "world_limits_mm": [
+        [
+          196.76664059626,
+          55.017265061844,
+          18.0
+        ],
+        [
+          233.76664059626,
+          87.017265061844,
+          24.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 13,
+      "edges": 27
+    },
+    {
+      "part": "stand_lock",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 304.7344873982098,
+      "center_world_mm": [
+        228.76664059625998,
+        70.96646506184399,
+        22.041237113402097
+      ],
+      "world_limits_mm": [
+        [
+          225.26664059626,
+          67.466465061844,
+          12.0
+        ],
+        [
+          232.26664059626,
+          74.466465061844,
+          28.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_m2_screw_0",
+      "group": "station",
+      "description": "M2 x 6 major-diameter envelope",
+      "quantity": 1,
+      "volume_mm3": 41.53185488045705,
+      "center_world_mm": [
+        209.26664059626006,
+        48.281896226745644,
+        20.8
+      ],
+      "world_limits_mm": [
+        [
+          207.36664059626,
+          45.466465061844,
+          18.900000000000002
+        ],
+        [
+          211.16664059626,
+          53.466465061844,
+          22.7
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_m2_screw_1",
+      "group": "station",
+      "description": "M2 x 6 major-diameter envelope",
+      "quantity": 1,
+      "volume_mm3": 41.53185488045705,
+      "center_world_mm": [
+        218.26664059625998,
+        48.281896226745644,
+        20.8
+      ],
+      "world_limits_mm": [
+        [
+          216.36664059626,
+          45.466465061844,
+          18.900000000000002
+        ],
+        [
+          220.16664059626,
+          53.466465061844,
+          22.7
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_post",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 68432.13993849511,
+      "center_world_mm": [
+        211.2773637348642,
+        71.01726506184401,
+        79.09387000928099
+      ],
+      "world_limits_mm": [
+        [
+          198.76664059626,
+          58.517265061844,
+          24.0
+        ],
+        [
+          223.76664059626,
+          83.517265061844,
+          134.0
+        ]
+      ],
+      "solids": 1,
+      "faces": 14,
+      "edges": 24
+    },
+    {
+      "part": "stand_post_bolt_0",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 304.7344873982098,
+      "center_world_mm": [
+        203.76664059625998,
+        71.017265061844,
+        24.208762886597896
+      ],
+      "world_limits_mm": [
+        [
+          200.26664059626,
+          67.517265061844,
+          18.25
+        ],
+        [
+          207.26664059626,
+          74.517265061844,
+          34.25
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_post_bolt_1",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 304.7344873982098,
+      "center_world_mm": [
+        218.76664059625998,
+        71.017265061844,
+        24.208762886597896
+      ],
+      "world_limits_mm": [
+        [
+          215.26664059626,
+          67.517265061844,
+          18.25
+        ],
+        [
+          222.26664059626,
+          74.517265061844,
+          34.25
+        ]
+      ],
+      "solids": 1,
+      "faces": 5,
+      "edges": 6
+    },
+    {
+      "part": "stand_receiver",
+      "group": "receiver register",
+      "description": "receiver with three machined wear-pad seats",
+      "quantity": 1,
+      "volume_mm3": 27638.487345424768,
+      "center_world_mm": [
+        235.82225784387407,
+        67.28074010535184,
+        15.044763987446935
+      ],
+      "world_limits_mm": [
+        [
+          194.96664059626,
+          38.0,
+          12.0
+        ],
+        [
+          276.0,
+          97.0,
+          23.6
+        ]
+      ],
+      "solids": 1,
+      "faces": 44,
+      "edges": 98
+    },
+    {
+      "part": "stand_reference_strip",
+      "group": "station",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 360.6318957844869,
+      "center_world_mm": [
+        213.76664059626003,
+        52.79198524053846,
+        20.8
+      ],
+      "world_limits_mm": [
+        [
+          205.86664059626,
+          50.517265061844,
+          18.1
+        ],
+        [
+          221.66664059626,
+          55.017265061844,
+          23.5
+        ]
+      ],
+      "solids": 1,
+      "faces": 14,
+      "edges": 24
+    },
+    {
+      "part": "stand_retaining_screw",
+      "group": "station",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 16.882694754747483,
+      "center_world_mm": [
+        131.3554340267858,
+        90.68449131018684,
+        98.93112361737822
+      ],
+      "world_limits_mm": [
+        [
+          129.77664059626,
+          88.684491310187,
+          96.931123617378
+        ],
+        [
+          133.77664059626,
+          92.684491310187,
+          100.931123617378
+        ]
+      ],
+      "solids": 1,
+      "faces": 12,
+      "edges": 25
+    },
+    {
+      "part": "stand_shim",
+      "group": "station",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 3.840853165538463,
+      "center_world_mm": [
+        213.76664059626,
+        50.49186506184401,
+        20.799999999999994
+      ],
+      "world_limits_mm": [
+        [
+          205.91664059626,
+          50.466465061844,
+          18.15
+        ],
+        [
+          221.61664059626,
+          50.517265061844,
+          23.45
+        ]
+      ],
+      "solids": 1,
+      "faces": 8,
+      "edges": 18
+    },
+    {
+      "part": "stand_spacer_left",
+      "group": "station",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 0.61637482376751,
+      "center_world_mm": [
+        134.11664059626,
+        90.68449131018701,
+        98.931123617378
+      ],
+      "world_limits_mm": [
+        [
+          134.01664059626,
+          88.884491310187,
+          97.13112361737801
+        ],
+        [
+          134.21664059626,
+          92.484491310187,
+          100.731123617378
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "stand_spacer_right",
+      "group": "station",
+      "description": "manufacturing geometry",
+      "quantity": 1,
+      "volume_mm3": 0.6163748237675978,
+      "center_world_mm": [
+        131.4166405962601,
+        90.68449131018701,
+        98.931123617378
+      ],
+      "world_limits_mm": [
+        [
+          131.31664059626,
+          88.884491310187,
+          97.13112361737801
+        ],
+        [
+          131.51664059626,
+          92.484491310187,
+          100.731123617378
+        ]
+      ],
+      "solids": 1,
+      "faces": 4,
+      "edges": 6
+    },
+    {
+      "part": "stand_yoke",
+      "group": "station",
+      "description": "source component",
+      "quantity": 1,
+      "volume_mm3": 15258.036106178813,
+      "center_world_mm": [
+        184.2813065982439,
+        84.75626138857986,
+        104.2626941795629
+      ],
+      "world_limits_mm": [
+        [
+          129.76664059626,
+          61.01726506184549,
+          77.19087200636567
+        ],
+        [
+          198.76664069625,
+          99.703719944247,
+          131.13546365543436
+        ]
+      ],
+      "solids": 1,
+      "faces": 46,
+      "edges": 119
+    }
+  ]
+}

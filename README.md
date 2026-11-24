@@ -22,6 +22,7 @@ purchased fasteners and bearings.
 - [Machine inputs](spec/current_machine.json)
 - [Spring-mounted yarn retainer and STEP files](docs/YARN_RETAINER.md)
 - [Sliding crochet gate, hook and individual STEP files](docs/CAPTURE_GATE.md)
+- [221-member hook, stripper and spring mounting assembly](docs/P5_MOUNTING.md)
 - [Engineering and mechanics](docs/ENGINEERING.md)
 - [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)

@@ -30,6 +30,7 @@ purchased fasteners and bearings.
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)
 - [Bounded quadratic solvers and analytical tests](docs/BOUNDED_QUADRATIC.md)
 - [Yarn length through a retracting guide](docs/GUIDE_TRAVEL.md)
+- [Sprung cloth clamp assemblies for two yarn diameters](cad/sprung_clamp/README.md)
 - [A spring shoe for the fabric clamp](docs/PASSIVE_JAW.md)
 - [A gravity-loaded carrier supported by yarn](docs/GRAVITY_CARRIER.md)
 - [Yarn weight and force balance](docs/YARN_WEIGHT.md)

@@ -1,0 +1,7 @@
+# Yarn load on the knockover plate
+
+The knockover plate bears against the yarn while the crochet head draws a loop. This benchmark calculates the normal force at a machined face of the plate. In the first supplied pose, two adjoining 4 mm material segments bear on the face. The plate exerts 2.663 and 3.620 mN on the two segments toward negative Y. [Plate STEP](../manufacturing/current/cad/BASE__B06_knockover.step) · [Six numerical poses and CAD reference loads](../examples/knockover_pressure.json)
+
+For a straight yarn segment with material coordinate *u* running from 0 to 1, the signed distance from its centerline to the face varies linearly. At each contacting point the force per unit relaxed length is the normal stiffness times the local compression. The code locates the point where compression begins or ends, integrates the pressure, and allocates the result between endpoints using the linear weights 1 − *u* and *u*. The potential is the integral of half the stiffness times squared compression. Its negative derivative gives the force on each node. The benchmark uses a 0.300 mm yarn radius and a normal stiffness of 1,000 N/mm². [Calculation](../physics/plane_yarn_pressure.py)
+
+Run `python3 -m unittest benchmarks.test_knockover_pressure` from the repository root. It checks both material segments at all six poses against independent numerical integration on the installed CAD solid. The analytical cases also check contact onset along a segment, force direction, endpoint reversal, and work. [Tests](../benchmarks/test_knockover_pressure.py)

@@ -33,6 +33,7 @@ purchased fasteners and bearings.
 - [Yarn weight and force balance](docs/YARN_WEIGHT.md)
 - [Continuous yarn self-clearance on an analytical coil](docs/YARN_CLEARANCE.md)
 - [Contact integration and analytical refinement](docs/CONTACT_INTEGRATION.md)
+- [Yarn pressure on the machined knockover plate](docs/KNOCKOVER_PRESSURE.md)
 - [Force at all four ends of a finite yarn contact](docs/FINITE_SEGMENTS.md)
 - [Passing a folded strand through a ring](docs/BIGHT_PASSAGE.md)
 - [Measuring two-direction yarn compliance](docs/SECTION_CALIBRATION.md)

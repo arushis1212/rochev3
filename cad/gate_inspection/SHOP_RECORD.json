@@ -1,0 +1,78 @@
+{
+  "serial": null,
+  "operator": null,
+  "observed_at": null,
+  "kind": "physical",
+  "records": {
+    "tool_envelope_and_full_width_profile": {
+      "path": null,
+      "sha256": null
+    },
+    "rail_and_pin_calibration": {
+      "path": null,
+      "sha256": null
+    },
+    "indexed_depth_and_flanks": {
+      "path": null,
+      "sha256": null
+    },
+    "bidirectional_sweep_and_loaded_compliance": {
+      "path": null,
+      "sha256": null
+    }
+  },
+  "limits_measured": {
+    "effective_cutter_radius_min_mm": null,
+    "effective_cutter_radius_max_mm": null,
+    "coarse_left_end_U_mm": null,
+    "coarse_right_end_U_mm": null,
+    "vertical_form_error_bound_mm": null,
+    "center_to_any_W_ideal_depth_change_bound_mm": null,
+    "full_width_endpoint_peak_to_peak_bound_mm": null,
+    "adjacent_top_and_depth_indication_error_bound_mm": null,
+    "flank_differential_indication_error_bound_mm": null,
+    "flank_station_U_error_bound_mm": null,
+    "small_contact_pin_radius_mm": null,
+    "small_contact_effective_land_minimum_mm": null,
+    "large_pin_radius_mm": null,
+    "large_pin_flat_end_circle_diameter_mm": null,
+    "large_pin_length_mm": null,
+    "end_fence_total_axial_clearance_mm": null,
+    "lower_rail_depth_below_adjacent_flat_min_mm": null,
+    "lower_rail_depth_below_adjacent_flat_max_mm": null,
+    "free_loaded_lift_min_mm": null,
+    "free_loaded_lift_max_mm": null,
+    "loaded_form_and_pose_error_bound_mm": null,
+    "left_stop_pin_center_U_mm": null,
+    "right_stop_pin_center_U_mm": null,
+    "peak_actual_profile_contact_load_N": null
+  },
+  "observations": {
+    "matched_identified_tool_and_nest": null,
+    "qualified_conditional_cylindrical_family": null,
+    "left_stop_to_right_stop_continuous": null,
+    "right_stop_to_left_stop_continuous": null,
+    "upper_caps_and_end_fences_fitted": null,
+    "profiles_measured_in_same_datum_setup": null
+  },
+  "tracks": [
+    {
+      "nominal_W_mm": -0.6,
+      "indicated_floor_depth_mm": null,
+      "left_rise_mm": null,
+      "right_rise_mm": null
+    },
+    {
+      "nominal_W_mm": 0,
+      "indicated_floor_depth_mm": null,
+      "left_rise_mm": null,
+      "right_rise_mm": null
+    },
+    {
+      "nominal_W_mm": 0.6,
+      "indicated_floor_depth_mm": null,
+      "left_rise_mm": null,
+      "right_rise_mm": null
+    }
+  ]
+}

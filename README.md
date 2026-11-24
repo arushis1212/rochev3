@@ -34,6 +34,7 @@ purchased fasteners and bearings.
 - [A gravity-loaded carrier supported by yarn](docs/GRAVITY_CARRIER.md)
 - [Yarn weight and force balance](docs/YARN_WEIGHT.md)
 - [Continuous yarn self-clearance on an analytical coil](docs/YARN_CLEARANCE.md)
+- [When the working yarn reaches the forming face](docs/FORMING_FACE.md)
 - [Contact integration and analytical refinement](docs/CONTACT_INTEGRATION.md)
 - [Yarn pressure on the machined knockover plate](docs/KNOCKOVER_PRESSURE.md)
 - [Force at all four ends of a finite yarn contact](docs/FINITE_SEGMENTS.md)

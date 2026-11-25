@@ -1,0 +1,54 @@
+{
+  "units": "mm",
+  "case": "0.600 mm stock, single 0.0127 mm cup shim, indexed common datum at minus 0.0127 mm",
+  "geometry": {
+    "aperture_diameter": 0.46,
+    "countersink_depth": 0.036,
+    "half_angle_deg": 45,
+    "nominal_steel_thickness": 0.05,
+    "original_through_diameter": 0.44,
+    "original_top_to_seated_center": 0.1273,
+    "nominal_cup_lip_above_center": 0.13,
+    "nominal_ball_diameter": 0.5
+  },
+  "receiving": {
+    "through_diameter": [
+      0.455,
+      0.465
+    ],
+    "countersink_depth": [
+      0.031,
+      0.041
+    ],
+    "half_angle_deg": [
+      44,
+      46
+    ],
+    "steel_thickness": [
+      0.048,
+      0.0533
+    ],
+    "outer_cone_to_bore_axis_error": 0.002,
+    "aperture_to_seat_transverse_error": 0.009,
+    "combined_edge_profile_burr_allowance": 0.001,
+    "local_seated_ball_center_height_above_foil": [
+      0.121,
+      0.133
+    ],
+    "ball_diameter_measured_envelope": [
+      0.491,
+      0.509
+    ],
+    "cup_lip_diameter_max": 0.46,
+    "cup_lip_height_above_seated_center_max": 0.14,
+    "full_lower_rim_outer_radius_min_from_seat": 0.255,
+    "full_upper_rim_outer_radius_min_from_seat": 0.28,
+    "retainer_tilt_deg_max": 0.35
+  },
+  "motion": {
+    "design_radial_excursion_mm": 0.004,
+    "design_additional_axial_drop_mm": 0.004,
+    "barrier_radius_from_cup_axis": 0.09
+  },
+  "scope": "Design receiving limits include measurement uncertainty. Verify each on assembled hardware. The motion envelope must be checked for the selected yarn and fixture. Nominal static and dynamic control inputs originate in the published archive."
+}

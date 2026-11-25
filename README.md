@@ -30,6 +30,8 @@ purchased fasteners and bearings.
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)
 - [Bounded quadratic solvers and analytical tests](docs/BOUNDED_QUADRATIC.md)
 - [Yarn length through a retracting guide](docs/GUIDE_TRAVEL.md)
+- [Formed feeder retainer and dimensional check](cad/feeder_ball_retainer/README.md)
+- [Feeder, spring-carrier and forming-gate calculations](docs/YARN_HANDOFF_FIXTURES.md)
 - [Printable spring carriers and three-axis inspection probe](cad/spring_carriers/BUILD.md)
 - [Barrel stop, inspection gauge and assembled transfer head](cad/barrel_stop/README.md)
 - [Sprung cloth clamp assemblies for two yarn diameters](cad/sprung_clamp/README.md)

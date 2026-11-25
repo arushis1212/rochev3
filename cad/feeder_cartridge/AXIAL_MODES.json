@@ -1,0 +1,436 @@
+{
+  "axis": "D01 +Y, applied axial force at ball center",
+  "boundary": "Actual joined polymer, 304 tube and cured bond, cut jaw fixed 2.5 mm from the ball center on bounding-box faces",
+  "cases": {
+    "23": {
+      "temperature_C": 23,
+      "epoxy_modulus_MPa": 1500.0,
+      "printed_jaw_modulus_MPa": 1800.0,
+      "elastic_coordinates": 154554,
+      "static_response_mm_per_N": 0.012907660242552913,
+      "full_FE_harmonic_checks": [
+        {
+          "frequency_Hz": 1000.0,
+          "response_mm_per_N": 0.012913118623460222
+        },
+        {
+          "frequency_Hz": 12000.0,
+          "response_mm_per_N": 0.013746416811048918
+        },
+        {
+          "frequency_Hz": 18000.0,
+          "response_mm_per_N": 0.014969171249146668
+        }
+      ],
+      "modes": [
+        {
+          "frequency_Hz": 47477.97718497745,
+          "static_contribution_mm_per_N": 0.01202674521968569
+        },
+        {
+          "frequency_Hz": 51874.55430614488,
+          "static_contribution_mm_per_N": 0.0001856129416788056
+        },
+        {
+          "frequency_Hz": 96576.1383386919,
+          "static_contribution_mm_per_N": 0.00037635990236609064
+        },
+        {
+          "frequency_Hz": 107574.25867674725,
+          "static_contribution_mm_per_N": 4.94797611548751e-05
+        },
+        {
+          "frequency_Hz": 114117.10893418615,
+          "static_contribution_mm_per_N": 4.018810543158059e-06
+        },
+        {
+          "frequency_Hz": 121112.19236412682,
+          "static_contribution_mm_per_N": 1.4459903808086882e-05
+        },
+        {
+          "frequency_Hz": 144643.9856937247,
+          "static_contribution_mm_per_N": 8.630067916188155e-06
+        },
+        {
+          "frequency_Hz": 146350.93596462492,
+          "static_contribution_mm_per_N": 2.8020714214240283e-06
+        },
+        {
+          "frequency_Hz": 151588.83690346972,
+          "static_contribution_mm_per_N": 7.716630146020725e-07
+        },
+        {
+          "frequency_Hz": 156289.35857907627,
+          "static_contribution_mm_per_N": 1.6122501714517758e-07
+        },
+        {
+          "frequency_Hz": 157901.25037154558,
+          "static_contribution_mm_per_N": 4.4840609784056214e-05
+        },
+        {
+          "frequency_Hz": 168760.7485297099,
+          "static_contribution_mm_per_N": 6.357414600105179e-06
+        },
+        {
+          "frequency_Hz": 169643.3228873809,
+          "static_contribution_mm_per_N": 7.541326783990971e-09
+        },
+        {
+          "frequency_Hz": 182244.55362729784,
+          "static_contribution_mm_per_N": 1.120494043557049e-05
+        },
+        {
+          "frequency_Hz": 187665.35029363775,
+          "static_contribution_mm_per_N": 8.043697449688574e-07
+        },
+        {
+          "frequency_Hz": 199278.88377885957,
+          "static_contribution_mm_per_N": 4.940340154362192e-07
+        },
+        {
+          "frequency_Hz": 205191.36724667755,
+          "static_contribution_mm_per_N": 2.385351349012392e-06
+        },
+        {
+          "frequency_Hz": 210159.09090615946,
+          "static_contribution_mm_per_N": 5.408990152125563e-07
+        },
+        {
+          "frequency_Hz": 212758.08094708115,
+          "static_contribution_mm_per_N": 3.5151506208331707e-06
+        },
+        {
+          "frequency_Hz": 213325.5354636333,
+          "static_contribution_mm_per_N": 3.183376813604861e-05
+        },
+        {
+          "frequency_Hz": 223295.83670477502,
+          "static_contribution_mm_per_N": 2.1699724101677815e-05
+        },
+        {
+          "frequency_Hz": 234910.93358990908,
+          "static_contribution_mm_per_N": 6.296772345918033e-06
+        },
+        {
+          "frequency_Hz": 236402.4031163867,
+          "static_contribution_mm_per_N": 4.398279369415759e-07
+        },
+        {
+          "frequency_Hz": 238675.95334944976,
+          "static_contribution_mm_per_N": 4.788035800837551e-05
+        },
+        {
+          "frequency_Hz": 252010.41699088854,
+          "static_contribution_mm_per_N": 3.943572758792865e-06
+        },
+        {
+          "frequency_Hz": 260475.43656100618,
+          "static_contribution_mm_per_N": 6.150205268006569e-06
+        },
+        {
+          "frequency_Hz": 266698.4174067693,
+          "static_contribution_mm_per_N": 9.615407805027244e-06
+        },
+        {
+          "frequency_Hz": 275544.34672114276,
+          "static_contribution_mm_per_N": 9.308892304184016e-07
+        },
+        {
+          "frequency_Hz": 282908.9372481246,
+          "static_contribution_mm_per_N": 2.676366680186348e-07
+        },
+        {
+          "frequency_Hz": 288984.5419881467,
+          "static_contribution_mm_per_N": 7.554963981853466e-07
+        },
+        {
+          "frequency_Hz": 307028.9306437213,
+          "static_contribution_mm_per_N": 1.20105375657562e-07
+        },
+        {
+          "frequency_Hz": 315758.63410669455,
+          "static_contribution_mm_per_N": 2.665157403802364e-07
+        },
+        {
+          "frequency_Hz": 317214.75050236995,
+          "static_contribution_mm_per_N": 8.461017925640879e-08
+        },
+        {
+          "frequency_Hz": 327716.13961406855,
+          "static_contribution_mm_per_N": 6.222627726479924e-10
+        },
+        {
+          "frequency_Hz": 337985.41374132864,
+          "static_contribution_mm_per_N": 1.1242071802351523e-07
+        },
+        {
+          "frequency_Hz": 345405.87770253205,
+          "static_contribution_mm_per_N": 1.5946512937318236e-07
+        },
+        {
+          "frequency_Hz": 359200.7799339932,
+          "static_contribution_mm_per_N": 1.190067654218898e-07
+        },
+        {
+          "frequency_Hz": 373492.1927542302,
+          "static_contribution_mm_per_N": 5.456635643581952e-07
+        },
+        {
+          "frequency_Hz": 405867.66648669064,
+          "static_contribution_mm_per_N": 3.649959162885695e-07
+        },
+        {
+          "frequency_Hz": 456677.5838819899,
+          "static_contribution_mm_per_N": 3.463318474430003e-05
+        },
+        {
+          "frequency_Hz": 464853.63843439147,
+          "static_contribution_mm_per_N": 1.126308087819849e-06
+        },
+        {
+          "frequency_Hz": 484062.4775722262,
+          "static_contribution_mm_per_N": 9.997120182371236e-07
+        },
+        {
+          "frequency_Hz": 541992.9355446761,
+          "static_contribution_mm_per_N": 8.533001260962241e-08
+        },
+        {
+          "frequency_Hz": 567623.2230524768,
+          "static_contribution_mm_per_N": 3.367207651475551e-09
+        },
+        {
+          "frequency_Hz": 582292.8250937192,
+          "static_contribution_mm_per_N": 8.570400328187467e-09
+        },
+        {
+          "frequency_Hz": 602412.3735544649,
+          "static_contribution_mm_per_N": 6.00917726592206e-09
+        },
+        {
+          "frequency_Hz": 614955.5162214381,
+          "static_contribution_mm_per_N": 3.1058967855443755e-10
+        },
+        {
+          "frequency_Hz": 680811.5306833215,
+          "static_contribution_mm_per_N": 1.8508514487086347e-08
+        }
+      ]
+    },
+    "40": {
+      "temperature_C": 40,
+      "epoxy_modulus_MPa": 260.0,
+      "printed_jaw_modulus_MPa": 1000.0,
+      "elastic_coordinates": 124017,
+      "static_response_mm_per_N": 0.05617587282293291,
+      "full_FE_harmonic_checks": [
+        {
+          "frequency_Hz": 1000.0,
+          "response_mm_per_N": 0.05628080422058614
+        },
+        {
+          "frequency_Hz": 12000.0,
+          "response_mm_per_N": 0.07716159939202921
+        },
+        {
+          "frequency_Hz": 18000.0,
+          "response_mm_per_N": 0.14906575606220587
+        }
+      ],
+      "modes": [
+        {
+          "frequency_Hz": 22534.324599401756,
+          "static_contribution_mm_per_N": 0.05098640807315786
+        },
+        {
+          "frequency_Hz": 23639.3741051623,
+          "static_contribution_mm_per_N": 0.001980739355823556
+        },
+        {
+          "frequency_Hz": 49084.85154017056,
+          "static_contribution_mm_per_N": 1.0557239658518574e-07
+        },
+        {
+          "frequency_Hz": 55680.864150718575,
+          "static_contribution_mm_per_N": 0.0015577989775396668
+        },
+        {
+          "frequency_Hz": 61985.052525265775,
+          "static_contribution_mm_per_N": 0.0007490938179290977
+        },
+        {
+          "frequency_Hz": 72942.09963096699,
+          "static_contribution_mm_per_N": 1.65084969921472e-05
+        },
+        {
+          "frequency_Hz": 94128.825226778,
+          "static_contribution_mm_per_N": 0.00022689154606089277
+        },
+        {
+          "frequency_Hz": 98669.55672213857,
+          "static_contribution_mm_per_N": 0.00028591144115440594
+        },
+        {
+          "frequency_Hz": 106470.95450165361,
+          "static_contribution_mm_per_N": 0.00010214002442876918
+        },
+        {
+          "frequency_Hz": 110453.26518348727,
+          "static_contribution_mm_per_N": 1.877376178897461e-06
+        },
+        {
+          "frequency_Hz": 112159.07310688095,
+          "static_contribution_mm_per_N": 4.6020791911077874e-06
+        },
+        {
+          "frequency_Hz": 117952.90488691852,
+          "static_contribution_mm_per_N": 4.512800275871225e-05
+        },
+        {
+          "frequency_Hz": 120951.92434506914,
+          "static_contribution_mm_per_N": 4.024402553524773e-06
+        },
+        {
+          "frequency_Hz": 124677.2746804538,
+          "static_contribution_mm_per_N": 1.2784672096038879e-05
+        },
+        {
+          "frequency_Hz": 131136.86716706233,
+          "static_contribution_mm_per_N": 4.786241022391354e-06
+        },
+        {
+          "frequency_Hz": 135489.25224635628,
+          "static_contribution_mm_per_N": 4.270986719135102e-07
+        },
+        {
+          "frequency_Hz": 141533.06608143085,
+          "static_contribution_mm_per_N": 1.1015293998181678e-07
+        },
+        {
+          "frequency_Hz": 147999.14978717605,
+          "static_contribution_mm_per_N": 6.085399014326006e-07
+        },
+        {
+          "frequency_Hz": 149287.5280648497,
+          "static_contribution_mm_per_N": 5.425247937584909e-07
+        },
+        {
+          "frequency_Hz": 153162.82945365424,
+          "static_contribution_mm_per_N": 3.0799884914477844e-06
+        },
+        {
+          "frequency_Hz": 156003.5823343509,
+          "static_contribution_mm_per_N": 1.5495724691183284e-07
+        },
+        {
+          "frequency_Hz": 160947.58777465677,
+          "static_contribution_mm_per_N": 1.1923298054978272e-07
+        },
+        {
+          "frequency_Hz": 165082.91452075454,
+          "static_contribution_mm_per_N": 9.713386010684345e-08
+        },
+        {
+          "frequency_Hz": 172574.98975177202,
+          "static_contribution_mm_per_N": 3.3010587283918636e-08
+        },
+        {
+          "frequency_Hz": 176052.257897801,
+          "static_contribution_mm_per_N": 2.417139525506588e-07
+        },
+        {
+          "frequency_Hz": 180431.36086132782,
+          "static_contribution_mm_per_N": 5.878211665389068e-06
+        },
+        {
+          "frequency_Hz": 190015.35137031972,
+          "static_contribution_mm_per_N": 3.835259397200258e-06
+        },
+        {
+          "frequency_Hz": 193145.57275666777,
+          "static_contribution_mm_per_N": 8.504065060581422e-05
+        },
+        {
+          "frequency_Hz": 198625.14134471572,
+          "static_contribution_mm_per_N": 5.684517312165896e-05
+        },
+        {
+          "frequency_Hz": 202320.94850241355,
+          "static_contribution_mm_per_N": 3.139919601752615e-05
+        },
+        {
+          "frequency_Hz": 207252.64514555928,
+          "static_contribution_mm_per_N": 5.973273421665534e-06
+        },
+        {
+          "frequency_Hz": 214665.66603964858,
+          "static_contribution_mm_per_N": 2.6391394692717016e-07
+        },
+        {
+          "frequency_Hz": 227115.1418463573,
+          "static_contribution_mm_per_N": 7.828320955014961e-08
+        },
+        {
+          "frequency_Hz": 236267.06193127675,
+          "static_contribution_mm_per_N": 6.23266098285251e-09
+        },
+        {
+          "frequency_Hz": 238835.00167605604,
+          "static_contribution_mm_per_N": 1.0186365337474925e-06
+        },
+        {
+          "frequency_Hz": 245451.97668031786,
+          "static_contribution_mm_per_N": 1.2004147196482694e-10
+        },
+        {
+          "frequency_Hz": 254738.4548257036,
+          "static_contribution_mm_per_N": 4.802209175117114e-07
+        },
+        {
+          "frequency_Hz": 270500.248146144,
+          "static_contribution_mm_per_N": 8.067026418772491e-07
+        },
+        {
+          "frequency_Hz": 380788.98549543094,
+          "static_contribution_mm_per_N": 2.455618037289923e-09
+        },
+        {
+          "frequency_Hz": 408445.2221273418,
+          "static_contribution_mm_per_N": 2.896040807598905e-09
+        },
+        {
+          "frequency_Hz": 425158.07815557386,
+          "static_contribution_mm_per_N": 9.138399567435692e-11
+        },
+        {
+          "frequency_Hz": 435136.99308576575,
+          "static_contribution_mm_per_N": 1.1434595787735092e-09
+        },
+        {
+          "frequency_Hz": 438684.0678919254,
+          "static_contribution_mm_per_N": 7.940927864874253e-10
+        },
+        {
+          "frequency_Hz": 466637.26220070117,
+          "static_contribution_mm_per_N": 5.947414761072505e-11
+        },
+        {
+          "frequency_Hz": 510303.026196915,
+          "static_contribution_mm_per_N": 6.522856403496948e-09
+        },
+        {
+          "frequency_Hz": 565016.922233453,
+          "static_contribution_mm_per_N": 1.0746810054552397e-08
+        },
+        {
+          "frequency_Hz": 722760.4263187483,
+          "static_contribution_mm_per_N": 7.78933563361552e-09
+        },
+        {
+          "frequency_Hz": 1062492.8570835297,
+          "static_contribution_mm_per_N": 1.695297727870664e-11
+        }
+      ]
+    }
+  }
+}

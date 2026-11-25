@@ -1,11 +1,13 @@
 # Yarn at the feeder, spring tips and forming gate
 
-These calculations use the modeled yarn and registered machine hardware. Each station has its own loading and boundary conditions.
+The yarn reaches a sprung guide at the feeder, remains held by two spring tips, and loads a separate forming gate. The following models use the registered geometry and distinguish each station's load and motion.
 
-| Interface | Reproduced local result |
+| Interface | Reproduced result |
 |---|---|
-| Feeder outlet on 0.600 mm yarn | Over 309.6 µs, the coupled axial shoe and 13 moving yarn nodes reach 10.981 mN peak contact force. Independent evaluation on the steel CAD surface gives 10.981 mN. All 16 interacting yarn edges are checked across the time cells. |
-| Laminated spring carriers | In 135 combinations of yarn diameter, two installed tip offsets and five sampled times, both tips retained the intended yarn segment. Normal forces range from 5.906 to 11.664 mN. Minimum clearance to another eligible strand edge is 0.09149 mm. |
-| Forming gate in its parked seat | Eighteen compressive support reactions balance the 53,700-coordinate elastic model. The largest elastic force residual is 4.0 × 10⁻¹¹ N. Independent checks cover the complete front and rear faces and the two steel floor surfaces. |
+| Feeder outlet on 0.600 mm yarn | A 55-edge strand with 52 moving material nodes and 53 freely spinning sections produces 10.998 mN peak shoe force over 309.6 µs. The previous time refinement gives 10.997 mN. Least clearance among 50,714 eligible nonlocal strand pairs is 0.08186 mm. |
+| Laminated spring carriers | Both tips stay on the intended strand in 960 modeled combinations of stock diameter, time and three-axis installation errors. The least clearance to another eligible edge is 0.07328 mm. At assumed friction coefficient 0.275, the least ideal axial traction ceiling is 3.277 mN. |
+| Forming gate under approaching yarn | The complete parked gate equilibrates on 18 compressive supports. When the yarn touches, both components respond to the contact force. Two independent clocks give 0.3138505 and 0.3138503 mN at 305.700 µs, with a 0.3344% difference in accumulated contact impulse. |
 
-The feeder study uses yarn extension, bending, rotational and translational inertia, gravity, finite contact and the installed spring mass. Four outside material nodes, the clamp pose and shoe slopes drive this local interval. For the spring carrier, the actual laminated brass plates, steel shim, solder, leaf, printed socket and epoxy enter the compliance calculation. At a friction coefficient of 0.275, the least computed ideal axial traction ceiling is 3.292 mN. Actual grip depends on yarn, finish and assembly. [Size-specific carrier kits and inspection](../cad/spring_carriers/BUILD.md) · [Feeder ball and retainer CAD](../cad/feeder_ball_retainer/README.md)
+The feeder calculation combines axial extension, bending, twist, translational and rotational inertia, gravity and finite steel contact. The 55-edge test imposes the outside strand motions and clamp motion. The carrier calculation uses actual brass plates, steel shims and leaves, solder, printed sockets and cured epoxy. Dry faces transfer compression and can open. The gate calculation couples full elastic and rigid-body motion to the moving yarn. The quoted intervals cover the first modeled engagement of each interface.
+
+The printable carrier kits include size-specific coupons and inspection dimensions. The formed foil is a separate component fit study on the 0.600 mm feeder. [Carrier kits](../cad/spring_carriers/BUILD.md) · [Machined foil and fit calculator](../cad/feeder_ball_retainer/README.md)

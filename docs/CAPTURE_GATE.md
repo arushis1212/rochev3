@@ -136,3 +136,14 @@ The complete bent gate clears all 957 edges of the stationary 0.600 mm yarn in 2
 The current steel hook places its guide land at V = 1.6936 ± 0.003 mm. Seat a 0.0508 mm (0.002 in) steel shim against the 4.500 mm strip before yarn release. The shim is 15.70 × 5.30 mm with two Ø2.20 mm holes spaced 9.00 mm apart. The gate stays parked while the working strand approaches. [Current hook STEP](../cad/capture_gate/registered_steel_hook.step)
 
 Across 24 nominal assemblies, the loaded gate clears the starting strand by at least 0.010051 mm. The freely advancing reference strand would meet the cam by 342 µs. In the 384 finish cases, the smallest starting clearance is 0.005105 mm and the smallest free-path interception by 379.10 µs is 0.004140 mm. Each case varies the two guide faces, shelf height and assembled fence position. Positive interception measures where the modeled free strand would overlap the steel-supported brass cam. On a machine the contact force changes the subsequent strand trajectory. [384 measured-in-model geometry bounds in millimeters](../examples/common_gate_setting.csv)
+
+## First yarn contact on the parked gate
+
+A finite segment of the previously formed loop presses against the brass gate and then separates. Two independently advanced simulations, using the same starting geometry and a frictionless normal contact law, give the following results. The gate can deform and move against eighteen support points during the pulse.
+
+| Time increment | End of contact, µs | Accumulated normal impulse, N·s |
+|---|---:|---:|
+| 0.500 µs | 316.15371–316.15391 | 2.19345 × 10⁻⁷ |
+| 0.250 µs | 316.13972–316.13992 | 2.19452 × 10⁻⁷ |
+
+The two integrated impulses differ by 0.0486%. After the indicated release, finite-surface sweeps resolve positive clearance between the yarn and brass through 317.8 µs. These measurements describe one simulated contact in the installed gate configuration.

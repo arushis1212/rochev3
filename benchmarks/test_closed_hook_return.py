@@ -20,7 +20,9 @@ class ReturnPathTests(unittest.TestCase):
         self.assertLess(dist(mid, [(a+b)/2 for a, b in zip(start, end)]), 1e-10)
         self.assertAlmostEqual(end[0] - start[0], 0.5625)
         with self.assertRaises(ValueError):
-            guide_at(marks[2] + 0.001)
+            guide_at(marks[3] + 0.001)
+        crest = guide_at(marks[3])
+        self.assertLess(dist(crest, (136.375, start[1], start[2])), 1e-8)
 
     def test_uniform_arc_length_within_each_segment(self):
         path = read_path()

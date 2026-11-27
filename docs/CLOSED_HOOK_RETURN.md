@@ -12,14 +12,15 @@ The swatch fixture commands the hook through four straight translations after th
 
 Run `python3 -m examples.closed_hook_return` from the repository root to reproduce the table, or append a distance in millimetres to evaluate an intermediate position. The calculation describes commanded hook geometry. Yarn motion, contact loads and actuator calibration have separate measurements. [Coordinate data](../examples/closed_hook_return.json) · [Interpolator](../examples/closed_hook_return.py)
 
-## Guide motion through the second waypoint
+## Guide motion through the third waypoint
 
-The yarn guide holds its position for the first 2.03667 mm of hook travel. During the next 2.86138 mm, the guide moves 0.56250 mm in X, a quarter of the hook’s X displacement. Its axial command advances from 27.00000 to 28.76104 mm. The simulated feeder clamps the same material mark throughout this command.
+The yarn guide holds its position for the first 2.03667 mm of hook travel. During the next 2.86138 mm, the guide moves 0.56250 mm in X, a quarter of the hook’s X displacement. Its axial command advances from 27.00000 to 28.76104 mm. On the third leg the guide retracts to its original 27.00000 mm axial datum while following a quarter of the hook’s sideways travel. The simulated feeder clamps the same material mark throughout these commands.
 
 | Hook travel (mm) | Guide X (mm) | Guide Y (mm) | Guide Z (mm) |
 | ---: | ---: | ---: | ---: |
 | 0.00000 | 136.00000 | 164.62830 | 87.30221 |
 | 2.03667 | 136.00000 | 164.62830 | 87.30221 |
 | 4.89805 | 136.56250 | 162.97346 | 86.69989 |
+| 8.97543 | 136.37500 | 164.62830 | 87.30221 |
 
 Run `python3 -m examples.closed_hook_return --guide` for the guide positions, or add a hook travel such as `3.0` to interpolate between them.

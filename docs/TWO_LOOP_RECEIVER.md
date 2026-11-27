@@ -32,3 +32,15 @@ The files share the machine coordinate system. The carriage is indexed at zero a
 | Transverse M1 screw | [STEP](../cad/station_one/S1-02-M1-crossbolt.step) |
 | S1 holder, braces and slide guide | [STEP](../cad/station_one/S1-03-holder-braces-guide.step) |
 | M2 slide-lock screw | [STEP](../cad/station_one/S1-04-M2-index-dog.step) |
+
+## How much load reaches the receiver?
+
+At a gate opening of 2.060672 mm, the drawn bight rests against the 1.50 mm diameter needle of the locked receiver. In this stationary simulation the needle carries 3.227 mN. The hook body retains several contacts with a total normal load of 82.045 mN. The sliding gate carries zero normal load. These are sums of contact magnitudes at each component, so their ratio does not measure a fraction of the yarn tension.
+
+Run the example from the repository root with NumPy and SciPy installed.
+
+```sh
+python -m examples.receiver_load
+```
+
+The example includes every free node of the working strand, the two fixed endpoint tangents, yarn rest lengths, axial and bending stiffnesses, gravity weights, material marks, and CAD contact normals. It differentiates the elastic energy, adds gravity, and finds nonnegative normal reactions that balance the free nodes. It also measures the radial distance between the loaded yarn and the needle. The maximum absolute component of the residual is 0.043 nN. This benchmark evaluates a stationary pose under nominal frictionless contact. [Executable example](../examples/receiver_load.py) · [Numerical inputs](../examples/receiver_load.npz)

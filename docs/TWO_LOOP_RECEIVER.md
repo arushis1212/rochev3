@@ -131,3 +131,18 @@ python -m examples.draw_feeder 57.270550905
 ### Carrier at the draw station
 
 The XT05 carrier uses a relieved shoe channel and a round-key bore. At the 10 mm draw dock and 20° roll, the nominal fitted shoe has 446.485 mm² of seating area with zero positive overlap. The 30 mm parking dock provides 431.617 mm². The relief removes 519.710 mm³, or 0.247% of the original carrier volume. The STEP file records this candidate in its machine coordinate frame. [Draw-station carrier CAD](../cad/registered_station/XT05_draw_carrier.step)
+
+### Pivoting receiver jaw
+
+The receiver has a 0.160 mm radius nose on a 0.180 mm diameter spindle. In two simulated closures, the nose reaches the working strand and carries 23.4 and 24.6 mN of normal load. The example follows the nearest point on the moving yarn segment at each jaw angle. The STEP parts use the receiver coordinate frame. [Hook and clevis](../cad/side_entry/receiver_jaw_hook.step) · [Jaw and spindle](../cad/side_entry/receiver_jaw_rotor.step)
+
+A separate draw holds material mark 1045.852053 mm from 20.664 to 24.369 mm of tool travel. The same mark bears on the finite nose at all 15 stopped poses. With an assumed friction coefficient of 0.24, native contact forces satisfy static balance within 0.9 µN per free coordinate. The largest modeled normal load on either gripping surface is 0.126 N. All 14 swept intervals clear surrounding hardware to at least 0.179 mm. These are model results for the stated rod diameter, material properties and contact conditions. [Replay nose contact, traction and spindle torque](../examples/receiver_jaw.py) · [Material coordinates and force vectors](../examples/receiver_jaw.json)
+
+### Moving held loops
+
+A second terminal dataset lets 211 additional stations of older material move. The geometry has opposite-signed limb crossings through each held loop around eye mark 1076.951 mm. Replay it to see how the marked crossing positions change when the cloth deforms. This example measures the geometry of one loaded pose. [Mobile-cloth coordinates](../examples/mobile_held_loops.npz) · [Crossing calculation](../examples/threaded_bight.py)
+
+```sh
+python -m examples.receiver_jaw
+python -m examples.threaded_bight examples/mobile_held_loops.npz
+```

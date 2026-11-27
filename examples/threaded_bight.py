@@ -39,4 +39,7 @@ def measure(path=None):
 
 
 if __name__ == '__main__':
-    print(json.dumps(measure(), indent=2))
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("data", nargs="?", type=Path)
+    print(json.dumps(measure(parser.parse_args().data), indent=2))

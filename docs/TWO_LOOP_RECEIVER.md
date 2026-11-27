@@ -83,3 +83,13 @@ On the separately seated draw, continuing from 1.750 to 2.100 mm raises the seco
 python -m examples.moving_pickup
 python -m examples.receiver_load examples/second_draw_210.npz
 ```
+
+## Routing a compact tool through the held loops
+
+At the seated 2.10 mm draw pose the two openings face different directions. A compact hinged eye follows seven translations around the fork. Its reference point pierces the newly drawn loop on leg three and the previous loop on leg seven. With the loops held in their measured poses, the finite tool clears the installed metal by at least 0.180 mm. Both loop disks in the example follow their own registered material boundaries. [Reproduce the signed crossings](../examples/two_loop_route.py) · [Tool waypoints and registered loop geometry](../examples/two_loop_route.npz)
+
+The stroke also needs enough yarn on the loop side of the eye. The original purchase provides 10.648 mm of relaxed yarn between the eye and the newly drawn loop’s neck. The shortest distance from that neck to the farther disk is 16.005 mm. Sliding the eye farther down the supply strand gives a force-balanced purchase at material mark 1063.645 mm across 18 swept translations. That leaves 20.279 mm of relaxed yarn on the loop side. The two-disk example measures tool passage with the loops held at the seated pose.
+
+```sh
+python -m examples.two_loop_route
+```

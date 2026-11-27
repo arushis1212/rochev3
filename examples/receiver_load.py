@@ -38,4 +38,7 @@ def replay(path=None):
 
 
 if __name__=='__main__':
-    print(json.dumps(replay(),indent=2))
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("pose",type=Path,nargs="?")
+    print(json.dumps(replay(parser.parse_args().pose),indent=2))

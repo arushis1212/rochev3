@@ -44,3 +44,9 @@ python -m examples.receiver_load
 ```
 
 The example includes every free node of the working strand, the two fixed endpoint tangents, yarn rest lengths, axial and bending stiffnesses, gravity weights, material marks, and CAD contact normals. It differentiates the elastic energy, adds gravity, and finds nonnegative normal reactions that balance the free nodes. It also measures the radial distance between the loaded yarn and the needle. The maximum absolute component of the residual is 0.043 nN. This benchmark evaluates a stationary pose under nominal frictionless contact. [Executable example](../examples/receiver_load.py) · [Numerical inputs](../examples/receiver_load.npz)
+
+With the receiver locked, advancing the guide by 5.264977 mm along the programmed presentation direction raises the simulated needle reaction to 7.167 mN. The same finite yarn retains its material coordinates across the sampled guide settings. Reproduce the second stationary balance with the following command. [Guide-advance data](../examples/receiver_load_guide.npz)
+
+```sh
+python -m examples.receiver_load examples/receiver_load_guide.npz
+```

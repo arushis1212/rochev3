@@ -34,8 +34,9 @@ def replay(path=None):
                     needle_force_mN=1e3*float(pressure[d['member']=='fork'].sum()),
                     hook_body_force_mN=1e3*float(pressure[d['member']=='TOOL_H01_hook_body'].sum()),
                     secondary_gate_force_mN=1e3*float(pressure[d['member']=='S1_aux_gate'].sum()),
+                    downstream_eye_force_mN=1e3*float(pressure[np.isin(d['member'], ['new_hook','new_gate'])].sum()),
                     main_gate_force_mN=1e3*float(pressure[d['member']=='TOOL_H02_gate'].sum()),
-                    needle_skin_gap_mm=float(min(needle_gap)),free_nodes=len(q)-2)
+                    needle_skin_gap_mm=float(min(needle_gap)) if needle_gap else None,free_nodes=len(q)-2)
 
 
 if __name__=='__main__':

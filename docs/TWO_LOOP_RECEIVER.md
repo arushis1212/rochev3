@@ -99,3 +99,20 @@ A second eye can also acquire the strand directly at material mark 1064.000 mm w
 In the moving pickup model the second hook bears on fresh material near mark 1056.9 mm. Its first load occurs at 8.274 ms with a 25 µs time-step ceiling and 8.324 ms with a 50 µs ceiling. The corresponding loads of 10.42 and 6.71 mN show the sensitivity of the short contact pulse to time and spatial discretization. The finer run retains the strand through 15.854 ms. A separate moving withdrawal from the same registered 7.174 ms state loads the hook at 0.00483 and 0.00591 mm of travel.
 
 The downstream hook first touches the registered yarn between 0.789398 and 0.789457 mm of travel. At the next stationary calculation, 0.795373 mm, the original cartridge carries 6.108 mN and the new hook carries 0.201 mN. Five sections still contain fresh yarn, and the free-node force imbalance is 0.00114 µN. This is a two-tool equilibrium at the start of the turn.
+
+### Transferring the load to the downstream eye
+
+At 0.795373 mm, a replay of the working strand against 729 component models gives 6.10848 mN on the upstream sliding gate and 0.20088 mN on the downstream hook. Backing the original cartridge toward its entry position unloads its gate. At the same downstream position, with the original gate opened 5.75 mm, the downstream hook carries 3.92686 mN and the fork carries 2.83505 mN. The example reconstructs these reactions from the stored material coordinates, elastic properties, gravity and surface normals. [Force replay](../examples/receiver_load.py) · [First contact state](../examples/downstream_touch.npz) · [Opened source gate](../examples/downstream_released.npz)
+
+In a separate draw with the original cartridge held closed, adding bending degrees of freedom in the working strand resolves the short span between the eye and the guide lip. A 172-free-node stop at 2.995373 mm puts 87.5188 mN on the downstream eye with a 0.530 nN maximum force imbalance. The eye and the guide can bear against different points between two of the original yarn stations. [Refined rod and native bearings](../examples/downstream_fine.npz)
+
+### Metering yarn for the two-loop route
+
+The feeder can donate yarn by lifting the moving pulley and shortening the two spans beside it. The example follows 92 registered points and preserves the original stretch on each supply segment. A candidate draw command transfers 41.2105 mm of relaxed yarn as the supported carrier rises from 154.3051 to 175.5618 mm. This calculation describes the feeder stroke. The two-loop route uses separate checks for the working yarn, both loop crossings, and opening and closing the outlet. [Feeder replay](../examples/draw_feeder.py) · [Wrapped supply and carrier inputs](../examples/draw_feeder.npz)
+
+```sh
+python -m examples.receiver_load examples/downstream_touch.npz
+python -m examples.receiver_load examples/downstream_released.npz
+python -m examples.receiver_load examples/downstream_fine.npz
+python -m examples.draw_feeder
+```

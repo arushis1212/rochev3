@@ -75,3 +75,7 @@ python3 -m examples.guide_parking hook-backoff 0.4
 python3 -m examples.guide_parking --measure
 python3 -m unittest benchmarks.test_guide_parking
 ```
+
+## Station one holder
+
+An alternative holder for the first support station seats two M2 fasteners and their nuts. Its 9 mm gate-opening stroke clears the installed geometry in the nominal parked configuration. The holder and four fastener parts also clear the moving assembly and all 995 yarn segments in each of the 190 return and 127 parking intervals. The smallest modeled yarn clearance to these five parts is 0.02070 mm during return and 0.35838 mm during parking. These values describe the nominal geometry. [Per-interval clearance bounds](../examples/station_one_holder_clearances.csv)

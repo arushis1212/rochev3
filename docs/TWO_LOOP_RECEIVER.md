@@ -60,3 +60,13 @@ The benchmark reconstructs nodal acceleration from the position history and the 
 ```sh
 python -m examples.mobile_yarn_contact
 ```
+
+## Presenting fresh yarn from the side
+
+A separate side-entry cartridge approaches the strand while the original head is parked and the receiver holds both loops. Its fixed hook blade and sliding gate run in two short guide lands. The simulated 3.5 mm entry brings fresh material to all five transverse sections of the nose after 1.920 mm of travel. A 5.75 mm gate stroke closes the pocket. The material at the middle section is 1054.000 mm along the registered yarn. The finite blades and housing clear the yarn by at least 0.4199 mm through entry and closure, with the closed feeder and receiver in their modeled positions.
+
+The example reconstructs the crossing intervals from the 3D yarn coordinates, section windows and cartridge orientation. The setup is a nominal geometry study of a stationary loaded receiver with a separately positioned cartridge. [Replay the side entry](../examples/side_entry.py) · [Material and frame data](../examples/side_entry.npz)
+
+```sh
+python -m examples.side_entry
+```

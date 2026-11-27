@@ -116,3 +116,14 @@ python -m examples.receiver_load examples/downstream_released.npz
 python -m examples.receiver_load examples/downstream_fine.npz
 python -m examples.draw_feeder
 ```
+
+### Two fresh limbs through both held loops
+
+A constructed endpoint uses one continuous strand from the held fabric to the feeder. In this pose the closed eye surrounds material mark 1076.732 mm. The two limbs intersect the previous loop at marks 1068.869 and 1078.399 mm, and the newly drawn loop at 1053.969 and 1094.157 mm. Each pair crosses in opposite directions around the captured mark. The calculation tracks the material boundaries of the loops and excludes the common neck from the crossing count. [Run the geometric example](../examples/threaded_bight.py) · [Registered strand, loop boundaries and eye pose](../examples/threaded_bight.npz)
+
+This arrangement uses 57.27055 mm of additional relaxed yarn, which the modeled pulley supplies at a carrier height of 183.84612 mm. These numbers describe the specified end shape and feeder setting. The continuous loaded motion into that shape is a separate experiment.
+
+```sh
+python -m examples.threaded_bight
+python -m examples.draw_feeder 57.270550905
+```

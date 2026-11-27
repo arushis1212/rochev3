@@ -3,6 +3,7 @@ from pathlib import Path
 
 from examples.draw_feeder import replay as meter
 from examples.receiver_load import replay as balance
+from examples.threaded_bight import measure
 
 
 EXAMPLES = Path(__file__).resolve().parents[1] / 'examples'
@@ -31,3 +32,14 @@ class DownstreamDrawTests(unittest.TestCase):
         self.assertEqual(meter(0.)['stroke_mm'],0.)
         with self.assertRaises(ValueError):
             meter(100.)
+
+    def test_fresh_limbs_bracket_the_eye_on_both_loop_disks(self):
+        result = measure()
+        self.assertAlmostEqual(result['eye_center_material_mm'], 1076.731605, places=5)
+        for name, near, far in [('L0',1068.869104,1078.399195),('L1',1053.968589,1094.157239)]:
+            loop = result['loops'][name]
+            self.assertTrue(loop['two_limbs'])
+            self.assertEqual(loop['signs'], [1,-1])
+            self.assertAlmostEqual(loop['marks_mm'][0], near, places=5)
+            self.assertAlmostEqual(loop['marks_mm'][1], far, places=5)
+        self.assertAlmostEqual(meter(57.270550905)['carrier_end_z_mm'],183.846121,places=5)

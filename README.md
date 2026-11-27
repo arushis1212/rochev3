@@ -12,6 +12,8 @@ actuated research prototype for stitch and swatch development.
 
 In a simulation starting with the yarn captured, the hook pulls 11.95 mm of additional yarn through a foundation loop while retaining the prior loop. A 0.48 mm guide withdrawal exposes the captured fold. The guide then returns to park in four movements, including a 0.793 mm hook backoff that gives the working yarn room to clear the foundation. The parked gap measures 0.368 mm. [Reproduce the first draw](docs/CLOSED_HOOK_RETURN.md#following-two-yarn-marks-through-the-foundation) · [Replay the parking sequence](docs/CLOSED_HOOK_RETURN.md#parking-the-guide)
 
+A tilted receiver can reach both parked yarn loops in the nominal model. Its two fingers enter on parallel paths, and a crossbolt closes the opening around a strand from each loop. The example measures where the actual yarn passes through the receiver. [Reproduce the receiver geometry](docs/TWO_LOOP_RECEIVER.md)
+
 The downloadable **D26-T17-S3-indexed-candidate** machine assembly contains **692 installed native solids**.
 It combines a closable hook, four paired-support stations, an indexed transfer
 module, a gravity feeder, two retained service nips and a hanging fabric clamp.

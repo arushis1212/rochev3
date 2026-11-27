@@ -93,3 +93,7 @@ The stroke also needs enough yarn on the loop side of the eye. The original purc
 ```sh
 python -m examples.two_loop_route
 ```
+
+A second eye can also acquire the strand directly at material mark 1064.000 mm with the original cartridge parked. Four translations with 45.013° of combined rotation join this pickup to the six remaining legs of the two-loop route. The connector clears both stationary yarn loops and 726 components by at least 0.05347 mm in the nominal sweep.
+
+In the moving pickup model the second hook bears on fresh material near mark 1056.9 mm. Its first load occurs at 8.274 ms with a 25 µs time-step ceiling and 8.324 ms with a 50 µs ceiling. The corresponding loads of 10.42 and 6.71 mN show the sensitivity of the short contact pulse to time and spatial discretization. The finer run retains the strand through 15.854 ms. A separate moving withdrawal from the same registered 7.174 ms state loads the hook at 0.00483 and 0.00591 mm of travel.

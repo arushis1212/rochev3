@@ -3,9 +3,16 @@ import math
 from pathlib import Path
 import unittest
 from examples.guide_length import disk_distance, length_bound
+from examples.parked_mouth import parked_mouth
 
 
 class GuideTravelTests(unittest.TestCase):
+    def test_parked_mouth_minimum_feed(self):
+        reach, span, slide = parked_mouth()
+        self.assertAlmostEqual(reach, 46.92145314, places=7)
+        self.assertAlmostEqual(span, 33.1805166, places=7)
+        self.assertAlmostEqual(slide, reach-span, places=12)
+
     def test_axial_and_outside_disk(self):
         self.assertEqual(2,disk_distance((0,0,-2),(0,0,0),(0,0,5),3))
         self.assertEqual(5,disk_distance((5,0,4),(0,0,0),(0,0,1),2))

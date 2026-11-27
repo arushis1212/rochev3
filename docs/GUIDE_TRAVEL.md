@@ -10,3 +10,7 @@ Run the calculation or change the coordinates in the input file. Both the exampl
 python3 examples/guide_length.py
 python3 -m unittest benchmarks.test_guide_length
 ```
+
+## Feeding the parked mouth
+
+The guide can slide along the yarn. With the cloth end at (113.622, 158.571, 69.401) mm and the parked tube mouth at (136.000, 190.000, 96.537) mm, the nearest point on the 0.43815 mm radius opening is **46.921 mm** from the cloth end. The reference material span holds **33.181 mm**. With the cloth end fixed, at least **13.741 mm** of additional unstrained yarn must pass through the mouth. Bends around the bed and the finite yarn diameter can increase that requirement. The calculation gives a geometric lower bound for setting up the feed. [Reproduce with Python](../examples/parked_mouth.py)

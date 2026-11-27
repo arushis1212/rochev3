@@ -127,3 +127,7 @@ This arrangement uses 57.27055 mm of additional relaxed yarn, which the modeled 
 python -m examples.threaded_bight
 python -m examples.draw_feeder 57.270550905
 ```
+
+### Carrier at the draw station
+
+The XT05 carrier uses a relieved shoe channel and a round-key bore. At the 10 mm draw dock and 20° roll, the nominal fitted shoe has 446.485 mm² of seating area with zero positive overlap. The 30 mm parking dock provides 431.617 mm². The relief removes 519.710 mm³, or 0.247% of the original carrier volume. The STEP file records this candidate in its machine coordinate frame. [Draw-station carrier CAD](../cad/registered_station/XT05_draw_carrier.step)

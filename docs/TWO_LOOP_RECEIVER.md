@@ -146,3 +146,9 @@ A second terminal dataset lets 211 additional stations of older material move. T
 python -m examples.receiver_jaw
 python -m examples.threaded_bight examples/mobile_held_loops.npz
 ```
+
+### A material point crossing a moving held loop
+
+A finite-mass simulation follows the same point of yarn as the closed jaw advances at 20 mm/s. At the beginning of the 25 µs window the two intersections with the nearer held loop lie on the same side of the gripped material mark. The mark then passes through the interior of a triangle in that loop. At the end, each held loop contains two oppositely directed limbs on either side of the mark. Both the loop boundary and the working yarn can move. The two time resolutions use a 0.24 jaw friction coefficient and the same local initial velocity field.
+
+Run `python -m examples.material_transit` from the repository root. The replay interpolates the same material points at each frame, solves for the time of intersection with every moving triangle, and reports the motion of the gripped point relative to the jaw. The included coordinates describe this local crossing window. [Replay calculation](../examples/material_transit.py) · [25 µs steps](../examples/receiver_transit_25us.npz) · [12.5 µs steps](../examples/receiver_transit_12p5us.npz)

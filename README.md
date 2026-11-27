@@ -82,4 +82,6 @@ The code regenerates native CAD and executes mechanics examples. Numerical
 examples declare their benchmark material properties; component measurements
 and physical stitch trials establish application performance.
 
+Follow a marked yarn point through a moving held loop at two time resolutions. [Receiver simulation and replay](docs/TWO_LOOP_RECEIVER.md#a-material-point-crossing-a-moving-held-loop)
+
 Created by [arushis1212](https://github.com/arushis1212).

@@ -1,6 +1,6 @@
 from math import dist, nan
 import unittest
-from examples.closed_hook_return import read_path, stations, tip_at
+from examples.closed_hook_return import guide_at, read_path, stations, tip_at
 
 
 class ReturnPathTests(unittest.TestCase):
@@ -11,6 +11,16 @@ class ReturnPathTests(unittest.TestCase):
         self.assertAlmostEqual(marks[-1], 13.962912023412057, places=9)
         for mark, point in zip(marks, path):
             self.assertLess(dist(tip_at(path, mark), point), 1e-10)
+
+    def test_linked_guide(self):
+        marks = stations(read_path())
+        self.assertEqual(guide_at(0), guide_at(marks[1]))
+        mid = guide_at((marks[1] + marks[2])/2)
+        start, end = guide_at(marks[1]), guide_at(marks[2])
+        self.assertLess(dist(mid, [(a+b)/2 for a, b in zip(start, end)]), 1e-10)
+        self.assertAlmostEqual(end[0] - start[0], 0.5625)
+        with self.assertRaises(ValueError):
+            guide_at(marks[2] + 0.001)
 
     def test_uniform_arc_length_within_each_segment(self):
         path = read_path()

@@ -1,7 +1,7 @@
 import math
 import unittest
 
-from examples.bight_passage import passage
+from examples.bight_passage import passage, through_sleeve
 
 
 def sample(height, offset=(0., 0.)):
@@ -9,6 +9,21 @@ def sample(height, offset=(0., 0.)):
 
 
 class BightPassageTests(unittest.TestCase):
+    def test_finite_faces_and_yarn_radius(self):
+        for height, expected in [(-1.5, False), (-1.25, False), (-1., True), (14.25, False)]:
+            with self.subTest(height=height):
+                result = through_sleeve(2., 15., 6., .25, height, 1.)
+                self.assertEqual(result['both_legs_through_with_clearance'], expected)
+        result = through_sleeve(2., 15., 6., .25, -1., 1.)
+        self.assertAlmostEqual(result['tip_above_far_face_mm'], .25)
+        self.assertAlmostEqual(result['sidewall_clearance_lower_mm'], 3.75)
+
+    def test_finite_bore_offset(self):
+        result = through_sleeve(2., 15., 6., .25, -1., 1., offset=(4., 0.))
+        self.assertFalse(result['both_legs_through_with_clearance'])
+        with self.assertRaises(ValueError):
+            through_sleeve(2., 15., 6., .25, -1., float('nan'))
+
     def test_before_and_at_birth(self):
         for height in (-3., -2.):
             result = sample(height)
@@ -18,7 +33,8 @@ class BightPassageTests(unittest.TestCase):
     def test_analytic_half_radius(self):
         result = sample(-1.)
         self.assertAlmostEqual(result.length_beyond_plane_mm, 4 * math.pi / 3)
-        for point, x, sign in zip(result.crossings, [-math.sqrt(3), math.sqrt(3)], [1, -1], strict=True):
+        self.assertEqual(len(result.crossings), 2)
+        for point, x, sign in zip(result.crossings, [-math.sqrt(3), math.sqrt(3)], [1, -1]):
             self.assertAlmostEqual(point[0], x)
             self.assertEqual(point[2], sign)
 

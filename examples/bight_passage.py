@@ -48,5 +48,23 @@ def passage(bend_radius, leg_length, ring_radius, ring_tube_radius, yarn_radius,
     return Passage(length, points, event, gap)
 
 
+def through_sleeve(bend_radius, leg_length, bore_radius, yarn_radius, center_height,
+                   thickness, offset=(0., 0.)):
+    """Check one circular bight through both faces of a straight circular bore, in mm."""
+    values = (bend_radius, leg_length, bore_radius, yarn_radius, thickness, center_height, *offset)
+    if not all(math.isfinite(value) for value in values) or min(values[:4]) <= 0 or thickness <= 0:
+        raise ValueError("Lengths and radii must be positive and all coordinates finite")
+    cx, cy = offset
+    # Each leg is monotone in height up to the common tip. Both faces must
+    # therefore cut the same two branches if the tip and tails clear the faces.
+    half = thickness / 2
+    margins = {
+        'tip_above_far_face_mm': center_height + bend_radius - half - yarn_radius,
+        'tails_below_near_face_mm': leg_length - center_height - half - yarn_radius,
+        'sidewall_clearance_lower_mm': bore_radius - math.hypot(abs(cx) + bend_radius, cy) - yarn_radius,
+    }
+    return {**margins, 'both_legs_through_with_clearance': min(margins.values()) > 0.}
+
+
 if __name__ == "__main__":
     print(json.dumps(asdict(passage(2., 15., 6., .6, .25, -1.)), indent=2))

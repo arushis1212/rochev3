@@ -12,3 +12,13 @@ With a 2 mm bend, 15 mm legs, a centered 6 mm ring, 0.60 mm wire and 0.25 mm yar
 python3 examples/bight_passage.py
 python3 -m unittest benchmarks.test_bight_passage
 ```
+
+## How far must a loop enter a sleeve?
+
+A straight sleeve has a near face and a far face. For a sleeve of thickness 1.00 mm centered at height zero, the far face is at +0.50 mm. A yarn of radius 0.25 mm needs its tip center above +0.75 mm for the outside of the bend to clear that face by a positive margin. The ends of the two legs must also stay below the near face by one yarn radius.
+
+In the example below the center of a 2 mm bend is at −1 mm. The top of its centerline is at +1 mm. Both legs traverse the bore, with 0.25 mm to spare at the far face and at least 3.75 mm at the cylindrical wall. These are geometric checks on the prescribed bend.
+
+```sh
+python3 -c "from examples.bight_passage import through_sleeve; print(through_sleeve(2, 15, 6, .25, -1, 1))"
+```

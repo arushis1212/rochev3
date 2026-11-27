@@ -53,3 +53,25 @@ python -m unittest benchmarks.test_first_draw
 ```
 
 The motion comes from the 719-component hook-and-feeder configuration. The compressed data contains the material labels, yarn coordinates, oriented aperture and hook coordinates from registered capture to the selected return stop. This example covers the first draw of a nominal simulated stitch. [Motion coordinates](../examples/first_draw_motion.npz) · [Geometric replay](../examples/first_draw.py) · [Tests](../benchmarks/test_first_draw.py)
+
+## Parking the guide
+
+After the guide exposes the fold, the new yarn remains in the closed hook's nose and the old loop remains in its heel. The guide retracts along its inclined axis, pauses while the hook backs away, finishes retracting, then centers on X. The guide reaches machine coordinates (136.00000, 190.00000, 96.53675) mm with the feeder outlet closed throughout.
+
+| Phase | Moving tool | Distance from start of phase, mm | Other tool |
+|---|---|---:|---|
+| Guide starts withdrawing | Guide along its 20° axis | 17.245000 | Hook held |
+| Hook backs away | Hook along its preceding draw line | 0.793463 | Guide held |
+| Guide finishes withdrawing | Guide along the same axis | 8.354545 | Hook held |
+| Guide centers | Guide along negative X | 0.259943 | Hook held |
+
+The distance clock starts at zero for each phase. In the nominal simulation, the working yarn maintained at least 0.13993 mm of surface clearance from the previously formed yarn over 127 motion intervals. All three marks used to track the first draw stayed on the drawn-through side of the foundation opening. At park the surface gap between the nearest working and foundation-rim segments is 0.368369 mm. The example independently calculates this endpoint measurement from four recorded strand vertices and the 0.600 mm yarn diameter. [Parking coordinates and yarn sample](../examples/guide_parking.json) · [Replay and distance calculation](../examples/guide_parking.py)
+
+Run from the repository root with Python 3.9 or later. The commands print all phase endpoints, sample the hook 0.4 mm into its own movement, then measure the yarn gap.
+
+```sh
+python3 -m examples.guide_parking
+python3 -m examples.guide_parking hook-backoff 0.4
+python3 -m examples.guide_parking --measure
+python3 -m unittest benchmarks.test_guide_parking
+```

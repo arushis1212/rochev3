@@ -10,7 +10,7 @@ actuated research prototype for stitch and swatch development.
 
 *Both views use the same assembly pose. The detail shows how the closable hook (orange) sits beside the paired supports (gold) and transfer mechanism (teal).*
 
-In a simulation starting with the yarn captured, the hook pulls 11.95 mm of additional yarn through a foundation loop while retaining the prior loop. The example tracks two marked points through the opening and replays the tool motion. A final 0.48 mm guide withdrawal exposes the captured fold. [Reproduce the first draw](docs/CLOSED_HOOK_RETURN.md#following-two-yarn-marks-through-the-foundation)
+In a simulation starting with the yarn captured, the hook pulls 11.95 mm of additional yarn through a foundation loop while retaining the prior loop. A 0.48 mm guide withdrawal exposes the captured fold. The guide then returns to park in four movements, including a 0.793 mm hook backoff that gives the working yarn room to clear the foundation. The parked gap measures 0.368 mm. [Reproduce the first draw](docs/CLOSED_HOOK_RETURN.md#following-two-yarn-marks-through-the-foundation) · [Replay the parking sequence](docs/CLOSED_HOOK_RETURN.md#parking-the-guide)
 
 The downloadable **D26-T17-S3-indexed-candidate** machine assembly contains **692 installed native solids**.
 It combines a closable hook, four paired-support stations, an indexed transfer

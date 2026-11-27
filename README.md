@@ -10,9 +10,9 @@ actuated research prototype for stitch and swatch development.
 
 *Both views use the same assembly pose. The detail shows how the closable hook (orange) sits beside the paired supports (gold) and transfer mechanism (teal).*
 
-The bight-release example shows how the machine exposes a fold of yarn while the hook holds two loops. A 0.48 mm guide withdrawal gives 0.248 mm of modeled clearance past the sleeve. The example includes machine coordinates and yarn segments so the clearance can be measured directly in code. [Reproduce the bight release](docs/CLOSED_HOOK_RETURN.md)
+In a simulation starting with the yarn captured, the hook pulls 11.95 mm of additional yarn through a foundation loop while retaining the prior loop. The example tracks two marked points through the opening and replays the tool motion. A final 0.48 mm guide withdrawal exposes the captured fold. [Reproduce the first draw](docs/CLOSED_HOOK_RETURN.md#following-two-yarn-marks-through-the-foundation)
 
-The current **D26-T17-S3-indexed-candidate** design contains **692 installed native solids**.
+The downloadable **D26-T17-S3-indexed-candidate** machine assembly contains **692 installed native solids**.
 It combines a closable hook, four paired-support stations, an indexed transfer
 module, a gravity feeder, two retained service nips and a hanging fabric clamp.
 Printed structural parts work with machined metal yarn-contact tools and

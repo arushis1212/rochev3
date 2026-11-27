@@ -35,3 +35,21 @@ For hook or guide coordinates between stations, pass a hook travel in millimetre
 With the hook fixed at the selected position, a guide withdrawal of **0.43–0.70 mm** maintained at least **0.2068 mm** of whole-radius sleeve clearance and **0.3166 mm** of clearance to the nearby foundation segment on the continuous modeled path. The lower bounds account for motion between the sampled equilibria. The nominal 0.48 mm setting sits 0.05 mm above the lower end of this guide-only command range.
 
 The simulation uses 330.98634 mm of working yarn between the registered cloth and closed outlet, with nominal axial rigidity 2 N and bending rigidity 0.02 N·mm². At 0.48 mm, calculated peak tensile strain is **2.584%** and combined outlet grip demand is **0.14645 N**. These are quasistatic model results for that yarn specification. Fixture repeatability, yarn properties and physical trials determine prototype performance.
+
+## Following two yarn marks through the foundation
+
+Imagine marking each leg of the working fold just outside the foundation opening before the hook starts pulling. Both marks pass through the opening during the modeled return. The amount of yarn between the two penetrations, measured along its unstretched material coordinates, grows from **9.85042 to 21.80342 mm**. The old loop stays in the heel and the fold stays in the nose.
+
+| Yarn mark (mm from material origin) | Hook travel at each passage (mm) | Final forward clearance (mm) |
+| --- | --- | ---: |
+| 1024, cloth side | Forward at 4.21256, back at 6.02704, forward at 6.48050 | 0.1960 |
+| 1040, feeder side | Forward at 7.73928 | 2.9055 |
+
+The example tests each mark’s trajectory against the triangles spanning the actual foundation yarn on 190 linear motion intervals. At all four crossings the marked yarn clears the foundation rim by at least 2.11368 mm, accounting for both yarn radii. Final forward clearance measures how far the entire marked yarn section lies in front of all foundation-rim fibers along the machine Y axis. Five sections through each hook pocket independently track retention.
+
+```sh
+python -m examples.first_draw
+python -m unittest benchmarks.test_first_draw
+```
+
+The motion comes from the 719-component hook-and-feeder configuration. The compressed data contains the material labels, yarn coordinates, oriented aperture and hook coordinates from registered capture to the selected return stop. This example covers the first draw of a nominal simulated stitch. [Motion coordinates](../examples/first_draw_motion.npz) · [Geometric replay](../examples/first_draw.py) · [Tests](../benchmarks/test_first_draw.py)

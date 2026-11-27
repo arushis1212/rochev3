@@ -2,6 +2,7 @@
   "frame": "Roche machine world frame",
   "units": "mm",
   "tool_point": "hook tip",
+  "inclination_deg": 30,
   "roll_deg": 270,
   "gate_travel_mm": 0,
   "waypoints_mm": [
@@ -52,5 +53,48 @@
       164.62829923878044,
       87.30220596938743
     ]
-  ]
+  ],
+  "bight_release": {
+    "fourth_leg_hook_travel_mm": 3.0605017515228345,
+    "held_head_tip_mm": [139.05641332353412, 159.3838446448857, 87.81419127095674],
+    "guide_tip_before_withdrawal_mm": [136.2599431818182, 165.49324358291295, 87.61701996494857],
+    "guide_withdrawal_unit_vector": [0.0, 0.9396926207859084, 0.3420201433256687],
+    "nominal_guide_withdrawal_mm": 0.48,
+    "modeled_guide_withdrawal_mm": [0.0, 0.2, 0.48, 0.7],
+    "exposed_stop_window_mm": [0.43, 0.7],
+    "closed_outlet_working_rest_length_mm": 330.9863375189692,
+    "nominal_yarn_diameter_mm": 0.6,
+    "simulation_at_nominal_stop": {
+      "full_radius_sleeve_clearance_mm": 0.24829511190952064,
+      "minimum_nonadjacent_yarn_surface_gap_mm": 0.31675461927152027,
+      "peak_tensile_strain": 0.02584099702119902,
+      "combined_outlet_grip_demand_N": 0.14645384776062773,
+      "maximum_working_rod_force_residual_N": 1.6311899685150788e-08
+    },
+    "continuous_bounds_in_stop_window": {
+      "full_radius_sleeve_clearance_mm": 0.2068385205605979,
+      "foundation_edge_surface_gap_mm": 0.31666718135297806
+    },
+    "nominal_crossing_geometry": {
+      "foundation_aperture_triangle_mm": [
+        [144.9885286255265, 165.6003568164036, 88.73500335148232],
+        [127.59743526232918, 164.97398622764257, 86.58704766078114],
+        [127.93405334264104, 164.98458573523718, 87.48083875709706]
+      ],
+      "crossing_yarn_segment_mm": [
+        [136.62945806744403, 163.76728578856225, 88.38598482161164],
+        [136.3021102167019, 165.72323623818252, 87.86040367845108]
+      ],
+      "crossing_segment_material_mm": [1042.670622450414, 1044.670622450414],
+      "positive_crossing_material_mm": 1044.2271869680199,
+      "neighboring_foundation_segment_mm": [
+        [130.1762358162918, 168.36736878937936, 82.50323814278238],
+        [130.47797036480497, 164.38329780313853, 82.3344206488821]
+      ],
+      "nearest_working_segment_mm": [
+        [129.9905034922374, 166.03915074183064, 80.74668939830579],
+        [131.13383435968342, 164.70586853498747, 81.72723296050015]
+      ]
+    }
+  }
 }

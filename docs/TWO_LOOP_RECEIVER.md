@@ -72,3 +72,14 @@ python -m examples.side_entry
 ```
 
 At 1.400 mm of nominal withdrawal, the secondary gate carries 0.8823 mN and the receiving fork carries 2.9725 mN. The stopped model balances the free working yarn to 0.065 nN with all five sections still occupied. At 1.750 mm, the secondary gate carries 3.484 mN and the original receiver carries 2.244 mN. The registered motion between these stopped poses clears 726 component models and preserves both receiver passages. The closest housing-to-carriage spacing during entry lies between 0.0371 and 0.0406 mm in the nominal CAD. The three component models define the cartridge geometry used in this calculation. [Hook blade](../cad/side_entry/S1-aux-hook.step) · [Sliding gate](../cad/side_entry/S1-aux-gate.step) · [Housing](../cad/side_entry/S1-aux-barrel.step)
+
+## From receiver contact to pickup
+
+The same simulated strand now travels from the parked handoff into the second hook. The open cartridge approaches diagonally by 4.230 mm. While the receiver accepts load, its secondary gate continues closing at 20 mm/s. At the first receiver contact, 1.334 ms after primary release, a 0.60 mm strand still fits through the central escape opening. At 6.052 ms the opening traps the yarn. It remains in the pocket through 7.174 ms. All five nose sections contain one fresh, positively oriented crossing during the moving handoff. The 490 sampled poses cover material marks 1055.249–1060.977 mm. The example recomputes the intersections and the escape test from material coordinates and sampled blade outlines. [Moving pickup example](../examples/moving_pickup.py) · [Motion and blade sections](../examples/moving_pickup.npz)
+
+On the separately seated draw, continuing from 1.750 to 2.100 mm raises the secondary gate load to 6.120 mN. The original receiver carries 1.527 mN. Solving the 122 free nodes from the registered geometry gives a maximum remaining force component of 0.0361 nN. The straight withdrawal carries fresh yarn through 3.500 mm in the nominal swept assembly. [Stationary force inputs](../examples/second_draw_210.npz)
+
+```sh
+python -m examples.moving_pickup
+python -m examples.receiver_load examples/second_draw_210.npz
+```

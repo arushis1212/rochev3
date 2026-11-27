@@ -33,6 +33,7 @@ def replay(path=None):
                     free_force_residual_nN=1e9*float(max(abs(forces-mat@pressure))),
                     needle_force_mN=1e3*float(pressure[d['member']=='fork'].sum()),
                     hook_body_force_mN=1e3*float(pressure[d['member']=='TOOL_H01_hook_body'].sum()),
+                    secondary_gate_force_mN=1e3*float(pressure[d['member']=='S1_aux_gate'].sum()),
                     main_gate_force_mN=1e3*float(pressure[d['member']=='TOOL_H02_gate'].sum()),
                     needle_skin_gap_mm=float(min(needle_gap)),free_nodes=len(q)-2)
 

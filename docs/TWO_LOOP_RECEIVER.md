@@ -70,3 +70,5 @@ The example reconstructs the crossing intervals from the 3D yarn coordinates, se
 ```sh
 python -m examples.side_entry
 ```
+
+At 1.400 mm of nominal withdrawal, the secondary gate carries 0.8823 mN and the receiving fork carries 2.9725 mN. The stopped model balances the free working yarn to 0.065 nN with all five sections still occupied. The closest housing-to-carriage spacing during entry lies between 0.0371 and 0.0406 mm in the nominal CAD. The three component models define the cartridge geometry used in this calculation. [Hook blade](../cad/side_entry/S1-aux-hook.step) · [Sliding gate](../cad/side_entry/S1-aux-gate.step) · [Housing](../cad/side_entry/S1-aux-barrel.step)

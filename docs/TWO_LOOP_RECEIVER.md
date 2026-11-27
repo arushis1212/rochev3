@@ -50,3 +50,13 @@ With the receiver locked, advancing the guide by 5.264977 mm along the programme
 ```sh
 python -m examples.receiver_load examples/receiver_load_guide.npz
 ```
+
+## When both strands move
+
+The handoff simulation starts at 1.005843 ms with 122 free nodes in the working strand and 114 free nodes in the foundation loop. The feeder outlet is closed and the fork is locked. At 1.030843 ms the strands push against each other. At 1.334055 ms the working strand first loads the receiving needle. Over the 132 accepted steps through 2.500 ms, the foundation moves as much as 1.194 mm and the working strand moves as much as 3.370 mm. At the final sample the needle carries 6.306 mN.
+
+The benchmark reconstructs nodal acceleration from the position history and the initial velocity. It balances inertia, elastic restoring forces, gravity and support forces against nonnegative contact reactions. At each yarn contact it locates the closest points on the two moving segments and distributes equal and opposite normal forces to their four nodes. The maximum free-node force component left unbalanced is 0.966 µN or less. The needle receives a normal impulse of 4.999 µN·s over this interval. These values describe the nominal frictionless model with prescribed material outside the two modeled spans. [Replay the transient](../examples/mobile_yarn_contact.py) · [Registered motion and force inputs](../examples/mobile_yarn_contact.npz)
+
+```sh
+python -m examples.mobile_yarn_contact
+```

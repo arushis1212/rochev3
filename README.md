@@ -45,6 +45,7 @@ purchased fasteners and bearings.
 - [Contact integration and analytical refinement](docs/CONTACT_INTEGRATION.md)
 - [Yarn pressure on the machined knockover plate](docs/KNOCKOVER_PRESSURE.md)
 - [Force at all four ends of a finite yarn contact](docs/FINITE_SEGMENTS.md)
+- [A single yarn segment bearing on two pins](docs/TWO_BEARING_SEGMENT.md)
 - [Passing a folded strand through a ring](docs/BIGHT_PASSAGE.md)
 - [Measuring two-direction yarn compliance](docs/SECTION_CALIBRATION.md)
 - [A deformable yarn section against two supports](docs/TWO_CONTACT_SECTION.md)

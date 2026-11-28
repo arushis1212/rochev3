@@ -28,3 +28,7 @@ The `brake/` directory contains a replacement fork, rotor and pin for the cam-dr
 A 31.829 mg integral tab on the tail brings the modelled moving fork assembly to the cam design mass of 4.458686 g and aligns its transverse centre of mass with the 0.800 mm pushrod. The crossbolt and adhesive are included for mass-property replay. The rod engages a 3.000 mm bonded length. A fivefold axial test load corresponds to 0.8712 MPa of average interfacial shear.
 
 Run `python -m examples.indexed_latch --brake --native` to calculate the assembly mass and transverse offset from the actual solids, replay the two brake loads, test seating in both directions, and measure clearance against the same cast-off yarn.
+
+## Relieved heel
+
+The 40° relief moves the heel away from the withdrawing yarn while preserving the working face of the deployed tooth. Across the specified machining tolerances, the registered 0.600 mm diameter yarn has 0.040954 mm of clearance over the 29.701763 mm withdrawal. The CAD benchmark also checks the earlier loaded yarn and the bearing sleeves. [Dimensioned variant and reproduction](relieved/README.md)

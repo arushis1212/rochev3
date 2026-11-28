@@ -1,0 +1,92 @@
+{
+  "bearing_samples": [
+    {
+      "interval": 6,
+      "start_sha256": "7d35fd8139742366e1b46d4deb3fdf95a0f5fe8dc09fa6aabdb3b168a4717c3b",
+      "end_sha256": "e1fbda93b40151d424c817ccf7b2e47eb0758e51b6efbfb9716bdd2262141503",
+      "fraction": 0.5,
+      "rod_edge_material_mm": [
+        1036.670622450414,
+        1038.670622450414
+      ],
+      "edge_on_fork_frame_world_axes_mm": [
+        [
+          136.67195102420658,
+          161.97833280824932,
+          89.18795143640375
+        ],
+        [
+          136.74511652552167,
+          163.95451990070282,
+          89.723049104768
+        ]
+      ]
+    },
+    {
+      "interval": 53,
+      "start_sha256": "1b6ffc6a458b151edb7c54c94264db82185b894f6c12c612614cdc9b67edcea0",
+      "end_sha256": "28adaab220b1959b9c15a64da8d3265d053aac1216727c7122a8c4361c40adba",
+      "fraction": 0.5,
+      "rod_edge_material_mm": [
+        1036.670622450414,
+        1038.670622450414
+      ],
+      "edge_on_fork_frame_world_axes_mm": [
+        [
+          136.664100863577,
+          161.78557834006557,
+          89.13330034273474
+        ],
+        [
+          136.74236516396104,
+          163.74082780495036,
+          89.68530995101233
+        ]
+      ]
+    },
+    {
+      "interval": 73,
+      "start_sha256": "24d053ebcf357747fae676bef71218eb7fc9d57c08add05afaf27a634b910462",
+      "end_sha256": "368383dc30510ae76b3d82573132a64b0dbb6576013fc175882d3823790d0620",
+      "fraction": 0.0,
+      "rod_edge_material_mm": [
+        1036.670622450414,
+        1038.670622450414
+      ],
+      "edge_on_fork_frame_world_axes_mm": [
+        [
+          136.65346329099677,
+          161.57810495197748,
+          89.09078291323239
+        ],
+        [
+          136.7391273077441,
+          163.5082487583954,
+          89.68037959183589
+        ]
+      ]
+    }
+  ],
+  "flat_deg": 40.0,
+  "flat_offset_mm": 0.6,
+  "proximal_end_D_mm": -2.12,
+  "distal_end_D_mm": 4.15,
+  "flange_land_radius_mm": 0.355,
+  "flange_land_half_extent_N_mm": 0.59,
+  "shank_land_radius_mm": 0.295,
+  "maximum_offset_error_mm": 0.006,
+  "maximum_angle_error_deg": 0.3,
+  "maximum_proximal_error_mm": 0.01,
+  "flat_worst_envelope_offsets_mm": [
+    0.586,
+    0.614
+  ],
+  "total_allowed_withdrawal_perturbations_mm": {
+    "registered_yarn_centerline": 0.015,
+    "assembled_travel": 0.01,
+    "radius_growth": 0.005,
+    "profile_and_compliance": 0.005
+  },
+  "nominal_moving_target_kg": 0.00445868629344466,
+  "source_reference_sha256": "91e289eeb582795a11b9f09d319694f50fa058aa89bb1369c07f315795358a64"
+}

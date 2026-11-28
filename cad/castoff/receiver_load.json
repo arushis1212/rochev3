@@ -1,0 +1,857 @@
+{
+  "mark_mm": 1073.0,
+  "outer_cheek_preload_mN": 40.0,
+  "supported_edge_material_mm": [
+    [
+      1070.0224049369417,
+      1071.4213837039517
+    ],
+    [
+      1075.4716049219514,
+      1077.9816049219514
+    ]
+  ],
+  "nodes_in_local_balance": 15,
+  "prescribed_original_edge_positions_xyz_mm": [
+    [
+      [
+        130.46892763069735,
+        151.9839488629654,
+        91.55582936053824
+      ],
+      [
+        130.33704923423247,
+        150.76756065385075,
+        92.23411997273227
+      ]
+    ],
+    [
+      [
+        131.60052475020007,
+        149.91881455471585,
+        95.47698486415922
+      ],
+      [
+        132.71772102510215,
+        152.11121605205062,
+        95.96880811669685
+      ]
+    ]
+  ],
+  "stations": [
+    {
+      "jaw_deg": 0,
+      "gate_deg": 110.0,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": true,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "friction_hook": 1.4391072391881063,
+        "new_hook": 0.8896781374591257,
+        "seat_1": 39.54941123259224,
+        "friction_jaw": 2.002604246345833,
+        "seat_3": 39.9999,
+        "seat_0": 39.26974020993839,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 4.331389622993065,
+      "maximum_local_residual_mN": 5.394148669402021e-10
+    },
+    {
+      "jaw_deg": 0,
+      "gate_deg": 110.0,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_jaw": 2.5737383604040596,
+        "new_hook": 2.85222454368356,
+        "seat_1": 39.54941123259215,
+        "seat_3": 39.9999,
+        "seat_0": 39.26974020993838,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 5.425962904087619,
+      "maximum_local_residual_mN": 5.394148669402021e-10
+    },
+    {
+      "jaw_deg": -5.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -10.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -15.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -20.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -25.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -30.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -35.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -40.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -45.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -50.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -55.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -60.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -65.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -70.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -75.0,
+      "gate_deg": 110,
+      "withdrawal_mm": 0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.4318347189174026,
+        "seat_1": 39.26011645581887,
+        "seat_3": 39.9999,
+        "seat_0": 38.96704020923065,
+        "seat_2": 39.99989999999999
+      },
+      "original_eye_load_mN": 0.4318347189174026,
+      "maximum_local_residual_mN": 8.68749516769185e-10
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 0.125,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 0.25,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 0.375,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.25509661446453613,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.25509661446453613,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 0.5,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.25509661446453613,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.25509661446453613,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 0.625,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.25509661446453613,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.25509661446453613,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 0.75,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 0.875,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.125,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.25,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.375,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.25509661446454146,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.25509661446454146,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.5,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.625,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.75,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 1.875,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 2.0,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "face_loads_mN": {
+        "new_hook": 0.2550966144645329,
+        "seat_1": 39.331423259396345,
+        "seat_3": 39.9999,
+        "seat_0": 38.91313699902491,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0.2550966144645329,
+      "maximum_local_residual_mN": 6.005127818620171e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 2.125,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "face_loads_mN": {
+        "seat_3": 39.9999,
+        "seat_1": 39.40660581240861,
+        "seat_0": 38.8729273378047,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0,
+      "maximum_local_residual_mN": 1.350135281352749e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 2.25,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "face_loads_mN": {
+        "seat_3": 39.9999,
+        "seat_1": 39.40660581240861,
+        "seat_0": 38.8729273378047,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0,
+      "maximum_local_residual_mN": 1.350135281352749e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 2.375,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "face_loads_mN": {
+        "seat_3": 39.9999,
+        "seat_1": 39.40660581240861,
+        "seat_0": 38.8729273378047,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0,
+      "maximum_local_residual_mN": 1.350135281352749e-09
+    },
+    {
+      "jaw_deg": -75,
+      "gate_deg": 110,
+      "withdrawal_mm": 2.5,
+      "jaw_commands_mark": false,
+      "eye_sections": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "face_loads_mN": {
+        "seat_3": 39.9999,
+        "seat_1": 39.40660581240861,
+        "seat_0": 38.8729273378047,
+        "seat_2": 39.9999
+      },
+      "original_eye_load_mN": 0,
+      "maximum_local_residual_mN": 1.350135281352749e-09
+    }
+  ],
+  "scope": "Local receiving fixture on the independently drawn fabric. The selected edge endpoints retain their original positions; their equilibrium equations are checked. The exterior fabric retains the original shape. Sweeps include the installed receiver, compact tool and yarn."
+}

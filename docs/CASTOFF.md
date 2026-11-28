@@ -37,3 +37,9 @@ The supplied coordinates reproduce each tangency and its position along the fini
 ## Moving the receiver past the S1 gate
 
 From the released mark to the independently posed four-crossing mark, a closed jaw can travel 40.459609 mm along five straight legs while changing orientation. With the original eye parked at release, the modeled sweep has 0.072520 mm of clearance to installed steel. The geometry package contains the four jaw solids, 16 nearby installed solids and bounding boxes for the other 713. The yarn follows a separate force calculation. Run `python -m unittest benchmarks.test_receiver_wrist` in the CAD environment to replay the rigid motion. [Wrist geometry, poses and subdivision intervals](../cad/castoff/marked_wrist/route.json)
+
+## Retaining the live loop as the jaw leaves
+
+The local fixture uses opposed contact faces on both yarn limbs. The gate opens to 110 degrees before the receiver enters. With the outer faces each preloaded to 40 mN and an assumed friction coefficient of 0.15, the jaw releases the material mark, rotates to -75 degrees and withdraws 2.5 mm. At the last of 37 simulated stations the four receiving faces carry 38.873, 39.407, 40.000 and 40.000 mN. The original eye carries zero force and its five sections are empty. Each station has a corresponding continuous clearance check.
+
+The fixture starts with four strand crossings already present. The 15-node local balance includes the contact-edge endpoint equations at their supplied positions. The outer fabric retains its prescribed configuration. [Local force stations, boundary positions and tool motion](../cad/castoff/receiver_load.json)

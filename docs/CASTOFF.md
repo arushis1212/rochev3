@@ -43,3 +43,16 @@ From the released mark to the independently posed four-crossing mark, a closed j
 The local fixture uses opposed contact faces on both yarn limbs. The gate opens to 110 degrees before the receiver enters. With the outer faces each preloaded to 40 mN and an assumed friction coefficient of 0.15, the jaw releases the material mark, rotates to -75 degrees and withdraws 2.5 mm. At the last of 37 simulated stations the four receiving faces carry 38.873, 39.407, 40.000 and 40.000 mN. The original eye carries zero force and its five sections are empty. Each station has a corresponding continuous clearance check.
 
 The fixture starts with four strand crossings already present. The 15-node local balance includes the contact-edge endpoint equations at their supplied positions. The outer fabric retains its prescribed configuration. [Local force stations, boundary positions and tool motion](../cad/castoff/receiver_load.json)
+
+### Aiming the receiver through both held loops
+
+Starting at 16.889408 mm of feeder payout, a seven-leg receiver path takes the registered yarn mark through the L1 opening after 26.235 mm of jaw travel and through L0 after 51.359 mm. These are intersections of the grip-center trajectory with the two loop surfaces held at their measured starting shape. Each surface is defined by the indexed yarn in `loop_geometry.npz`.
+
+The 54.699514 mm rigid path has 0.017971 mm nominal clearance to the installed machine. The STEP replay checks four moving parts against 17 nearby solids and bounding boxes for 712 other components. The clearance is a CAD result. The two running yarn limbs have their own load and contact model.
+
+```sh
+python -m examples.aperture_route
+python -m unittest benchmarks.test_receiver_wrist.WristClearance.test_two_aperture_route
+```
+
+[Receiver path, installed station and measured loops](../cad/castoff/released_curve)

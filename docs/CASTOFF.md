@@ -27,3 +27,9 @@ The closed receiving jaw holds material mark 1073.000 mm while the original eye 
 Run `python3 examples/eye_release.py` to intersect the material segments with each section in the moving eye frame. The input includes every segment whose bounding box lies within 0.05 mm of the aperture box at the sampled stations. It also records the distance to the nearest excluded segment. [Section geometry, yarn coordinates and opposite-face loads](../cad/castoff/eye_release.json)
 
 The modeled feeder uses three pulleys and a free carriage. Its 259 saved states reconstruct the outlet history, including 113 intervals while the loaded jaw and eye move. The final feeder force residual is 0.0000276 mN at 16.875271 mm payout. The 733-part station includes the opened eye and the closed receiving jaw. Outlet travel is prescribed; the model solves the carriage height.
+
+## A receiver sized to the live loop
+
+With the four limb passages already present and the fork withdrawn, two 0.800 mm pins at 3.352565 mm center spacing can enter the held loop directly. One touches material coordinate 1070.190282 mm and the other 1077.580005 mm. The receiving jaw holds the intervening 1073.000 mm mark. A 4 mm axial insertion clears the installed steel by at least 0.400 mm. The common carrier measures 5.653 × 2.300 × 2.600 mm and clears the yarn by at least 0.350 mm during insertion.
+
+The supplied coordinates reproduce each tangency and its position along the finite pin. Run `python3 -m unittest benchmarks.test_receiver_pair` to check the geometry. [Pin axes, carrier dimensions and material contact points](../cad/castoff/receiver_pair.json)

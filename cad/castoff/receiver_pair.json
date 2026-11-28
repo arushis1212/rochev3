@@ -1,0 +1,52 @@
+{
+  "mark_mm": 1073.0,
+  "yarn_radius_mm": 0.3,
+  "pin_diameter_mm": 0.8,
+  "axis_toward_carrier": [
+    -0.7531266968721846,
+    0.2915555861262667,
+    0.5897419085133441
+  ],
+  "pitch_mm": 3.352565443448918,
+  "carrier_dimensions_mm": [
+    5.652565443448918,
+    2.3,
+    2.6
+  ],
+  "carrier_front_mm": 10.0,
+  "tip_forward_mm": 1.45,
+  "stroke_mm": 4.0,
+  "pins": [
+    {
+      "axis_center_xyz_mm": [
+        130.5787620252719,
+        152.1854197939304,
+        92.37952537003075
+      ],
+      "touch_material_mm": 1070.190282388983,
+      "yarn_center_xyz_mm": [
+        130.45310222312156,
+        151.83798227787162,
+        91.63722423400154
+      ],
+      "steel_lower_bound_mm": 0.4
+    },
+    {
+      "axis_center_xyz_mm": [
+        132.5721739637077,
+        151.91065721293094,
+        95.06103789478091
+      ],
+      "touch_material_mm": 1077.5800049219513,
+      "yarn_center_xyz_mm": [
+        132.53896962111776,
+        151.76043181247692,
+        95.8901163962908
+      ],
+      "steel_lower_bound_mm": 0.4
+    }
+  ],
+  "carrier_to_yarn_lower_bound_mm": 0.35,
+  "carrier_to_steel_lower_bound_mm": 0.4,
+  "scope": "Axial insertion at a stationary four-crossing yarn pose after the old loops leave the fork. Contact locations are on one bight held by the receiving jaw."
+}

@@ -179,5 +179,388 @@
     }
   ],
   "local_empty_sections": 5,
-  "scope": "Quasistatic local rod with two fixed fabric-neck positions. Frictionless pin normals; opposite jaw faces use an assumed friction coefficient of 0.24."
+  "scope": "Quasistatic local rod with two fixed fabric-neck positions. Frictionless pin normals; opposite jaw faces use an assumed friction coefficient of 0.24.",
+  "forward_reload": {
+    "material_mark_mm": 1076.7266049219515,
+    "material_interval_mm": [
+      1066.0552573588727,
+      1087.3979524850301
+    ],
+    "initial_neck_xyz_mm": [
+      [
+        125.64541739082904,
+        160.77723932970196,
+        128.896147819482
+      ],
+      [
+        144.4392698065472,
+        157.35703789644526,
+        122.97218516496152
+      ]
+    ],
+    "coordinate_order": [
+      "lowering_mm",
+      "jaw_deg",
+      "gate_deg"
+    ],
+    "force_stations": [
+      {
+        "command": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          0.0,
+          0.0
+        ],
+        "held_by_jaw": true,
+        "pin_only": false,
+        "residual_mN": 1.000000000883107e-07
+      },
+      {
+        "command": [
+          1.045,
+          0.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          0.01999295630020174,
+          0.020354108816406594
+        ],
+        "held_by_jaw": true,
+        "pin_only": false,
+        "residual_mN": 7.616773078141653e-06
+      },
+      {
+        "command": [
+          1.05,
+          0.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          0.11384159602819445,
+          0.11420820082730898
+        ],
+        "held_by_jaw": true,
+        "pin_only": false,
+        "residual_mN": 6.531515838706543e-07
+      },
+      {
+        "command": [
+          1.08,
+          0.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          0.7405318921011912,
+          0.7408050176140142
+        ],
+        "held_by_jaw": true,
+        "pin_only": false,
+        "residual_mN": 0.0001329992033486608
+      },
+      {
+        "command": [
+          1.12,
+          0.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.7646476276289602,
+          1.7644342731033866
+        ],
+        "held_by_jaw": true,
+        "pin_only": false,
+        "residual_mN": 0.0009316992702975042
+      },
+      {
+        "command": [
+          1.12,
+          -2.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -5.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -15.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -35.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          0.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          30.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          60.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          90.0
+        ],
+        "offset_xyz_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pin_normals_mN": [
+          1.66760446829298,
+          1.6628407992020569
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7318361219924305e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          90.0
+        ],
+        "offset_xyz_mm": [
+          0.002682651720888829,
+          -0.0016867999788353627,
+          0.009484623639114065
+        ],
+        "pin_normals_mN": [
+          1.630745123561064,
+          1.6260090622307284
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7320091129542636e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          90.0
+        ],
+        "offset_xyz_mm": [
+          0.006706629302229261,
+          -0.00421699994711211,
+          0.02371155909779421
+        ],
+        "pin_normals_mN": [
+          1.5798477149549002,
+          1.5751554482149752
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7321072961345996e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          90.0
+        ],
+        "offset_xyz_mm": [
+          0.013413258604444367,
+          -0.00843399989425897,
+          0.0474231181956134
+        ],
+        "pin_normals_mN": [
+          1.5067191624475103,
+          1.5021060049283612
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7319521381300995e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          90.0
+        ],
+        "offset_xyz_mm": [
+          0.026826517208846157,
+          -0.016867999788495847,
+          0.09484623639122336
+        ],
+        "pin_normals_mN": [
+          1.4049954827793296,
+          1.400554040726661
+        ],
+        "held_by_jaw": false,
+        "pin_only": false,
+        "residual_mN": 1.7320868589236482e-07
+      },
+      {
+        "command": [
+          1.12,
+          -75.0,
+          90.0
+        ],
+        "offset_xyz_mm": [
+          0.05365303441767816,
+          -0.03373599957702644,
+          0.18969247278244328
+        ],
+        "pin_normals_mN": [
+          1.3656428397887437,
+          1.3617818013491207
+        ],
+        "held_by_jaw": false,
+        "pin_only": true,
+        "residual_mN": 1.732474927407246e-07
+      }
+    ],
+    "verified_intervals_to_sole_custody": 18,
+    "final_neck_forces_xyz_mN": [
+      [
+        -2.517063405333443,
+        -0.2493841198086739,
+        -0.4132443862423632
+      ],
+      [
+        1.609664186522464,
+        -0.9985661714278686,
+        -1.7108878829692573
+      ]
+    ],
+    "empty_tool_withdrawal_mm": 4.8,
+    "minimum_withdrawal_yarn_skin_mm": 0.046598224627046436
+  }
 }

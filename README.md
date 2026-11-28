@@ -29,6 +29,7 @@ purchased fasteners and bearings.
 - [257-member registered hook station, single STEP and installation instructions](cad/registered_station/README.md)
 - [Shim-defined spring sockets, printable test coupon and metal cutting drawings](cad/shim_sockets/README.md)
 - [Hook, stripper and spring mounting dimensions](docs/P5_MOUNTING.md)
+- [Replay the marked yarn leaving the original eye](docs/CASTOFF.md#replaying-release-from-the-original-eye)
 - [Engineering and mechanics](docs/ENGINEERING.md)
 - [Elastic interface benchmarks](docs/ELASTIC_INTERFACES.md)
 - [Convex search methods and benchmarks](docs/CONVEX_SEARCH.md)

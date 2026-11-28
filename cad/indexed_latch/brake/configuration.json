@@ -1,0 +1,139 @@
+{
+  "parts": [
+    {
+      "name": "fork",
+      "file": "brake/fork.step",
+      "density_kg_mm3": 7.9e-06,
+      "volume_mm3": 548.8896454882823,
+      "cg_xyz_mm": [
+        139.21047206801765,
+        143.41423542703188,
+        123.87419323470954
+      ]
+    },
+    {
+      "name": "rotor",
+      "file": "brake/rotor.step",
+      "density_kg_mm3": 7.9e-06,
+      "volume_mm3": 3.450527247575566,
+      "cg_xyz_mm": [
+        137.03050406781512,
+        162.40623465351945,
+        87.00247271908052
+      ]
+    },
+    {
+      "name": "index_dog",
+      "file": "brake/index_dog.step",
+      "density_kg_mm3": 7.9e-06,
+      "volume_mm3": 0.058246810263003206,
+      "cg_xyz_mm": [
+        135.44745991817962,
+        162.62106364665604,
+        86.55811912746049
+      ]
+    },
+    {
+      "name": "gland",
+      "file": "gland.step",
+      "density_kg_mm3": 1.15e-06,
+      "volume_mm3": 0.008187018729587988,
+      "cg_xyz_mm": [
+        135.45680463670584,
+        162.63949885378594,
+        86.56706267588255
+      ]
+    },
+    {
+      "name": "front_liner",
+      "file": "front_liner.step",
+      "density_kg_mm3": 2.16e-06,
+      "volume_mm3": 0.008968854326925027,
+      "cg_xyz_mm": [
+        135.46119192860516,
+        162.4983657538898,
+        86.9761324737965
+      ]
+    },
+    {
+      "name": "back_liner",
+      "file": "back_liner.step",
+      "density_kg_mm3": 2.16e-06,
+      "volume_mm3": 0.00896885432692529,
+      "cg_xyz_mm": [
+        135.9481354172714,
+        163.45900507640582,
+        87.4421714087803
+      ]
+    },
+    {
+      "name": "crossbolt",
+      "file": "brake/crossbolt.step",
+      "density_kg_mm3": 7.9e-06,
+      "volume_mm3": 11.93805208364125,
+      "cg_xyz_mm": [
+        142.12490969674337,
+        160.91846063633767,
+        84.74763215169959
+      ]
+    },
+    {
+      "name": "adhesive",
+      "file": "brake/adhesive.step",
+      "density_kg_mm3": 1.2e-06,
+      "volume_mm3": 0.3166725394818537,
+      "cg_xyz_mm": [
+        137.85383687510372,
+        127.84896658224338,
+        157.37595735903392
+      ]
+    }
+  ],
+  "axis_point_mm": [
+    137.79858646235243,
+    127.21745147474914,
+    158.7354190395889
+  ],
+  "nominal_cam_fork_mass_kg": 0.00445868629344466,
+  "sample_loads": [
+    {
+      "slide_accel_mm_s2": -280241.4925894077,
+      "yarn_contacts": []
+    },
+    {
+      "slide_accel_mm_s2": -225.13684930118325,
+      "yarn_contacts": [
+        {
+          "N": 0.00019426031669372035,
+          "surface_den_mm": [
+            -0.49389688872042464,
+            1.9720593234223869,
+            0.07788365240720828
+          ],
+          "rotor_force_xyz_N": [
+            1.962395553408044e-05,
+            0.00010555763514736173,
+            -0.0001618936585331168
+          ],
+          "distance_delta_mm": 0.0,
+          "normal_delta": 0.0
+        }
+      ]
+    }
+  ],
+  "rotor_centre_den_mm": [
+    -0.004857061631563284,
+    1.4588505916913472,
+    0.0005367889489000938
+  ],
+  "rotor_mass_kg": 2.725916525584697e-05,
+  "extra_trim_mass_g": 0.03182872952855586,
+  "taper_half_angle_deg": 1,
+  "stroke_length_mm": 0.47,
+  "index_pitch_radius_mm": 0.43,
+  "assembled_tongue_wall_mm": 0.2733472574868647,
+  "rod_diameter_mm": 0.8,
+  "bond_engagement_mm": 3.0,
+  "peak_rod_axial_force_N": 1.3137577334558679,
+  "reference_radius_bound_mm": 3.81
+}

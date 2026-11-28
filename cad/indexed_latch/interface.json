@@ -1,0 +1,90 @@
+{
+  "origin_mm": [
+    135.70466367293835,
+    162.97868541514777,
+    87.20915194128838
+  ],
+  "slide_axis": [
+    0.03683360850073487,
+    0.4210100716628344,
+    -0.9063077870366499
+  ],
+  "tooth_axis": [
+    0.9091006600516974,
+    -0.39069557710373604,
+    -0.144543958452599
+  ],
+  "swivel_axis": [
+    -0.4149449061964523,
+    -0.8186009318282222,
+    -0.39713126196710286
+  ],
+  "reference_yarn_radius_mm": 0.3,
+  "reference_source_sha256": "91e289eeb582795a11b9f09d319694f50fa058aa89bb1369c07f315795358a64",
+  "indexed_rotor_radius_bound_mm": 3.81,
+  "dog_stroke_mm": 0.47,
+  "fold_degrees": -90,
+  "slide_stroke_mm": 29.70176289029781,
+  "opening_face_origin_mm": [
+    135.71474487078117,
+    163.09391403376563,
+    86.96109945662839
+  ],
+  "opening_span_mm": 10.0,
+  "opening_axial_range_mm": [
+    -30.375458524615436,
+    1.3263043656823748
+  ],
+  "material_ranges": {
+    "L0": [
+      739.871275567478,
+      997.0654471005106
+    ],
+    "L1": [
+      1022.5831374102465,
+      1043.3657821264046
+    ]
+  },
+  "peak_load_case": {
+    "j": 334,
+    "work": "443a282c6f7a53fee789614d882b53e2c626405cdd83c471c19dd2a120722d37",
+    "contacts": [
+      {
+        "tag": 1037.7417996378394,
+        "N": 0.008499629095670544,
+        "surface_e_mm": 1.9523672289869531,
+        "surface_den_mm": [
+          -0.4947220196438498,
+          1.9523672289869531,
+          0.07245773443549028
+        ],
+        "distance_delta_mm": 0.0,
+        "param_delta": 0.0,
+        "normal_delta": 0.0,
+        "fold_torque_Nmm": -0.01641922749893557,
+        "rotor_force_xyz_N": [
+          0.0008208663843880702,
+          0.004548949166084442,
+          -0.007132806924859988
+        ]
+      }
+    ]
+  },
+  "rotor_mass_kg": 2.696690131934106e-05,
+  "rotor_centre_local_mm": [
+    -0.005857234862700019,
+    1.4644037729581678,
+    0.001118232372499058
+  ],
+  "dog_pitch_radius_mm": 0.43,
+  "radial_bearing_arm_mm": 0.629,
+  "journal_radius_mm": 0.16,
+  "each_journal_length_mm": 0.212,
+  "gate_sequence": [
+    "park driver, open transverse fork closure",
+    "dock driver and puller, pull indexing dog",
+    "fold bearing 90 degrees",
+    "reinsert dog, remove both tools",
+    "withdraw fork"
+  ]
+}

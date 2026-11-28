@@ -1,5 +1,5 @@
 import unittest
-from examples.receiver_wrist import intervals_for, replay
+from examples.receiver_wrist import DATA, intervals_for, replay
 
 
 class WristClearance(unittest.TestCase):
@@ -8,6 +8,12 @@ class WristClearance(unittest.TestCase):
         self.assertEqual(report["checked_components"], 733)
         self.assertAlmostEqual(report["mark_path_length_mm"], 23.216262, places=5)
         self.assertGreater(report["minimum_swept_clearance_mm"], .0697)
+
+    def test_released_mark_route(self):
+        report = replay(DATA.parent / 'castoff/marked_wrist')
+        self.assertEqual(report['checked_components'],733)
+        self.assertAlmostEqual(report['mark_path_length_mm'],40.459609,places=5)
+        self.assertGreater(report['minimum_swept_clearance_mm'],.0724)
 
     def test_gap_in_verification(self):
         rows = [{"leg":0,"fractions":[0,.45]}, {"leg":0,"fractions":[.5,1]}]

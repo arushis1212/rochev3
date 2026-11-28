@@ -33,3 +33,7 @@ The modeled feeder uses three pulleys and a free carriage. Its 259 saved states 
 With the four limb passages already present and the fork withdrawn, two 0.800 mm pins at 3.352565 mm center spacing can enter the held loop directly. One touches material coordinate 1070.190282 mm and the other 1077.580005 mm. The receiving jaw holds the intervening 1073.000 mm mark. A 4 mm axial insertion clears the installed steel by at least 0.400 mm. The common carrier measures 5.653 × 2.300 × 2.600 mm and clears the yarn by at least 0.350 mm during insertion.
 
 The supplied coordinates reproduce each tangency and its position along the finite pin. Run `python3 -m unittest benchmarks.test_receiver_pair` to check the geometry. [Pin axes, carrier dimensions and material contact points](../cad/castoff/receiver_pair.json)
+
+## Moving the receiver past the S1 gate
+
+From the released mark to the independently posed four-crossing mark, a closed jaw can travel 40.459609 mm along five straight legs while changing orientation. With the original eye parked at release, the modeled sweep has 0.072520 mm of clearance to installed steel. The geometry package contains the four jaw solids, 16 nearby installed solids and bounding boxes for the other 713. The yarn follows a separate force calculation. Run `python -m unittest benchmarks.test_receiver_wrist` in the CAD environment to replay the rigid motion. [Wrist geometry, poses and subdivision intervals](../cad/castoff/marked_wrist/route.json)

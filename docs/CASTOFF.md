@@ -46,9 +46,11 @@ The fixture starts with four strand crossings already present. The 15-node local
 
 ### Aiming the receiver through both held loops
 
-Starting at 16.889408 mm of feeder payout, a seven-leg receiver path takes the registered yarn mark through the L1 opening after 26.235 mm of jaw travel and through L0 after 51.359 mm. These are intersections of the grip-center trajectory with the two loop surfaces held at their measured starting shape. Each surface is defined by the indexed yarn in `loop_geometry.npz`.
+Two lift pins support the older fabric while a short, rounded pin on the closed receiving fork bears against the near loop. A folded steel bracket takes the cable reaction to the machine base. The receiver holder has pockets for two formed steel inserts. [Support assembly and fork STEP files](../cad/castoff/cloth_support)
 
-The 54.699514 mm rigid path has 0.017971 mm nominal clearance to the installed machine. The STEP replay checks four moving parts against 17 nearby solids and bounding boxes for 712 other components. The clearance is a CAD result. The two running yarn limbs have their own load and contact model.
+At 16.893529 mm of issued yarn, the registered receiver path passes through the measured L1 opening after 27.473 mm of jaw travel and through L0 after 52.780 mm. The path stays at least 1.201 mm from the first aperture's boundary, including the line across its open neck. The included geometry holds both loop shapes at this loaded instant.
+
+The 56.120622 mm rigid path has 0.201050 mm nominal swept clearance to the 752 modeled components. The STEP replay checks four moving parts against 19 nearby solids and bounding boxes for 729 others. This measurement describes receiver clearance with the fork in its engaged pose. The running yarn limbs and release motion have separate load cases.
 
 ```sh
 python -m examples.aperture_route
